@@ -1,14 +1,14 @@
 package entity;
 
-public class Librarian {
+public class Admin {
 
     private String name;
     private String password;
     private String phone;
     private String account;
-    private String type = "Librarian";
+    private String type = "Admin";
 
-    public Librarian() {
+    public Admin() {
         this.name = "null";
         this.phone = "null";
         this.account = "null";

@@ -72,7 +72,7 @@
                 <div class="title">
                     <h1 class="h4">
                         <%
-                            String account = (String) session.getAttribute("username");
+                            String account = (String) session.getAttribute("name");
                             out.println(account);
                         %>
                     </h1>

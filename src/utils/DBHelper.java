@@ -29,11 +29,11 @@ public class DBHelper {
     }
 
     public Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(url,username,password);
+        return DriverManager.getConnection(url, username, password);
     }
 
     public static void closeConnection(Connection connection, Statement statement,
-                                ResultSet resultSet) {
+                                       ResultSet resultSet) {
         try {
             if (connection != null) {
                 connection.close();
@@ -41,8 +41,21 @@ public class DBHelper {
             if (statement != null) {
                 statement.close();
             }
-            if (resultSet != null){
+            if (resultSet != null) {
                 resultSet.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void closeConnection(Connection connection, PreparedStatement preparedStatement) {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+            if (preparedStatement != null) {
+                preparedStatement.close();
             }
         } catch (SQLException e) {
             e.printStackTrace();

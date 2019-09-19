@@ -72,7 +72,7 @@
                 <div class="title">
                     <h1 class="h4">
                         <%
-                            String account = (String) session.getAttribute("username");
+                            String account = (String) session.getAttribute("name");
                             out.println(account);
                         %>
                     </h1>
@@ -167,6 +167,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="name"
+                                               class="form-control form-control-warning">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Phone</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="phone"
@@ -240,6 +248,8 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully add!");
+    }else if(info == 'erroe'){
+        alert("add failure because of have the same account!");
     }
 </script>
 <!-- JavaScript files-->
