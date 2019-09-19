@@ -39,7 +39,7 @@ public class LibrarianDao {
     public Librarian info(String account) {
         Librarian librarian = new Librarian();
         try {
-            String sql = "select * from staff where staff_account = " + account;
+            String sql = "select * from staff where staff_account = \'" + account + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
