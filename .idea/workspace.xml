@@ -8,13 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/entity/Librarian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/entity/Librarian.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/entity/Librarian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/entity/Librarian.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LibrarianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LibrarianDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LoginDao.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +160,7 @@
       <workItem from="1568775499230" duration="4531000" />
       <workItem from="1568790624933" duration="1754000" />
       <workItem from="1568792492922" duration="14311000" />
-      <workItem from="1568819578408" duration="17063000" />
+      <workItem from="1568819578408" duration="18018000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -187,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568864675229</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改查找librarian bug">
+      <created>1568894450248</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568894450248</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +212,8 @@
     <MESSAGE value="gengx" />
     <MESSAGE value="更新数据库，初步add librarian" />
     <MESSAGE value="增加admin类" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加admin类" />
+    <MESSAGE value="修改查找librarian bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改查找librarian bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
