@@ -69,7 +69,7 @@
                 <div class="title">
                     <h1 class="h4">
                         <%
-                            String account = (String) session.getAttribute("username");
+                            String account = (String) session.getAttribute("account");
                             out.println(account);
                         %>
                     </h1>
@@ -82,7 +82,7 @@
                     <ul id="LibrarianManage" class="collapse list-unstyled ">
                         <li><a href="LibrarianListPage">Librarian List</a></li>
                         <li><a href="#">Librarian Edit</a></li>
-                        <li><a href="#">Librarian Add</a></li>
+                        <li><a href="add_librarian.jsp">Librarian Add</a></li>
                         <li><a href="#">Retrieve Password</a></li>
                     </ul>
                 </li>

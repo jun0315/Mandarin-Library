@@ -27,4 +27,12 @@
         <servlet-name>logoutServlet</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>LibrarianAdd</servlet-name>
+        <servlet-class>servlet.LibrarianAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibrarianAdd</servlet-name>
+        <url-pattern>/librarian_add.do</url-pattern>
+    </servlet-mapping>
 </web-app>

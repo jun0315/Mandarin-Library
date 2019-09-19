@@ -14,17 +14,19 @@ import java.util.List;
 public class LibrarianDao {
     public List<Librarian> getLibrarians(){
         List<Librarian> librarians = new ArrayList<Librarian>();
-        String sql = "select * from staff where staff_type ='librarian'";
+        String sql = "select * from staff where user_type ='librarian'";
         try {
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()){
                 Librarian librarian = new Librarian();
+                String account = resultSet.getString("staff_account");
                 String name = resultSet.getString("staff_name");
                 String phone = resultSet.getString("staff_phone");
                 librarian.setName(name);
                 librarian.setPhone(phone);
+                librarian.setAccount(account);
                 librarians.add(librarian);
             }
         } catch (SQLException e) {

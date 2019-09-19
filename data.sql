@@ -79,15 +79,18 @@ CREATE TABLE `book_detail` (
 DROP TABLE IF EXISTS `reader`;
 
 CREATE TABLE `reader` (
-  `user_id` int(11) unsigned NOT NULL,
+  `user_account` varchar(64) NOT NULL,
   `user_name` varchar(2048) CHARACTER SET latin1 DEFAULT NULL,
   `user_password` varchar(64) CHARACTER SET latin1 NOT NULL,
   `reader_email` varchar(128) CHARACTER SET latin1 DEFAULT NULL,
   `security_deposit` int(11) DEFAULT '0',
-  PRIMARY KEY (`user_id`)
+  PRIMARY KEY (`user_account`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader` */
+
+insert  into `reader`(`user_account`,`user_name`,`user_password`,`reader_email`,`security_deposit`) values 
+('reader-test','jun','123','1072505283@qq.com',0);
 
 /*Table structure for table `reader_borrow` */
 
@@ -95,12 +98,12 @@ DROP TABLE IF EXISTS `reader_borrow`;
 
 CREATE TABLE `reader_borrow` (
   `book_id` varchar(128) NOT NULL,
-  `user_id` int(11) unsigned NOT NULL,
+  `user_account` varchar(64) NOT NULL,
   `borrow_time` datetime DEFAULT NULL,
-  PRIMARY KEY (`book_id`,`user_id`),
-  KEY `user_id` (`user_id`),
+  PRIMARY KEY (`book_id`,`user_account`),
+  KEY `user_id` (`user_account`),
   CONSTRAINT `reader_borrow_ibfk_1` FOREIGN KEY (`book_id`) REFERENCES `book_detail` (`book_id`),
-  CONSTRAINT `reader_borrow_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `reader` (`user_id`)
+  CONSTRAINT `reader_borrow_ibfk_2` FOREIGN KEY (`user_account`) REFERENCES `reader` (`user_account`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader_borrow` */
@@ -110,7 +113,7 @@ CREATE TABLE `reader_borrow` (
 DROP TABLE IF EXISTS `reader_reserve`;
 
 CREATE TABLE `reader_reserve` (
-  `user_id` int(11) DEFAULT NULL,
+  `user_account` varchar(64) DEFAULT NULL,
   `book_id` varchar(128) DEFAULT NULL,
   `isbn` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -123,18 +126,18 @@ DROP TABLE IF EXISTS `staff`;
 
 CREATE TABLE `staff` (
   `staff_name` varchar(256) DEFAULT NULL,
-  `staff_type` enum('admin','librarian') CHARACTER SET latin1 DEFAULT NULL,
-  `staff_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_type` enum('admin','librarian') CHARACTER SET latin1 DEFAULT NULL,
+  `staff_account` varchar(64) NOT NULL,
   `staff_password` varchar(64) CHARACTER SET latin1 DEFAULT NULL,
   `staff_phone` varchar(64) DEFAULT NULL,
-  PRIMARY KEY (`staff_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`staff_account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `staff` */
 
-insert  into `staff`(`staff_name`,`staff_type`,`staff_id`,`staff_password`,`staff_phone`) values 
-('admin','admin',1,'root','1333333'),
-('librarian','librarian',2,'123','1333333');
+insert  into `staff`(`staff_name`,`user_type`,`staff_account`,`staff_password`,`staff_phone`) values 
+('admin','admin','admin','root','1333333'),
+('librarian','librarian','librarian','123','1333333');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

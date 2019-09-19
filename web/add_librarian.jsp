@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
@@ -85,7 +85,7 @@
                     <ul id="LibrarianManage" class="collapse list-unstyled ">
                         <li><a href="LibrarianListPage">Librarian List</a></li>
                         <li><a href="#">Librarian Edit</a></li>
-                        <li><a href="add_librarian.jsp">Librarian Add</a></li>
+                        <li><a href="#">Librarian Add</a></li>
                         <li><a href="#">Retrieve Password</a></li>
                     </ul>
                 </li>
@@ -134,52 +134,90 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">Librarian Add</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="Admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item active">Librarian Add</li>
                 </ul>
             </div>
             <section class="tables">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Account</th>
-                                                <th>Name</th>
-                                                <th>Phone</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>
-                                            <%int i = 0;%>
-                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">
-                                                <% i++;%>
-                                                <tr>
-                                                    <th>${i}</th>
-                                                    <td>${librarian.getAccount()}</td>
-                                                    <td>${librarian.getName()}</td>
-                                                    <td>${librarian.getPhone()}</td>
-                                                </tr>
-                                            </c:forEach>
-                                            </tbody>
-                                        </table>
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Sign up for a new librarian.</p>
+                            <form class="form-horizontal" action="librarian_add.do" method="post">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Account</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="account"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Password</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="password" value="00010001"
+                                               class="form-control form-control-warning">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Phone</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="phone"
+                                               class="form-control form-control-warning">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-9 offset-sm-3">
+                                        <input type="submit" value="Signin" class="btn btn-primary">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
+                <%--                <div class="container-fluid">--%>
+                <%--                    <div class="row">--%>
+                <%--                        <div class="col-lg-12">--%>
+                <%--                            <div class="card">--%>
+                <%--                                <div class="card-body">--%>
+                <%--                                    <div class="table-responsive">--%>
+                <%--                                        <table class="table">--%>
+                <%--                                            <thead>--%>
+                <%--                                            <tr>--%>
+                <%--                                                <th>#</th>--%>
+                <%--                                                <th>Account</th>--%>
+                <%--                                                <th>Name</th>--%>
+                <%--                                                <th>Phone</th>--%>
+                <%--                                            </tr>--%>
+                <%--                                            </thead>--%>
+                <%--                                            <tbody>--%>
+                <%--                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>--%>
+                <%--                                            <%int i = 0;%>--%>
+                <%--                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">--%>
+                <%--                                                <% i++;%>--%>
+                <%--                                                <tr>--%>
+                <%--                                                    <th>${i}</th>--%>
+                <%--                                                    <td>${librarian.getAccount()}</td>--%>
+                <%--                                                    <td>${librarian.getName()}</td>--%>
+                <%--                                                    <td>${librarian.getPhone()}</td>--%>
+                <%--                                                </tr>--%>
+                <%--                                            </c:forEach>--%>
+                <%--                                            </tbody>--%>
+                <%--                                        </table>--%>
+                <%--                                    </div>--%>
+                <%--                                </div>--%>
+                <%--                            </div>--%>
+                <%--                        </div>--%>
+                <%--                    </div>--%>
+                <%--                </div>--%>
             </section>
             <!-- Page Footer-->
             <footer class="main-footer">
@@ -198,6 +236,12 @@
         </div>
     </div>
 </div>
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'success') {
+        alert("successfully add!");
+    }
+</script>
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>

@@ -85,7 +85,7 @@
                     <ul id="LibrarianManage" class="collapse list-unstyled ">
                         <li><a href="LibrarianListPage">Librarian List</a></li>
                         <li><a href="#">Librarian Edit</a></li>
-                        <li><a href="#">Librarian Add</a></li>
+                        <li><a href="add_librarian.jsp">Librarian Add</a></li>
                         <li><a href="#">Retrieve Password</a></li>
                     </ul>
                 </li>
@@ -155,6 +155,7 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
+                                                <th>Account</th>
                                                 <th>Name</th>
                                                 <th>Phone</th>
                                             </tr>
@@ -165,7 +166,8 @@
                                             <c:forEach items="${librarians}" var="librarian" varStatus="li">
                                                 <% i++;%>
                                                 <tr>
-                                                    <th>${i}1</th>
+                                                    <th>${i}</th>
+                                                    <td>${librarian.getAccount()}</td>
                                                     <td>${librarian.getName()}</td>
                                                     <td>${librarian.getPhone()}</td>
                                                 </tr>
