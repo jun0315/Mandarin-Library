@@ -110,7 +110,7 @@
     padding: 15px;
     margin-top: 20px;
     display: block;
-	width: 330px;
+    width: 330px;
 }
 
 .act-but {
@@ -119,5 +119,5 @@
     font-size: 20px;
     border-radius: 50px;
     background: #0096e6;
-
+    width: 330px;
 }

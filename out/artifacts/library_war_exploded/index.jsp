@@ -24,7 +24,7 @@
         <form action="login" name="f" method="post">
           <div class="input_outer">
             <span class="u_user"></span>
-            <input name="username" class="text" style="color: #FFFFFF !important" type="text"
+            <input name="account" class="text" style="color: #FFFFFF !important" type="text"
                    placeholder="请输入账户">
           </div>
           <div class="input_outer">
@@ -44,7 +44,7 @@
 </div><!-- /container -->
 <%
   session = request.getSession();
-  String acconut = (String)session.getAttribute("username");
+  String acconut = (String)session.getAttribute("account");
   if(acconut !=null)
   {
     response.sendRedirect("login");

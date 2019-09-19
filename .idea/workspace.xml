@@ -6,7 +6,16 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="" />
+    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LoginDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Reader.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +31,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="LogFilters">
@@ -32,7 +42,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1QwbBN3O59yC6zvytYp9xxoH2xP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="H:/Git/Git/bin/git.exe" />
@@ -45,6 +57,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\大学\web\library - test" />
       <recent name="H:\大学\web\library - test\web\WEB-INF\lib" />
       <recent name="H:\大学\web\library - test\web" />
       <recent name="H:\大学\web\library\web\WEB-INF\lib" />
@@ -151,12 +164,23 @@
       <workItem from="1568775499230" duration="4531000" />
       <workItem from="1568790624933" duration="1754000" />
       <workItem from="1568792492922" duration="14311000" />
-      <workItem from="1568819578408" duration="4548000" />
+      <workItem from="1568819578408" duration="7919000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

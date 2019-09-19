@@ -17,14 +17,14 @@ public class LoginServlet extends HttpServlet {
         //用于保存会话
         HttpSession session = request.getSession();
         request.setCharacterEncoding("UTF-8");
-        String account = request.getParameter("username");
+        String account = request.getParameter("account");
         String password = request.getParameter("password");
         dealAccount(request,response,account,password);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String account = (String)session.getAttribute("username");
+        String account = (String)session.getAttribute("account");
         String password = (String) session.getAttribute("password");
         dealAccount(request,response,account,password);
     }
@@ -36,7 +36,7 @@ public class LoginServlet extends HttpServlet {
         UserType userType = loginDao.login(account, password);
         System.out.println("");
         if (userType != UserType.None) {
-            session.setAttribute("username", account);
+            session.setAttribute("account", account);
             session.setAttribute("password", password);
         }
         switch (userType) {

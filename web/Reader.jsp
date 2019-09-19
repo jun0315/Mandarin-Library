@@ -69,9 +69,10 @@
                 <div class="title">
                     <h1 class="h4">
                         <%
-                            String account = (String) session.getAttribute("username");
+                            String account = (String) session.getAttribute("account");
                             out.println(account);
                         %>
+                        reader
                     </h1>
                 </div>
             </div>
