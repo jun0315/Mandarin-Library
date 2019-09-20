@@ -28,6 +28,18 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <script src="js/dialogue.js"></script>
+
+<%--    <script type="text/javascript">--%>
+<%--        function deleteClick() {--%>
+<%--            var con;--%>
+<%--            con = confirm("Are you sure you want to delete?\n");--%>
+<%--            if(con==true) {--%>
+<%--                window.location.href("index.jsp");--%>
+<%--            }--%>
+<%--        }--%>
+<%--    </script>--%>
 </head>
 <body>
 <div class="page">
@@ -158,18 +170,21 @@
                                                 <th>Account</th>
                                                 <th>Name</th>
                                                 <th>Phone</th>
+                                                <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>
-                                            <%int i = 0;%>
                                             <c:forEach items="${librarians}" var="librarian" varStatus="li">
-                                                <% i++;%>
                                                 <tr>
-                                                    <th>${i}</th>
+                                                    <th>${li.index+1}</th>
                                                     <td>${librarian.getAccount()}</td>
                                                     <td>${librarian.getName()}</td>
                                                     <td>${librarian.getPhone()}</td>
+                                                    <td>
+                                                        <a href="javasrcipt:" style="color: #ff0c0c" onclick="deleteClick();return false">删除</a>
+                                                        <a href="#" style="color: #0000c6">编辑</a>
+                                                    </td>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>
@@ -208,5 +223,6 @@
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
+
 </body>
 </html>

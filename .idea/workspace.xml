@@ -7,10 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/js/dialogue.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LoginDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Librarian_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +23,7 @@
       <list>
         <option value="Jsp File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,6 +53,10 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\大学\web\library - test\web\js" />
+      <recent name="H:\大学\web\library - test\web" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\大学\web\library - test" />
       <recent name="H:\大学\web\library - test\web\WEB-INF\lib" />
@@ -160,7 +165,9 @@
       <workItem from="1568775499230" duration="4531000" />
       <workItem from="1568790624933" duration="1754000" />
       <workItem from="1568792492922" duration="14311000" />
-      <workItem from="1568819578408" duration="18018000" />
+      <workItem from="1568819578408" duration="18536000" />
+      <workItem from="1568953845910" duration="5260000" />
+      <workItem from="1568968220213" duration="2806000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -190,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568894450248</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="优化登陆界面数据库查询">
+      <created>1568895236445</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568895236445</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +215,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -213,7 +229,8 @@
     <MESSAGE value="更新数据库，初步add librarian" />
     <MESSAGE value="增加admin类" />
     <MESSAGE value="修改查找librarian bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改查找librarian bug" />
+    <MESSAGE value="优化登陆界面数据库查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化登陆界面数据库查询" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -237,6 +254,24 @@
           <url>file://$PROJECT_DIR$/src/dao/LibrarianDao.java</url>
           <line>42</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/js/dialogue.js</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/js/dialogue.js</url>
+          <line>3</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web/js/dialogue.js</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
