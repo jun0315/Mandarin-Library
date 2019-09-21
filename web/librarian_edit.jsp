@@ -84,9 +84,7 @@
                         class="icon-interface-windows"></i>Librarian Manage</a>
                     <ul id="LibrarianManage" class="collapse list-unstyled ">
                         <li><a href="LibrarianListPage">Librarian List</a></li>
-                        <li><a href="#">Librarian Edit</a></li>
-                        <li><a href="#">Librarian Add</a></li>
-                        <li><a href="#">Retrieve Password</a></li>
+                        <li><a href="librarian_add.jsp">Librarian Add</a></li>
                     </ul>
                 </li>
                 <li><a href="#ReaderRule" aria-expanded="false" data-toggle="collapse"> <i
