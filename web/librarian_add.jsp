@@ -105,7 +105,7 @@
                     </ul>
                 </li>
 
-                <%--                <li class="active"><a href="Admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
+                <%--                <li class="active"><a href="admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
 
                 <%--                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>--%>
                 <%--                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>--%>
@@ -140,7 +140,7 @@
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="Admin.jsp">Home</a></li>
+                    <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
                     <li class="breadcrumb-item active">Librarian Add</li>
                 </ul>
             </div>
