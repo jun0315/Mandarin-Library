@@ -7,41 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/librarian_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Reader.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LibrarianListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LibrarianListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LibrarianListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LibrarianListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/AddLibrarianDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LibrarianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LibrarianDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LoginDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/add_librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/dialogue.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/dialogue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +39,7 @@
   <component name="ProjectId" id="1QwbBN3O59yC6zvytYp9xxoH2xP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -201,7 +168,7 @@
       <workItem from="1568819578408" duration="18536000" />
       <workItem from="1568953845910" duration="5260000" />
       <workItem from="1568968220213" duration="5958000" />
-      <workItem from="1569032358841" duration="13772000" />
+      <workItem from="1569032358841" duration="14052000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -245,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568971056248</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="完成librarian编辑功能">
+      <created>1569058148351</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569058148351</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +246,8 @@
     <MESSAGE value="修改查找librarian bug" />
     <MESSAGE value="优化登陆界面数据库查询" />
     <MESSAGE value="删除确认弹框" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除确认弹框" />
+    <MESSAGE value="完成librarian编辑功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成librarian编辑功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
