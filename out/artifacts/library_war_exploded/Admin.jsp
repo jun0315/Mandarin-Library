@@ -82,7 +82,7 @@
                     <ul id="LibrarianManage" class="collapse list-unstyled ">
                         <li><a href="LibrarianListPage">Librarian List</a></li>
                         <li><a href="#">Librarian Edit</a></li>
-                        <li><a href="add_librarian.jsp">Librarian Add</a></li>
+                        <li><a href="librarian_add.jsp">Librarian Add</a></li>
                         <li><a href="#">Retrieve Password</a></li>
                     </ul>
                 </li>
@@ -102,7 +102,7 @@
                     </ul>
                 </li>
 
-                <%--                <li class="active"><a href="Admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
+                <%--                <li class="active"><a href="admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
 
                 <li><a href="tables.html"> <i class="icon-grid"></i>(素材入口） </a></li>
                 <%--                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>--%>

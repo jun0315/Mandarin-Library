@@ -118,7 +118,7 @@
                 </li>
 
 
-                <%--                <li class="active"><a href="Admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
+                <%--                <li class="active"><a href="admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
 
                 <%--                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>--%>
                 <%--                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>--%>
