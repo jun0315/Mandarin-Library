@@ -7,7 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +184,8 @@
       <workItem from="1568819578408" duration="18536000" />
       <workItem from="1568953845910" duration="5260000" />
       <workItem from="1568968220213" duration="5958000" />
-      <workItem from="1569032358841" duration="14052000" />
+      <workItem from="1569032358841" duration="14318000" />
+      <workItem from="1569120466140" duration="999000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -233,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569058148351</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="删除admin两个按钮">
+      <created>1569058393520</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569058393520</updated>
+    </task>
+    <task id="LOCAL-00009" summary="更新admin页面布局">
+      <created>1569058536117</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569058536117</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +278,9 @@
     <MESSAGE value="优化登陆界面数据库查询" />
     <MESSAGE value="删除确认弹框" />
     <MESSAGE value="完成librarian编辑功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成librarian编辑功能" />
+    <MESSAGE value="删除admin两个按钮" />
+    <MESSAGE value="更新admin页面布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新admin页面布局" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
