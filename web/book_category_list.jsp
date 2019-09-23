@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.BookCategory" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -47,7 +48,7 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
@@ -83,23 +84,21 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Account</th>
-                                                <th>Name</th>
-                                                <th>Phone</th>
+                                                <th>Category</th>
+                                                <th>Location</th>
                                                 <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>
-                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">
+                                            <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
+                                            <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
                                                 <tr>
                                                     <th>${li.index+1}</th>
-                                                    <td>${librarian.getAccount()}</td>
-                                                    <td>${librarian.getName()}</td>
-                                                    <td>${librarian.getPhone()}</td>
+                                                    <td>${bookCategory.getCategory()}</td>
+                                                    <td>${bookCategory.getLocation()}</td>
                                                     <td>
                                                         <a href="#myModal" style="color: #ff0c0c"
-                                                           data-toggle="modal" value="${librarian.getAccount()}"
+                                                           data-toggle="modal" value="${bookCategory.getCategory()}"
                                                            id="lastButton">删除</a>
                                                             <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
@@ -116,14 +115,13 @@
                                                                                 aria-hidden="true">×</span></button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        <p>Are you sure want to delete this account?</p>
+                                                                        <p>Are you sure want to delete this category?</p>
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=${librarian.getAccount()}"
-                                                                           value="${librarian.getAccount()}">
+                                                                        <a href="admin.jsp?account=${bookCategory.getCategory()}" value="${bookCategory.getCategory()}">
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -133,7 +131,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}"
+                                                        <a href="BookCategoryEdit.do?category=${bookCategory.getCategory()}"
                                                            style="color: #0000c6">编辑</a>
                                                     </td>
                                                 </tr>
