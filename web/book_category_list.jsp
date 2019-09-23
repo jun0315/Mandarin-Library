@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.BookCategory" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -44,78 +45,10 @@
 <body>
 <div class="page">
     <!-- Main Navbar-->
-    <header class="header">
-        <nav class="navbar">
-            <!-- Search Box-->
-            <div class="search-box">
-                <button class="dismiss"><i class="icon-close"></i></button>
-                <form id="searchForm" action="#" role="search">
-                    <input type="search" placeholder="What are you looking for..." class="form-control">
-                </form>
-            </div>
-            <div class="container-fluid">
-                <div class="navbar-holder d-flex align-items-center justify-content-between">
-                    <!-- Navbar Header-->
-                    <div class="navbar-header">
-                        <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
-                        <div class="brand-text d-none d-lg-inline-block"><span>Bilobili </span><strong>Library</strong>
-                        </div>
-                        <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
-                    </a>
-                        <!-- Toggle Button--><a id="toggle-btn" href="#"
-                                                class="menu-btn active"><span></span><span></span><span></span></a>
-                    </div>
-                    <!-- Navbar Menu -->
-                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                        <!-- Logout    -->
-                        <li class="nav-item"><a href="logout" class="nav-link logout"> <span
-                                class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <nav class="side-navbar">
-            <!-- Sidebar Header-->
-            <div class="sidebar-header d-flex align-items-center">
-                <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                <div class="title">
-                    <h1 class="h4">
-                        <%
-                            String account = (String) session.getAttribute("name");
-                            out.println(account);
-                        %>
-                    </h1>
-                </div>
-            </div>
-            <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
-            <ul class="list-unstyled">
-                <li><a href="#LibrarianManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Librarian Manage</a>
-                    <ul id="LibrarianManage" class="collapse list-unstyled ">
-                        <li><a href="LibrarianListPage">Librarian List</a></li>
-                        <li><a href="librarian_add.jsp">Librarian Add</a></li>
-                    </ul>
-                </li>
-                <li><a href="#ReaderRule" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Reader Rule</a>
-                    <ul id="ReaderRule" class="collapse list-unstyled ">
-                        <li><a href="#">Rule List</a></li>
-                        <li><a href="#">Rule Edit</a></li>
-                        <li><a href="#">Rule Add</a></li>
-                    </ul>
-                </li>
-                <li><a href="#AccountManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Account Manage</a>
-                    <ul id="AccountManage" class="collapse list-unstyled ">
-                        <li><a href="#">Account Information</a></li>
-                        <li><a href="#">Reset Password</a></li>
-                    </ul>
-                </li>
-
-        </nav>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
@@ -151,23 +84,21 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Account</th>
-                                                <th>Name</th>
-                                                <th>Phone</th>
+                                                <th>Category</th>
+                                                <th>Location</th>
                                                 <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>
-                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">
+                                            <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
+                                            <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
                                                 <tr>
                                                     <th>${li.index+1}</th>
-                                                    <td>${librarian.getAccount()}</td>
-                                                    <td>${librarian.getName()}</td>
-                                                    <td>${librarian.getPhone()}</td>
+                                                    <td>${bookCategory.getCategory()}</td>
+                                                    <td>${bookCategory.getLocation()}</td>
                                                     <td>
                                                         <a href="#myModal" style="color: #ff0c0c"
-                                                           data-toggle="modal" value="${librarian.getAccount()}"
+                                                           data-toggle="modal" value="${bookCategory.getCategory()}"
                                                            id="lastButton">删除</a>
                                                             <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
@@ -184,13 +115,13 @@
                                                                                 aria-hidden="true">×</span></button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        <p>Are you sure want to delete this account?</p>
+                                                                        <p>Are you sure want to delete this category?</p>
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=${librarian.getAccount()}" value="${librarian.getAccount()}">
+                                                                        <a href="admin.jsp?account=${bookCategory.getCategory()}" value="${bookCategory.getCategory()}">
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -200,7 +131,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}"
+                                                        <a href="BookCategoryEdit.do?category=${bookCategory.getCategory()}"
                                                            style="color: #0000c6">编辑</a>
                                                     </td>
                                                 </tr>

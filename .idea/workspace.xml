@@ -6,42 +6,33 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4ea3134-19b9-44c0-88aa-75d9e1b95c1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/librarian_edit.jsp" afterDir="false" />
+    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/BookCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_category_add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_category_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/header_template.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Reader.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LibrarianListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LibrarianListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/entity/Librarian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/entity/Librarian.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LibrarianListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LibrarianListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/AddLibrarianDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LibrarianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LibrarianDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LoginDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/entity/Librarian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/entity/Librarian.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Librarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/add_librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/dialogue.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/dialogue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,8 +59,8 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -93,8 +84,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="H:/Git/Git/bin/git.exe" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -103,16 +92,16 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\大学\web\library - test\web\js" />
-      <recent name="H:\大学\web\library - test\web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\大学\web\library - test" />
       <recent name="H:\大学\web\library - test\web\WEB-INF\lib" />
       <recent name="H:\大学\web\library - test\web" />
       <recent name="H:\大学\web\library\web\WEB-INF\lib" />
       <recent name="H:\大学\web\library\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\大学\web\library - test\web" />
+      <recent name="H:\大学\web\library - test\web\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -218,7 +207,9 @@
       <workItem from="1568819578408" duration="18536000" />
       <workItem from="1568953845910" duration="5260000" />
       <workItem from="1568968220213" duration="5958000" />
-      <workItem from="1569032358841" duration="14052000" />
+      <workItem from="1569032358841" duration="14318000" />
+      <workItem from="1569120466140" duration="4170000" />
+      <workItem from="1569200290574" duration="14231000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -269,7 +260,35 @@
       <option name="project" value="LOCAL" />
       <updated>1569058148351</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="删除admin两个按钮">
+      <created>1569058393520</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569058393520</updated>
+    </task>
+    <task id="LOCAL-00009" summary="更新admin页面布局">
+      <created>1569058536117</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569058536117</updated>
+    </task>
+    <task id="LOCAL-00010" summary="更新admin页面布局">
+      <created>1569122727376</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1569122727376</updated>
+    </task>
+    <task id="LOCAL-00011" summary="搜索librarian功能实现，删除确认框获取account无法遍历">
+      <created>1569210474102</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1569210474103</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,14 +316,17 @@
     <MESSAGE value="优化登陆界面数据库查询" />
     <MESSAGE value="删除确认弹框" />
     <MESSAGE value="完成librarian编辑功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成librarian编辑功能" />
+    <MESSAGE value="删除admin两个按钮" />
+    <MESSAGE value="更新admin页面布局" />
+    <MESSAGE value="搜索librarian功能实现，删除确认框获取account无法遍历" />
+    <option name="LAST_COMMIT_MESSAGE" value="搜索librarian功能实现，删除确认框获取account无法遍历" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java</url>
-          <line>44</line>
+          <line>46</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -314,13 +336,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java</url>
-          <line>34</line>
+          <line>37</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dao/LibrarianDao.java</url>
           <line>105</line>
           <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianSearchServlet.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

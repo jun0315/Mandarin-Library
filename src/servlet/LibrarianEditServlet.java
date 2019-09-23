@@ -15,25 +15,27 @@ public class LibrarianEditServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
-        String preAccount = (String)request.getParameter("preAccount");
+        String preAccount = (String) request.getParameter("preAccount");
         String account = (String) request.getParameter("account");
         String password = (String) request.getParameter("password");
         String name = (String) request.getParameter("name");
         String phone = (String) request.getParameter("phone");
         LibrarianDao librarianDao = new LibrarianDao();
+        Librarian librarian = new Librarian(name, password, phone, account);
         boolean canEdit = true;
-        if(account!=preAccount){
+        if (!account.equals(preAccount)) {
             //当两者不相等时，判断新改的账号是否与之前数据库其他里有重复的
             canEdit = !librarianDao.isExitInDB(account);
         }
         if (!canEdit) {
-            response.sendRedirect("librarian_edit.jsp?info=error");
+            request.setAttribute("librarian", librarian);
+            request.getRequestDispatcher("librarian_edit.jsp?info=error").forward(request, response);
+
         } else {
-            librarianDao.editLibrarian(name,account,preAccount,password,phone);
-            Librarian librarian = librarianDao.info(account);
-            request.setAttribute("librarian",librarian);
+            librarianDao.editLibrarian(name, account, preAccount, password, phone);
+            librarian = librarianDao.info(account);
+            request.setAttribute("librarian", librarian);
             request.getRequestDispatcher("librarian_edit.jsp?info=success").forward(request, response);
-//            response.sendRedirect("librarian_edit.jsp?info=success");
         }
     }
 

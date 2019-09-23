@@ -35,67 +35,46 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian Edit</h2>
+                    <h2 class="no-margin-bottom">Add Category</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian Edit</li>
+                    <li class="breadcrumb-item active">Add the category of the book and its corresponding location</li>
                 </ul>
             </div>
             <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Edit this account infomation</p>
-                            <form class="form-horizontal" action="EditLibrarian.do" method="post">
-                                <%Librarian librarian = (Librarian) request.getAttribute("librarian");%>
+                            <p>Add the category of the book and its corresponding location</p>
+                            <form class="form-horizontal" action="book_category_add.do" method="post">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Account</label>
+                                    <label class="col-sm-3 form-control-label">Category</label>
                                     <div class="col-sm-9">
-                                        <input type="hidden" name="preAccount" value="<%=librarian.getAccount()%>">
-                                        <input id="inputHorizontalSuccess" name="account"
-                                               value="<%=librarian.getAccount()%>"
+                                        <input id="inputHorizontalSuccess" name="category"
                                                class="form-control form-control-success">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Password</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="password"
-                                               value="<%=librarian.getPassword()%>"
-                                               class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Name</label>
+                                    <label class="col-sm-3 form-control-label">Location</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="name"
-                                               value="<%=librarian.getName()%>"
-                                               class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Phone</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="phone"
-                                               value="<%=librarian.getPhone()%>"
-                                               class="form-control form-control-warning">
+                                        <input id="inputHorizontalSuccess" name="location"
+                                               class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Done" class="btn btn-primary">
+                                        <input type="submit" value="Submit" class="btn btn-primary">
                                     </div>
                                 </div>
                             </form>
@@ -120,16 +99,14 @@
         </div>
     </div>
 </div>
-
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
-        alert("successfully edit!");
+        alert("successfully add!");
     } else if (info == 'error') {
-        alert("edit failure because of have the same account!");
+        alert("add failure because of have the same account!");
     }
 </script>
-
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>

@@ -44,78 +44,10 @@
 <body>
 <div class="page">
     <!-- Main Navbar-->
-    <header class="header">
-        <nav class="navbar">
-            <!-- Search Box-->
-            <div class="search-box">
-                <button class="dismiss"><i class="icon-close"></i></button>
-                <form id="searchForm" action="#" role="search">
-                    <input type="search" placeholder="What are you looking for..." class="form-control">
-                </form>
-            </div>
-            <div class="container-fluid">
-                <div class="navbar-holder d-flex align-items-center justify-content-between">
-                    <!-- Navbar Header-->
-                    <div class="navbar-header">
-                        <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
-                        <div class="brand-text d-none d-lg-inline-block"><span>Bilobili </span><strong>Library</strong>
-                        </div>
-                        <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
-                    </a>
-                        <!-- Toggle Button--><a id="toggle-btn" href="#"
-                                                class="menu-btn active"><span></span><span></span><span></span></a>
-                    </div>
-                    <!-- Navbar Menu -->
-                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                        <!-- Logout    -->
-                        <li class="nav-item"><a href="logout" class="nav-link logout"> <span
-                                class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <nav class="side-navbar">
-            <!-- Sidebar Header-->
-            <div class="sidebar-header d-flex align-items-center">
-                <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                <div class="title">
-                    <h1 class="h4">
-                        <%
-                            String account = (String) session.getAttribute("name");
-                            out.println(account);
-                        %>
-                    </h1>
-                </div>
-            </div>
-            <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
-            <ul class="list-unstyled">
-                <li><a href="#LibrarianManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Librarian Manage</a>
-                    <ul id="LibrarianManage" class="collapse list-unstyled ">
-                        <li><a href="LibrarianListPage">Librarian List</a></li>
-                        <li><a href="librarian_add.jsp">Librarian Add</a></li>
-                    </ul>
-                </li>
-                <li><a href="#ReaderRule" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Reader Rule</a>
-                    <ul id="ReaderRule" class="collapse list-unstyled ">
-                        <li><a href="#">Rule List</a></li>
-                        <li><a href="#">Rule Edit</a></li>
-                        <li><a href="#">Rule Add</a></li>
-                    </ul>
-                </li>
-                <li><a href="#AccountManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Account Manage</a>
-                    <ul id="AccountManage" class="collapse list-unstyled ">
-                        <li><a href="#">Account Information</a></li>
-                        <li><a href="#">Reset Password</a></li>
-                    </ul>
-                </li>
-
-        </nav>
+        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
@@ -130,7 +62,17 @@
                     <li class="breadcrumb-item active">Librarian List</li>
                 </ul>
             </div>
-            <section class="tables">
+            <section class="tables" style="padding: 20px">
+
+                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
+                      name="search" method="post">
+                    <input type="text" class="form-control" name="searchAccount"
+                           placeholder="Please enter the account of the administrator who needs to query">
+                    <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info btn-search">search</button>
+                        </span>
+                </form>
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -180,7 +122,8 @@
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=">
+                                                                        <a href="admin.jsp?account=${librarian.getAccount()}"
+                                                                           value="${librarian.getAccount()}">
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -221,6 +164,19 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'found') {
+        alert("successfully serach!");
+    } else if (info == 'notFound') {
+        alert("search failure!");
+    }
+</script>
+
+<
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
