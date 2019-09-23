@@ -43,4 +43,12 @@
         <servlet-name>EditLibrarian</servlet-name>
         <url-pattern>/EditLibrarian.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>SearchLibrarian</servlet-name>
+        <servlet-class>servlet.LibrarianSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchLibrarian</servlet-name>
+        <url-pattern>/SearchLibrarian.do</url-pattern>
+    </servlet-mapping>
 </web-app>
