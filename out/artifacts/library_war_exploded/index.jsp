@@ -44,8 +44,8 @@
 </div><!-- /container -->
 <%
   session = request.getSession();
-  String acconut = (String)session.getAttribute("account");
-  if(acconut !=null)
+  String account = (String)session.getAttribute("account");
+  if(account !=null)
   {
     response.sendRedirect("login");
   }
