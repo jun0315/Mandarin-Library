@@ -130,7 +130,17 @@
                     <li class="breadcrumb-item active">Librarian List</li>
                 </ul>
             </div>
-            <section class="tables">
+            <section class="tables" style="padding: 20px">
+
+                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
+                      name="search" method="post">
+                    <input type="text" class="form-control" name="searchAccount"
+                           placeholder="Please enter the account of the administrator who needs to query">
+                    <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info btn-search">search</button>
+                        </span>
+                </form>
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -180,7 +190,7 @@
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=">
+                                                                        <a href="admin.jsp?account=${librarian.getAccount()}" value="${librarian.getAccount()}">
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -221,6 +231,19 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'found') {
+        alert("successfully serach!");
+    } else if (info == 'notFound') {
+        alert("search failure!");
+    }
+</script>
+
+<
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>

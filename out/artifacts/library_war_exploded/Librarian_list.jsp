@@ -96,9 +96,7 @@
                         class="icon-interface-windows"></i>Librarian Manage</a>
                     <ul id="LibrarianManage" class="collapse list-unstyled ">
                         <li><a href="LibrarianListPage">Librarian List</a></li>
-                        <li><a href="#">Librarian Edit</a></li>
                         <li><a href="librarian_add.jsp">Librarian Add</a></li>
-                        <li><a href="#">Retrieve Password</a></li>
                     </ul>
                 </li>
                 <li><a href="#ReaderRule" aria-expanded="false" data-toggle="collapse"> <i
@@ -117,30 +115,6 @@
                     </ul>
                 </li>
 
-                <%--                <li class="active"><a href="admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
-
-                <%--                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>--%>
-                <%--                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>--%>
-                <%--                <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>--%>
-                <%--                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i--%>
-                <%--                        class="icon-interface-windows"></i>Example dropdown </a>--%>
-                <%--                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                    </ul>--%>
-                <%--                </li>--%>
-                <%--                <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>--%>
-                <%--            </ul>--%>
-
-                <%--            <span class="heading">Extras</span>--%>
-                <%--            <ul class="list-unstyled">--%>
-                <%--                <li><a href="#"> <i class="icon-flask"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-screen"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-mail"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-picture"></i>Demo </a></li>--%>
-                <%--            </ul>--%>
-
         </nav>
         <div class="content-inner">
             <!-- Page Header-->
@@ -156,7 +130,17 @@
                     <li class="breadcrumb-item active">Librarian List</li>
                 </ul>
             </div>
-            <section class="tables">
+            <section class="tables" style="padding: 20px">
+
+                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
+                      name="search" method="post">
+                    <input type="text" class="form-control" name="searchAccount"
+                           placeholder="Please enter the account of the administrator who needs to query">
+                    <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info btn-search">search</button>
+                        </span>
+                </form>
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -206,7 +190,7 @@
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=">
+                                                                        <a href="admin.jsp?account=${librarian.getAccount()}" value="${librarian.getAccount()}">
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -247,6 +231,19 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'found') {
+        alert("successfully serach!");
+    } else if (info == 'notFound') {
+        alert("search failure!");
+    }
+</script>
+
+<
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>

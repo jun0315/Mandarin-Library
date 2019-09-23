@@ -7,7 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0284e5d-7c06-44da-b3e8-350990ae3351" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianSearchServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,45 +203,6 @@
           <select />
         </treeState>
       </serviceView>
-    </option>
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <option name="contentProportion" value="0.36299512" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7aa23b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7aa23b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3181eed6" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7aa23b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4e81de3e" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7aa23b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceNode@cbd1d62" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-          <option name="viewType" value="contributor" />
-          <option name="roots">
-            <list>
-              <ServiceState>
-                <option name="contributor" value="com.intellij.database.console.DatabaseServiceViewContributor" />
-              </ServiceState>
-            </list>
-          </option>
-        </serviceView>
-      </list>
     </option>
     <option name="selectedView" value="0" />
   </component>
