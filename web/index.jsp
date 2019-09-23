@@ -35,7 +35,7 @@
           </div>
           <div class="mb2">
             <!--                        <a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a>-->
-            <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF";width="330px">登陆</button>
+            <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px">登陆</button>
           </div>
         </form>
       </div>
@@ -44,8 +44,8 @@
 </div><!-- /container -->
 <%
   session = request.getSession();
-  String acconut = (String)session.getAttribute("account");
-  if(acconut !=null)
+  String account = (String)session.getAttribute("account");
+  if(account !=null)
   {
     response.sendRedirect("login");
   }

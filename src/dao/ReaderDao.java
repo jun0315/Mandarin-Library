@@ -1,70 +1,71 @@
 package dao;
 
-import entity.Librarian;
+import entity.Reader;
 //import sun.text.resources.no.CollationData_no; //没用到
 import utils.DBHelper;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LibrarianDao {
-    public List<Librarian> getLibrarians() {
-        List<Librarian> librarians = new ArrayList<Librarian>();
-        String sql = "select * from staff where user_type ='librarian'";
+public class ReaderDao {
+    public List<Reader> getReaders() {
+        List<Reader> readers = new ArrayList<Reader>();
+        String sql = "select * from reader";
         try {
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
-                Librarian librarian = new Librarian();
-                String account = resultSet.getString("staff_account");
-                String name = resultSet.getString("staff_name");
-                String phone = resultSet.getString("staff_phone");
-                librarian.setName(name);
-                librarian.setPhone(phone);
-                librarian.setAccount(account);
-                librarians.add(librarian);
+                Reader reader = new Reader();
+                String account = resultSet.getString("user_account");
+                String name = resultSet.getString("user_name");
+                String email = resultSet.getString("user_email");
+                int deposit = resultSet.getInt("security_deposit");
+                reader.setName(name);
+                reader.setEmail(email);
+                reader.setAccount(account);
+                reader.setDeposit(deposit);
+                readers.add(reader);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return librarians;
+        return readers;
     }
 
-    //通过account返回librarian实体
-    public Librarian info(String account) {
-        Librarian librarian = new Librarian();
+    //通过user_account返回reader实体
+    public Reader info(String account) {
+        Reader reader = new Reader();
         try {
-            String sql = "select * from staff where staff_account = \'" + account + "\'";
+            String sql = "select * from reader where user_account = \'" + account + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
-                String passwordInDB = resultSet.getString("staff_password");
-                String nameInDB = resultSet.getString("staff_name");
-                String phoneInDB = resultSet.getString("staff_phone");
-                librarian.setName(nameInDB);
-                librarian.setPhone(phoneInDB);
-                librarian.setAccount(account);
-                librarian.setPassword(passwordInDB);
+                String passwordInDB = resultSet.getString("user_password");
+                String nameInDB = resultSet.getString("user_name");
+                String emailInDB = resultSet.getString("user_email");
+                reader.setName(nameInDB);
+                reader.setEmail(emailInDB);
+                reader.setAccount(account);
+                reader.setPassword(passwordInDB);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return librarian;
+        return reader;
     }
 
-    public boolean isExistInDB(String account){
+    public boolean isExistInDB(String account) {
         boolean Exist = false;
         try {
-            String sql = "select * from staff where user_type = 'librarian'";
+            String sql = "select * from reader";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
-            while (resultSet.next()){
-                String accountInDB = resultSet.getString("staff_account");
-                if(accountInDB.equals(account)){
+            while (resultSet.next()) {
+                String accountInDB = resultSet.getString("user_account");
+                if (accountInDB.equals(account)) {
                     Exist = true;
                     break;
                 }
@@ -76,15 +77,16 @@ public class LibrarianDao {
         return Exist;
     }
 
-    public void addLibrarian(String name,String account,String password,String phone){
+    public void addReader(String name,String account,String password,String email, int deposit){
         try {
-            String sql = "insert into staff values(?,'librarian',?,?,?);";
+            String sql = "insert into reader values(?,?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, name);
             ps.setString(2, account);
             ps.setString(3, password);
-            ps.setString(4, phone);
+            ps.setString(4, email);
+            ps.setInt(4, deposit);
             ps.executeUpdate();
             DBHelper.closeConnection(connection,ps);
         } catch (SQLException e) {
@@ -92,21 +94,21 @@ public class LibrarianDao {
         }
     }
 
-    public void editLibrarian(String name,String account,String preAccount, String password,String phone){
+    public void editReader(String name,String account,String preAccount, String password,String email, int deposit){
         try {
-            String sql = "update staff set staff_name=?,staff_account=?,staff_password=?,staff_phone=? where staff_account=? ";
+            String sql = "update staff set staff_name=?,user_account=?,user_password=?,user_email=?,security_deposit=? where user_account=? ";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, name);
             ps.setString(2, account);
             ps.setString(3, password);
-            ps.setString(4, phone);
-            ps.setString(5,preAccount);
+            ps.setString(4, email);
+            ps.setInt(5, deposit);
+            ps.setString(6,preAccount);
             ps.executeUpdate();
             DBHelper.closeConnection(connection,ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
 }

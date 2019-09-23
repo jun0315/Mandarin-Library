@@ -1,13 +1,16 @@
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
-<%@ page import="entity.Librarian" %>
-<%@ page import="java.util.List" %>
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: Liu_PiPiPi
+  Date: 2019/9/23
+  Time: 14:54
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Add Reader</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -46,7 +49,8 @@
                     <!-- Navbar Header-->
                     <div class="navbar-header">
                         <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
-                        <div class="brand-text d-none d-lg-inline-block"><span>Bilobili </span><strong>Library</strong>
+                        <div class="brand-text d-none d-lg-inline-block">
+                            <span>Mandarin - </span><strong>Library</strong><span>   Automation</span>
                         </div>
                         <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
                     </a>
@@ -78,82 +82,79 @@
                     </h1>
                 </div>
             </div>
-            <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
+            <%--    侧边栏的目录      --%>
             <ul class="list-unstyled">
-                <li><a href="#LibrarianManage" aria-expanded="true" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Librarian Manage</a>
-                    <ul id="LibrarianManage" class="collapse list-unstyled show">
-                        <li><a href="LibrarianListPage">Librarian List</a></li>
-                        <li><a href="librarian_add.jsp">Librarian Add</a></li>
+                <li><a href="#BookManage" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Book Manage</a>
+                    <ul id="BookManage" class="collapse list-unstyled ">
+                        <li><a href="#">Book List</a></li>
+                        <li><a href="#">Search Book</a></li>
+                        <li><a href="#">Edit Book Category</a></li>
+                        <li><a href="#">Edit Book Location</a></li>
                     </ul>
                 </li>
-                <li><a href="#ReaderRule" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Reader Rule</a>
-                    <ul id="ReaderRule" class="collapse list-unstyled ">
-                        <li><a href="#">Rule List</a></li>
-                        <li><a href="#">Rule Edit</a></li>
-                        <li><a href="#">Rule Add</a></li>
-                    </ul>
-                </li>
-                <li><a href="#AccountManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Account Manage</a>
-                    <ul id="AccountManage" class="collapse list-unstyled ">
-                        <li><a href="#">Account Information</a></li>
-                        <li><a href="#">Reset Password</a></li>
+                <li><a href="#ReaderManage" aria-expanded="true" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Reader Manage</a>
+                    <ul id="ReaderManage" class="collapse list-unstyled show">
+                        <li><a href="reader_add.jsp">Reader List</a></li>
                     </ul>
                 </li>
 
-                <%--                <li class="active"><a href="admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
+                <li><a href="#BusinessProcess" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Business Process</a>
+                    <ul id="BusinessProcess" class="collapse list-unstyled ">
+                        <li><a href="#">Borrow Business</a></li>
+                        <li><a href="#">Return Business</a></li>
+                    </ul>
+                </li>
+                <li><a href="#RecordQuery" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Record Query</a>
+                    <ul id="RecordQuery" class="collapse list-unstyled ">
+                        <li><a href="librarian_add.jsp">Reader History</a></li>
+                        <li><a href="#">Book Deletion</a></li>
+                        <li><a href="#">Total Deposit</a></li>
+                        <li><a href="#">Total Fine</a></li>
 
-                <%--                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>--%>
-                <%--                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>--%>
-                <%--                <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>--%>
-                <%--                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i--%>
-                <%--                        class="icon-interface-windows"></i>Example dropdown </a>--%>
-                <%--                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                    </ul>--%>
-                <%--                </li>--%>
-                <%--                <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>--%>
-                <%--            </ul>--%>
-
-                <%--            <span class="heading">Extras</span>--%>
-                <%--            <ul class="list-unstyled">--%>
-                <%--                <li><a href="#"> <i class="icon-flask"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-screen"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-mail"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-picture"></i>Demo </a></li>--%>
-                <%--            </ul>--%>
-
+                    </ul>
+                </li>
+                <li><a href="#NoticeEdit" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Notice</a>
+                    <ul id="NoticeEdit" class="collapse list-unstyled ">
+                        <li><a href="#">Notice List</a></li>
+                        <li><a href="#">Post Notice</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <%--    end   --%>
         </nav>
+
+
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian Add</h2>
+                    <h2 class="no-margin-bottom">Reader Add</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian Add</li>
+                    <li class="breadcrumb-item active">Reader Add</li>
                 </ul>
             </div>
             <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Sign up for a new librarian.</p>
+                            <p>Sign up for a new reader.</p>
                             <form class="form-horizontal" action="librarian_add.do" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Account</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="account"
                                                class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -161,7 +162,7 @@
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="password" value="00010001"
                                                class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -169,20 +170,20 @@
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="name"
                                                class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Phone</label>
+                                    <label class="col-sm-3 form-control-label">Email</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="phone"
+                                        <input id="inputHorizontalWarning" name="email"
                                                class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Signin" class="btn btn-primary">
+                                        <input type="submit" value="Sign in" class="btn btn-primary">
                                     </div>
                                 </div>
                             </form>
@@ -230,7 +231,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
+                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>

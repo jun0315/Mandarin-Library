@@ -42,7 +42,7 @@
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <!-- Navbar Header-->
                     <div class="navbar-header">
-                        <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+                        <!-- Navbar Brand --><a href="index.jsp" class="navbar-brand d-none d-sm-inline-block">
                         <div class="brand-text d-none d-lg-inline-block"><span>Bilobili </span><strong>Library</strong>
                         </div>
                         <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
@@ -89,7 +89,7 @@
                 <li><a href="#ReaderManage" aria-expanded="false" data-toggle="collapse"> <i
                         class="icon-interface-windows"></i>Reader Manage</a>
                     <ul id="ReaderManage" class="collapse list-unstyled ">
-                        <li><a href="#">Reader List</a></li>
+                        <li><a href="reader_add.jsp">Reader List</a></li>
                     </ul>
                 </li>
 
@@ -103,7 +103,7 @@
                 <li><a href="#RecordQuery" aria-expanded="false" data-toggle="collapse"> <i
                         class="icon-interface-windows"></i>Record Query</a>
                     <ul id="RecordQuery" class="collapse list-unstyled ">
-                        <li><a href="#">Reader History</a></li>
+                        <li><a href="librarian_add.jsp">Reader History</a></li>
                         <li><a href="#">Book Deletion</a></li>
                         <li><a href="#">Total Deposit</a></li>
                         <li><a href="#">Total Fine</a></li>
