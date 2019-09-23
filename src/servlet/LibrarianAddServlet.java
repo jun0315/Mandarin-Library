@@ -1,6 +1,6 @@
 package servlet;
 
-import dao.AddLibrarianDao;
+import dao.LibrarianDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,17 +18,17 @@ public class LibrarianAddServlet extends HttpServlet {
         String password = (String) request.getParameter("password");
         String name = (String) request.getParameter("name");
         String phone = (String) request.getParameter("phone");
-        AddLibrarianDao addLibrarianDao = new AddLibrarianDao();
-        boolean canAdd = addLibrarianDao.canAdd(account);
-        if (!canAdd) {
-            response.sendRedirect("add_librarian.jsp?info=error");
+        LibrarianDao librarianDao = new LibrarianDao();
+        boolean exit = librarianDao.isExitInDB(account);
+        if (exit) {
+            response.sendRedirect("librarian_add.jsp?info=error");
         } else {
-            addLibrarianDao.addLibrarian(name,account,password,phone);
-            response.sendRedirect("add_librarian.jsp?info=success");
+            librarianDao.addLibrarian(name,account,password,phone);
+            response.sendRedirect("librarian_add.jsp?info=success");
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        response.sendRedirect("add_librarian.jsp?info=success");
+//        response.sendRedirect("librarian_add.jsp?info=success");
     }
 }
