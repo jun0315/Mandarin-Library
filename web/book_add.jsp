@@ -1,6 +1,7 @@
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.BookCategory" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -57,19 +58,55 @@
                             <p>Add the new book</p>
                             <form class="form-horizontal" action="book_category_add.do" method="post">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Category</label>
+                                    <label class="col-sm-3 form-control-label">ISBN</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="category"
+                                        <input id="inputHorizontalSuccess" name="isbn"
                                                class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Location</label>
+                                    <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="location"
+                                        <input id="inputHorizontalSuccess" name="name"
                                                class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Press</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="press"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Price</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="price"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Author</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="author"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Category</label>
+                                    <div class="col-sm-9">
+                                        <select name="category" class="form-control form-control-success">
+                                            <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
+                                            <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
+                                                <option value="${bookCategory.getCategory()}">${bookCategory.getCategory()}</option>
+                                            </c:forEach>
+
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
