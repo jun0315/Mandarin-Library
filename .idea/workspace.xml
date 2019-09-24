@@ -7,31 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/BookCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryAddServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_category_add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_category_list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/header_template.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/entity/Librarian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/entity/Librarian.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/entity/Librarian.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/entity/Librarian.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Librarian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Reader.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -209,7 +188,9 @@
       <workItem from="1568968220213" duration="5958000" />
       <workItem from="1569032358841" duration="14318000" />
       <workItem from="1569120466140" duration="4170000" />
-      <workItem from="1569200290574" duration="14231000" />
+      <workItem from="1569200290574" duration="15359000" />
+      <workItem from="1569305931911" duration="518000" />
+      <workItem from="1569306488296" duration="1633000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -288,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569210474103</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="实现书籍category相关操作 将相同html代码提取出来">
+      <created>1569231528837</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569231528837</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +307,8 @@
     <MESSAGE value="删除admin两个按钮" />
     <MESSAGE value="更新admin页面布局" />
     <MESSAGE value="搜索librarian功能实现，删除确认框获取account无法遍历" />
-    <option name="LAST_COMMIT_MESSAGE" value="搜索librarian功能实现，删除确认框获取account无法遍历" />
+    <MESSAGE value="实现书籍category相关操作 将相同html代码提取出来" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现书籍category相关操作 将相同html代码提取出来" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

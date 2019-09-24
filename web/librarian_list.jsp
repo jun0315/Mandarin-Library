@@ -98,12 +98,12 @@
                                                     <td>${librarian.getName()}</td>
                                                     <td>${librarian.getPhone()}</td>
                                                     <td>
-                                                        <a href="#myModal" style="color: #ff0c0c"
+                                                        <a href="#myModal_${li.index+1}" style="color: #ff0c0c"
                                                            data-toggle="modal" value="${librarian.getAccount()}"
                                                            id="lastButton">删除</a>
                                                             <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
-                                                        <div id="myModal" tabindex="-1" role="dialog"
+                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
                                                              aria-labelledby="exampleModalLabel" aria-hidden="true"
                                                              class="modal fade text-left">
                                                             <div role="document" class="modal-dialog">
@@ -122,8 +122,8 @@
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=${librarian.getAccount()}"
-                                                                           value="${librarian.getAccount()}">
+                                                                        <a href="admin.jsp?account=${librarian.getAccount()}">
+<%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
