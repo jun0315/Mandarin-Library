@@ -14,7 +14,8 @@ import java.util.List;
 @WebServlet(name = "LibrarianListServlet")
 public class LibrarianListServlet extends HttpServlet {
     private LibrarianDao librarianDao = new LibrarianDao();
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
     }
 
