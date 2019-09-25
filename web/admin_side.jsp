@@ -25,7 +25,7 @@
                 class="icon-interface-windows"></i>Librarian Manage</a>
             <ul id="LibrarianManage" class="collapse list-unstyled ">
                 <li><a href="LibrarianListPage">Librarian List</a></li>
-                <li><a href="librarian_add.jsp">Librarian Add</a></li>
+                <li><a href="librarian_add.jsp">Add Librarian</a></li>
                 <li><a href="findBackLibrarianPassword.do">Find Back Librarian Password</a></li>
             </ul>
         </li>
