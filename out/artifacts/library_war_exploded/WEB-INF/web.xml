@@ -91,4 +91,28 @@
         <servlet-name>AdminChangePassword</servlet-name>
         <url-pattern>/AdminChangePassword.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>findBackLibrarianPasswordServlet</servlet-name>
+        <servlet-class>servlet.FindBackLibrarianPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findBackLibrarianPasswordServlet</servlet-name>
+        <url-pattern>/findBackLibrarianPassword.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SystemSettingsServlet</servlet-name>
+        <servlet-class>servlet.SystemSettingsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SystemSettingsServlet</servlet-name>
+        <url-pattern>/SystemSettingsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminChangeSettingsServlet</servlet-name>
+        <servlet-class>servlet.AdminChangeSettingsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminChangeSettingsServlet</servlet-name>
+        <url-pattern>/AdminChangeSettingsServlet.do</url-pattern>
+    </servlet-mapping>
 </web-app>

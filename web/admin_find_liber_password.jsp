@@ -1,10 +1,16 @@
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
-<%@ page import="java.util.List" %>
-<!DOCTYPE html>
+<%@ page import="java.util.List" %><%--
+  Created by IntelliJ IDEA.
+  User: kehan
+  Date: 2019/9/25
+  Time: 下午7:52
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
@@ -28,8 +34,12 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <script src="js/dialogue.js"></script>
+
 </head>
 <body>
+
 <div class="page">
     <!-- Main Navbar-->
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
@@ -40,60 +50,55 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian Add</h2>
+                    <h2 class="no-margin-bottom">Find Back Librarian Password</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian Add</li>
+                    <li class="breadcrumb-item active">Find Back Librarian Password</li>
                 </ul>
             </div>
-            <section class="tables">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Sign up for a new librarian.</p>
-                            <form class="form-horizontal" action="librarian_add.do" method="post">
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Account</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="account"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+            <section class="tables" style="padding: 20px">
+
+                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
+                      name="search" method="post">
+                    <input type="text" class="form-control" name="searchAccount"
+                           placeholder="Please enter the account of the administrator who needs to query">
+                    <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info btn-search">search</button>
+                    </span>
+                </form>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Account</th>
+                                                <th>Password</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>
+                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">
+                                                <tr>
+                                                    <th>${li.index+1}</th>
+                                                    <td>${librarian.getAccount()}</td>
+                                                    <td>${librarian.getPassword()}</td>
+                                                </tr>
+                                            </c:forEach>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Password</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="password"
-                                               class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="name"
-                                               class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Phone</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="phone"
-                                               class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Signin" class="btn btn-primary">
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -115,14 +120,17 @@
         </div>
     </div>
 </div>
+
+
 <script>
     var info = '<%=request.getParameter("info")%>';
-    if (info == 'success') {
-        alert("successfully add!");
-    } else if (info == 'error') {
-        alert("add failure because of have the same account!");
+    if (info == 'found') {
+        alert("successfully serach!");
+    } else if (info == 'notFound') {
+        alert("search failure!");
     }
 </script>
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
@@ -133,5 +141,6 @@
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
+
 </body>
 </html>
