@@ -36,11 +36,11 @@
                 <li><a href="#">Rule Add</a></li>
             </ul>
         </li>
-        <li><a href="#AccountManage" aria-expanded="false" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i>Account Manage</a>
-            <ul id="AccountManage" class="collapse list-unstyled ">
-                <li><a href="#">Account Information</a></li>
-                <li><a href="#">Reset Password</a></li>
+        <li><a href="#AccountSettings" aria-expanded="false" data-toggle="collapse"> <i
+                class="icon-interface-windows"></i>Account Settings</a>
+            <ul id="AccountSettings" class="collapse list-unstyled ">
+                <li><a href="#">About Account</a></li>
+                <li><a href="admin_change_password.jsp">Change Password</a></li>
             </ul>
         </li>
         <li><a href="tables.html"> <i class="icon-grid"></i>(素材入口） </a></li>

@@ -83,4 +83,12 @@
         <servlet-name>BookAdd</servlet-name>
         <url-pattern>/BookAdd.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminChangePassword</servlet-name>
+        <servlet-class>servlet.AdminChangePasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminChangePassword</servlet-name>
+        <url-pattern>/AdminChangePassword.do</url-pattern>
+    </servlet-mapping>
 </web-app>
