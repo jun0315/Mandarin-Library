@@ -48,21 +48,21 @@ CREATE TABLE `book` (
 insert  into `book`(`book_id`,`isbn`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`) values 
 (0,'9787542637956','白银时代','上海三联书店',50,'王小波',NULL);
 
-/*Table structure for table `book_category_location` */
+/*Table structure for table `book_category_floor` */
 
-DROP TABLE IF EXISTS `book_category_location`;
+DROP TABLE IF EXISTS `book_category_floor`;
 
-CREATE TABLE `book_category_location` (
+CREATE TABLE `book_category_floor` (
   `category` varchar(64) NOT NULL,
-  `location` varchar(64) DEFAULT NULL,
+  `floor` varchar(64) DEFAULT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`category`),
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
-/*Data for the table `book_category_location` */
+/*Data for the table `book_category_floor` */
 
-insert  into `book_category_location`(`category`,`location`,`id`) values 
+insert  into `book_category_floor`(`category`,`floor`,`id`) values 
 ('musci','seconde floor',1),
 ('story','first floor',2);
 

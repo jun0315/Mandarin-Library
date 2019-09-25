@@ -85,7 +85,7 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Category</th>
-                                                <th>Location</th>
+                                                <th>Floor</th>
                                                 <th>Operation</th>
                                             </tr>
                                             </thead>
@@ -95,7 +95,7 @@
                                                 <tr>
                                                     <th>${li.index+1}</th>
                                                     <td>${bookCategory.getCategory()}</td>
-                                                    <td>${bookCategory.getLocation()}</td>
+                                                    <td>${bookCategory.getFloor()}</td>
                                                     <td>
                                                         <a href="#myModal" style="color: #ff0c0c"
                                                            data-toggle="modal" value="${bookCategory.getCategory()}"

@@ -83,8 +83,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="location"
-                                               value="<%=bookCategory.getLocation()%>"
+                                        <input id="inputHorizontalWarning" name="floor"
+                                               value="<%=bookCategory.getFloor()%>"
                                                class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>

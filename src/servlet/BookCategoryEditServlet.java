@@ -20,11 +20,11 @@ public class BookCategoryEditServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         String preCategory = request.getParameter("preCategory");
         String category = (String)request.getParameter("category");
-        String location = (String) request.getParameter("location");
+        String floor = (String) request.getParameter("floor");
         BookCategoryDao bookCategoryDao = new BookCategoryDao();
         boolean canEdit = true;
         //保存之前的数据
-        BookCategory bookCategory = new BookCategory(preCategory,location);
+        BookCategory bookCategory = new BookCategory(preCategory,floor);
         if(!category.equals(preCategory)){
             //当两者不相等时，判断新改的账号是否与之前数据库其他里有重复的
             canEdit = !bookCategoryDao.isExitInDB(category);
@@ -33,7 +33,7 @@ public class BookCategoryEditServlet extends HttpServlet {
             request.setAttribute("bookCategory",bookCategory);
             request.getRequestDispatcher("book_category_edit.jsp?info=error").forward(request, response);
         } else {
-            bookCategoryDao.editLibrarian(category,preCategory,location);
+            bookCategoryDao.editLibrarian(category,preCategory,floor);
             bookCategory = bookCategoryDao.info(category);
             request.setAttribute("bookCategory",bookCategory);
             request.getRequestDispatcher("book_category_edit.jsp?info=success").forward(request, response);

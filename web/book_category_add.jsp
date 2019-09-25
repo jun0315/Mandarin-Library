@@ -65,9 +65,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Location</label>
+                                    <label class="col-sm-3 form-control-label">Floor</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="location"
+                                        <input id="inputHorizontalSuccess" name="floor"
                                                class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>

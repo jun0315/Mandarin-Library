@@ -56,7 +56,7 @@
                     <div class="card">
                         <div class="card-body">
                             <p>Add the new book</p>
-                            <form class="form-horizontal" action="book_category_add.do" method="post">
+                            <form class="form-horizontal" action="book_add.do" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">ISBN</label>
                                     <div class="col-sm-9">
@@ -103,10 +103,25 @@
                                         <select name="category" class="form-control form-control-success">
                                             <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
                                             <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
-                                                <option value="${bookCategory.getCategory()}">${bookCategory.getCategory()}</option>
+                                                <option value="${bookCategory.getCategory()}">${bookCategory.getCategory()}(${bookCategory.getLocation()})</option>
                                             </c:forEach>
-
                                         </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Shelf</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="Shelf"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Amount</label>
+                                    <div class="col-sm-9">
+                                        <input id="bookamount" name="amount"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -136,6 +151,11 @@
         </div>
     </div>
 </div>
+<%--<script>--%>
+<%--    function changeISBN() {--%>
+<%--        --%>
+<%--    }--%>
+<%--// </script>--%>
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
