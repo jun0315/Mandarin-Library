@@ -42,7 +42,7 @@
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <!-- Navbar Header-->
                     <div class="navbar-header">
-                        <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
+                        <!-- Navbar Brand --><a href="index.jsp" class="navbar-brand d-none d-sm-inline-block">
                         <div class="brand-text d-none d-lg-inline-block"><span>Bilobili </span><strong>Library</strong>
                         </div>
                         <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>

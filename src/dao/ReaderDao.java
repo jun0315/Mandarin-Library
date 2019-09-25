@@ -8,6 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderDao {
+    private ReaderDao() {
+    }
+
+    public static ReaderDao getInstance(){
+        return new ReaderDao();
+    }
+
     public List<Reader> getReaders() {
         List<Reader> readers = new ArrayList<Reader>();
         String sql = "select * from reader";
@@ -77,16 +84,16 @@ public class ReaderDao {
         return Exist;
     }
 
-    public void addReader(String name,String account,String password,String email, int deposit){
+    public void addReader(String account,String password,String name,String email, int deposit){
         try {
             String sql = "insert into reader values(?,?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, name);
-            ps.setString(2, account);
-            ps.setString(3, password);
+            ps.setString(1, account);
+            ps.setString(2, password);
+            ps.setString(3, name);
             ps.setString(4, email);
-            ps.setInt(4, deposit);
+            ps.setInt(5, deposit);
             ps.executeUpdate();
             DBHelper.closeConnection(connection,ps);
         } catch (SQLException e) {
@@ -94,14 +101,14 @@ public class ReaderDao {
         }
     }
 
-    public void editReader(String name,String account,String preAccount, String password,String email, int deposit){
+    public void editReader(String account, String password, String name, String email, int deposit, String preAccount){
         try {
-            String sql = "update staff set staff_name=?,user_account=?,user_password=?,user_email=?,security_deposit=? where user_account=? ";
+            String sql = "update reader set user_account=?,user_password=?,user_name=?,user_email=?,security_deposit=? where user_account=? ";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, name);
-            ps.setString(2, account);
-            ps.setString(3, password);
+            ps.setString(1, account);
+            ps.setString(2, password);
+            ps.setString(3, name);
             ps.setString(4, email);
             ps.setInt(5, deposit);
             ps.setString(6,preAccount);

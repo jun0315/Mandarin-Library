@@ -2,6 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en" class="no-js">
 <head>
+  <title>Login</title>
+
   <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +16,7 @@
   <script src="js/html5.js"></script>
   <![endif]-->
 </head>
+
 <body>
 <div class="container demo-1">
   <div class="content">
@@ -35,7 +38,7 @@
           </div>
           <div class="mb2">
             <!--                        <a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a>-->
-            <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF";width="330px">登陆</button>
+            <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px">登陆</button>
           </div>
         </form>
       </div>

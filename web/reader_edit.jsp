@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: Liu_PiPiPi
-  Date: 2019/9/23
-  Time: 14:54
+  Date: 2019/9/25
+  Time: 15:52
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Add Reader</title>
+    <title>Edit Reader</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -135,14 +135,14 @@
             <!-- Page Header 黑色粗体title-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Reader Add</h2>
+                    <h2 class="no-margin-bottom">Reader Edit</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Reader Add</li>
+                    <li class="breadcrumb-item active">Reader Edit</li>
                 </ul>
             </div>
 
@@ -151,7 +151,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Sign up for a new reader.</p>
+                            <p>Edit a reader.</p>
                             <form class="form-horizontal" action="reader_add.do" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Account</label>
@@ -225,25 +225,25 @@
 </div>
 
 
-    <script>
-        var info = '<%=request.getParameter("info")%>';
-        if (info == 'success') {
-            alert("Successfully add!");
-        }else if(info == 'error'){
-            alert("Add failure because of have the same account!");
-        }
-    </script>
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'success') {
+        alert("Successfully add!");
+    }else if(info == 'error'){
+        alert("Add failure because of have the same account!");
+    }
+</script>
 
-    <!-- JavaScript files-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper.js/umd/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="js/charts-home.js"></script>
-    <!-- Main File-->
-    <script src="js/front.js"></script>
+<!-- JavaScript files-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/popper.js/umd/popper.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/jquery.cookie/jquery.cookie.js"></script>
+<script src="vendor/chart.js/Chart.min.js"></script>
+<script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+<script src="js/charts-home.js"></script>
+<!-- Main File-->
+<script src="js/front.js"></script>
 
 </body>
 </html>

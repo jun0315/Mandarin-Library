@@ -139,8 +139,8 @@ CREATE TABLE `staff` (
 /*Data for the table `staff` */
 
 insert  into `staff`(`staff_name`,`user_type`,`staff_account`,`staff_password`,`staff_phone`) values 
-('admin','admin','admin','root','1333333'),
-('librarian','librarian','librarian','123','1333333');
+('Admin','Admin','admin','root','1333333'),
+('Librarian','Librarian','librarian','123','1333333');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
