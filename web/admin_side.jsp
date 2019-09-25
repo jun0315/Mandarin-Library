@@ -39,7 +39,7 @@
         <li><a href="#AccountSettings" aria-expanded="false" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i>Account Settings</a>
             <ul id="AccountSettings" class="collapse list-unstyled ">
-                <li><a href="#">About Account</a></li>
+                <li><a href="admin_info.jsp">About Account</a></li>
                 <li><a href="admin_change_password.jsp">Change Password</a></li>
             </ul>
         </li>

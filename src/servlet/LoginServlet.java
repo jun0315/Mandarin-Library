@@ -23,38 +23,45 @@ public class LoginServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String account = request.getParameter("account");
         String password = request.getParameter("password");
-        dealAccount(request,response,account,password);
+        dealAccount(request, response, account, password);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String account = (String)session.getAttribute("account");
+        String account = (String) session.getAttribute("account");
         String password = (String) session.getAttribute("password");
-        dealAccount(request,response,account,password);
+        dealAccount(request, response, account, password);
     }
 
     private void dealAccount(HttpServletRequest request, HttpServletResponse response,
-                             String account,String password) throws IOException {
+                             String account, String password) throws IOException {
         HttpSession session = request.getSession();
         LoginDao loginDao = new LoginDao();
         UserType userType = loginDao.login(account, password);
         //设置session相关信息
-        if(userType == UserType.Admin){
+        if (userType == UserType.Admin) {
+
             AdminDao adminDao = new AdminDao();
             Admin admin = adminDao.info(account);
-            session.setAttribute("name",admin.getName());
-        }
-        else if(userType == UserType.Librarian){
+            session.setAttribute("name", admin.getName());
+            session.setAttribute("type", admin.getType());
+            session.setAttribute("account", admin.getAccount());
+            session.setAttribute("phone", admin.getPhone());
+
+        } else if (userType == UserType.Librarian) {
+
             LibrarianDao librarianDao = new LibrarianDao();
             Librarian librarian = librarianDao.info(account);
-            session.setAttribute("name",librarian.getName());
-        }
-        else if(userType == UserType.Reader){
+            session.setAttribute("name", librarian.getName());
+
+        } else if (userType == UserType.Reader) {
             //TODO建立reader相应的dao和entity
         }
         if (userType != UserType.None) {
+
             session.setAttribute("account", account);
             session.setAttribute("password", password);
+
         }
 
         switch (userType) {

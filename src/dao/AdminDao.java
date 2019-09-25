@@ -19,14 +19,19 @@ public class AdminDao {
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
+
             while (resultSet.next()) {
-                String passwordInDB = resultSet.getString("staff_password");
+
                 String nameInDB = resultSet.getString("staff_name");
+                String passwordInDB = resultSet.getString("staff_password");
                 String phoneInDB = resultSet.getString("staff_phone");
+
+
                 admin.setName(nameInDB);
-                admin.setPhone(phoneInDB);
                 admin.setAccount(account);
                 admin.setPassword(passwordInDB);
+                admin.setPhone(phoneInDB);
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
