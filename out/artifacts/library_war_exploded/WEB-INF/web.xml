@@ -91,4 +91,12 @@
         <servlet-name>AdminChangePassword</servlet-name>
         <url-pattern>/AdminChangePassword.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>findBackLibrarianPasswordServlet</servlet-name>
+        <servlet-class>servlet.FindBackLibrarianPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findBackLibrarianPasswordServlet</servlet-name>
+        <url-pattern>/findBackLibrarianPassword.do</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -7,15 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6d495af-fd62-4ae0-821d-61f4c18a3af7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/admin_info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/FindBackLibrarianPasswordServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_find_liber_password.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdminDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/LibrarianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LibrarianDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +58,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -311,7 +312,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dao/LibrarianDao.java</url>
-          <line>42</line>
+          <line>46</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
