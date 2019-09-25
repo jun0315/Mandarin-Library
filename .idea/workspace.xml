@@ -7,16 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6d495af-fd62-4ae0-821d-61f4c18a3af7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/servlet/FindBackLibrarianPasswordServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/admin_find_liber_password.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/AdminSettingsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/AdminSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/AdminChangeSettingsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/SystemSettingsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_system_settings.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LibrarianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LibrarianDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/admin_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,16 +100,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\大学\web\library - test\web\js" />
-      <recent name="H:\大学\web\library - test\web" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="H:\大学\web\library - test" />
       <recent name="H:\大学\web\library - test\web\WEB-INF\lib" />
       <recent name="H:\大学\web\library - test\web" />
       <recent name="H:\大学\web\library\web\WEB-INF\lib" />
       <recent name="H:\大学\web\library\web" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\大学\web\library - test\web\js" />
+      <recent name="H:\大学\web\library - test\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -309,11 +313,6 @@
           <url>file://$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java</url>
           <line>25</line>
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/dao/LibrarianDao.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/web/js/dialogue.js</url>

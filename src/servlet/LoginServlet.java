@@ -1,9 +1,11 @@
 package servlet;
 
 import dao.AdminDao;
+import dao.AdminSettingsDao;
 import dao.LibrarianDao;
 import dao.LoginDao;
 import entity.Admin;
+import entity.AdminSettings;
 import entity.Librarian;
 import utils.UserType;
 

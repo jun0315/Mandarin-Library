@@ -26,22 +26,20 @@
             <ul id="LibrarianManage" class="collapse list-unstyled ">
                 <li><a href="LibrarianListPage">Librarian List</a></li>
                 <li><a href="librarian_add.jsp">Librarian Add</a></li>
-                <li><a href="/findBackLibrarianPassword.do">Find Back Librarian Password</a></li>
+                <li><a href="findBackLibrarianPassword.do">Find Back Librarian Password</a></li>
             </ul>
         </li>
-        <li><a href="#ReaderRule" aria-expanded="false" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i>Reader Rule</a>
-            <ul id="ReaderRule" class="collapse list-unstyled ">
-                <li><a href="#">Rule List</a></li>
-                <li><a href="#">Rule Edit</a></li>
-                <li><a href="#">Rule Add</a></li>
+        <li><a href="#SystemSettings" aria-expanded="false" data-toggle="collapse"> <i
+                class="icon-interface-windows"></i>System Settings</a>
+            <ul id="SystemSettings" class="collapse list-unstyled ">
+                <li><a href="${pageContext.request.contextPath}/SystemSettingsServlet">System Settings</a></li>
             </ul>
         </li>
         <li><a href="#AccountSettings" aria-expanded="false" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i>Account Settings</a>
             <ul id="AccountSettings" class="collapse list-unstyled ">
                 <li><a href="admin_info.jsp">About Account</a></li>
-                <li><a href="admin_change_password.jsp">Change Password</a></li>
+                <li><a href="${pageContext.request.contextPath}/admin_change_password.jsp">Change Password</a></li>
             </ul>
         </li>
         <li><a href="tables.html"> <i class="icon-grid"></i>(素材入口） </a></li>
