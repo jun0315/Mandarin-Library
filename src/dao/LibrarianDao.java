@@ -4,10 +4,7 @@ import entity.Librarian;
 import sun.text.resources.no.CollationData_no;
 import utils.DBHelper;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,11 +47,66 @@ public class LibrarianDao {
                 librarian.setName(nameInDB);
                 librarian.setPhone(phoneInDB);
                 librarian.setAccount(account);
-                librarian.setAccount(passwordInDB);
+                librarian.setPassword(passwordInDB);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return librarian;
     }
+
+    public boolean isExitInDB(String account){
+        boolean Exit = false;
+        try {
+            String sql = "select * from staff where user_type = 'librarian'";
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()){
+                String accountInDB = resultSet.getString("staff_account");
+                if(accountInDB.equals(account)){
+                    Exit = true;
+                    break;
+                }
+            }
+            DBHelper.closeConnection(connection, statement, resultSet);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Exit;
+    }
+
+    public void addLibrarian(String name,String account,String password,String phone){
+        try {
+            String sql = "insert into staff values(?,'librarian',?,?,?);";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, name);
+            ps.setString(2, account);
+            ps.setString(3, password);
+            ps.setString(4, phone);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection,ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void editLibrarian(String name,String account,String preAccount, String password,String phone){
+        try {
+            String sql = "update staff set staff_name=?,staff_account=?,staff_password=?,staff_phone=? where staff_account=? ";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, name);
+            ps.setString(2, account);
+            ps.setString(3, password);
+            ps.setString(4, phone);
+            ps.setString(5,preAccount);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection,ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

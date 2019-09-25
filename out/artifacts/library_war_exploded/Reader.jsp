@@ -32,12 +32,6 @@
     <header class="header">
         <nav class="navbar">
             <!-- Search Box-->
-            <div class="search-box">
-                <button class="dismiss"><i class="icon-close"></i></button>
-                <form id="searchForm" action="#" role="search">
-                    <input type="search" placeholder="What are you looking for..." class="form-control">
-                </form>
-            </div>
             <div class="container-fluid">
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <!-- Navbar Header-->
@@ -118,7 +112,7 @@
                 </li>
 
 
-                <%--                <li class="active"><a href="Admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
+                <%--                <li class="active"><a href="admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
 
                 <%--                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>--%>
                 <%--                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>--%>

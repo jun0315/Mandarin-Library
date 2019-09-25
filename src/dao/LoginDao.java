@@ -10,7 +10,6 @@ import java.sql.Statement;
 
 public class LoginDao {
     //通过账号密码获取账户类型
-    //TODO 读者查询 分开到reader表中查找
     public UserType login(String account, String password) {
         UserType userType = UserType.None;
         String sqlFromStaff = "select * from staff where staff_account =\'" + account+ "\'";

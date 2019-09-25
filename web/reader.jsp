@@ -32,12 +32,6 @@
     <header class="header">
         <nav class="navbar">
             <!-- Search Box-->
-            <div class="search-box">
-                <button class="dismiss"><i class="icon-close"></i></button>
-                <form id="searchForm" action="#" role="search">
-                    <input type="search" placeholder="What are you looking for..." class="form-control">
-                </form>
-            </div>
             <div class="container-fluid">
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <!-- Navbar Header-->
@@ -72,39 +66,55 @@
                             String account = (String) session.getAttribute("name");
                             out.println(account);
                         %>
+                        reader
                     </h1>
                 </div>
             </div>
             <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
             <ul class="list-unstyled">
-                <li><a href="#LibrarianManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Librarian Manage</a>
-                    <ul id="LibrarianManage" class="collapse list-unstyled ">
-                        <li><a href="LibrarianListPage">Librarian List</a></li>
-                        <li><a href="#">Librarian Edit</a></li>
-                        <li><a href="add_librarian.jsp">Librarian Add</a></li>
-                        <li><a href="#">Retrieve Password</a></li>
+                <li><a href="#BookManage" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Book Manage</a>
+                    <ul id="BookManage" class="collapse list-unstyled ">
+                        <li><a href="LibrarianListPage">test</a></li>
+                        <li><a href="#">test</a></li>
+                        <li><a href="#">test</a></li>
+                        <li><a href="#">test</a></li>
                     </ul>
                 </li>
-                <li><a href="#ReaderRule" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Reader Rule</a>
-                    <ul id="ReaderRule" class="collapse list-unstyled ">
-                        <li><a href="#">Rule List</a></li>
-                        <li><a href="#">Rule Edit</a></li>
-                        <li><a href="#">Rule Add</a></li>
+                <li><a href="#RecordQuery" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Record Query</a>
+                    <ul id="RecordQuery" class="collapse list-unstyled ">
+                        <li><a href="#">test</a></li>
+                        <li><a href="#">test</a></li>
+                        <li><a href="#">test</a></li>
                     </ul>
                 </li>
-                <li><a href="#AccountManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Account Manage</a>
-                    <ul id="AccountManage" class="collapse list-unstyled ">
-                        <li><a href="#">Account Information</a></li>
-                        <li><a href="#">Reset Password</a></li>
+                <li><a href="#ReaderManage" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Reader Manage</a>
+                    <ul id="ReaderManage" class="collapse list-unstyled ">
+                        <li><a href="#">test</a></li>
+                        <li><a href="#">test</a></li>
+                    </ul>
+                </li>
+                <li><a href="#BusinessProcess" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Business Process</a>
+                    <ul id="BusinessProcess" class="collapse list-unstyled ">
+                        <li><a href="#">test</a></li>
+                        <li><a href="#">test</a></li>
+                    </ul>
+                </li>
+                <li><a href="#NoticeEdit" aria-expanded="false" data-toggle="collapse"> <i
+                        class="icon-interface-windows"></i>Notice Edit</a>
+                    <ul id="NoticeEdit" class="collapse list-unstyled ">
+                        <li><a href="#">test</a></li>
+                        <li><a href="#">test</a></li>
                     </ul>
                 </li>
 
-                <%--                <li class="active"><a href="Admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
 
-                <li><a href="tables.html"> <i class="icon-grid"></i>(素材入口） </a></li>
+                <%--                <li class="active"><a href="admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
+
+                <%--                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>--%>
                 <%--                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>--%>
                 <%--                <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>--%>
                 <%--                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i--%>
@@ -131,7 +141,7 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Data Analysis</h2>
+                    <h2 class="no-margin-bottom">Dashboard</h2>
                 </div>
             </header>
             <!-- Dashboard Counts Section-->

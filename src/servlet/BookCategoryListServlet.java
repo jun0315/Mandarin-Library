@@ -1,7 +1,7 @@
 package servlet;
 
-import dao.LibrarianDao;
-import entity.Librarian;
+import dao.BookCategoryDao;
+import entity.BookCategory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,16 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "LibrarianListServlet")
-public class LibrarianListServlet extends HttpServlet {
-    private LibrarianDao librarianDao = new LibrarianDao();
+@WebServlet(name = "BookCategoryListServlet")
+public class BookCategoryListServlet extends HttpServlet {
+    BookCategoryDao bookCategoryDao = new BookCategoryDao();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Librarian> librarians = librarianDao.getLibrarians();
-        request.setAttribute("librarians",librarians);
-        request.getRequestDispatcher("librarian_list.jsp").forward(request,response);
+        List<BookCategory> bookCategories = bookCategoryDao.getCategories();
+        request.setAttribute("bookCategories",bookCategories);
+        request.getRequestDispatcher("book_category_list.jsp").forward(request,response);
     }
 }
