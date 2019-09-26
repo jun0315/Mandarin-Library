@@ -20,6 +20,8 @@
         </div>
     </div>
     <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
+
+    <%--    侧边栏的目录      --%>
     <ul class="list-unstyled">
         <li><a href="#BookManage" aria-expanded="false" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i>Book Manage</a>
@@ -32,8 +34,10 @@
         </li>
         <li><a href="#ReaderManage" aria-expanded="false" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i>Reader Manage</a>
-            <ul id="ReaderManage" class="collapse list-unstyled ">
-                <li><a href="#">Reader List</a></li>
+            <ul id="ReaderManage" class="collapse list-unstyled">
+                <li><a href="reader_add.jsp">Reader Add</a></li>
+                <li><a href="reader_edit.jsp">Reader Edit</a></li>
+                <li><a href="reader_delete.jsp">Reader Delete</a></li>
             </ul>
         </li>
 

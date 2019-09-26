@@ -8,13 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="初步更改add-book ISBN标签">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/DBHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/DBHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/utils/DBHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/utils/DBHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_add.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +53,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="admin_setting: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="reader: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -207,12 +212,12 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@453e708f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7739f4cf" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@82cb5a4" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@453e708f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@82cb5a4" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3627de5a" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -245,7 +250,7 @@
       <workItem from="1569323588768" duration="6283000" />
       <workItem from="1569339479720" duration="332000" />
       <workItem from="1569372036894" duration="11589000" />
-      <workItem from="1569465337255" duration="741000" />
+      <workItem from="1569465337255" duration="1917000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -425,7 +430,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dao/LibrarianDao.java</url>
-          <line>109</line>
+          <line>99</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

@@ -19,7 +19,7 @@ public class LibrarianAddServlet extends HttpServlet {
         String name = (String) request.getParameter("name");
         String phone = (String) request.getParameter("phone");
         LibrarianDao librarianDao = new LibrarianDao();
-        boolean exit = librarianDao.isExistInDB(account);
+        boolean exit = librarianDao.isExitInDB(account);
         if (exit) {
             response.sendRedirect("librarian_add.jsp?info=error");
         } else {

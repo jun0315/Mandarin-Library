@@ -25,7 +25,7 @@ public class LibrarianEditServlet extends HttpServlet {
         boolean canEdit = true;
         if (!account.equals(preAccount)) {
             //当两者不相等时，判断新改的账号是否与之前数据库其他里有重复的
-            canEdit = !librarianDao.isExistInDB(account);
+            canEdit = !librarianDao.isExitInDB(account);
         }
         if (!canEdit) {
             request.setAttribute("librarian", librarian);
