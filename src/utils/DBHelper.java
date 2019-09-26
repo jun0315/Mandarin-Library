@@ -5,9 +5,9 @@ import java.sql.*;
 //
 public class DBHelper {
     public String url = "jdbc:mysql://localhost:3306/lib_system?useUnicode=true&characterEncoding=UTF-8";
-    public String username = "root";
-    public String password = "root";
-    public static DBHelper dbHelperInstance = null;
+    private String username = "root";
+    public String password = "liubihao";
+    private static DBHelper dbHelperInstance = null;
 
     //将MySQL驱动注册到DriverManager中去
     static {

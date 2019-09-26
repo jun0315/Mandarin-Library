@@ -67,7 +67,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Password</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="password"
+                                        <input id="inputHorizontalWarning" name="password" value="00010001"
                                                class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -97,6 +97,41 @@
                         </div>
                     </div>
                 </div>
+                <%--                <div class="container-fluid">--%>
+                <%--                    <div class="row">--%>
+                <%--                        <div class="col-lg-12">--%>
+                <%--                            <div class="card">--%>
+                <%--                                <div class="card-body">--%>
+                <%--                                    <div class="table-responsive">--%>
+                <%--                                        <table class="table">--%>
+                <%--                                            <thead>--%>
+                <%--                                            <tr>--%>
+                <%--                                                <th>#</th>--%>
+                <%--                                                <th>Account</th>--%>
+                <%--                                                <th>Name</th>--%>
+                <%--                                                <th>Phone</th>--%>
+                <%--                                            </tr>--%>
+                <%--                                            </thead>--%>
+                <%--                                            <tbody>--%>
+                <%--                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>--%>
+                <%--                                            <%int i = 0;%>--%>
+                <%--                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">--%>
+                <%--                                                <% i++;%>--%>
+                <%--                                                <tr>--%>
+                <%--                                                    <th>${i}</th>--%>
+                <%--                                                    <td>${librarian.getAccount()}</td>--%>
+                <%--                                                    <td>${librarian.getName()}</td>--%>
+                <%--                                                    <td>${librarian.getPhone()}</td>--%>
+                <%--                                                </tr>--%>
+                <%--                                            </c:forEach>--%>
+                <%--                                            </tbody>--%>
+                <%--                                        </table>--%>
+                <%--                                    </div>--%>
+                <%--                                </div>--%>
+                <%--                            </div>--%>
+                <%--                        </div>--%>
+                <%--                    </div>--%>
+                <%--                </div>--%>
             </section>
             <!-- Page Footer-->
             <footer class="main-footer">
@@ -119,7 +154,7 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully add!");
-    } else if (info == 'error') {
+    }else if(info == 'erroe'){
         alert("add failure because of have the same account!");
     }
 </script>
