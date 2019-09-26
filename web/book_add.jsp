@@ -2,8 +2,22 @@
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
 <%@ page import="entity.BookCategory" %>
+<%@ page import="dao.BookCategoryDao" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script>
+    function changeISBN() {
+        var bookNo = document.getElementById("bookNo");
+        if (bookNo.innerHTML.equals("ISBN")) {
+            bookNo.innerHTML = "MSBN";
+        }
+        if (bookNo.innerHTML == "MSBN") {
+            bookNo.innerHTML = "ISBN";
+        }
+
+        // bookNo.innerHTML="MSBN";
+    }
+</script>
 <html>
 <head>
     <meta charset="utf-8">
@@ -51,6 +65,7 @@
                     <li class="breadcrumb-item active">Add the new book</li>
                 </ul>
             </div>
+            <button onclick="changeISBN()">Have No ISBN</button>
             <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
@@ -58,7 +73,7 @@
                             <p>Add the new book</p>
                             <form class="form-horizontal" action="book_add.do" method="post">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">ISBN</label>
+                                    <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="isbn"
                                                class="form-control form-control-success">
@@ -103,7 +118,9 @@
                                         <select name="category" class="form-control form-control-success">
                                             <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
                                             <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
-                                                <option value="${bookCategory.getCategory()}">${bookCategory.getCategory()}(${bookCategory.getLocation()})</option>
+                                                <option id="category"
+                                                        value="${bookCategory.getCategory()}">${bookCategory.getCategory()}(${bookCategory.getFloor()})
+                                                </option>
                                             </c:forEach>
                                         </select>
                                     </div>
@@ -151,11 +168,7 @@
         </div>
     </div>
 </div>
-<%--<script>--%>
-<%--    function changeISBN() {--%>
-<%--        --%>
-<%--    }--%>
-<%--// </script>--%>
+
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {

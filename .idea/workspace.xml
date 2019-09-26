@@ -6,19 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="更改book_">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/BookCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/BookCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookCategoryAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookCategoryAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_category_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_category_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_category_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +200,7 @@
       <workItem from="1569306488296" duration="2000000" />
       <workItem from="1569323588768" duration="6283000" />
       <workItem from="1569339479720" duration="332000" />
-      <workItem from="1569372036894" duration="4134000" />
+      <workItem from="1569372036894" duration="11589000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -317,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569330295636</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="更改book_category_floor数据库及其对应代码">
+      <created>1569381840298</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569381840298</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +349,8 @@
     <MESSAGE value="解决delete传参正确Bug" />
     <MESSAGE value="更新数据库数据" />
     <MESSAGE value="实现add book的页面及复选框" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现add book的页面及复选框" />
+    <MESSAGE value="更改book_category_floor数据库及其对应代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改book_category_floor数据库及其对应代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -406,6 +404,11 @@
           <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
           <line>75</line>
           <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
