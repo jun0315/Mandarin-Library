@@ -15,6 +15,14 @@ public class Librarian {
         this.password = "null";
     }
 
+    public Librarian(String name, String password, String phone, String account) {
+        this.name = name;
+        this.password = password;
+        this.phone = phone;
+        this.account = account;
+        this.type = "Librarian";
+    }
+
     public String getPassword() {
         return password;
     }
@@ -23,9 +31,7 @@ public class Librarian {
         this.password = password;
     }
 
-    public String getAccount() {
-        return account;
-    }
+    public String getAccount() { return account; }
 
     public void setAccount(String account) {
         this.account = account;

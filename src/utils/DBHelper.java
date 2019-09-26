@@ -5,9 +5,9 @@ import java.sql.*;
 //
 public class DBHelper {
     public String url = "jdbc:mysql://localhost:3306/lib_system?useUnicode=true&characterEncoding=UTF-8";
-    public String username = "root";
+    private String username = "root";
     public String password = "root";
-    public static DBHelper dbHelperInstance = null;
+    private static DBHelper dbHelperInstance = null;
 
     //将MySQL驱动注册到DriverManager中去
     static {
@@ -20,11 +20,15 @@ public class DBHelper {
 
     public static DBHelper getInstance() {
         //给类加锁，避免多线程问题
-        synchronized (DBHelper.class) {
-            if (dbHelperInstance == null) {
-                dbHelperInstance = new DBHelper();
+
+        if (dbHelperInstance == null) {
+            synchronized (DBHelper.class) {
+                if (dbHelperInstance == null) {
+                    dbHelperInstance = new DBHelper();
+                }
             }
         }
+
         return dbHelperInstance;
     }
 

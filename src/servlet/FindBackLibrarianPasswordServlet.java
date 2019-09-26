@@ -11,17 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "LibrarianListServlet")
-public class LibrarianListServlet extends HttpServlet {
-    private LibrarianDao librarianDao = new LibrarianDao();
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+@WebServlet(name = "FindBackLibrarianPasswordServlet")
+public class FindBackLibrarianPasswordServlet extends HttpServlet {
 
+    private LibrarianDao librarianDao = new LibrarianDao();
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Librarian> librarians = librarianDao.getLibrarians();
-        request.setAttribute("librarians",librarians);
-        request.getRequestDispatcher("librarian_list.jsp").forward(request,response);
+        request.setAttribute("librarians", librarians);
+        request.getRequestDispatcher("admin_find_liber_password.jsp").forward(request, response);
     }
 }
