@@ -16,7 +16,7 @@ public class ReaderAddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("reader_add.jsp").forward(request, response);
-        response.sendRedirect("reader_add.jsp?info=success");
+        //response.sendRedirect("reader_add.jsp?info=success");
     }
 
     @Override

@@ -15,13 +15,38 @@ public class ReaderDao {
         return new ReaderDao();
     }
 
-    public List<Reader> getReaders() {
+    public int getTotal(){
+        int total = 0;
+        try {
+            Connection c = DBHelper.getInstance().getConnection();
+            Statement s = c.createStatement();
+            String sql = "select count(*) from reader";
+            ResultSet rs = s.executeQuery(sql);
+
+            while (rs.next()) {
+                total = rs.getInt(1);
+            }
+            DBHelper.closeConnection(c, s, rs);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return total;
+    }
+
+    public List<Reader> getReaders(){
+        return getReaders(0, Short.MAX_VALUE);
+    }
+
+    public List<Reader> getReaders(int start, int count) {
         List<Reader> readers = new ArrayList<Reader>();
-        String sql = "select * from reader";
         try {
             Connection connection = DBHelper.getInstance().getConnection();
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
+            String sql = "select * from reader order by user_account desc limit ?,? ";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, start);
+            ps.setInt(2, count);
+
+            ResultSet resultSet = ps.executeQuery(sql);
             while (resultSet.next()) {
                 Reader reader = new Reader();
                 String account = resultSet.getString("user_account");
@@ -34,6 +59,7 @@ public class ReaderDao {
                 reader.setDeposit(deposit);
                 readers.add(reader);
             }
+            DBHelper.closeConnection(connection,ps,resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -112,6 +138,19 @@ public class ReaderDao {
             ps.setString(4, email);
             ps.setInt(5, deposit);
             ps.setString(6,preAccount);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection,ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteReader(String account){
+        try {
+            String sql = "delete from reader where user_account=? ";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, account);
             ps.executeUpdate();
             DBHelper.closeConnection(connection,ps);
         } catch (SQLException e) {
