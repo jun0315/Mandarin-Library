@@ -30,5 +30,6 @@
         <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="json-20190722" level="project" />
   </component>
 </module>
