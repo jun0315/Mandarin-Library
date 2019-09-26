@@ -28,6 +28,9 @@ CREATE TABLE `admin_setting` (
 
 /*Data for the table `admin_setting` */
 
+insert  into `admin_setting`(`book_fine_value`,`book_return_period`,`reader_security_deposit`) values 
+(1,30,100);
+
 /*Table structure for table `book` */
 
 DROP TABLE IF EXISTS `book`;
@@ -55,16 +58,15 @@ DROP TABLE IF EXISTS `book_category_floor`;
 CREATE TABLE `book_category_floor` (
   `category` varchar(64) NOT NULL,
   `floor` varchar(64) DEFAULT NULL,
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`category`),
-  KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`category`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `book_category_floor` */
 
-insert  into `book_category_floor`(`category`,`floor`,`id`) values 
-('musci','seconde floor',1),
-('story','first floor',2);
+insert  into `book_category_floor`(`category`,`floor`) values 
+('arts','three floor'),
+('musci','seconde floor1'),
+('story','first floor');
 
 /*Table structure for table `book_deleted` */
 
@@ -111,6 +113,7 @@ CREATE TABLE `reader` (
 /*Data for the table `reader` */
 
 insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`) values 
+('reader','123','123','123',300),
 ('reader-test','jun','123','1072505283@qq.com',0);
 
 /*Table structure for table `reader_borrow` */
@@ -157,7 +160,7 @@ CREATE TABLE `staff` (
 /*Data for the table `staff` */
 
 insert  into `staff`(`staff_name`,`user_type`,`staff_account`,`staff_password`,`staff_phone`) values 
-('admin','Admin','admin','root','1333333'),
+('admin','Admin','admin','root1','1333333'),
 ('librarian','Librarian','librarian','123','1333333');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
