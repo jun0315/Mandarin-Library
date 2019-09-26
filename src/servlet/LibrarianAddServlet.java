@@ -27,7 +27,7 @@ public class LibrarianAddServlet extends HttpServlet {
             response.sendRedirect("librarian_add.jsp?info=success");
         }
     }
-
+//this is git test
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        response.sendRedirect("librarian_add.jsp?info=success");
     }

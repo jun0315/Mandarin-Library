@@ -6,24 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="更新数据库，新加了Book实体，创建BookDao，修改addBookServlet中doPost方法">
-      <change afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LibrarianListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LibrarianListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/UserType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LibrarianListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/servlet/LibrarianListServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/library/utils/UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/library/utils/UserType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/UserType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +24,37 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="admin_setting: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="reader: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -74,15 +87,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="H:/Git/Git/bin/git.exe" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -187,6 +193,26 @@
       </method>
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@453e708f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@453e708f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3627de5a" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -209,10 +235,10 @@
       <workItem from="1569200290574" duration="15359000" />
       <workItem from="1569305931911" duration="518000" />
       <workItem from="1569306488296" duration="2000000" />
-      <workItem from="1569323588768" duration="4407000" />
-      <workItem from="1569374730171" duration="12538000" />
-      <workItem from="1569467870980" duration="260000" />
-      <workItem from="1569468226056" duration="238000" />
+      <workItem from="1569323588768" duration="6283000" />
+      <workItem from="1569339479720" duration="332000" />
+      <workItem from="1569372036894" duration="11589000" />
+      <workItem from="1569465337255" duration="2167000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -312,14 +338,35 @@
       <option name="project" value="LOCAL" />
       <updated>1569326856169</updated>
     </task>
-    <task id="LOCAL-00015" summary="更新数据库，新加了Book实体，创建BookDao，修改addBookServlet中doPost方法">
-      <created>1569467947021</created>
+    <task id="LOCAL-00015" summary="实现add book的页面及复选框">
+      <created>1569330295636</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1569467947021</updated>
+      <updated>1569330295636</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="更改book_category_floor数据库及其对应代码">
+      <created>1569381840298</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569381840298</updated>
+    </task>
+    <task id="LOCAL-00017" summary="初步更改add-book ISBN标签">
+      <created>1569465444329</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1569465444329</updated>
+    </task>
+    <task id="LOCAL-00018" summary="merge lbh branch">
+      <created>1569467482025</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1569467482025</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,9 +400,11 @@
     <MESSAGE value="实现书籍category相关操作 将相同html代码提取出来" />
     <MESSAGE value="解决delete传参正确Bug" />
     <MESSAGE value="更新数据库数据" />
-    <MESSAGE value="更新数据库，新加了Book实体，创建BookDao，修改addBookServlet中doPost方法" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/jun0315/Bilobili_Library into zcy&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;out/artifacts/library_war_exploded/Librarian_list.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/jun0315/Bilobili_Library into zcy&#10;&#10; Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;out/artifacts/library_war_exploded/Librarian_list.jsp" />
+    <MESSAGE value="实现add book的页面及复选框" />
+    <MESSAGE value="更改book_category_floor数据库及其对应代码" />
+    <MESSAGE value="初步更改add-book ISBN标签" />
+    <MESSAGE value="merge lbh branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge lbh branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -377,7 +426,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dao/LibrarianDao.java</url>
-          <line>105</line>
+          <line>99</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -392,7 +441,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
-          <line>96</line>
+          <line>95</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -406,14 +455,14 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlet/LoginServlet.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="54" />
+          <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/dao/LoginDao.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="55" />
+          <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

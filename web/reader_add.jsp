@@ -1,13 +1,16 @@
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
-<%@ page import="entity.Librarian" %>
-<%@ page import="java.util.List" %>
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: Liu_PiPiPi
+  Date: 2019/9/23
+  Time: 14:54
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Add Reader</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -29,47 +32,52 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
+
 <body>
 <div class="page">
     <!-- Main Navbar-->
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
+        <nav class="side-navbar">
+            <jsp:include page="librarian_side.jsp"></jsp:include>
+        </nav>
         <div class="content-inner">
-            <!-- Page Header-->
+            <!-- Page Header 黑色粗体title-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian Add</h2>
+                    <h2 class="no-margin-bottom">Reader Add</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian Add</li>
+                    <li class="breadcrumb-item active">Reader Add</li>
                 </ul>
             </div>
+
+            <%--    最中间版块   --%>
             <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Sign up for a new librarian.</p>
-                            <form class="form-horizontal" action="librarian_add.do" method="post">
+                            <p>Sign up for a new reader.</p>
+                            <form class="form-horizontal" action="reader_add.do" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Account</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="account"
                                                class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Password</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="password" value="00010001"
+                                        <input id="inputHorizontalWarning" name="password" value=""
                                                class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -77,68 +85,42 @@
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="name"
                                                class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Phone</label>
+                                    <label class="col-sm-3 form-control-label">Email</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="phone"
+                                        <input id="inputHorizontalWarning" name="email"
                                                class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Deposit</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="deposit"
+                                               class="form-control form-control-warning">
+                                        <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Signin" class="btn btn-primary">
+                                        <input type="submit" value="Add" class="btn btn-primary">
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <%--                <div class="container-fluid">--%>
-                <%--                    <div class="row">--%>
-                <%--                        <div class="col-lg-12">--%>
-                <%--                            <div class="card">--%>
-                <%--                                <div class="card-body">--%>
-                <%--                                    <div class="table-responsive">--%>
-                <%--                                        <table class="table">--%>
-                <%--                                            <thead>--%>
-                <%--                                            <tr>--%>
-                <%--                                                <th>#</th>--%>
-                <%--                                                <th>Account</th>--%>
-                <%--                                                <th>Name</th>--%>
-                <%--                                                <th>Phone</th>--%>
-                <%--                                            </tr>--%>
-                <%--                                            </thead>--%>
-                <%--                                            <tbody>--%>
-                <%--                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>--%>
-                <%--                                            <%int i = 0;%>--%>
-                <%--                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">--%>
-                <%--                                                <% i++;%>--%>
-                <%--                                                <tr>--%>
-                <%--                                                    <th>${i}</th>--%>
-                <%--                                                    <td>${librarian.getAccount()}</td>--%>
-                <%--                                                    <td>${librarian.getName()}</td>--%>
-                <%--                                                    <td>${librarian.getPhone()}</td>--%>
-                <%--                                                </tr>--%>
-                <%--                                            </c:forEach>--%>
-                <%--                                            </tbody>--%>
-                <%--                                        </table>--%>
-                <%--                                    </div>--%>
-                <%--                                </div>--%>
-                <%--                            </div>--%>
-                <%--                        </div>--%>
-                <%--                    </div>--%>
-                <%--                </div>--%>
             </section>
+
             <!-- Page Footer-->
             <footer class="main-footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
+                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -147,17 +129,22 @@
                     </div>
                 </div>
             </footer>
+
         </div>
     </div>
+
 </div>
+
+
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
-        alert("successfully add!");
-    }else if(info == 'erroe'){
-        alert("add failure because of have the same account!");
+        alert("Successfully add!");
+    } else if (info == 'error') {
+        alert("Add failure because of have the same account!");
     }
 </script>
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
@@ -168,5 +155,6 @@
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
+
 </body>
 </html>

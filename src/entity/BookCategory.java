@@ -1,9 +1,9 @@
 package entity;
 
 public class BookCategory {
-    public BookCategory(String category, String location) {
+    public BookCategory(String category, String floor) {
         this.category = category;
-        this.location = location;
+        this.floor = floor;
     }
 
     public BookCategory(){}
@@ -16,14 +16,14 @@ public class BookCategory {
         this.category = category;
     }
 
-    public String getLocation() {
-        return location;
+    public String getFloor() {
+        return floor;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setFloor(String floor) {
+        this.floor = floor;
     }
 
     private String category;
-    private String location;
+    private String floor;
 }

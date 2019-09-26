@@ -16,13 +16,13 @@ public class BookCategoryAddServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         String category = (String) request.getParameter("category");
-        String location = (String) request.getParameter("location");
+        String floor = (String) request.getParameter("floor");
         BookCategoryDao bookCategoryDao = new BookCategoryDao();
         boolean exit = bookCategoryDao.isExitInDB(category);
         if (exit) {
             response.sendRedirect("book_category_add.jsp?info=error");
         } else {
-            bookCategoryDao.addCategory(category,location);
+            bookCategoryDao.addCategory(category,floor);
             response.sendRedirect("book_category_add.jsp?info=success");
         }
     }

@@ -1,18 +1,19 @@
 package entity;
 
-public class Admin {
-
+public class Reader {
     private String name;
     private String password;
-    private String phone;
     private String account;
-    private String type = "Admin";
+    private String email;
+    private int security_deposit;
+    private String type = "Reader";
 
-    public Admin() {
+    public Reader(){
         this.name = "null";
-        this.phone = "null";
-        this.account = "null";
         this.password = "null";
+        this.account = "null";
+        this.email = "null";
+        this.security_deposit = 0;
     }
 
     public String getPassword() {
@@ -31,12 +32,12 @@ public class Admin {
         this.account = account;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getName() {
@@ -46,6 +47,10 @@ public class Admin {
     public void setName(String name) {
         this.name = name;
     }
+    
+    public int getDeposit(){ return security_deposit;}
+
+    public void setDeposit(int deposit){ this.security_deposit = deposit;}
 
     public String getType() {
         return type;
