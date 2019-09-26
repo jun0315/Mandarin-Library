@@ -75,4 +75,12 @@
         <servlet-name>BookCategoryEdit</servlet-name>
         <url-pattern>/BookCategoryEdit.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>BookAdd</servlet-name>
+        <servlet-class>servlet.BookAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookAdd</servlet-name>
+        <url-pattern>/BookAdd.do</url-pattern>
+    </servlet-mapping>
 </web-app>

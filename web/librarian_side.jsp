@@ -25,7 +25,7 @@
                 class="icon-interface-windows"></i>Book Manage</a>
             <ul id="BookManage" class="collapse list-unstyled ">
                 <li><a href="#">Book List</a></li>
-                <li><a href="#">Add Book</a></li>
+                <li><a href="BookAdd.do">Add Book</a></li>
                 <li><a href="book_category_add.jsp">Add Book Category and Location</a></li>
                 <li><a href="book_category_list.do">Category List</a></li>
             </ul>
