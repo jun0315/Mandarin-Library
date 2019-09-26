@@ -175,7 +175,6 @@
     }
 </script>
 
-<
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
