@@ -29,31 +29,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="admin_setting: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="reader: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -368,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569467482025</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="更新数据库，新加了Book实体，创建BookDao，修改addBookServlet中doPost方法">
+      <created>1569577169583</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1569577169583</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +388,8 @@
     <MESSAGE value="更改book_category_floor数据库及其对应代码" />
     <MESSAGE value="初步更改add-book ISBN标签" />
     <MESSAGE value="merge lbh branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge lbh branch" />
+    <MESSAGE value="更新数据库，新加了Book实体，创建BookDao，修改addBookServlet中doPost方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新数据库，新加了Book实体，创建BookDao，修改addBookServlet中doPost方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
