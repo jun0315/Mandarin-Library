@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.BookCategory" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -47,19 +47,19 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">Book Category List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item active">Book Category List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
@@ -83,27 +83,25 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Account</th>
-                                                <th>Name</th>
-                                                <th>Phone</th>
+                                                <th>Category</th>
+                                                <th>Floor</th>
                                                 <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>
-                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">
+                                            <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
+                                            <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
                                                 <tr>
                                                     <th>${li.index+1}</th>
-                                                    <td>${librarian.getAccount()}</td>
-                                                    <td>${librarian.getName()}</td>
-                                                    <td>${librarian.getPhone()}</td>
+                                                    <td>${bookCategory.getCategory()}</td>
+                                                    <td>${bookCategory.getFloor()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" style="color: #ff0c0c"
-                                                           data-toggle="modal" value="${librarian.getAccount()}"
+                                                        <a href="#myModal" style="color: #ff0c0c"
+                                                           data-toggle="modal" value="${bookCategory.getCategory()}"
                                                            id="lastButton">删除</a>
-                                                            <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
+                                                            <%--   <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
-                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
+                                                        <div id="myModal" tabindex="-1" role="dialog"
                                                              aria-labelledby="exampleModalLabel" aria-hidden="true"
                                                              class="modal fade text-left">
                                                             <div role="document" class="modal-dialog">
@@ -116,14 +114,13 @@
                                                                                 aria-hidden="true">×</span></button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        <p>Are you sure want to delete this account?</p>
+                                                                        <p>Are you sure want to delete this category?</p>
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=${librarian.getAccount()}">
-<%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
+                                                                        <a href="admin.jsp?account=${bookCategory.getCategory()}" value="${bookCategory.getCategory()}">
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -133,7 +130,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}"
+                                                        <a href="BookCategoryEdit.do?category=${bookCategory.getCategory()}"
                                                            style="color: #0000c6">编辑</a>
                                                     </td>
                                                 </tr>
@@ -152,10 +149,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
+                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                         </div>
                     </div>
                 </div>
@@ -173,7 +171,6 @@
         alert("search failure!");
     }
 </script>
-
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

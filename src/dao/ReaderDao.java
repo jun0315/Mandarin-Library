@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderDao {
-    private ReaderDao() {
-    }
-
     public static ReaderDao getInstance(){
         return new ReaderDao();
     }
@@ -33,33 +30,27 @@ public class ReaderDao {
         return total;
     }
 
-    public List<Reader> getReaders(){
-        return getReaders(0, Short.MAX_VALUE);
-    }
-
-    public List<Reader> getReaders(int start, int count) {
+    public List<Reader> getReaders() {
         List<Reader> readers = new ArrayList<Reader>();
+        String sql = "select * from reader";
         try {
             Connection connection = DBHelper.getInstance().getConnection();
-            String sql = "select * from reader order by user_account desc limit ?,? ";
-            PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, start);
-            ps.setInt(2, count);
-
-            ResultSet resultSet = ps.executeQuery(sql);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 Reader reader = new Reader();
                 String account = resultSet.getString("user_account");
+                String password = resultSet.getString("user_password");
                 String name = resultSet.getString("user_name");
                 String email = resultSet.getString("user_email");
                 int deposit = resultSet.getInt("security_deposit");
+                reader.setAccount(account);
+                reader.setPassword(password);
                 reader.setName(name);
                 reader.setEmail(email);
-                reader.setAccount(account);
                 reader.setDeposit(deposit);
                 readers.add(reader);
             }
-            DBHelper.closeConnection(connection,ps,resultSet);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -92,7 +83,7 @@ public class ReaderDao {
     public boolean isExistInDB(String account) {
         boolean Exist = false;
         try {
-            String sql = "select * from reader";
+            String sql = "select * from reader where user_account = \'" + account + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);

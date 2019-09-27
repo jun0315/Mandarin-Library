@@ -1,7 +1,7 @@
 package dao;
 
 import entity.Librarian;
-//import sun.text.resources.no.CollationData_no; //没用到
+import sun.text.resources.no.CollationData_no;
 import utils.DBHelper;
 
 import java.sql.*;
@@ -11,7 +11,7 @@ import java.util.List;
 public class LibrarianDao {
     public List<Librarian> getLibrarians() {
         List<Librarian> librarians = new ArrayList<Librarian>();
-        String sql = "select * from staff where user_type ='librarian'";
+        String sql = "select * from staff where staff.user_type ='librarian'";
         try {
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
@@ -21,9 +21,13 @@ public class LibrarianDao {
                 String account = resultSet.getString("staff_account");
                 String name = resultSet.getString("staff_name");
                 String phone = resultSet.getString("staff_phone");
+                String password = resultSet.getString("staff_password");
+
                 librarian.setName(name);
                 librarian.setPhone(phone);
                 librarian.setAccount(account);
+                librarian.setPassword(password);
+
                 librarians.add(librarian);
             }
         } catch (SQLException e) {
@@ -55,17 +59,17 @@ public class LibrarianDao {
         return librarian;
     }
 
-    public boolean isExistInDB(String account){
-        boolean Exist = false;
+    public boolean isExitInDB(String account) {
+        boolean Exit = false;
         try {
             String sql = "select * from staff where user_type = 'librarian'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 String accountInDB = resultSet.getString("staff_account");
-                if(accountInDB.equals(account)){
-                    Exist = true;
+                if (accountInDB.equals(account)) {
+                    Exit = true;
                     break;
                 }
             }
@@ -73,10 +77,10 @@ public class LibrarianDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return Exist;
+        return Exit;
     }
 
-    public void addLibrarian(String name,String account,String password,String phone){
+    public void addLibrarian(String name, String account, String password, String phone) {
         try {
             String sql = "insert into staff values(?,'librarian',?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
@@ -86,13 +90,13 @@ public class LibrarianDao {
             ps.setString(3, password);
             ps.setString(4, phone);
             ps.executeUpdate();
-            DBHelper.closeConnection(connection,ps);
+            DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public void editLibrarian(String name,String account,String preAccount, String password,String phone){
+    public void editLibrarian(String name, String account, String preAccount, String password, String phone) {
         try {
             String sql = "update staff set staff_name=?,staff_account=?,staff_password=?,staff_phone=? where staff_account=? ";
             Connection connection = DBHelper.getInstance().getConnection();
@@ -101,9 +105,9 @@ public class LibrarianDao {
             ps.setString(2, account);
             ps.setString(3, password);
             ps.setString(4, phone);
-            ps.setString(5,preAccount);
+            ps.setString(5, preAccount);
             ps.executeUpdate();
-            DBHelper.closeConnection(connection,ps);
+            DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }

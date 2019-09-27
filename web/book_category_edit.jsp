@@ -1,6 +1,7 @@
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.BookCategory" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -28,6 +29,18 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <script src="js/dialogue.js"></script>
+
+    <%--    <script type="text/javascript">--%>
+    <%--        function deleteClick() {--%>
+    <%--            var con;--%>
+    <%--            con = confirm("Are you sure you want to delete?\n");--%>
+    <%--            if(con==true) {--%>
+    <%--                window.location.href("index.jsp");--%>
+    <%--            }--%>
+    <%--        }--%>
+    <%--    </script>--%>
 </head>
 <body>
 <div class="page">
@@ -35,7 +48,7 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
@@ -54,23 +67,15 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Edit this account infomation</p>
-                            <form class="form-horizontal" action="EditLibrarian.do" method="post">
-                                <%Librarian librarian = (Librarian) request.getAttribute("librarian");%>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Account</label>
-                                    <div class="col-sm-9">
-                                        <input type="hidden" name="preAccount" value="<%=librarian.getAccount()%>">
-                                        <input id="inputHorizontalSuccess" name="account"
-                                               value="<%=librarian.getAccount()%>"
-                                               class="form-control form-control-success">
-                                    </div>
-                                </div>
+                            <p>Edit this book category and location</p>
+                            <form class="form-horizontal" action="BookCategoryEdit.do" method="post">
+                                <%BookCategory bookCategory = (BookCategory) request.getAttribute("bookCategory");%>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Password</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="password"
-                                               value="<%=librarian.getPassword()%>"
+                                        <input type="hidden" name="preCategory" value="<%=bookCategory.getCategory()%>">
+                                        <input id="inputHorizontalWarning" name="category"
+                                               value="<%=bookCategory.getCategory()%>"
                                                class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -78,17 +83,8 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="name"
-                                               value="<%=librarian.getName()%>"
-                                               class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Phone</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="phone"
-                                               value="<%=librarian.getPhone()%>"
+                                        <input id="inputHorizontalWarning" name="floor"
+                                               value="<%=bookCategory.getFloor()%>"
                                                class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -108,7 +104,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
+                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -121,14 +117,17 @@
     </div>
 </div>
 
+
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully edit!");
     } else if (info == 'error') {
-        alert("edit failure because of have the same account!");
+        alert("edit failure!");
     }
 </script>
+
+<
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
@@ -140,5 +139,6 @@
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
+
 </body>
 </html>

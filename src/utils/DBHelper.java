@@ -20,11 +20,15 @@ public class DBHelper {
 
     public static DBHelper getInstance() {
         //给类加锁，避免多线程问题
-        synchronized (DBHelper.class) {
-            if (dbHelperInstance == null) {
-                dbHelperInstance = new DBHelper();
+
+        if (dbHelperInstance == null) {
+            synchronized (DBHelper.class) {
+                if (dbHelperInstance == null) {
+                    dbHelperInstance = new DBHelper();
+                }
             }
         }
+
         return dbHelperInstance;
     }
 

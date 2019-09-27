@@ -1,10 +1,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
-<%@ page import="java.util.List" %>
-<!DOCTYPE html>
+<%@ page import="java.util.List" %><%--
+  Created by IntelliJ IDEA.
+  User: kehan
+  Date: 2019/9/25
+  Time: 下午7:52
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home</title>
@@ -31,17 +37,9 @@
 
     <script src="js/dialogue.js"></script>
 
-    <%--    <script type="text/javascript">--%>
-    <%--        function deleteClick() {--%>
-    <%--            var con;--%>
-    <%--            con = confirm("Are you sure you want to delete?\n");--%>
-    <%--            if(con==true) {--%>
-    <%--                window.location.href("index.jsp");--%>
-    <%--            }--%>
-    <%--        }--%>
-    <%--    </script>--%>
 </head>
 <body>
+
 <div class="page">
     <!-- Main Navbar-->
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
@@ -52,14 +50,14 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">Find Back Librarian Password</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item active">Find Back Librarian Password</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
@@ -70,7 +68,7 @@
                            placeholder="Please enter the account of the administrator who needs to query">
                     <span class="input-group-btn">
                             <button type="submit" class="btn btn-info btn-search">search</button>
-                        </span>
+                    </span>
                 </form>
 
                 <div class="container-fluid">
@@ -84,9 +82,7 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Account</th>
-                                                <th>Name</th>
-                                                <th>Phone</th>
-                                                <th>Operation</th>
+                                                <th>Password</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -95,47 +91,7 @@
                                                 <tr>
                                                     <th>${li.index+1}</th>
                                                     <td>${librarian.getAccount()}</td>
-                                                    <td>${librarian.getName()}</td>
-                                                    <td>${librarian.getPhone()}</td>
-                                                    <td>
-                                                        <a href="#myModal_${li.index+1}" style="color: #ff0c0c"
-                                                           data-toggle="modal" value="${librarian.getAccount()}"
-                                                           id="lastButton">删除</a>
-                                                            <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
-                                                        <!-- Modal-->
-                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
-                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
-                                                             class="modal fade text-left">
-                                                            <div role="document" class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h4 id="exampleModalLabel" class="modal-title">
-                                                                            Delete</h4>
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                aria-label="Close" class="close"><span
-                                                                                aria-hidden="true">×</span></button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <p>Are you sure want to delete this account?</p>
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                class="btn btn-secondary">Close
-                                                                        </button>
-                                                                        <a href="admin.jsp?account=${librarian.getAccount()}">
-<%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
-                                                                            <button type="button"
-                                                                                    class="btn btn-primary">
-                                                                                Delete
-                                                                            </button>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}"
-                                                           style="color: #0000c6">编辑</a>
-                                                    </td>
+                                                    <td>${librarian.getPassword()}</td>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>
@@ -152,10 +108,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
+                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                         </div>
                     </div>
                 </div>
@@ -173,7 +130,6 @@
         alert("search failure!");
     }
 </script>
-
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

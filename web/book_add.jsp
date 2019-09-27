@@ -1,8 +1,23 @@
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.BookCategory" %>
+<%@ page import="dao.BookCategoryDao" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script>
+    function changeISBN() {
+        var bookNo = document.getElementById("bookNo");
+        if (bookNo.innerHTML.equals("ISBN")) {
+            bookNo.innerHTML = "MSBN";
+        }
+        if (bookNo.innerHTML == "MSBN") {
+            bookNo.innerHTML = "ISBN";
+        }
+
+        // bookNo.innerHTML="MSBN";
+    }
+</script>
 <html>
 <head>
     <meta charset="utf-8">
@@ -35,110 +50,113 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian Add</h2>
+                    <h2 class="no-margin-bottom">Add Category</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian Add</li>
+                    <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
+                    <li class="breadcrumb-item active">Add the new book</li>
                 </ul>
             </div>
+            <button onclick="changeISBN()">Have No ISBN</button>
             <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Sign up for a new librarian.</p>
-                            <form class="form-horizontal" action="librarian_add.do" method="post">
+                            <p>Add the new book</p>
+                            <form class="form-horizontal" action="book_add.do" method="post">
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Account</label>
+                                    <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="account"
+                                        <input id="inputHorizontalSuccess" name="isbn"
                                                class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Password</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="password" value="00010001"
-                                               class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="name"
-                                               class="form-control form-control-warning">
+                                        <input id="inputHorizontalSuccess" name="name"
+                                               class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Phone</label>
+                                    <label class="col-sm-3 form-control-label">Press</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="phone"
-                                               class="form-control form-control-warning">
+                                        <input id="inputHorizontalSuccess" name="press"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Price</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="price"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Author</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="author"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Category</label>
+                                    <div class="col-sm-9">
+                                        <select name="category" class="form-control form-control-success">
+                                            <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
+                                            <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
+                                                <option id="category"
+                                                        value="${bookCategory.getCategory()}">${bookCategory.getCategory()}(${bookCategory.getFloor()})
+                                                </option>
+                                            </c:forEach>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Shelf</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="Shelf"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Amount</label>
+                                    <div class="col-sm-9">
+                                        <input id="bookamount" name="amount"
+                                               class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Signin" class="btn btn-primary">
+                                        <input type="submit" value="Submit" class="btn btn-primary">
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <%--                <div class="container-fluid">--%>
-                <%--                    <div class="row">--%>
-                <%--                        <div class="col-lg-12">--%>
-                <%--                            <div class="card">--%>
-                <%--                                <div class="card-body">--%>
-                <%--                                    <div class="table-responsive">--%>
-                <%--                                        <table class="table">--%>
-                <%--                                            <thead>--%>
-                <%--                                            <tr>--%>
-                <%--                                                <th>#</th>--%>
-                <%--                                                <th>Account</th>--%>
-                <%--                                                <th>Name</th>--%>
-                <%--                                                <th>Phone</th>--%>
-                <%--                                            </tr>--%>
-                <%--                                            </thead>--%>
-                <%--                                            <tbody>--%>
-                <%--                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>--%>
-                <%--                                            <%int i = 0;%>--%>
-                <%--                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">--%>
-                <%--                                                <% i++;%>--%>
-                <%--                                                <tr>--%>
-                <%--                                                    <th>${i}</th>--%>
-                <%--                                                    <td>${librarian.getAccount()}</td>--%>
-                <%--                                                    <td>${librarian.getName()}</td>--%>
-                <%--                                                    <td>${librarian.getPhone()}</td>--%>
-                <%--                                                </tr>--%>
-                <%--                                            </c:forEach>--%>
-                <%--                                            </tbody>--%>
-                <%--                                        </table>--%>
-                <%--                                    </div>--%>
-                <%--                                </div>--%>
-                <%--                            </div>--%>
-                <%--                        </div>--%>
-                <%--                    </div>--%>
-                <%--                </div>--%>
             </section>
             <!-- Page Footer-->
             <footer class="main-footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
+                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -150,11 +168,12 @@
         </div>
     </div>
 </div>
+
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully add!");
-    }else if(info == 'erroe'){
+    } else if (info == 'error') {
         alert("add failure because of have the same account!");
     }
 </script>

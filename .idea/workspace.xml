@@ -7,7 +7,533 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/AdminSettingsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/AdminSettings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/BookCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/AdminChangePasswordServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/AdminChangeSettingsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/FindBackLibrarianPasswordServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianSearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/SystemSettingsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_change_password.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_find_liber_password.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/admin_system_settings.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_category_add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/header_template.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/reader_side.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data2.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/Reader.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LibrarianDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/dao/LoginDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/entity/Librarian.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LibrarianListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/DBHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/UserType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/lib/jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.20-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/lib/standard.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/fontastic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/style.blue.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/style.default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/style.green.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/style.pink.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/style.red.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/style.sea.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/style.violet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/data/addresses.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/data/countries.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/fonts/dashboard.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/fonts/dashboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/fonts/dashboard.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/fonts/dashboard.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/forms.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/icons-reference/fonts/dashboard.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/icons-reference/fonts/dashboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/icons-reference/fonts/dashboard.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/icons-reference/fonts/dashboard.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/icons-reference/icons-reference.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/icons-reference/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/avatar-9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/demo-1-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/AZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/BZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/CZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/DE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/DJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/DK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/DM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/DO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/DZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/EC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/EE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/EG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/EH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ER.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ES.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ET.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/EU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/FI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/FJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/FK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/FM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/FO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/FR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/GY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/HK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/HN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/HR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/HT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/HU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ID.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/IT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/JE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/JM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/JO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/JP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/KZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/LY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ME.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ML.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/MZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/NZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/OM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/PY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/QA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/RE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/RO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/RS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/RU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/RW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SB.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ST.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/SZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TJ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TV.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/TZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/UA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/UG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/US.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/UY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/UZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/VA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/VC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/VE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/VG.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/VI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/VN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/VU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/WF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/WS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/YE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/YT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ZA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ZM.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/ZW.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_abkhazia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_basque-country.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_british-antarctic-territory.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_commonwealth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_england.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_gosquared.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_kosovo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_mars.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_nagorno-karabakh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_nato.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_northern-cyprus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_olympics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_red-cross.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_scotland.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_somaliland.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_south-ossetia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_united-nations.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_unknown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/flags/16/_wales.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-marker-blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-marker-default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-marker-green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-marker-pink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-marker-red.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-marker-sea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-marker-violet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/map-marker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/mockup1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/mockup2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/mockup3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/mockup4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/mockup5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/mockup6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/mockup7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/multiselect-switch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/photos/paul-morris-116514-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/project-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/project-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/project-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/project-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/img/template-mac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/js/EasePack.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/js/TweenLite.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/js/charts-custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/js/charts-home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/js/demo-1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/js/front.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/js/html5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/js/rAF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/chart.js/Chart.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/chart.js/Chart.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/chart.js/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/chart.js/Chart.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/font-awesome/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/additional-methods.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/jquery.validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_bn_BD.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_es_AR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_es_PE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_hy_AM.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_kk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_my.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_no.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_pt_BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_pt_PT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_sd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_sr_lat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_tj.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_ur.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_zh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/messages_zh_TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/methods_de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/methods_es_CL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/methods_fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/methods_nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery-validation/localization/methods_pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery.cookie/MIT-LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery.cookie/component.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery.cookie/cookie.jquery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery.cookie/jquery.cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery/jquery.slim.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/jquery/jquery.slim.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/esm/popper-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/esm/popper-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/esm/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/esm/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/popper-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/popper-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/umd/popper-utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/umd/popper-utils.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/umd/popper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/vendor/popper.js/umd/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LibrarianDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/dao/LoginDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/entity/Librarian.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LibrarianListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/servlet/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/utils/DBHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/library/utils/UserType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdminDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/LibrarianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LibrarianDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReaderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Librarian.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_edit.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +552,37 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="admin_setting: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="reader: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -35,101 +591,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="19">
+              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/test.jsp">
+        <entry file="file://$PROJECT_DIR$/web/admin.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianListServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="149">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/reader_edit.jsp">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4370">
-              <caret line="230" column="35" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
+            <state relative-caret-position="-11">
+              <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/servlet/ReaderEditServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/reader_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="149">
+              <caret line="162" column="78" selection-start-line="162" selection-start-column="78" selection-end-line="162" selection-end-column="78" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/ReaderAddServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/book_category_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
+            <state relative-caret-position="179">
+              <caret line="146" column="31" lean-forward="true" selection-start-line="146" selection-start-column="31" selection-end-line="146" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/librarian_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/reader_add.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/ReaderDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2527">
-              <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#284#285#0" expanded="true" />
-                <element signature="e#322#323#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#933#934#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlet/ReaderListServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-304">
+              <caret line="105" column="87" selection-start-line="105" selection-start-column="61" selection-end-line="105" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -148,13 +672,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>phone</find>
-      <find>name</find>
-      <find>index</find>
+      <find>list</find>
+      <find>do</find>
     </findStrings>
-    <replaceStrings>
-      <replace>email</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -163,29 +683,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/entity/Reader.java" />
-        <option value="$PROJECT_DIR$/src/entity/Librarian.java" />
-        <option value="$PROJECT_DIR$/src/dao/LibrarianDao.java" />
-        <option value="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/reader_add.jsp" />
-        <option value="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" />
-        <option value="$PROJECT_DIR$/web/librarian_add.jsp" />
-        <option value="$PROJECT_DIR$/src/utils/UserType.java" />
-        <option value="$PROJECT_DIR$/web/js/html5.js" />
-        <option value="$PROJECT_DIR$/web/librarian.jsp" />
         <option value="$PROJECT_DIR$/src/utils/DBHelper.java" />
-        <option value="$PROJECT_DIR$/web/reader_add.jsp" />
-        <option value="$PROJECT_DIR$/web/reader_delete.jsp" />
+        <option value="$PROJECT_DIR$/web/reader_side.jsp" />
+        <option value="$PROJECT_DIR$/web/librarian_edit.jsp" />
+        <option value="$PROJECT_DIR$/web/librarian_add.jsp" />
+        <option value="$PROJECT_DIR$/web/librarian_list.jsp" />
         <option value="$PROJECT_DIR$/web/reader_edit.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/admin_login.jsp" />
-        <option value="$PROJECT_DIR$/src/servlet/ReaderListServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlet/ReaderAddServlet.java" />
-        <option value="$PROJECT_DIR$/web/test.jsp" />
-        <option value="$PROJECT_DIR$/src/dao/ReaderDao.java" />
         <option value="$PROJECT_DIR$/src/servlet/ReaderEditServlet.java" />
+        <option value="$PROJECT_DIR$/web/librarian_side.jsp" />
+        <option value="$PROJECT_DIR$/web/js/dialogue.js" />
+        <option value="$PROJECT_DIR$/src/entity/Reader.java" />
+        <option value="$PROJECT_DIR$/src/dao/BookCategoryDao.java" />
+        <option value="$PROJECT_DIR$/src/dao/ReaderDao.java" />
+        <option value="$PROJECT_DIR$/web/book_category_list.jsp" />
+        <option value="$PROJECT_DIR$/web/reader_add.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/servlet/ReaderListServlet.java" />
+        <option value="$PROJECT_DIR$/web/reader_list.jsp" />
       </list>
     </option>
   </component>
@@ -209,7 +723,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,19 +757,19 @@
             <path>
               <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
               <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
               <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,9 +801,8 @@
       <recent name="H:\大学\web\library\web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\www12\Desktop\BilobiliLibrary\web" />
-      <recent name="H:\大学\web\library - test\web\js" />
       <recent name="H:\大学\web\library - test\web" />
+      <recent name="H:\大学\web\library - test\web\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -305,12 +818,12 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
+    <configuration name="Tomcat 9.0.24" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.24" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/BilobiliLibrary/" />
       <deployment>
         <artifact name="library:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="" />
+            <option name="CONTEXT_PATH" value="/BilobiliLibrary" />
           </settings>
         </artifact>
       </deployment>
@@ -371,12 +884,32 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="library:war exploded" />
         </option>
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@453e708f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@453e708f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3627de5a" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -395,13 +928,17 @@
       <workItem from="1568819578408" duration="18536000" />
       <workItem from="1568953845910" duration="5260000" />
       <workItem from="1568968220213" duration="5958000" />
-      <workItem from="1569032358841" duration="14052000" />
-      <workItem from="1569218166408" duration="10249000" />
-      <workItem from="1569320620864" duration="3499000" />
-      <workItem from="1569378391261" duration="9359000" />
-      <workItem from="1569419407398" duration="3162000" />
-      <workItem from="1569456153455" duration="5185000" />
-      <workItem from="1569467876851" duration="238000" />
+      <workItem from="1569032358841" duration="14318000" />
+      <workItem from="1569120466140" duration="4170000" />
+      <workItem from="1569200290574" duration="15359000" />
+      <workItem from="1569305931911" duration="518000" />
+      <workItem from="1569306488296" duration="2000000" />
+      <workItem from="1569323588768" duration="6283000" />
+      <workItem from="1569339479720" duration="332000" />
+      <workItem from="1569372036894" duration="11589000" />
+      <workItem from="1569465337255" duration="2167000" />
+      <workItem from="1569484587243" duration="5720000" />
+      <workItem from="1569547793230" duration="7823000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -452,45 +989,101 @@
       <option name="project" value="LOCAL" />
       <updated>1569058148351</updated>
     </task>
-    <task id="LOCAL-00008" summary="test git">
-      <created>1569123019728</created>
+    <task id="LOCAL-00008" summary="删除admin两个按钮">
+      <created>1569058393520</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1569123019728</updated>
+      <updated>1569058393520</updated>
     </task>
-    <task id="LOCAL-00009" summary="git -- reader add">
-      <created>1569242367278</created>
+    <task id="LOCAL-00009" summary="更新admin页面布局">
+      <created>1569058536117</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1569242367278</updated>
+      <updated>1569058536117</updated>
     </task>
-    <task id="LOCAL-00010" summary="此次push（修改了数据库）和上次push都是对于读者添加所作的添加和修改，以及一些细节修改">
-      <created>1569243773148</created>
+    <task id="LOCAL-00010" summary="更新admin页面布局">
+      <created>1569122727376</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1569243773148</updated>
+      <updated>1569122727376</updated>
     </task>
-    <task id="LOCAL-00011" summary="完成了读者的添加和admin登录页面">
-      <created>1569402889923</created>
+    <task id="LOCAL-00011" summary="搜索librarian功能实现，删除确认框获取account无法遍历">
+      <created>1569210474102</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1569402889924</updated>
+      <updated>1569210474103</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="实现书籍category相关操作 将相同html代码提取出来">
+      <created>1569231528837</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569231528837</updated>
+    </task>
+    <task id="LOCAL-00013" summary="解决delete传参正确Bug">
+      <created>1569308393635</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569308393635</updated>
+    </task>
+    <task id="LOCAL-00014" summary="更新数据库数据">
+      <created>1569326856168</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1569326856169</updated>
+    </task>
+    <task id="LOCAL-00015" summary="实现add book的页面及复选框">
+      <created>1569330295636</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1569330295636</updated>
+    </task>
+    <task id="LOCAL-00016" summary="更改book_category_floor数据库及其对应代码">
+      <created>1569381840298</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569381840298</updated>
+    </task>
+    <task id="LOCAL-00017" summary="初步更改add-book ISBN标签">
+      <created>1569465444329</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1569465444329</updated>
+    </task>
+    <task id="LOCAL-00018" summary="merge lbh branch">
+      <created>1569467482025</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1569467482025</updated>
+    </task>
+    <task id="LOCAL-00019" summary="admin login.jsp的背景图">
+      <created>1569469480604</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1569469480604</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35752000" />
+    <option name="totallyTimeSpent" value="17100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15167785" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16442953" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -499,20 +1092,20 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.22379604" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49932885" weight="0.2875354" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.23229462" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -523,40 +1116,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15033557" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49932885" weight="0.2875354" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -610,108 +1169,96 @@
     <MESSAGE value="优化登陆界面数据库查询" />
     <MESSAGE value="删除确认弹框" />
     <MESSAGE value="完成librarian编辑功能" />
-    <MESSAGE value="test git" />
-    <MESSAGE value="git -- reader add" />
-    <MESSAGE value="此次push（修改了数据库）和上次push都是对于读者添加所作的添加和修改，以及一些细节修改" />
-    <MESSAGE value="完成了读者的添加和admin登录页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了读者的添加和admin登录页面" />
+    <MESSAGE value="删除admin两个按钮" />
+    <MESSAGE value="更新admin页面布局" />
+    <MESSAGE value="搜索librarian功能实现，删除确认框获取account无法遍历" />
+    <MESSAGE value="实现书籍category相关操作 将相同html代码提取出来" />
+    <MESSAGE value="解决delete传参正确Bug" />
+    <MESSAGE value="更新数据库数据" />
+    <MESSAGE value="实现add book的页面及复选框" />
+    <MESSAGE value="更改book_category_floor数据库及其对应代码" />
+    <MESSAGE value="初步更改add-book ISBN标签" />
+    <MESSAGE value="merge lbh branch" />
+    <MESSAGE value="admin login.jsp的背景图" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin login.jsp的背景图" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/LibrarianDao.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianSearchServlet.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/LoginDao.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookCategoryDao.java</url>
+          <line>13</line>
+          <properties />
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Librarian.java">
+    <entry file="file://$PROJECT_DIR$/web/admin_change_password.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-          <folding>
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-823" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/html5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/LoginDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/AdminDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/artifacts/library_war_exploded/js/html5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data2.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/reader.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="90" column="63" selection-start-line="90" selection-start-column="63" selection-end-line="90" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/librarian.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="266">
+          <caret line="23" column="94" lean-forward="true" selection-start-line="23" selection-start-column="94" selection-end-line="23" selection-end-column="94" />
         </state>
       </provider>
     </entry>
@@ -722,146 +1269,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderDeleteServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/librarian_add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-229">
-          <caret line="184" column="72" lean-forward="true" selection-start-line="184" selection-start-column="72" selection-end-line="184" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/LibrarianDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
+        <state relative-caret-position="304">
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/reader_delete.jsp">
+    <entry file="file://$PROJECT_DIR$/src/servlet/BookAddServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/book_category_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_login.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="40" lean-forward="true" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/reader_side.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+    <entry file="file://$PROJECT_DIR$/web/book_add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="61" column="49" lean-forward="true" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+        <state relative-caret-position="190">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/web/librarian_add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="184">
+          <caret line="141" column="30" lean-forward="true" selection-start-line="141" selection-start-column="30" selection-end-line="141" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin_login.jsp">
+    <entry file="file://$PROJECT_DIR$/web/librarian_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="105" column="31" lean-forward="true" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/reader_delete.jsp" />
+    <entry file="file://$PROJECT_DIR$/web/reader_edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="65" lean-forward="true" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/DBHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/entity/Librarian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="209">
+          <caret line="17" column="79" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/LibrarianDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/reader_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4370">
-          <caret line="230" column="35" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
+        <state relative-caret-position="-1520">
+          <caret line="13" column="78" lean-forward="true" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/ReaderAddServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="17" column="82" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/reader_add.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/ReaderDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2527">
-          <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#933#934#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        <state relative-caret-position="548">
+          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -870,13 +1386,241 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/ReaderEditServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="133">
+          <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/header_template.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/librarian_side.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1881" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_system_settings.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1944" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/SystemSettingsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/dialogue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/BookCategoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding>
+            <element signature="e#274#288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ReaderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="47" column="45" lean-forward="true" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1006#1014#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/reader_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="13" column="40" lean-forward="true" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/BookCategory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="123" column="21" lean-forward="true" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/librarian_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="105" column="87" selection-start-line="105" selection-start-column="61" selection-end-line="105" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/book_category_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="146" column="31" lean-forward="true" selection-start-line="146" selection-start-column="31" selection-end-line="146" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/reader_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="162" column="78" selection-start-line="162" selection-start-column="78" selection-end-line="162" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
