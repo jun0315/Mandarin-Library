@@ -6,14 +6,29 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <script>
+    var ISBN_flag = true;
+
     function changeISBN() {
         var bookNo = document.getElementById("bookNo");
-        if (bookNo.innerHTML.equals("ISBN")) {
+        var ClickISBNorMSBN=document.getElementById("ClickISBNorMSBN");
+        var ImportISBN=document.getElementById("importISBN");
+        if (ISBN_flag) {
+            ISBN_flag = false;
             bookNo.innerHTML = "MSBN";
-        }
-        if (bookNo.innerHTML == "MSBN") {
+            ClickISBNorMSBN.innerHTML="Have ISBN";
+            ImportISBN.style.display='none';
+        } else if (!ISBN_flag) {
+            ISBN_flag = true;
             bookNo.innerHTML = "ISBN";
+            ClickISBNorMSBN.innerHTML="Have No ISBN";
+            ImportISBN.style.display="";
         }
+        // if (bookNo.innerHTML.equals("ISBN")) {
+        //     bookNo.innerHTML = "MSBN";
+        // }
+        // if (bookNo.innerHTML == "MSBN") {
+        //     bookNo.innerHTML = "ISBN";
+        // }
 
         // bookNo.innerHTML="MSBN";
     }
@@ -65,7 +80,6 @@
                     <li class="breadcrumb-item active">Add the new book</li>
                 </ul>
             </div>
-            <button onclick="changeISBN()">Have No ISBN</button>
             <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
@@ -77,7 +91,9 @@
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="isbn"
                                                class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <a  href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
+                                        <a href="#" id="importISBN" onclick="" >Import ISBN</a>
+                                    <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -168,7 +184,6 @@
         </div>
     </div>
 </div>
-
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
