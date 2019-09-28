@@ -115,7 +115,14 @@
         <servlet-name>AdminChangeSettingsServlet</servlet-name>
         <url-pattern>/AdminChangeSettingsServlet.do</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>AddBookByISBN</servlet-name>
+        <servlet-class>servlet.BookAddByISBNSrvelet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddBookByISBN</servlet-name>
+        <url-pattern>/AddBookByISBN.do</url-pattern>
+    </servlet-mapping>
 <!--    add reader  -->
     <servlet>
         <servlet-name>ReaderAdd</servlet-name>

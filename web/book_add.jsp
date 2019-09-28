@@ -3,6 +3,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="entity.BookCategory" %>
 <%@ page import="dao.BookCategoryDao" %>
+<%@ page import="entity.Book" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <script>
@@ -10,27 +11,19 @@
 
     function changeISBN() {
         var bookNo = document.getElementById("bookNo");
-        var ClickISBNorMSBN=document.getElementById("ClickISBNorMSBN");
-        var ImportISBN=document.getElementById("importISBN");
+        var ClickISBNorMSBN = document.getElementById("ClickISBNorMSBN");
+        var ImportISBN = document.getElementById("importISBN");
         if (ISBN_flag) {
             ISBN_flag = false;
             bookNo.innerHTML = "MSBN";
-            ClickISBNorMSBN.innerHTML="Have ISBN";
-            ImportISBN.style.display='none';
+            ClickISBNorMSBN.innerHTML = "Have ISBN";
+            ImportISBN.style.display = 'none';
         } else if (!ISBN_flag) {
             ISBN_flag = true;
             bookNo.innerHTML = "ISBN";
-            ClickISBNorMSBN.innerHTML="Have No ISBN";
-            ImportISBN.style.display="";
+            ClickISBNorMSBN.innerHTML = "Have No ISBN";
+            ImportISBN.style.display = "";
         }
-        // if (bookNo.innerHTML.equals("ISBN")) {
-        //     bookNo.innerHTML = "MSBN";
-        // }
-        // if (bookNo.innerHTML == "MSBN") {
-        //     bookNo.innerHTML = "ISBN";
-        // }
-
-        // bookNo.innerHTML="MSBN";
     }
 </script>
 <html>
@@ -80,7 +73,19 @@
                     <li class="breadcrumb-item active">Add the new book</li>
                 </ul>
             </div>
-            <section class="tables">
+            <%
+                String nameFromAPI = "";
+                String authorFromAPI = "";
+                String pressFromAPI = "";
+                Book book = (Book) request.getAttribute("bookFromISBN");
+                if (book != null) {
+                    nameFromAPI = book.getName();
+                    authorFromAPI = book.getAuthor();
+                    pressFromAPI = book.getPress();
+                }
+            %>
+            <section
+                    class="tables">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
@@ -91,16 +96,16 @@
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="isbn"
                                                class="form-control form-control-success">
-                                        <a  href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
-                                        <a href="#" id="importISBN" onclick="" >Import ISBN</a>
-                                    <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
+                                        <a href="AddBookByISBN.do" id="importISBN">Import ISBN</a>
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="name"
-                                               class="form-control form-control-success">
+                                               class="form-control form-control-success" value="${nameFormAPI}">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
@@ -108,7 +113,15 @@
                                     <label class="col-sm-3 form-control-label">Press</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="press"
-                                               class="form-control form-control-success">
+                                               class="form-control form-control-success" value="${pressFromAPI}">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label" }>Author</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="author"
+                                               class="form-control form-control-success" value="${authorFromAPI}">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
@@ -116,14 +129,6 @@
                                     <label class="col-sm-3 form-control-label">Price</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="price"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Author</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="author"
                                                class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>

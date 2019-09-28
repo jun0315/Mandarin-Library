@@ -57,13 +57,18 @@ public class GetBookInfo {
         return volumeInfo.getString("title");
     }
 
-    public List<String> getAuthor() {
-        List<String> authorsResult = new ArrayList<>();
+    public String getAuthor() {
+//        List<String> authorsResult = new ArrayList<>();
+//
+
+//        return authorsResult;
+        StringBuilder authorResult = new StringBuilder();
         JSONArray authors = volumeInfo.getJSONArray("authors");
+
         for (Object author : authors) {
-            authorsResult.add((String) author);
+            authorResult.append((String) author);
         }
-        return authorsResult;
+        return authorResult.toString();
     }
 
     public String getPublisher() {
@@ -77,6 +82,7 @@ public class GetBookInfo {
     public int getPageCount() {
         return volumeInfo.getInt("pageCount");
     }
+
 
 //test
 //    public static void main(String[] args) {
