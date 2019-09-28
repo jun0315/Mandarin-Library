@@ -20,11 +20,7 @@ import org.json.JSONObject;
 
 public class GetBookInfo {
 
-
-    private String isbn;
     private JSONObject volumeInfo;
-
-    private GetBookInfo getBookInfo;
 
     public GetBookInfo(String isbn) {
         proxySetting();
@@ -58,10 +54,6 @@ public class GetBookInfo {
     }
 
     public String getAuthor() {
-//        List<String> authorsResult = new ArrayList<>();
-//
-
-//        return authorsResult;
         StringBuilder authorResult = new StringBuilder();
         JSONArray authors = volumeInfo.getJSONArray("authors");
 
@@ -83,6 +75,9 @@ public class GetBookInfo {
         return volumeInfo.getInt("pageCount");
     }
 
+    public String getDescription() {
+        return volumeInfo.getString("description");
+    }
 
 //test
 //    public static void main(String[] args) {
