@@ -81,15 +81,6 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="floor"
-                                               value="<%=bookCategory.getFloor()%>"
-                                               class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
                                         <input type="submit" value="Done" class="btn btn-primary">
                                     </div>
