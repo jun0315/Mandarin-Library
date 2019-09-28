@@ -126,12 +126,20 @@
         <url-pattern>/ReaderAdd.do</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>ReaderEdit</servlet-name>
-        <servlet-class>servlet.ReaderEditServlet</servlet-class>
-        </servlet>
+    <servlet-name>ReaderEdit</servlet-name>
+    <servlet-class>servlet.ReaderEditServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>ReaderEdit</servlet-name>
         <url-pattern>/ReaderEdit.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReaderDelete</servlet-name>
+        <servlet-class>servlet.ReaderDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReaderDelete</servlet-name>
+        <url-pattern>/ReaderDelete.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>ReaderList</servlet-name>

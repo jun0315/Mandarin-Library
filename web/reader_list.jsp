@@ -38,6 +38,10 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
     <script src="js/dialogue.js"></script>
+
+    <!--  侧边栏效果 -->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
 </head>
 
 <body>
@@ -68,6 +72,13 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <div style="width: 1000px;height: 40px">
+                                        <a href="reader_add.jsp">
+                                            <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
+                                            <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
+                                                <strong>Add Reader</strong></p>
+                                        </a>
+                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
@@ -81,100 +92,53 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-<%--                                            <%List<Reader> readers = (List<Reader>) request.getAttribute("readers");%>--%>
-<%--                                            <c:forEach items="${readers}" var="reader" varStatus="li">--%>
-<%--                                                <tr>--%>
-<%--                                                    <th>${li.index+1}</th>--%>
-<%--                                                    <td>${reader.getAccount()}</td>--%>
-<%--                                                    <td>${reader.getName()}</td>--%>
-<%--                                                    <td>${reader.getEmail()}</td>--%>
-<%--                                                    <td>${reader.getDeposit()}</td>--%>
-<%--                                                    <td>--%>
-<%--                                                        <a href="#myModal" style="color: #ff0c0c"--%>
-<%--                                                           data-toggle="modal" value="${reader.getAccount()}"--%>
-<%--                                                           id="lastButton">Delete</a>--%>
-<%--                                                        <!-- Modal-->--%>
-<%--                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"--%>
-<%--                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"--%>
-<%--                                                             class="modal fade text-left">--%>
-<%--                                                            <div role="document" class="modal-dialog">--%>
-<%--                                                                <div class="modal-content">--%>
-<%--                                                                    <div class="modal-header">--%>
-<%--                                                                        <h4 id="exampleModalLabel" class="modal-title">--%>
-<%--                                                                            Delete</h4>--%>
-<%--                                                                        <button type="button" data-dismiss="modal"--%>
-<%--                                                                                aria-label="Close" class="close"><span--%>
-<%--                                                                                aria-hidden="true">×</span></button>--%>
-<%--                                                                    </div>--%>
-<%--                                                                    <div class="modal-body">--%>
-<%--                                                                        <p>Are you sure want to delete this account?</p>--%>
-<%--                                                                    </div>--%>
-<%--                                                                    <div class="modal-footer">--%>
-<%--                                                                        <button type="button" data-dismiss="modal" class="btn btn-secondary">--%>
-<%--                                                                            Close--%>
-<%--                                                                        </button>--%>
-<%--                                                                        <a href="librarian.jsp?account=${reader.getAccount()}" value="${reader.getAccount()}">--%>
-<%--                                                                            <button type="button" class="btn btn-primary">--%>
-<%--                                                                                Delete--%>
-<%--                                                                            </button>--%>
-<%--                                                                        </a>--%>
-<%--                                                                    </div>--%>
-<%--                                                                </div>--%>
-<%--                                                            </div>--%>
-<%--                                                        </div>--%>
-<%--                                                        <a href="ReaderEdit.do?account=${reader.getAccount()}"--%>
-<%--                                                           style="color: #0000c6">Edit</a>--%>
-<%--                                                    </td>--%>
-<%--                                                </tr>--%>
-<%--                                            </c:forEach>--%>
-<%List<Reader> readers = (List<Reader>) request.getAttribute("readers");%>
-<c:forEach items="${readers}" var="reader" varStatus="li">
-    <tr>
-        <th>${li.index+1}</th>
-        <td>${reader.getAccount()}</td>
-        <td>${reader.getName()}</td>
-        <td>${reader.getEmail()}</td>
-        <td>${reader.getDeposit()}</td>
-        <td>
-            <a href="#myModal" style="color: #ff0c0c"
-               data-toggle="modal" value="${reader.getAccount()}"
-               id="lastButton">删除</a>
-                <%--   <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
-            <!-- Modal-->
-            <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
-                 aria-labelledby="exampleModalLabel" aria-hidden="true"
-                 class="modal fade text-left">
-                <div role="document" class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 id="exampleModalLabel" class="modal-title">
-                                Delete</h4>
-                            <button type="button" data-dismiss="modal"
-                                    aria-label="Close" class="close"><span
-                                    aria-hidden="true">×</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Are you sure want to delete this reader?</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" data-dismiss="modal"
-                                    class="btn btn-secondary">Close
-                            </button>
-                            <a href="admin.jsp?account=${reader.getAccount()}"}>
-                                <button type="button"
-                                        class="btn btn-primary">
-                                    Delete
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="ReaderEdit.do?account=${reader.getAccount()}"
-               style="color: #0000c6">编辑</a>
-        </td>
-    </tr>
-</c:forEach>
+                                            <%List<Reader> readers = (List<Reader>) request.getAttribute("readers");%>
+                                            <c:forEach items="${readers}" var="reader" varStatus="li">
+                                                <tr>
+                                                    <th>${li.index+1}</th>
+                                                    <td>${reader.getAccount()}</td>
+                                                    <td>${reader.getName()}</td>
+                                                    <td>${reader.getEmail()}</td>
+                                                    <td>${reader.getDeposit()}</td>
+                                                    <td>
+                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${reader.getAccount()}"
+                                                           id="lastButton" >
+                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
+                                                                Delete
+                                                            </button>
+                                                        </a>
+                                                        <!-- Modal-->
+                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
+                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                                             class="modal fade text-left">
+                                                            <div role="document" class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 id="exampleModalLabel">Delete</h4>
+                                                                        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>Are you sure want to delete this reader?</p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                                                        <a href="ReaderDelete.do?account=${reader.getAccount()}"}>
+                                                                            <button type="button" class="btn btn-primary">Delete</button>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="ReaderEdit.do?account=${reader.getAccount()}">
+                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
+                                                                Edit
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
                                             </tbody>
                                         </table>
                                     </div>
@@ -205,7 +169,7 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'found') {
-        alert("successfully serach!");
+        alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
     }

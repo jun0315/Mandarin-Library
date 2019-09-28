@@ -78,6 +78,13 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <div style="width: 1000px;height: 40px">
+                                        <a href="librarian_add.jsp">
+                                            <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
+                                            <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
+                                                <strong>Add Librarian</strong></p>
+                                        </a>
+                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
@@ -98,10 +105,12 @@
                                                     <td>${librarian.getName()}</td>
                                                     <td>${librarian.getPhone()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" style="color: #ff0c0c"
-                                                           data-toggle="modal" value="${librarian.getAccount()}"
-                                                           id="lastButton">删除</a>
-                                                            <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
+                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${librarian.getAccount()}"
+                                                           id="lastButton">
+                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
+                                                                Delete
+                                                            </button>
+                                                        </a>
                                                         <!-- Modal-->
                                                         <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
                                                              aria-labelledby="exampleModalLabel" aria-hidden="true"
@@ -133,8 +142,11 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}"
-                                                           style="color: #0000c6">编辑</a>
+                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}">
+                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
+                                                                Edit
+                                                            </button>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             </c:forEach>

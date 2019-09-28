@@ -8,7 +8,6 @@
 
 <%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 <%@ page import="entity.Reader" %>
-<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -44,7 +43,7 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
@@ -63,8 +62,8 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Edit this account infomation</p>
-                            <form class="form-horizontal" action="EditLibrarian.do" method="post">
+                            <p>Edit this reader's information</p>
+                            <form class="form-horizontal" action="ReaderEdit.do" method="post">
                                 <%Reader reader = (Reader) request.getAttribute("reader");%>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Account</label>
@@ -106,7 +105,7 @@
                                     <label class="col-sm-3 form-control-label">Deposit</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="deposit"
-                                               value="<%=reader.getDeposit()%>"
+                                               value="<%=Integer.toString(reader.getDeposit())%>"
                                                class="form-control form-control-warning">
                                         <%-- <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -141,9 +140,11 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
-        alert("successfully edit!");
+        alert("Successfully edit!");
+        window.location.href = "ReaderList.do";
     } else if (info == 'error') {
-        alert("edit failure because of have the same account!");
+        alert("Edit failure because of have the same account!");
+        window.location.href = "ReaderList.do";
     }
 </script>
 

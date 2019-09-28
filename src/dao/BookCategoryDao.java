@@ -85,7 +85,7 @@ public class BookCategoryDao {
         }
     }
 
-    public void editLibrarian(String category,String preCategory, String floor){
+    public void editCategory(String category,String preCategory, String floor){
         try {
             String sql = "update book_category_floor set category=?,floor=? where category=? ";
             Connection connection = DBHelper.getInstance().getConnection();

@@ -78,6 +78,13 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <div style="width: 1000px;height: 40px">
+                                        <a href="book_category_add.jsp">
+                                            <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
+                                            <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
+                                                <strong>Add Book Category and Location</strong></p>
+                                        </a>
+                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
@@ -96,9 +103,12 @@
                                                     <td>${bookCategory.getCategory()}</td>
                                                     <td>${bookCategory.getFloor()}</td>
                                                     <td>
-                                                        <a href="#myModal" style="color: #ff0c0c"
-                                                           data-toggle="modal" value="${bookCategory.getCategory()}"
-                                                           id="lastButton">删除</a>
+                                                        <a href="#myModal" data-toggle="modal" value="${bookCategory.getCategory()}"
+                                                           id="lastButton">
+                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
+                                                                Delete
+                                                            </button>
+                                                        </a>
                                                             <%--   <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
                                                         <div id="myModal" tabindex="-1" role="dialog"
@@ -120,7 +130,8 @@
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=${bookCategory.getCategory()}" value="${bookCategory.getCategory()}">
+                                                                        <a href="admin.jsp?account=${bookCategory.getCategory()}"
+                                                                           value="${bookCategory.getCategory()}">
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -130,8 +141,11 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="BookCategoryEdit.do?category=${bookCategory.getCategory()}"
-                                                           style="color: #0000c6">编辑</a>
+                                                        <a href="BookCategoryEdit.do?category=${bookCategory.getCategory()}">
+                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
+                                                                Edit
+                                                            </button>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             </c:forEach>

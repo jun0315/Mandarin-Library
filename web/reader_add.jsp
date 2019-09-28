@@ -138,6 +138,7 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("Successfully add!");
+        window.location.href = "ReaderList.do";
     } else if (info == 'error') {
         alert("Add failure because of have the same account!");
     }

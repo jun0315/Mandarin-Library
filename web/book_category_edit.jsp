@@ -53,14 +53,14 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian Edit</h2>
+                    <h2 class="no-margin-bottom">Book Category Edit</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian Edit</li>
+                    <li class="breadcrumb-item active">Book Category Edit</li>
                 </ul>
             </div>
             <section class="tables">
@@ -71,7 +71,7 @@
                             <form class="form-horizontal" action="BookCategoryEdit.do" method="post">
                                 <%BookCategory bookCategory = (BookCategory) request.getAttribute("bookCategory");%>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Password</label>
+                                    <label class="col-sm-3 form-control-label">Category</label>
                                     <div class="col-sm-9">
                                         <input type="hidden" name="preCategory" value="<%=bookCategory.getCategory()%>">
                                         <input id="inputHorizontalWarning" name="category"
@@ -81,7 +81,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Name</label>
+                                    <label class="col-sm-3 form-control-label">Floor</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="floor"
                                                value="<%=bookCategory.getFloor()%>"
@@ -104,7 +104,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
+                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -121,9 +121,9 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
-        alert("successfully edit!");
+        alert("Successfully edit!");
     } else if (info == 'error') {
-        alert("edit failure!");
+        alert("Edit failure!");
     }
 </script>
 

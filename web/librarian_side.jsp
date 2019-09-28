@@ -28,17 +28,12 @@
             <ul id="BookManage" class="collapse list-unstyled ">
                 <li><a href="">Book List</a></li>
                 <li><a href="BookAdd.do">Add Book</a></li>
-                <li><a href="book_category_add.jsp">Add Book Category and Location</a></li>
                 <li><a href="book_category_list.do">Category List</a></li>
             </ul>
         </li>
-        <li><a href="#ReaderManage" aria-expanded="false" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i>Reader Manage</a>
-            <ul id="ReaderManage" class="collapse list-unstyled">
-                <li><a href="reader_list.jsp">Reader List</a></li>
-                <li><a href="reader_add.jsp">Add Reader</a></li>
-            </ul>
-        </li>
+
+        <li><a href="ReaderList.do"> <i
+                class="icon-interface-windows"></i>Reader Manage</a></li>
 
         <li><a href="#BusinessProcess" aria-expanded="false" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i>Business Process</a>
@@ -66,3 +61,26 @@
         </li>
     </ul>
 </nav>
+
+<script>
+    $(function(){
+        //记录菜单状态
+        $(".list-unstyled").click(function(){
+            //获取用于伸缩菜单的li的class
+            var classCookie = $(this).parent().attr("class");
+            //把li的class保存进cookie
+            $.cookie("classCookie",classCookie);
+            //获取状态改变的菜单的索引
+            var index = $(".list-unstyled").find(".show").index(this);
+            //保存状态改变菜单的索引
+            $.cookie("indexClass",index);
+        });
+
+        //刷新页面执行的操作，判断是否有cookie
+        if($.cookie("indexClass") != null && $.cookie("classCookie").indexOf("show") == -1){
+            var num = $.cookie("indexClass");
+            //为li添加展开菜单的class
+            $(".collapse").eq(num).addClass("show");
+        }
+    })
+</script>

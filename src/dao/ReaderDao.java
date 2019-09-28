@@ -69,10 +69,12 @@ public class ReaderDao {
                 String passwordInDB = resultSet.getString("user_password");
                 String nameInDB = resultSet.getString("user_name");
                 String emailInDB = resultSet.getString("user_email");
-                reader.setName(nameInDB);
-                reader.setEmail(emailInDB);
+                int depositInDB = resultSet.getInt("security_deposit");
                 reader.setAccount(account);
                 reader.setPassword(passwordInDB);
+                reader.setName(nameInDB);
+                reader.setEmail(emailInDB);
+                reader.setDeposit(depositInDB);
             }
         } catch (SQLException e) {
             e.printStackTrace();
