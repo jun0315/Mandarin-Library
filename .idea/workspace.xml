@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="BilobiliLibrary:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/DBHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderSearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/reader_search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1QwbBN3O59yC6zvytYp9xxoH2xP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15136719" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\大学\web\library - test\web\js" />
+      <recent name="H:\大学\web\library - test\web" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\大学\web\library - test" />
+      <recent name="H:\大学\web\library - test\web\WEB-INF\lib" />
+      <recent name="H:\大学\web\library - test\web" />
+      <recent name="H:\大学\web\library\web\WEB-INF\lib" />
+      <recent name="H:\大学\web\library\web" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk1.8.0_45">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="BilobiliLibrary:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_45_library" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="45841" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="BilobiliLibrary:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="" />
+      <created>1568684469383</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568684469383</updated>
+      <workItem from="1568684473580" duration="15886000" />
+      <workItem from="1568775499230" duration="4531000" />
+      <workItem from="1568790624933" duration="1754000" />
+      <workItem from="1568792492922" duration="14311000" />
+      <workItem from="1568819578408" duration="18536000" />
+      <workItem from="1568953845910" duration="5260000" />
+      <workItem from="1568968220213" duration="5958000" />
+      <workItem from="1569032358841" duration="14318000" />
+      <workItem from="1569120466140" duration="999000" />
+      <workItem from="1569138115952" duration="1990000" />
+      <workItem from="1569386247684" duration="262000" />
+      <workItem from="1569394392261" duration="15330000" />
+      <workItem from="1569661792799" duration="416000" />
+      <workItem from="1569662230752" duration="7389000" />
+      <workItem from="1569724286002" duration="4965000" />
+    </task>
+    <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
+      <created>1568856657284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568856657284</updated>
+    </task>
+    <task id="LOCAL-00002" summary="更新数据库，初步add librarian">
+      <created>1568860437555</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568860437555</updated>
+    </task>
+    <task id="LOCAL-00003" summary="增加admin类">
+      <created>1568864675229</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568864675229</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改查找librarian bug">
+      <created>1568894450248</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568894450248</updated>
+    </task>
+    <task id="LOCAL-00005" summary="优化登陆界面数据库查询">
+      <created>1568895236445</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568895236445</updated>
+    </task>
+    <task id="LOCAL-00006" summary="删除确认弹框">
+      <created>1568971056248</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568971056248</updated>
+    </task>
+    <task id="LOCAL-00007" summary="完成librarian编辑功能">
+      <created>1569058148351</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1569058148351</updated>
+    </task>
+    <task id="LOCAL-00008" summary="删除admin两个按钮">
+      <created>1569058393520</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569058393520</updated>
+    </task>
+    <task id="LOCAL-00009" summary="更新admin页面布局">
+      <created>1569058536117</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569058536117</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成reader账户查询，三个页面完成" />
+    <MESSAGE value="gengx" />
+    <MESSAGE value="更新数据库，初步add librarian" />
+    <MESSAGE value="增加admin类" />
+    <MESSAGE value="修改查找librarian bug" />
+    <MESSAGE value="优化登陆界面数据库查询" />
+    <MESSAGE value="删除确认弹框" />
+    <MESSAGE value="完成librarian编辑功能" />
+    <MESSAGE value="删除admin两个按钮" />
+    <MESSAGE value="更新admin页面布局" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新admin页面布局" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LoginServlet.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/dao/AdminDao.java</url>
+          <line>13</line>
+          <properties class="dao.AdminDao" method="info">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
