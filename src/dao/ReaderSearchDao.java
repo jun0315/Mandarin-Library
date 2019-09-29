@@ -10,11 +10,16 @@ import java.util.List;
 
 
 public class ReaderSearchDao {
+    public ReaderSearchDao(){
+
+    }
 
     public List<Book> Search(String message) {
         try {
-            String sql = "select * from book ";
-                    //where book_name like %+'message'+%";
+            String ma="%"+message+"%";
+            String sql = "select * from book where book_name like \'"+ma+"\'" ;
+
+                    //'%'+message+'%'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);

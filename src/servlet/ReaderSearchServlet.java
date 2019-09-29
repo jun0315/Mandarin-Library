@@ -32,15 +32,15 @@ public class ReaderSearchServlet extends HttpServlet {
         //String[] b3 = list.get(3);
         //String[] b4 = list.get(4);
         //String[] b5 = list.get(5);
-      // for (int i = 0; i < list.size(); i++) {
+      //for (int i = 0; i < list.size(); i++) {
 
          //out.println(list.get(i).getBookNumber());//+list.get(i).getBook_name()+list.get(i).getBook_press());
         // out.println(list.get(i).getBook_price()+list.get(i).getBook_author()+list.get(i).getBook_category());
-     // }
+     //}
 
 
-       RequestDispatcher dispatcher=request.getRequestDispatcher("test.jsp");
-       dispatcher.forward(request, response);
+      RequestDispatcher dispatcher=request.getRequestDispatcher("test.jsp");
+    dispatcher.forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
