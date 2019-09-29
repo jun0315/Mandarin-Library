@@ -1,8 +1,10 @@
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
+<%@ page import="entity.Book" %>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -28,192 +30,128 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <script src="js/dialogue.js"></script>
+
+    <%--    <script type="text/javascript">--%>
+    <%--        function deleteClick() {--%>
+    <%--            var con;--%>
+    <%--            con = confirm("Are you sure you want to delete?\n");--%>
+    <%--            if(con==true) {--%>
+    <%--                window.location.href("index.jsp");--%>
+    <%--            }--%>
+    <%--        }--%>
+    <%--    </script>--%>
 </head>
 <body>
 <div class="page">
     <!-- Main Navbar-->
-    <header class="header">
-        <nav class="navbar">
-            <!-- Search Box-->
-            <div class="search-box">
-                <button class="dismiss"><i class="icon-close"></i></button>
-                <form id="searchForm" action="#" role="search">
-                    <input type="search" placeholder="What are you looking for..." class="form-control">
-                </form>
-            </div>
-            <div class="container-fluid">
-                <div class="navbar-holder d-flex align-items-center justify-content-between">
-                    <!-- Navbar Header-->
-                    <div class="navbar-header">
-                        <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
-                        <div class="brand-text d-none d-lg-inline-block"><span>Bilobili </span><strong>Library</strong>
-                        </div>
-                        <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
-                    </a>
-                        <!-- Toggle Button--><a id="toggle-btn" href="#"
-                                                class="menu-btn active"><span></span><span></span><span></span></a>
-                    </div>
-                    <!-- Navbar Menu -->
-                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-                        <!-- Logout    -->
-                        <li class="nav-item"><a href="logout" class="nav-link logout"> <span
-                                class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <nav class="side-navbar">
-            <!-- Sidebar Header-->
-            <div class="sidebar-header d-flex align-items-center">
-                <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                <div class="title">
-                    <h1 class="h4">
-                        <%
-                            String account = (String) session.getAttribute("name");
-                            out.println(account);
-                        %>
-                    </h1>
-                </div>
-            </div>
-            <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
-            <ul class="list-unstyled">
-                <li><a href="#LibrarianManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Librarian Manage</a>
-                    <ul id="LibrarianManage" class="collapse list-unstyled ">
-                        <li><a href="LibrarianListPage">Librarian List</a></li>
-                        <li><a href="librarian_add.jsp">Librarian Add</a></li>
-                    </ul>
-                </li>
-                <li><a href="#ReaderRule" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Reader Rule</a>
-                    <ul id="ReaderRule" class="collapse list-unstyled ">
-                        <li><a href="#">Rule List</a></li>
-                        <li><a href="#">Rule Edit</a></li>
-                        <li><a href="#">Rule Add</a></li>
-                    </ul>
-                </li>
-                <li><a href="#AccountManage" aria-expanded="false" data-toggle="collapse"> <i
-                        class="icon-interface-windows"></i>Account Manage</a>
-                    <ul id="AccountManage" class="collapse list-unstyled ">
-                        <li><a href="#">Account Information</a></li>
-                        <li><a href="#">Reset Password</a></li>
-                    </ul>
-                </li>
-
-                <%--                <li class="active"><a href="admin.jsp"> <i class="icon-home"></i>Home </a></li>--%>
-
-                <%--                <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>--%>
-                <%--                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>--%>
-                <%--                <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>--%>
-                <%--                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i--%>
-                <%--                        class="icon-interface-windows"></i>Example dropdown </a>--%>
-                <%--                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                        <li><a href="#">Page</a></li>--%>
-                <%--                    </ul>--%>
-                <%--                </li>--%>
-                <%--                <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>--%>
-                <%--            </ul>--%>
-
-                <%--            <span class="heading">Extras</span>--%>
-                <%--            <ul class="list-unstyled">--%>
-                <%--                <li><a href="#"> <i class="icon-flask"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-screen"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-mail"></i>Demo </a></li>--%>
-                <%--                <li><a href="#"> <i class="icon-picture"></i>Demo </a></li>--%>
-                <%--            </ul>--%>
-
-        </nav>
+        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian Add</h2>
+                    <h2 class="no-margin-bottom">Search</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian Add</li>
+                    <li class="breadcrumb-item active">Search</li>
                 </ul>
             </div>
-            <section class="tables">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Sign up for a new librarian.</p>
-                            <form class="form-horizontal" action="ReaderSearchServlet" method="post">
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">search</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="message"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
+            <section class="tables" style="padding: 20px">
 
-                                <div class="form-group row">
-                                    <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="search" class="btn btn-primary">
+                    <form class="input-group col-md-12" style="margin: 10px;position: relative" action="ReaderSearchServlet"
+                      name="search" method="post">
+                    <input type="text" class="form-control" name="message"
+                           placeholder="Please enter the account of the administrator who needs to query">
+                    <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info btn-search">search</button>
+                        </span>
+                </form>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Bnumber</th>
+                                                <th>Name</th>
+                                                <th>Press</th>
+                                                <th>Author</th>
+                                                <th>Operation</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <%List<Book> list = (List<Book>)request.getAttribute("list");
+                                            %>
+                                            <c:forEach items="${list}" var="book" varStatus="li">
+                                                <tr>
+                                                    <th>${li.index+1}</th>
+                                                    <td>${book.getBookNumber()}</td>
+                                                    <td>${book.getName()}</td>
+                                                    <td>${book.getPress()}</td>
+                                                    <td>${book.getAuthor()}</td>
+                                                    <td>
+                                                        <a href="#myModal_${li.index+1}" style="color: #ff0c0c"
+                                                           data-toggle="modal" value="${book.getBookNumber()}"
+                                                           id="lastButton">详情</a>
+                                                            <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
+                                                        <!-- Modal-->
+                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
+                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                                             class="modal fade text-left">
+                                                            <div role="document" class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 id="exampleModalLabel" class="modal-title">
+                                                                            Delete</h4>
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                aria-label="Close" class="close"><span
+                                                                                aria-hidden="true">×</span></button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>Are you sure want to delete this account?</p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                class="btn btn-secondary">Close
+                                                                        </button>
+                                                                        <a href="admin.jsp?account=${librarian.getAccount()}">
+                                                                                <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
+                                                                            <button type="button"
+                                                                                    class="btn btn-primary">
+                                                                                Delete
+                                                                            </button>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}"
+                                                           style="color: #0000c6">预约</a>
+                                                    </td>
+                                                </tr>
+                                            </c:forEach>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                        <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>
-                        <c:forEach items="${librarians}" var="librarian" varStatus="li">
-                        <tr>
-                            <th>${li.index+1}</th>
-                            <td>${librarian.getAccount()}</td>
-                            <td>${librarian.getName()}</td>
-                            <td>${librarian.getPhone()}</td>
-                            <td></td>
-                        </tr>
-                        </c:forEach>
                     </div>
                 </div>
-                <%--                <div class="container-fluid">--%>
-                <%--                    <div class="row">--%>
-                <%--                        <div class="col-lg-12">--%>
-                <%--                            <div class="card">--%>
-                <%--                                <div class="card-body">--%>
-                <%--                                    <div class="table-responsive">--%>
-                <%--                                        <table class="table">--%>
-                <%--                                            <thead>--%>
-                <%--                                            <tr>--%>
-                <%--                                                <th>#</th>--%>
-                <%--                                                <th>Account</th>--%>
-                <%--                                                <th>Name</th>--%>
-                <%--                                                <th>Phone</th>--%>
-                <%--                                            </tr>--%>
-                <%--                                            </thead>--%>
-                <%--                                            <tbody>--%>
-                <%--                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>--%>
-                <%--                                            <%int i = 0;%>--%>
-                <%--                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">--%>
-                <%--                                                <% i++;%>--%>
-                <%--                                                <tr>--%>
-                <%--                                                    <th>${i}</th>--%>
-                <%--                                                    <td>${librarian.getAccount()}</td>--%>
-                <%--                                                    <td>${librarian.getName()}</td>--%>
-                <%--                                                    <td>${librarian.getPhone()}</td>--%>
-                <%--                                                </tr>--%>
-                <%--                                            </c:forEach>--%>
-                <%--                                            </tbody>--%>
-                <%--                                        </table>--%>
-                <%--                                    </div>--%>
-                <%--                                </div>--%>
-                <%--                            </div>--%>
-                <%--                        </div>--%>
-                <%--                    </div>--%>
-                <%--                </div>--%>
             </section>
-
-
             <!-- Page Footer-->
             <footer class="main-footer">
                 <div class="container-fluid">
@@ -231,14 +169,18 @@
         </div>
     </div>
 </div>
+
+
 <script>
     var info = '<%=request.getParameter("info")%>';
-    if (info == 'success') {
-        alert("successfully add!");
-    }else if(info == 'erroe'){
-        alert("add failure because of have the same account!");
+    if (info == 'found') {
+        alert("successfully serach!");
+    } else if (info == 'notFound') {
+        alert("search failure!");
     }
 </script>
+
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
@@ -249,5 +191,6 @@
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
+
 </body>
 </html>

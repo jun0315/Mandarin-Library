@@ -39,7 +39,7 @@ public class ReaderSearchServlet extends HttpServlet {
      //}
 
 
-      RequestDispatcher dispatcher=request.getRequestDispatcher("test.jsp");
+      RequestDispatcher dispatcher=request.getRequestDispatcher("reader_search.jsp");
     dispatcher.forward(request, response);
     }
 
