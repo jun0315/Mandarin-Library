@@ -12,11 +12,12 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
+
 /**
-*@author 刘威
+ * @author 刘威
  * @version 1.0
- *用于实现Reader的view功能，访问数据库的reader_borrow表
-**/
+ * 用于实现Reader的view功能，访问数据库的reader_borrow表
+ **/
 
 @WebServlet(name = "ReaderBorrowServlet")
 public class ReaderBorrowServlet extends HttpServlet {
@@ -30,6 +31,6 @@ public class ReaderBorrowServlet extends HttpServlet {
         HttpSession session = request.getSession();
         List<ReaderBorrow> readerBorrowList = readerBorrowDao.getReaderBorrowList((String) session.getAttribute("account"));
         request.setAttribute("readerBorrowList", readerBorrowList);
-        request.getRequestDispatcher("reader_view.jsp").forward(request, response);
+        request.getRequestDispatcher("reader_borrowHistory.jsp").forward(request, response);
     }
 }
