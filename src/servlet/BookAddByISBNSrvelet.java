@@ -19,13 +19,13 @@ public class BookAddByISBNSrvelet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         String ISBN = request.getParameter("ISBN");
-//        GetBookInfo getBookInfo = new GetBookInfo(ISBN);
+        GetBookInfo getBookInfo = new GetBookInfo(ISBN);
         Book book = new Book();
-//        book.setAuthor(getBookInfo.getAuthor());
-//        book.setName(getBookInfo.getTitle());
-//        book.setPress(getBookInfo.getPublisher());
-        //test
-        book.setPress("test");
+////        book.setAuthor(getBookInfo.getAuthor());
+////        book.setName(getBookInfo.getTitle());
+////        book.setPress(getBookInfo.getPublisher());
+//        //test
+//        book.setPress("test");
         request.setAttribute("bookFromISBN", book);
         request.getRequestDispatcher("book_add.jsp").forward(request, response);
     }

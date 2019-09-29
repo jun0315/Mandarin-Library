@@ -33,7 +33,7 @@ public class BookCategoryEditServlet extends HttpServlet {
             request.setAttribute("bookCategory",bookCategory);
             request.getRequestDispatcher("book_category_edit.jsp?info=error").forward(request, response);
         } else {
-            bookCategoryDao.editLibrarian(category,preCategory,floor);
+            bookCategoryDao.editLibrarian(category,preCategory);
             bookCategory = bookCategoryDao.info(category);
             request.setAttribute("bookCategory",bookCategory);
             request.getRequestDispatcher("book_category_edit.jsp?info=success").forward(request, response);

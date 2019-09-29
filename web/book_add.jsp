@@ -73,10 +73,10 @@
                     <li class="breadcrumb-item active">Add the new book</li>
                 </ul>
             </div>
+            <%! String nameFromAPI = "";%>
+            <%! String authorFromAPI = "";%>
+            <%! String pressFromAPI = "";%>
             <%
-                String nameFromAPI = "";
-                String authorFromAPI = "";
-                String pressFromAPI = "";
                 Book book = (Book) request.getAttribute("bookFromISBN");
                 if (book != null) {
                     nameFromAPI = book.getName();
@@ -105,7 +105,7 @@
                                     <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="name"
-                                               class="form-control form-control-success" value="${nameFormAPI}">
+                                               class="form-control form-control-success" value="<%=nameFromAPI%>">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@
                                     <label class="col-sm-3 form-control-label">Press</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="press"
-                                               class="form-control form-control-success" value="${pressFromAPI}">
+                                               class="form-control form-control-success" value="<%=pressFromAPI%>">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                                     <label class="col-sm-3 form-control-label" }>Author</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="author"
-                                               class="form-control form-control-success" value="${authorFromAPI}">
+                                               class="form-control form-control-success" value="<%=authorFromAPI%>">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
