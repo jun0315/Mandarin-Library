@@ -140,5 +140,13 @@
         <servlet-name>EditReader</servlet-name>
         <url-pattern>/EditReader.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>BorrowHistory</servlet-name>
+        <servlet-class>servlet.ReaderBorrowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BorrowHistory</servlet-name>
+        <url-pattern>/BorrowHistory.do</url-pattern>
+    </servlet-mapping>
 <!--    end -->
 </web-app>
