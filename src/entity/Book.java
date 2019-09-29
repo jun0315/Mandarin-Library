@@ -1,10 +1,10 @@
 package entity;
 
 public class Book {
-    private int BookNumber;
+    private String BookNumber;
     private String Name;
     private String Press;
-    private String Price;
+    private double Price;
     private String Author;
     private String Category;
     private int Amount;
@@ -14,10 +14,10 @@ public class Book {
     private String Description;
 
     public Book() {
-        this.BookNumber =0 ;
+        this.BookNumber ="bull" ;
         this.Name = "null";
         this.Press = "null";
-        this.Price = "null";
+        this.Price = 0;
         this.Author = "null";
         this.Category = "null";
         this.Amount = 0;
@@ -27,12 +27,11 @@ public class Book {
         this.Description="null";
     }
 
-
-    public int getBookNumber() {
+    public String getBookNumber() {
         return BookNumber;
     }
 
-    public void setBookNumber(int bookNumber) {
+    public void setBookNumber(String bookNumber) {
         BookNumber = bookNumber;
     }
 
@@ -52,11 +51,11 @@ public class Book {
         Press = press;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return Price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         Price = price;
     }
 

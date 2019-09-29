@@ -123,7 +123,7 @@
         <servlet-name>AddBookByISBN</servlet-name>
         <url-pattern>/AddBookByISBN.do</url-pattern>
     </servlet-mapping>
-<!--    add reader  -->
+    <!--    add reader  -->
     <servlet>
         <servlet-name>ReaderAdd</servlet-name>
         <servlet-class>servlet.ReaderAddServlet</servlet-class>
@@ -135,10 +135,18 @@
     <servlet>
         <servlet-name>EditReader</servlet-name>
         <servlet-class>servlet.ReaderEditServlet</servlet-class>
-        </servlet>
+    </servlet>
     <servlet-mapping>
         <servlet-name>EditReader</servlet-name>
         <url-pattern>/EditReader.do</url-pattern>
     </servlet-mapping>
-<!--    end -->
+    <servlet>
+        <servlet-name>BookList</servlet-name>
+        <servlet-class>servlet.BookListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookList</servlet-name>
+        <url-pattern>/BookList.do</url-pattern>
+    </servlet-mapping>
+    <!--    end -->
 </web-app>

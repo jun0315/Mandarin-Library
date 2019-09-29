@@ -76,12 +76,14 @@
             <%! String nameFromAPI = "";%>
             <%! String authorFromAPI = "";%>
             <%! String pressFromAPI = "";%>
+            <%! String describeFromAPI = "";%>
             <%
                 Book book = (Book) request.getAttribute("bookFromISBN");
                 if (book != null) {
                     nameFromAPI = book.getName();
                     authorFromAPI = book.getAuthor();
                     pressFromAPI = book.getPress();
+                    describeFromAPI = book.getDescription();
                 }
             %>
             <section
@@ -90,11 +92,11 @@
                     <div class="card">
                         <div class="card-body">
                             <p>Add the new book</p>
-                            <form class="form-horizontal" action="book_add.do" method="post">
+                            <form class="form-horizontal" action="BookAdd.do" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="isbn"
+                                        <input id="inputHorizontalSuccess" name="BookNumber"
                                                class="form-control form-control-success">
                                         <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
                                         <a href="AddBookByISBN.do" id="importISBN">Import ISBN</a>
@@ -118,6 +120,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Price</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="price"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
                                     <label class="col-sm-3 form-control-label" }>Author</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="author"
@@ -126,10 +136,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Price</label>
+                                    <label class="col-sm-3 form-control-label">Description</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="price"
-                                               class="form-control form-control-success">
+                                        <input name="description"
+                                               class="form-control form-control-success" value="<%=describeFromAPI%>">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
@@ -140,24 +150,40 @@
                                             <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
                                             <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
                                                 <option id="category"
-                                                        value="${bookCategory.getCategory()}">${bookCategory.getCategory()}(${bookCategory.getFloor()})
+                                                        value="${bookCategory.getCategory()}">${bookCategory.getCategory()}
                                                 </option>
                                             </c:forEach>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Shelf</label>
+                                    <label class="col-sm-3 form-control-label">Amount</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="Shelf"
+                                        <input id="inputHorizontalSuccess" name="amount"
                                                class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Amount</label>
+                                    <label class="col-sm-3 form-control-label">Floor</label>
                                     <div class="col-sm-9">
-                                        <input id="bookamount" name="amount"
+                                        <input id="inputHorizontalSuccess" name="floor"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Shelf</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="shelf"
+                                               class="form-control form-control-success">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">AreaCode</label>
+                                    <div class="col-sm-9">
+                                        <input name="areaCode"
                                                class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>

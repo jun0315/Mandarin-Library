@@ -21,9 +21,10 @@ public class BookAddByISBNSrvelet extends HttpServlet {
         String ISBN = request.getParameter("ISBN");
         GetBookInfo getBookInfo = new GetBookInfo(ISBN);
         Book book = new Book();
-////        book.setAuthor(getBookInfo.getAuthor());
-////        book.setName(getBookInfo.getTitle());
-////        book.setPress(getBookInfo.getPublisher());
+        book.setAuthor(getBookInfo.getAuthor());
+        book.setName(getBookInfo.getTitle());
+        book.setPress(getBookInfo.getPublisher());
+        book.setDescription(getBookInfo.getDescription());
 //        //test
 //        book.setPress("test");
         request.setAttribute("bookFromISBN", book);
