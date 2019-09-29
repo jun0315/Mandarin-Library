@@ -144,7 +144,6 @@
         window.location.href = "ReaderList.do";
     } else if (info == 'error') {
         alert("Edit failure because of have the same account!");
-        window.location.href = "ReaderList.do";
     }
 </script>
 

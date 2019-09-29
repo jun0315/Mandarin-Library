@@ -78,9 +78,9 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div style="width: 1000px;height: 40px">
+                                    <div style="width: 1000px;height: 60px">
                                         <a href="book_category_add.jsp">
-                                            <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
+                                            <img src="img/addBook.png" style="float: left; length:40px; width:40px;">
                                             <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
                                                 <strong>Add Book Category and Location</strong></p>
                                         </a>

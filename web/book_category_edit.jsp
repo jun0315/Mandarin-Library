@@ -122,6 +122,7 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("Successfully edit!");
+        window.location.href = "book_category_list.do";
     } else if (info == 'error') {
         alert("Edit failure!");
     }

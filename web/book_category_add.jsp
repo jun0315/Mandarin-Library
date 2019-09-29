@@ -87,7 +87,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
+                            <p>CCopyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -103,8 +103,9 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully add!");
+        window.location.href = "book_category_list.do";
     } else if (info == 'error') {
-        alert("add failure because of have the same account!");
+        alert("add failure because of have the same category!");
     }
 </script>
 <!-- JavaScript files-->

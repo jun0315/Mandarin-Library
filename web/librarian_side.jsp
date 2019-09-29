@@ -76,7 +76,7 @@
             $.cookie("indexClass",index);
         });
 
-        //刷新页面执行的操作，判断是否有cookie
+        //刷新页面执行的操作，判断是否有cookie (未完成)
         if($.cookie("indexClass") != null && $.cookie("classCookie").indexOf("show") == -1){
             var num = $.cookie("indexClass");
             //为li添加展开菜单的class
