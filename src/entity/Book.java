@@ -14,7 +14,7 @@ public class Book {
     private String Description;
 
     public Book() {
-        this.BookNumber ="bull" ;
+        this.BookNumber ="null" ;
         this.Name = "null";
         this.Press = "null";
         this.Price = 0;
