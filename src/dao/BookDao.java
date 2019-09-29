@@ -30,18 +30,18 @@ public class BookDao {
             String AreaCode=resultSet.getString("AreaCode");
             String Description=resultSet.getString("Description");
 
-            book.setBookNumber(BookNumber);
-            book.setName(Name);
-            book.setPress(Press);
-            book.setPrice(Price);
-            book.setAuthor(Author);
-            book.setCategory(Category);
-            book.setAmount(Amount);
-            book.setFloor(Floor);
-            book.setShelf(Shelf);
-            book.setAreaCode(AreaCode);
-            book.setDescription(Description);
-            books.add(book);
+           // book.setBookNumber(BookNumber);
+            //book.setName(Name);
+           // book.setPress(Press);
+           // book.setPrice(Price);
+            //book.setAuthor(Author);
+            //book.setCategory(Category);
+            //book.setAmount(Amount);
+            //book.setFloor(Floor);
+            //book.setShelf(Shelf);
+            //book.setAreaCode(AreaCode);
+            //book.setDescription(Description);
+            //books.add(book);
         }
     } catch (SQLException e) {
         e.printStackTrace();
