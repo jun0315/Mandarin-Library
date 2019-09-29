@@ -148,5 +148,13 @@
         <servlet-name>BookList</servlet-name>
         <url-pattern>/BookList.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ReaderList</servlet-name>
+        <servlet-class>servlet.ReaderListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReaderList</servlet-name>
+        <url-pattern>/ReaderList.do</url-pattern>
+    </servlet-mapping>
     <!--    end -->
 </web-app>
