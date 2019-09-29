@@ -53,7 +53,8 @@ CREATE TABLE `book` (
 /*Data for the table `book` */
 
 insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_floor`,`book_shelf`,`book_areacode`,`book_description`) values 
-('9787536025097','白银时代','上海三联书店',50,'王小波',NULL,NULL,NULL,NULL,NULL,NULL);
+('11','111','1',11,'11','arts',11,'11','11','11','111'),
+('9787536025097','白银时代','上海三联书店',50,'王小波','atrs',11,'11','11','11','11');
 
 /*Table structure for table `book_category` */
 
@@ -125,6 +126,8 @@ CREATE TABLE `reader_borrow` (
   `copy_id` varchar(10) NOT NULL,
   `user_account` varchar(64) NOT NULL,
   `borrow_time` datetime DEFAULT NULL,
+  `isReturned` tinyint(4) DEFAULT NULL,
+  `fine` double DEFAULT NULL,
   PRIMARY KEY (`copy_id`,`user_account`),
   KEY `user_id` (`user_account`),
   CONSTRAINT `copy_id` FOREIGN KEY (`copy_id`) REFERENCES `book_detail` (`copy_id`),
@@ -132,6 +135,11 @@ CREATE TABLE `reader_borrow` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader_borrow` */
+
+insert  into `reader_borrow`(`copy_id`,`user_account`,`borrow_time`,`isReturned`,`fine`) values 
+('1','reader-test','2019-02-08 10:41:54',1,NULL),
+('2','reader-test','2019-09-28 10:42:16',0,NULL),
+('3','reader-test','2019-05-16 10:43:59',0,NULL);
 
 /*Table structure for table `reader_reserve` */
 
