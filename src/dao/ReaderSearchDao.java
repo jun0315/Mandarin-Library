@@ -19,14 +19,13 @@ public class ReaderSearchDao {
             String ma="%"+message+"%";
             String sql = "select * from book where book_name like \'"+ma+"\'" ;
 
-                    //'%'+message+'%'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
 
             ResultSetMetaData rsmd = resultSet.getMetaData();
-            Book book=new Book();
-            List<Book> list = new ArrayList<Book>();
+            //Book book=new Book();
+            List<Book> list = new ArrayList<>();
             //int total =resultSet.getRow();
             //String[] a1 = new String[10];
             //String[] a2 = new String[10];
@@ -45,6 +44,7 @@ public class ReaderSearchDao {
           // a5[i]=resultSet.getString(5);
            //a6[i]=resultSet.getString(6);
           // i++;
+                Book book=new Book();
                 book.setBookNumber(resultSet.getString(1));
                 book.setName(resultSet.getString(2));
                 book.setPress(resultSet.getString(3));

@@ -8,9 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/ReaderSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderSearchServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/reader_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/test.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +197,7 @@
       <workItem from="1569394392261" duration="15330000" />
       <workItem from="1569661792799" duration="416000" />
       <workItem from="1569662230752" duration="7389000" />
-      <workItem from="1569724286002" duration="10295000" />
+      <workItem from="1569724286002" duration="12479000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -276,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569742510832</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="search更新细节1">
+      <created>1569743637227</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569743637228</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +315,8 @@
     <MESSAGE value="更新admin页面布局" />
     <MESSAGE value="search更新1" />
     <MESSAGE value="search更新2" />
-    <option name="LAST_COMMIT_MESSAGE" value="search更新2" />
+    <MESSAGE value="search更新细节1" />
+    <option name="LAST_COMMIT_MESSAGE" value="search更新细节1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -332,6 +340,11 @@
           <url>file://$PROJECT_DIR$/src/servlet/LoginServlet.java</url>
           <line>39</line>
           <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/ReaderSearchDao.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/dao/AdminDao.java</url>

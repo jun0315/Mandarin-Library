@@ -69,7 +69,7 @@
                     <form class="input-group col-md-12" style="margin: 10px;position: relative" action="ReaderSearchServlet"
                       name="search" method="post">
                     <input type="text" class="form-control" name="message"
-                           placeholder="Please enter the account of the administrator who needs to query">
+                           placeholder="Please enter the content you are searching for">
                     <span class="input-group-btn">
                             <button type="submit" class="btn btn-info btn-search">search</button>
                         </span>
@@ -93,7 +93,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Book> list = (List<Book>)request.getAttribute("list");
+                                            <%request.getAttribute("list");
                                             %>
                                             <c:forEach items="${list}" var="book" varStatus="li">
                                                 <tr>
