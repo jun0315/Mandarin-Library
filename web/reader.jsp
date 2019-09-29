@@ -734,10 +734,10 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <p>Copyright &copy; 2019.Company name All rights reserved.More Templates <a
-                                        href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect
+                                <p>Copyright &copy; 2019. <a
+                                        href="http://www.cssmoban.com/" target="_blank" title=""></a> - Collect
                                     from
-                                    <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                                    <a href="http://www.cssmoban.com/" title="" target="_blank"></a></p>
                             </div>
                             <div class="col-sm-6 text-right">
                                 <p></p>

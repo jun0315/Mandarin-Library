@@ -14,7 +14,7 @@
                 <!-- Navbar Header-->
                 <div class="navbar-header">
                     <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
-                    <div class="brand-text d-none d-lg-inline-block"><span>Bilobili </span><strong>Library</strong>
+                    <div class="brand-text d-none d-lg-inline-block"><span>Mandarin </span><strong>Library</strong>
                     </div>
                     <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
                 </a>

@@ -23,18 +23,18 @@
     <div id="large-header" class="large-header">
       <canvas id="demo-canvas"></canvas>
       <div class="logo_box">
-        <h3>欢迎你</h3>
+        <h3>Welcome</h3>
         <form action="login" name="f" method="post">
           <div class="input_outer">
             <span class="u_user"></span>
             <input name="account" class="text" style="color: #FFFFFF !important" type="text"
-                   placeholder="请输入账户">
+                   placeholder="Your account">
           </div>
           <div class="input_outer">
             <span class="us_uer"></span>
             <input name="password" class="text"
                    style="color: #FFFFFF !important; position:absolute; z-index:100;" value=""
-                   type="password" placeholder="请输入密码">
+                   type="password" placeholder="Your password">
           </div>
           <div class="mb2">
             <!--                        <a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a>-->
