@@ -53,11 +53,13 @@ public class LoginServlet extends HttpServlet {
             LibrarianDao librarianDao = new LibrarianDao();
             Librarian librarian = librarianDao.info(account);
             session.setAttribute("name", librarian.getName());
+            session.setAttribute("type",librarian.getType());
 
         } else if (userType == UserType.Reader) {
             ReaderDao readerDao = ReaderDao.getInstance();
             Reader reader = readerDao.info(account);
             session.setAttribute("name", reader.getName());
+            session.setAttribute("type", reader.getType());
         }
         if (userType != UserType.None) {
 
