@@ -1,5 +1,13 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Liu_PiPiPi
+  Date: 2019/9/26
+  Time: 16:11
+  To change this template use File | Settings | File Templates.
+--%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="entity.Librarian" %>
+<%@ page import="entity.Reader" %>
 <%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -7,7 +15,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Reader List</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -31,58 +39,44 @@
 
     <script src="js/dialogue.js"></script>
 
-    <%--    <script type="text/javascript">--%>
-    <%--        function deleteClick() {--%>
-    <%--            var con;--%>
-    <%--            con = confirm("Are you sure you want to delete?\n");--%>
-    <%--            if(con==true) {--%>
-    <%--                window.location.href("index.jsp");--%>
-    <%--            }--%>
-    <%--        }--%>
-    <%--    </script>--%>
+    <!--  侧边栏效果 -->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
 </head>
+
 <body>
 <div class="page">
     <!-- Main Navbar-->
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">Reader List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
+                    <li class="breadcrumb-item active">Reader List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
-
-                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
-                      name="search" method="post">
-                    <input type="text" class="form-control" name="searchAccount"
-                           placeholder="Please enter the account of the administrator who needs to query">
-                    <span class="input-group-btn">
-                            <button type="submit" class="btn btn-info btn-search">search</button>
-                        </span>
-                </form>
 
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div style="width: 1000px;height: 40px">
-                                        <a href="librarian_add.jsp">
+                                    <div style="width: 1000px;height: 60px">
+                                        <a href="reader_add.jsp">
                                             <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
                                             <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
-                                                <strong>Add Librarian</strong></p>
+                                                <strong>Add Reader</strong></p>
                                         </a>
                                     </div>
                                     <div class="table-responsive">
@@ -92,21 +86,23 @@
                                                 <th>#</th>
                                                 <th>Account</th>
                                                 <th>Name</th>
-                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Deposit</th>
                                                 <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Librarian> librarians = (List<Librarian>) request.getAttribute("librarians");%>
-                                            <c:forEach items="${librarians}" var="librarian" varStatus="li">
+                                            <%List<Reader> readers = (List<Reader>) request.getAttribute("readers");%>
+                                            <c:forEach items="${readers}" var="reader" varStatus="li">
                                                 <tr>
                                                     <th>${li.index+1}</th>
-                                                    <td>${librarian.getAccount()}</td>
-                                                    <td>${librarian.getName()}</td>
-                                                    <td>${librarian.getPhone()}</td>
+                                                    <td>${reader.getAccount()}</td>
+                                                    <td>${reader.getName()}</td>
+                                                    <td>${reader.getEmail()}</td>
+                                                    <td>${reader.getDeposit()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${librarian.getAccount()}"
-                                                           id="lastButton">
+                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${reader.getAccount()}"
+                                                           id="lastButton" >
                                                             <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
                                                                 Delete
                                                             </button>
@@ -118,31 +114,24 @@
                                                             <div role="document" class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h4 id="exampleModalLabel" class="modal-title">
-                                                                            Delete</h4>
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                aria-label="Close" class="close"><span
-                                                                                aria-hidden="true">×</span></button>
+                                                                        <h4 id="exampleModalLabel">Delete</h4>
+                                                                        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                                                            <span aria-hidden="true">×</span>
+                                                                        </button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        <p>Are you sure want to delete this account?</p>
+                                                                        <p>Are you sure want to delete this reader?</p>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                class="btn btn-secondary">Close
-                                                                        </button>
-                                                                        <a href="admin.jsp?account=${librarian.getAccount()}">
-<%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
-                                                                            <button type="button"
-                                                                                    class="btn btn-primary">
-                                                                                Delete
-                                                                            </button>
+                                                                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                                                        <a href="ReaderDelete.do?account=${reader.getAccount()}"}>
+                                                                            <button type="button" class="btn btn-primary">Delete</button>
                                                                         </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}">
+                                                        <a href="ReaderEdit.do?account=${reader.getAccount()}">
                                                             <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
@@ -180,7 +169,7 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'found') {
-        alert("successfully serach!");
+        alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
     }

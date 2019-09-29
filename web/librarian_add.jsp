@@ -138,7 +138,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
+                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
