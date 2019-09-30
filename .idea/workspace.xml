@@ -153,8 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,30 +168,26 @@
             <path>
               <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
               <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
               <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -367,6 +361,8 @@
       <workItem from="1569638099684" duration="14211000" />
       <workItem from="1569737355502" duration="79000" />
       <workItem from="1569737536128" duration="5350000" />
+      <workItem from="1569747136353" duration="206000" />
+      <workItem from="1569818824713" duration="260000" />
     </task>
     <task id="LOCAL-00001" summary="完成reader账户查询，三个页面完成">
       <created>1568856657284</created>
@@ -522,16 +518,23 @@
       <option name="project" value="LOCAL" />
       <updated>1569743069328</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="release 1 -- img (2 pics)">
+      <created>1569747253036</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1569747253036</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42115000" />
+    <option name="totallyTimeSpent" value="42581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17248322" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17718121" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -630,7 +633,8 @@
     <MESSAGE value="admin login.jsp的背景图" />
     <MESSAGE value="--" />
     <MESSAGE value="release 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="release 1" />
+    <MESSAGE value="release 1 -- img (2 pics)" />
+    <option name="LAST_COMMIT_MESSAGE" value="release 1 -- img (2 pics)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
