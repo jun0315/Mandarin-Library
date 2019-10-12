@@ -22,8 +22,9 @@ public class ReaderSearchServlet extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
         String message = (String) request.getParameter("message");
+        String signal=(String) request.getParameter("signal");
        ReaderSearchDao ReaderSearchDao = new ReaderSearchDao();
-        List<Book> list=ReaderSearchDao.Search(message);
+        List<Book> list=ReaderSearchDao.Search(message,signal);
         request.setAttribute("list", list);
 
         //String[] b0 = list.get(0);

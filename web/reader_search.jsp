@@ -64,10 +64,16 @@
                     <li class="breadcrumb-item active">Search</li>
                 </ul>
             </div>
+
             <section class="tables" style="padding: 20px">
 
                     <form class="input-group col-md-12" style="margin: 10px;position: relative" action="ReaderSearchServlet"
                       name="search" method="post">
+                        <select  name="signal">
+                            <option>name</option>
+                            <option>id</option>
+                            <option>author</option>
+                        </select>
                     <input type="text" class="form-control" name="message"
                            placeholder="Please enter the content you are searching for">
                     <span class="input-group-btn">
@@ -105,7 +111,7 @@
                                                     <td>
                                                         <a href="#myModal_${li.index+1}" style="color: #ff0c0c"
                                                            data-toggle="modal" value="${book.getBookNumber()}"
-                                                           id="lastButton">详情</a>
+                                                           id="lastButton">details</a>
                                                             <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
                                                         <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
@@ -139,7 +145,7 @@
                                                             </div>
                                                         </div>
                                                         <a href="EditLibrarian.do?account=${librarian.getAccount()}"
-                                                           style="color: #0000c6">预约</a>
+                                                           style="color: #0000c6">order</a>
                                                     </td>
                                                 </tr>
                                             </c:forEach>

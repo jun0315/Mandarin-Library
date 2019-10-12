@@ -14,10 +14,16 @@ public class ReaderSearchDao {
 
     }
 
-    public List<Book> Search(String message) {
+    public List<Book> Search(String message,String signal) {
         try {
             String ma="%"+message+"%";
-            String sql = "select * from book where book_name like \'"+ma+"\'" ;
+            String sql=null;
+            if(signal.equals("name")){
+          sql = "select * from book where book_name like \'"+ma+"\'" ;}
+            else if(signal.equals("id")){
+                sql = "select * from book where book_number like \'"+ma+"\'" ;
+            }else {
+                sql = "select * from book where book_author like \'"+ma+"\'" ;            }
 
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
