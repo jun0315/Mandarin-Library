@@ -58,6 +58,8 @@ public class LoginServlet extends HttpServlet {
             ReaderDao readerDao = ReaderDao.getInstance();
             Reader reader = readerDao.info(account);
             session.setAttribute("name", reader.getName());
+            session.setAttribute("email", reader.getEmail());
+            session.setAttribute("securityDeposit", reader.getDeposit());
         }
         if (userType != UserType.None) {
 

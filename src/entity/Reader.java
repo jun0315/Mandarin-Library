@@ -8,7 +8,7 @@ public class Reader {
     private int security_deposit;
     private String type = "Reader";
 
-    public Reader(){
+    public Reader() {
         this.name = "null";
         this.password = "null";
         this.account = "null";
@@ -47,10 +47,14 @@ public class Reader {
     public void setName(String name) {
         this.name = name;
     }
-    
-    public int getDeposit(){ return security_deposit;}
 
-    public void setDeposit(int deposit){ this.security_deposit = deposit;}
+    public int getDeposit() {
+        return security_deposit;
+    }
+
+    public void setDeposit(int deposit) {
+        this.security_deposit = deposit;
+    }
 
     public String getType() {
         return type;

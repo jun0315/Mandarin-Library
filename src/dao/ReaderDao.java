@@ -3,6 +3,7 @@ package dao;
 import entity.Reader;
 //import sun.text.resources.no.CollationData_no; //没用到
 import utils.DBHelper;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ public class ReaderDao {
     private ReaderDao() {
     }
 
-    public static ReaderDao getInstance(){
+    public static ReaderDao getInstance() {
         return new ReaderDao();
     }
 
@@ -52,8 +53,10 @@ public class ReaderDao {
                 String passwordInDB = resultSet.getString("user_password");
                 String nameInDB = resultSet.getString("user_name");
                 String emailInDB = resultSet.getString("user_email");
+                int depositInDB = resultSet.getInt("security_deposit");
                 reader.setName(nameInDB);
                 reader.setEmail(emailInDB);
+                reader.setDeposit(depositInDB);
                 reader.setAccount(account);
                 reader.setPassword(passwordInDB);
             }
@@ -84,7 +87,7 @@ public class ReaderDao {
         return Exist;
     }
 
-    public void addReader(String account,String password,String name,String email, int deposit){
+    public void addReader(String account, String password, String name, String email, int deposit) {
         try {
             String sql = "insert into reader values(?,?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
@@ -95,13 +98,13 @@ public class ReaderDao {
             ps.setString(4, email);
             ps.setInt(5, deposit);
             ps.executeUpdate();
-            DBHelper.closeConnection(connection,ps);
+            DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public void editReader(String account, String password, String name, String email, int deposit, String preAccount){
+    public void editReader(String account, String password, String name, String email, int deposit, String preAccount) {
         try {
             String sql = "update reader set user_account=?,user_password=?,user_name=?,user_email=?,security_deposit=? where user_account=? ";
             Connection connection = DBHelper.getInstance().getConnection();
@@ -111,9 +114,9 @@ public class ReaderDao {
             ps.setString(3, name);
             ps.setString(4, email);
             ps.setInt(5, deposit);
-            ps.setString(6,preAccount);
+            ps.setString(6, preAccount);
             ps.executeUpdate();
-            DBHelper.closeConnection(connection,ps);
+            DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
