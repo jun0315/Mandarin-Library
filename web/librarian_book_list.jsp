@@ -91,6 +91,7 @@
                                                 <th>Author</th>
                                                 <th>Category</th>
                                                 <th>Amount</th>
+                                                <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
