@@ -6,14 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_edit.jsp" afterDir="false" />
+    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="调试条形码列表">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_book_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_book_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/added_book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/added_book_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,41 +18,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="lib_system: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -78,12 +45,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../课程/大三/企业级开发/exce/ex3" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -175,31 +136,6 @@
       </method>
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@49e4ca0" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@49e4ca0" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5d6183b9" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@49e4ca0" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@8c838f3" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -222,7 +158,6 @@
       <workItem from="1569804431175" duration="1457000" />
       <workItem from="1570874931675" duration="1385000" />
       <workItem from="1571295621945" duration="269000" />
-      <workItem from="1571321506828" duration="4390000" />
     </task>
     <task id="LOCAL-00001" summary="更新.gitignore">
       <created>1569579494657</created>
@@ -322,12 +257,12 @@
       <option name="project" value="LOCAL" />
       <updated>1571319112086</updated>
     </task>
-    <task id="LOCAL-00015" summary="Delete Book finished.">
-      <created>1571323193848</created>
+    <task id="LOCAL-00015" summary="调试条形码列表">
+      <created>1571319873659</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1571323193848</updated>
+      <updated>1571319873659</updated>
     </task>
     <option name="localTasksCounter" value="16" />
     <servers />
@@ -349,8 +284,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="更新.gitignore" />
     <MESSAGE value="初步合并isbn接口" />
@@ -366,8 +299,8 @@
     <MESSAGE value="完善add book" />
     <MESSAGE value="准备生成条形码" />
     <MESSAGE value="准备合并zcy" />
-    <MESSAGE value="Delete Book finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Book finished." />
+    <MESSAGE value="调试条形码列表" />
+    <option name="LAST_COMMIT_MESSAGE" value="调试条形码列表" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -401,6 +334,11 @@
           <url>file://$PROJECT_DIR$/web/librarian_book_list.jsp</url>
           <line>87</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/librarian_book_list.jsp</url>
+          <line>99</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/ReaderBorrowServlet.java</url>
@@ -489,12 +427,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>107</line>
+          <line>105</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>110</line>
+          <line>108</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -509,7 +447,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>109</line>
+          <line>107</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -521,16 +459,6 @@
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
           <line>102</line>
           <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>105</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>103</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

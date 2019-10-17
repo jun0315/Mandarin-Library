@@ -22,11 +22,11 @@ public class BookAddByISBNSrvelet extends HttpServlet {
     //TODO ISBN处理
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-//        String ISBN = request.getParameter("BookNumber");
-        String ISBN = "9780131872486";
+        String ISBN = request.getParameter("BookNumber");
+//        String ISBN = "9780131872486";
         GetBookInfo getBookInfo = new GetBookInfo(ISBN);
         Book book = new Book();
-        book.setBookNumber("9780131872486");
+        book.setBookNumber("ISBN");
         book.setAuthor(getBookInfo.getAuthor());
         book.setName(getBookInfo.getTitle());
         book.setPress(getBookInfo.getPublisher());
