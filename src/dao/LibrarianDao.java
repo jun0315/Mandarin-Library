@@ -113,4 +113,17 @@ public class LibrarianDao {
         }
     }
 
+    public void deleteLibrarian(String account) {
+
+        String sql = "delete from staff where staff_account = \'" + account + "\'";
+        try {
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            int resultSet = statement.executeUpdate(sql);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return;
+    }
 }
