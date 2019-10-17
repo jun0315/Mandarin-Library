@@ -1,6 +1,6 @@
 package servlet;
 
-import dao.ReaderDao;
+import dao.BookCategoryDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ReaderDeleteServlet")
-public class ReaderDeleteServlet extends HttpServlet{
+@WebServlet(name = "BookCategoryDeleteServlet")
+public class BookCategoryDeleteServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html; charset=utf-8");
 
-        String account = (String) request.getParameter("account");
-        ReaderDao readerDao = new ReaderDao();
-        boolean exist = readerDao.isExistInDB(account);
+        String category = (String) request.getParameter("category");
+        BookCategoryDao bookCategoryDao = new BookCategoryDao();
+        boolean exist = bookCategoryDao.isExistInDB(category);
         if (!exist) {
-            response.sendRedirect("reader_list.jsp?info=delete_error");
+            response.sendRedirect("book_category_list.jsp?info=delete_error");
         } else {
-            readerDao.deleteReader(account);
-            response.sendRedirect("reader_list.jsp?info=delete_success");
+            bookCategoryDao.deleteBookCategory(category);
+            response.sendRedirect("book_category_list.jsp?info=delete_success");
         }
     }
 

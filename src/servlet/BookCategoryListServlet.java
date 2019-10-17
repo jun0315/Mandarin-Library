@@ -19,7 +19,7 @@ public class BookCategoryListServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<BookCategory> bookCategories = bookCategoryDao.getCategories();
+        List<BookCategory> bookCategories = bookCategoryDao.getBookCategories();
         request.setAttribute("bookCategories",bookCategories);
         request.getRequestDispatcher("book_category_list.jsp").forward(request,response);
     }

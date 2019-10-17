@@ -1,7 +1,6 @@
 package servlet;
 
 import dao.BookCategoryDao;
-import dao.LibrarianDao;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,18 +14,21 @@ public class BookCategoryAddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
+
         String category = (String) request.getParameter("category");
-        BookCategoryDao bookCategoryDao = new BookCategoryDao();
-        boolean exit = bookCategoryDao.isExitInDB(category);
-        if (exit) {
+        int floor = Integer.parseInt(request.getParameter("floor"));
+        String shelf = (String) request.getParameter("shelf");
+
+        BookCategoryDao bookCategoryDao = BookCategoryDao.getInstance();
+        boolean exist = bookCategoryDao.isExistInDB(category);
+        if (exist) {
             response.sendRedirect("book_category_add.jsp?info=error");
         } else {
-            bookCategoryDao.addCategory(category);
+            bookCategoryDao.addBookCategory(category, floor, shelf);
             response.sendRedirect("book_category_add.jsp?info=success");
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }
