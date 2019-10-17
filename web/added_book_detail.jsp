@@ -101,19 +101,16 @@
                                             <tbody>
                                             <%
                                                 List<BookDetail> bookdetails = (List<BookDetail>) (request.getAttribute("bookDetails"));
-                                                List<BookDetail> bookdetails1 = (List<BookDetail>) (request.getAttribute("bookDetails"));
-                                                int a = 0;
-                                                a++;
+                                                request.setAttribute("bookdetails", bookdetails);
                                             %>
                                             <c:forEach items="${bookdetails}" var="bookdetail" varStatus="li">
                                                 <tr>
-                                                    <th>1</th>
+                                                    <th>${bookdetail.getCopyID()}</th>
                                                     <td>${bookdetail.getFloor()}</td>
                                                     <td>${bookdetail.getShelf()}</td>
                                                     <td>${bookdetail.getAreaCode()}</td>
                                                     <td>
-                                                            ${bookdetail.getPath()}
-                                                            <%--                                                        <img src="cache/barcode/"+${bookdetail.getPath()}>--%>
+                                                        <img src="cache/barcode/${bookdetail.getPath()}">
                                                     </td>
                                                 </tr>
                                             </c:forEach>

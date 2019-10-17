@@ -99,10 +99,14 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="BookNumber"
-                                               class="form-control form-control-success" value="<%=bookNumberFromAPI%>">
-                                        <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
-                                        <a href="AddBookByISBN.do" id="importISBN">Import ISBN</a>
+                                        <form action="AddBookByISBN.do" method="post">
+                                            <input  name="BookNumber"
+                                                   class="form-control form-control-success" value="<%=bookNumberFromAPI%>">
+                                            <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
+<%--                                            <input type="submit" value="Submit" class="btn btn-primary" id="importISBN">Import ISBN</input>--%>
+                                            <a href="AddBookByISBN.do" id="importISBN">Import ISBN</a>
+                                        </form>
+
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>

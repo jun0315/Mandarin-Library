@@ -6,10 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="">
+    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="调试条形码列表">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/BookDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/BookDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/added_book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/added_book_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -256,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571319112086</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="调试条形码列表">
+      <created>1571319873659</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1571319873659</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +299,8 @@
     <MESSAGE value="完善add book" />
     <MESSAGE value="准备生成条形码" />
     <MESSAGE value="准备合并zcy" />
-    <option name="LAST_COMMIT_MESSAGE" value="准备合并zcy" />
+    <MESSAGE value="调试条形码列表" />
+    <option name="LAST_COMMIT_MESSAGE" value="调试条形码列表" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -418,12 +427,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>107</line>
+          <line>105</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>110</line>
+          <line>108</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -438,7 +447,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>109</line>
+          <line>107</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -450,16 +459,6 @@
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
           <line>102</line>
           <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>105</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
-          <line>103</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
