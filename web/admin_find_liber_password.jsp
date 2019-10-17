@@ -13,7 +13,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Find Back Librarian Password</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -65,7 +65,7 @@
                 <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
                       name="search" method="post">
                     <input type="text" class="form-control" name="searchAccount"
-                           placeholder="Please enter the account of the administrator who needs to query">
+                           placeholder="Please enter the account of the librarian who needs to query">
                     <span class="input-group-btn">
                             <button type="submit" class="btn btn-info btn-search">search</button>
                     </span>

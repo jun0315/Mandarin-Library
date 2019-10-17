@@ -1,7 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.BookCategory" %>
 <%@ page import="entity.Book" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -9,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Book List</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -54,18 +52,17 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">Book List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item active">Book List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
-
                 <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
                       name="search" method="post">
                     <input type="text" class="form-control" name="searchAccount"

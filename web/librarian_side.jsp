@@ -17,7 +17,6 @@
     String[] BookManage = {
             "/book_add.jsp",
             "/librarian_book_list.jsp",
-            "/book_add.jsp",
             "/book_category_add.jsp",
             "/book_category_edit.jsp",
             "/book_category_list.jsp",

@@ -16,7 +16,8 @@ import java.util.List;
 public class LibrarianSearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=utf-8");
+        response.setContentType("text/html; charset=utf-8");
+
         String account = (String) request.getParameter("searchAccount");
         LibrarianDao librarianDao = new LibrarianDao();
         Librarian librarian = librarianDao.info(account);
@@ -33,6 +34,5 @@ public class LibrarianSearchServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }

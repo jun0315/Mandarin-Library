@@ -67,10 +67,10 @@
                 <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
                       name="search" method="post">
                     <input type="text" class="form-control" name="searchAccount"
-                           placeholder="Please enter the account of the administrator who needs to query">
+                           placeholder="Please enter the Account of the Librarian">
                     <span class="input-group-btn">
-                            <button type="submit" class="btn btn-info btn-search">search</button>
-                        </span>
+                        <button type="submit" class="btn btn-info btn-search">search</button>
+                    </span>
                 </form>
 
                 <div class="container-fluid">
@@ -180,9 +180,9 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'found') {
-        alert("successfully serach!");
+        alert("Successfully search!");
     } else if (info == 'notFound') {
-        alert("search failure!");
+        alert("Search failure!");
     }
 </script>
 
