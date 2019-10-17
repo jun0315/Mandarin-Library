@@ -122,6 +122,7 @@ public class ReaderDao {
 
     public void editReader(String account, String password, String name, String email, int deposit, String preAccount){
         try {
+            //TODO BUG 修改reader后 再reader-borrow中当作外键 没办法修改
             String sql = "update reader set user_account=?,user_password=?,user_name=?,user_email=?,security_deposit=? where user_account=? ";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);

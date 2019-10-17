@@ -63,7 +63,7 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Add Category</h2>
+                    <h2 class="no-margin-bottom">Add Book</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
@@ -77,9 +77,12 @@
             <%! String authorFromAPI = "";%>
             <%! String pressFromAPI = "";%>
             <%! String describeFromAPI = "";%>
+            <%! String bookNumberFromAPI = "";%>
             <%
                 Book book = (Book) request.getAttribute("bookFromISBN");
+                request.setAttribute("bookFromISBN", null);
                 if (book != null) {
+                    bookNumberFromAPI = book.getBookNumber();
                     nameFromAPI = book.getName();
                     authorFromAPI = book.getAuthor();
                     pressFromAPI = book.getPress();
@@ -97,7 +100,7 @@
                                     <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="BookNumber"
-                                               class="form-control form-control-success">
+                                               class="form-control form-control-success" value="<%=bookNumberFromAPI%>">
                                         <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
                                         <a href="AddBookByISBN.do" id="importISBN">Import ISBN</a>
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
@@ -119,14 +122,7 @@
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Price</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="price"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
+
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label" }>Author</label>
                                     <div class="col-sm-9">
@@ -140,6 +136,14 @@
                                     <div class="col-sm-9">
                                         <input name="description"
                                                class="form-control form-control-success" value="<%=describeFromAPI%>">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Price</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalSuccess" name="price"
+                                               class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
@@ -228,7 +232,7 @@
 <script src="vendor/popper.js/umd/popper.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
-<script src="vendor/chart.js/Chart.min.js"></script>
+<script src="vendor/chart.js/Chart.min.js1"></script>
 <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
