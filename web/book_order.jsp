@@ -54,14 +54,14 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Search</h2>
+                    <h2 class="no-margin-bottom">orderdetail</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Search</li>
+                    <li class="breadcrumb-item active"></li>
                 </ul>
             </div>
 
@@ -92,18 +92,18 @@
                                                     <td>
                                                         <c:if test="${detail.getState()==0}">已外借</c:if>
                                                         <c:if test="${detail.getState()==1}">已预约</c:if>
-                                                        <c:if test="${detail.getState()==2}">可借</c:if>
+                                                        <c:if test="${detail.getState()==2}">可借</c:if></td>
                                                         <%--<c:otherwise><form  style="margin: 10px;position: relative" action="Order"
                                                                name="search" method="post">
                                                             <input type="hidden" name="number" value="" />
 
                                                             <input type="submit" value="Order">
-                                                        </form> </c:otherwise> --%></td>
+                                                        </form> </c:otherwise> --%>
                                                     <td><form  style="margin: 10px;position: relative" action="Orderto"
-                                                               name="search" method="post">
-                                                        <input type="hidden" name="number" value="${detail.getState()}" />
-                                                        <input type="hidden" name="id" value="${detail.getCopyid()}" />
-                                                        <input type="submit" value="Order"></td>
+                                                               name="" method="post">
+                                                        <input type="hidden" name="number" value="${detail.getState()}">
+                                                        <input type="hidden" name="id" value="${detail.getCopyid()}">
+                                                        <input type="submit" value="Order"></form></td>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>
@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+
             <!-- Page Footer-->
             <footer class="main-footer">
                 <div class="container-fluid">

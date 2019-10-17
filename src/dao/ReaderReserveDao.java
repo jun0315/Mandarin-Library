@@ -1,7 +1,7 @@
 package dao;
 
-import entity.ReaderReserve;
 import utils.DBHelper;
+import entity.ReaderReserve;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class ReaderReserveDao {
 
     public void addReaderReserve(String user_account, String copy_id) {
         try {
-            String sql = "insert into book values(?,?,?);";
+            String sql = "insert into reader_reserve values(?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, user_account);

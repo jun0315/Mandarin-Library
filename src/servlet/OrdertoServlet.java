@@ -1,7 +1,7 @@
 package servlet;
 
+import dao.ChangeDao;
 import dao.ReaderReserveDao;
-import entity.ReaderReserve;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,20 +18,22 @@ public class OrdertoServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         PrintWriter out = response.getWriter();
-        String number = (String) request.getParameter("number");
+        String number =(String)request.getParameter("number");
         String id = (String) request.getParameter("id");
+    /*    out.print(id);*/
         if(number.equals("0")||number.equals("1")){
             RequestDispatcher dispatcher=request.getRequestDispatcher("failed.jsp");
             dispatcher.forward(request, response);
         }
-        else{
+        else if(number.equals("2")){
             HttpSession session = request.getSession();
             String m=(String) session.getAttribute("account");
             ReaderReserveDao a=new ReaderReserveDao();
             a.addReaderReserve(m, id);
+            ChangeDao b=new ChangeDao();
+            b.changed(id);
             RequestDispatcher dispatcher=request.getRequestDispatcher("successed.jsp");
-            dispatcher.forward(request, response);
-        }
+            dispatcher.forward(request, response);}
 
     }
 
