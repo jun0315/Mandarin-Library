@@ -8,12 +8,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class  LoginDao {
+public class LoginDao {
     //通过账号密码获取账户类型
     public UserType login(String account, String password) {
         UserType userType = UserType.None;
-        String sqlFromStaff = "select * from staff where staff_account =\'" + account+ "\'";
-        String sqlFromReader = "select * from reader where user_account =\'" + account+ "\'";
+        String sqlFromStaff = "select * from staff where staff_account =\'" + account + "\'";
+        String sqlFromReader = "select * from reader where user_account =\'" + account + "\'";
         boolean canFind = false;
         try {
             Connection connection = DBHelper.getInstance().getConnection();
@@ -34,7 +34,7 @@ public class  LoginDao {
                     String passwordInDB = resultSet.getString("user_password");
                     if (passwordInDB.equals(password)) {
                         userType = UserType.Reader;
-                        System.out.println(resultSet.getString("user_type"));
+                        //System.out.println(resultSet.getString("user_type"));
                         break;
                     }
                 }
