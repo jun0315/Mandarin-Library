@@ -36,49 +36,52 @@ insert  into `admin_setting`(`book_fine_value`,`book_return_period`,`reader_secu
 DROP TABLE IF EXISTS `book`;
 
 CREATE TABLE `book` (
-  `book_id` int(11) NOT NULL,
-  `isbn` char(13) DEFAULT NULL,
+  `book_number` char(13) NOT NULL,
   `book_name` varchar(2048) DEFAULT NULL,
   `book_press` varchar(2048) DEFAULT NULL,
   `book_price` double unsigned DEFAULT NULL,
   `book_author` varchar(2048) DEFAULT NULL,
   `book_category` varchar(2048) DEFAULT NULL,
-  PRIMARY KEY (`book_id`)
+  `book_amount` int(10) unsigned DEFAULT NULL,
+  `book_floor` varchar(2048) DEFAULT NULL,
+  `book_shelf` varchar(2048) DEFAULT NULL,
+  `book_areacode` varchar(2048) DEFAULT NULL,
+  `book_description` varchar(4096) DEFAULT NULL,
+  PRIMARY KEY (`book_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `book` */
 
-insert  into `book`(`book_id`,`isbn`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`) values 
-(0,'9787542637956','白银时代','上海三联书店',50,'王小波',NULL);
+insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_floor`,`book_shelf`,`book_areacode`,`book_description`) values 
+('11','111','1',11,'11','arts',11,'11','11','11','111'),
+('9787536025097','白银时代','上海三联书店',50,'王小波','atrs',11,'11','11','11','11');
 
-/*Table structure for table `book_category_floor` */
+/*Table structure for table `book_category` */
 
-DROP TABLE IF EXISTS `book_category_floor`;
+DROP TABLE IF EXISTS `book_category`;
 
-CREATE TABLE `book_category_floor` (
-  `category` varchar(64) NOT NULL,
-  `floor` varchar(64) DEFAULT NULL,
-  PRIMARY KEY (`category`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `book_category` (
+  `category` varchar(2048) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `book_category_floor` */
+/*Data for the table `book_category` */
 
-insert  into `book_category_floor`(`category`,`floor`) values 
-('arts','three floor'),
-('musci','seconde floor1'),
-('story','first floor');
+insert  into `book_category`(`category`) values 
+('arts'),
+('music'),
+('fiction');
 
 /*Table structure for table `book_deleted` */
 
 DROP TABLE IF EXISTS `book_deleted`;
 
 CREATE TABLE `book_deleted` (
-  `book_id` varchar(128) NOT NULL,
-  `isbn` int(11) DEFAULT NULL,
+  `copy_id` varchar(32) NOT NULL,
   `delete_time` time DEFAULT NULL,
   `staff_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`book_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`copy_id`),
+  CONSTRAINT `book_deleted_ibfk_1` FOREIGN KEY (`copy_id`) REFERENCES `book_detail` (`copy_id`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `book_deleted` */
 
@@ -87,12 +90,11 @@ CREATE TABLE `book_deleted` (
 DROP TABLE IF EXISTS `book_detail`;
 
 CREATE TABLE `book_detail` (
-  `book_id` int(11) DEFAULT NULL,
-  `copy_id` varchar(10) NOT NULL,
-  `book_location` varchar(10) DEFAULT NULL,
+  `book_number` char(13) NOT NULL,
+  `copy_id` varchar(32) NOT NULL,
   PRIMARY KEY (`copy_id`),
-  KEY `book_id` (`book_id`),
-  CONSTRAINT `book_id` FOREIGN KEY (`book_id`) REFERENCES `book` (`book_id`)
+  KEY `book_id` (`book_number`),
+  CONSTRAINT `book_detail_ibfk_1` FOREIGN KEY (`book_number`) REFERENCES `book` (`book_number`) ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `book_detail` */
@@ -124,6 +126,8 @@ CREATE TABLE `reader_borrow` (
   `copy_id` varchar(10) NOT NULL,
   `user_account` varchar(64) NOT NULL,
   `borrow_time` datetime DEFAULT NULL,
+  `isReturned` tinyint(4) DEFAULT NULL,
+  `fine` double DEFAULT NULL,
   PRIMARY KEY (`copy_id`,`user_account`),
   KEY `user_id` (`user_account`),
   CONSTRAINT `copy_id` FOREIGN KEY (`copy_id`) REFERENCES `book_detail` (`copy_id`),
@@ -131,6 +135,11 @@ CREATE TABLE `reader_borrow` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader_borrow` */
+
+insert  into `reader_borrow`(`copy_id`,`user_account`,`borrow_time`,`isReturned`,`fine`) values 
+('1','reader-test','2019-02-08 10:41:54',1,NULL),
+('2','reader-test','2019-09-28 10:42:16',0,NULL),
+('3','reader-test','2019-05-16 10:43:59',0,NULL);
 
 /*Table structure for table `reader_reserve` */
 

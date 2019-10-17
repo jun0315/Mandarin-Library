@@ -124,14 +124,14 @@
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                                                                        <a href="ReaderDelete.do?account=${reader.getAccount()}"}>
+                                                                        <a href="DeleteReader.do?account=${reader.getAccount()}">
                                                                             <button type="button" class="btn btn-primary">Delete</button>
                                                                         </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="ReaderEdit.do?account=${reader.getAccount()}">
+                                                        <a href="EditReader.do?account=${reader.getAccount()}">
                                                             <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
@@ -172,6 +172,12 @@
         alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
+    } else if (info == 'delete_error') {
+        alert("There is no account to delete!");
+        window.location.href = "ReaderList.do";
+    } else if (info == 'delete_success') {
+        alert("Successfully delete!");
+        window.location.href = "ReaderList.do";
     }
 </script>
 

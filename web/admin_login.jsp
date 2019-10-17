@@ -26,7 +26,7 @@
 <body>
 <div class="container demo-1">
     <div class="content">
-        <div id="large-header" class="large-header" style="background-image: url('/img/adminLogin_bg.jpg')">
+        <div id="large-header" class="large-header" style="background-image: url('img/adminLogin_bg.jpg')">
             <canvas id="demo-canvas"></canvas>
             <div class="logo_box" style="left: 23%;">
                 <h1>Welcome! Administrator</h1>

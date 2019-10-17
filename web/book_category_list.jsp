@@ -91,7 +91,6 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Category</th>
-                                                <th>Floor</th>
                                                 <th>Operation</th>
                                             </tr>
                                             </thead>
@@ -101,9 +100,8 @@
                                                 <tr>
                                                     <th>${li.index+1}</th>
                                                     <td>${bookCategory.getCategory()}</td>
-                                                    <td>${bookCategory.getFloor()}</td>
                                                     <td>
-                                                        <a href="#myModal" data-toggle="modal" value="${bookCategory.getCategory()}"
+                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${bookCategory.getCategory()}"
                                                            id="lastButton">
                                                             <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
                                                                 Delete
@@ -111,14 +109,13 @@
                                                         </a>
                                                             <%--   <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
-                                                        <div id="myModal" tabindex="-1" role="dialog"
+                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
                                                              aria-labelledby="exampleModalLabel" aria-hidden="true"
                                                              class="modal fade text-left">
                                                             <div role="document" class="modal-dialog">
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
-                                                                        <h4 id="exampleModalLabel" class="modal-title">
-                                                                            Delete</h4>
+                                                                        <h4 id="exampleModalLabel" class="modal-title">Delete</h4>
                                                                         <button type="button" data-dismiss="modal"
                                                                                 aria-label="Close" class="close"><span
                                                                                 aria-hidden="true">×</span></button>
@@ -127,15 +124,9 @@
                                                                         <p>Are you sure want to delete this category?</p>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                class="btn btn-secondary">Close
-                                                                        </button>
-                                                                        <a href="admin.jsp?account=${bookCategory.getCategory()}"
-                                                                           value="${bookCategory.getCategory()}">
-                                                                            <button type="button"
-                                                                                    class="btn btn-primary">
-                                                                                Delete
-                                                                            </button>
+                                                                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                                                        <a href="BookCategoryDelete.do?category=${bookCategory.getCategory()}">
+                                                                            <button type="button" class="btn btn-primary">Delete</button>
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -163,7 +154,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
+                            <p>Copyright &copy; 2019. test</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -183,6 +174,12 @@
         alert("successfully serach!");
     } else if (info == 'notFound') {
         alert("search failure!");
+    } else if (info == 'delete_error') {
+        alert("There is no category to delete!");
+        window.location.href = "book_category_list.do";
+    } else if (info == 'delete_success') {
+        alert("Successfully delete!");
+        window.location.href = "book_category_list.do";
     }
 </script>
 

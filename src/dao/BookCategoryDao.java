@@ -11,7 +11,7 @@ public class BookCategoryDao {
 
     public List<BookCategory> getCategories() {
         List<BookCategory> bookCategories = new ArrayList<BookCategory>();
-        String sql = "select * from book_category_floor";
+        String sql = "select * from book_category";
         try {
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
@@ -19,9 +19,7 @@ public class BookCategoryDao {
             while (resultSet.next()) {
                 BookCategory bookCategory = new BookCategory();
                 String category = resultSet.getString("category");
-                String floor = resultSet.getString("floor");
                 bookCategory.setCategory(category);
-                bookCategory.setFloor(floor);
                 bookCategories.add(bookCategory);
             }
         } catch (SQLException e) {
@@ -33,7 +31,7 @@ public class BookCategoryDao {
     public boolean isExitInDB(String category){
         boolean Exit = false;
         try {
-            String sql = "select * from book_category_floor where category = \'" + category +"\'";
+            String sql = "select * from book_category where category = \'" + category +"\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -51,19 +49,17 @@ public class BookCategoryDao {
         return Exit;
     }
 
-    //通过account返回librarian实体
+    //通过category返回bookCategory实体
     public BookCategory info(String category) {
         BookCategory bookCategory = new BookCategory();
         try {
-            String sql = "select * from book_category_floor where category = \'" + category + "\'";
+            String sql = "select * from book_category where category = \'" + category + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 String categoryInDB = resultSet.getString("category");
-                String floorInDB = resultSet.getString("floor");
                 bookCategory.setCategory(categoryInDB);
-                bookCategory.setFloor(floorInDB);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -71,13 +67,12 @@ public class BookCategoryDao {
         return bookCategory;
     }
 
-    public void addCategory(String category, String floor){
+    public void addCategory(String category){
         try {
-            String sql = "insert into book_category_floor values(?,?);";
+            String sql = "insert into book_category values(?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, category);
-            ps.setString(2, floor);
             ps.executeUpdate();
             DBHelper.closeConnection(connection,ps);
         } catch (SQLException e) {
@@ -85,14 +80,26 @@ public class BookCategoryDao {
         }
     }
 
-    public void editCategory(String category,String preCategory, String floor){
+    public void editLibrarian(String category,String preCategory){
         try {
-            String sql = "update book_category_floor set category=?,floor=? where category=? ";
+            String sql = "update book_category set category=? where category=? ";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, category);
-            ps.setString(2, floor);
-            ps.setString(3,preCategory);
+            ps.setString(2, preCategory);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection,ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteBookCategory(String category){
+        try {
+            String sql = "delete from book_category where category=?";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, category);
             ps.executeUpdate();
             DBHelper.closeConnection(connection,ps);
         } catch (SQLException e) {
