@@ -43,8 +43,6 @@ CREATE TABLE `book` (
   `book_author` varchar(2048) DEFAULT NULL,
   `book_category` varchar(2048) DEFAULT NULL,
   `book_amount` int(10) unsigned DEFAULT NULL,
-  `book_floor` varchar(2048) DEFAULT NULL,
-  `book_shelf` varchar(2048) DEFAULT NULL,
   `book_areacode` varchar(2048) DEFAULT NULL,
   `book_description` varchar(4096) DEFAULT NULL,
   PRIMARY KEY (`book_number`)
@@ -52,33 +50,36 @@ CREATE TABLE `book` (
 
 /*Data for the table `book` */
 
-insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_floor`,`book_shelf`,`book_areacode`,`book_description`) values 
-('','librarianafadf','ewe',16,'阿迪斯发','arts',626,'2','22','177','阿道夫啊'),
-('1231231231234','','12',12,'','arts',12,'','','',''),
-('1236632125666','','',233,'','arts',23,'','','',''),
-('3263632563263','78782','7',36,'','arts',36,' 违法',' 违法',' 违法',' 违法我'),
-('3264692563263','78782','7',36,'阿迪斯发','music',82,'',' 违法',' 违法','88'),
-('3264692563633','78782','7',36,'阿迪斯发','music',82,'、4','82','','88'),
-('3264692563963','78782','7',36,'阿迪斯发','music',82,'、4','',' 违法','88'),
-('3269692563263','78782','7',36,'阿迪斯发','arts',36,' 违法',' 违法',' 违法',''),
-('9636548521236','','23',23,'',NULL,2323,'','','',''),
-('9787536025097','白银时代','上海三联书店',50,'王小波',NULL,NULL,NULL,NULL,NULL,NULL),
-('plokmnjuhbko2','','',12,'','arts',12,'','','','');
+insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_areacode`,`book_description`) values 
+('','librarianafadf','ewe',16,'阿迪斯发','arts',626,'177','阿道夫啊'),
+('1231231231234','','12',12,'','arts',12,'',''),
+('1236632125666','','',233,'','arts',23,'',''),
+('3263632563263','78782','7',36,'','arts',36,' 违法',' 违法我'),
+('3264692563263','78782','7',36,'阿迪斯发','music',82,' 违法','88'),
+('3264692563633','78782','7',36,'阿迪斯发','music',82,'','88'),
+('3264692563963','78782','7',36,'阿迪斯发','music',82,' 违法','88'),
+('3269692563263','78782','7',36,'阿迪斯发','arts',36,' 违法',''),
+('9636548521236','','23',23,'',NULL,2323,'',''),
+('9787536025097','白银时代','上海三联书店',50,'王小波',NULL,NULL,NULL,NULL),
+('plokmnjuhbko2','','',12,'','arts',12,'','');
 
 /*Table structure for table `book_category` */
 
 DROP TABLE IF EXISTS `book_category`;
 
 CREATE TABLE `book_category` (
-  `category` varchar(2048) NOT NULL
+  `category` varchar(2048) NOT NULL,
+  `floor` int(11) DEFAULT NULL,
+  `shelf` varchar(16) DEFAULT NULL,
+  `areacode` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `book_category` */
 
-insert  into `book_category`(`category`) values 
-('arts'),
-('music'),
-('fiction');
+insert  into `book_category`(`category`,`floor`,`shelf`,`areacode`) values 
+('arts',NULL,NULL,NULL),
+('music',NULL,NULL,NULL),
+('fiction',NULL,NULL,NULL);
 
 /*Table structure for table `book_deleted` */
 
@@ -136,6 +137,8 @@ CREATE TABLE `reader_borrow` (
   `copy_id` varchar(10) NOT NULL,
   `user_account` varchar(64) NOT NULL,
   `borrow_time` datetime DEFAULT NULL,
+  `isreturned` tinyint(1) NOT NULL,
+  `fine` double DEFAULT NULL,
   PRIMARY KEY (`copy_id`,`user_account`),
   KEY `user_id` (`user_account`),
   CONSTRAINT `copy_id` FOREIGN KEY (`copy_id`) REFERENCES `book_detail` (`copy_id`),
@@ -151,7 +154,8 @@ DROP TABLE IF EXISTS `reader_reserve`;
 CREATE TABLE `reader_reserve` (
   `user_account` varchar(64) DEFAULT NULL,
   `book_id` varchar(128) DEFAULT NULL,
-  `isbn` int(11) DEFAULT NULL
+  `isbn` int(11) DEFAULT NULL,
+  `reservetime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `reader_reserve` */
