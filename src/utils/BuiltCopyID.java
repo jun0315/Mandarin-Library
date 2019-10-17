@@ -8,7 +8,7 @@ public class BuiltCopyID {
     public static ArrayList<String> GetBuiltCopyID(String BookNumber, int Amount) {
         ArrayList<String> CopyIDs = new ArrayList<>();
         for (int i = 0; i < Amount; i++) {
-            String result = String.format("%04d", (i + 1));
+            String result = BookNumber + String.format("%04d", (i + 1));
             CopyIDs.add(result);
         }
         return CopyIDs;

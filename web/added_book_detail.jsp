@@ -94,18 +94,20 @@
                                                 <th>Floor</th>
                                                 <th>Shelf</th>
                                                 <th>AreaCode</th>
+                                                <th>Barcode</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<BookDetail> bookdetails = (List<BookDetail>) request.getAttribute("bookdetail");%>
+                                            <%List<BookDetail> bookdetails = (List<BookDetail>) request.getAttribute("bookDetails");%>
                                             <c:forEach items="${bookdetails}" var="bookdetail" varStatus="li">
                                                 <tr>
-                                                    <td>${bookdetails.getCopyID()}</td>
-                                                    <td>${bookdetails.getFloor()}</td>
-                                                    <td>${bookdetails.getShelf()}</td>
-                                                    <td>${bookdetails.getAreaCode()}</td>
+                                                    <td>${bookdetail.getCopyID()}</td>
+                                                    <td>${bookdetail.getFloor()}</td>
+                                                    <td>${bookdetail.getShelf()}</td>
+                                                    <td>${bookdetail.getAreaCode()}</td>
                                                     <td>
-                                                        <img src=${bookdetail.getPath()}>
+                                                            ${bookdetail.getPath()}
+<%--                                                        <img src="cache/barcode/"+${bookdetail.getPath()}>--%>
                                                     </td>
                                                 </tr>
                                             </c:forEach>

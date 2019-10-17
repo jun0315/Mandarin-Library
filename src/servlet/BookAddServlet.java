@@ -7,7 +7,8 @@ import entity.Book;
 import entity.BookCategory;
 import entity.BookDetail;
 import jdk.nashorn.tools.Shell;
-import utils.BuiledCopyID;
+import utils.BarCodeUtil;
+import utils.BuiltCopyID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "BookAddServlet")
@@ -48,11 +50,8 @@ public class BookAddServlet extends HttpServlet {
             //在book中添加
             bookDao.addBook(BookNumber, Name, Press, Price, Author, Category
                     , Amount, Description);
-//            ArrayList<String> copyIDs = BuiledCopyID.BuiledCopyID(BookNumber, Amount);
-            //test
-            ArrayList<String> copyIDs = new ArrayList<String>();
-            copyIDs.add("1111");
-            copyIDs.add("2222");
+            ArrayList<String> copyIDs = BuiltCopyID.GetBuiltCopyID(BookNumber, Amount);
+
             BookDetailDao bookDetailDao = new BookDetailDao();
             //准备条形码页面
             List<BookDetail> bookdetails = new ArrayList<BookDetail>();
@@ -66,7 +65,9 @@ public class BookAddServlet extends HttpServlet {
                 bookDetail.setCopyID(copyIDs.get(i));
                 bookDetail.setShelf(Shelf);
                 bookDetail.setAreaCode(AreaCode);
+                bookDetail.setFloor(Floor);
                 String path = copyIDs.get(i) + ".png";
+                BarCodeUtil.GenerateBarCode(copyIDs.get(i),path,request);
                 bookDetail.setPath(path);
                 bookdetails.add(bookDetail);
             }
