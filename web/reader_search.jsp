@@ -66,7 +66,7 @@
             </div>
             <section class="tables" style="padding: 20px">
 
-                    <form class="input-group col-md-12" style="margin: 10px;position: relative" action="ReaderSearchServlet"
+                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="ReaderSearchServlet"
                       name="search" method="post">
                     <input type="text" class="form-control" name="message"
                            placeholder="Please enter the content you are searching for">
@@ -93,7 +93,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%request.getAttribute("list");
+                                            <%
+                                                request.getAttribute("list");
                                             %>
                                             <c:forEach items="${list}" var="book" varStatus="li">
                                                 <tr>

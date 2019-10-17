@@ -154,7 +154,7 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully add!");
-    }else if(info == 'erroe'){
+    } else if (info == 'erroe') {
         alert("add failure because of have the same account!");
     }
 </script>

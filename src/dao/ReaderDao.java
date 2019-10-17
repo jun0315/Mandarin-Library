@@ -13,7 +13,7 @@ public class ReaderDao {
         return new ReaderDao();
     }
 
-    public int getTotal(){
+    public int getTotal() {
         int total = 0;
         try {
             Connection c = DBHelper.getInstance().getConnection();
@@ -140,14 +140,14 @@ public class ReaderDao {
         }
     }
 
-    public void deleteReader(String account){
+    public void deleteReader(String account) {
         try {
             String sql = "delete from reader where user_account=?";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, account);
             ps.executeUpdate();
-            DBHelper.closeConnection(connection,ps);
+            DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }

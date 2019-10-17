@@ -1,8 +1,10 @@
 package dao;
+
 import entity.Book;
 import entity.Librarian;
 import sun.text.resources.no.CollationData_no;
 import utils.DBHelper;
+
 import java.sql.*;
 import java.io.*;
 import java.util.ArrayList;
@@ -10,14 +12,14 @@ import java.util.List;
 
 
 public class ReaderSearchDao {
-    public ReaderSearchDao(){
+    public ReaderSearchDao() {
 
     }
 
     public List<Book> Search(String message) {
         try {
-            String ma="%"+message+"%";
-            String sql = "select * from book where book_name like \'"+ma+"\'" ;
+            String ma = "%" + message + "%";
+            String sql = "select * from book where book_name like \'" + ma + "\'";
 
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
@@ -30,21 +32,21 @@ public class ReaderSearchDao {
             //String[] a1 = new String[10];
             //String[] a2 = new String[10];
             //String[] a3 = new String[10];
-           // String[] a4 = new String[10];
-           // String[] a5 = new String[10];
+            // String[] a4 = new String[10];
+            // String[] a5 = new String[10];
             //String[] a6 = new String[10];
-           // int i=0;
+            // int i=0;
 
 
             while (resultSet.next()) {
-           //a1[i]=resultSet.getString(1);
-          // a2[i]=resultSet.getString(2);
-           //a3[i]=resultSet.getString(3);
-           //a4[i]=resultSet.getString(4);
-          // a5[i]=resultSet.getString(5);
-           //a6[i]=resultSet.getString(6);
-          // i++;
-                Book book=new Book();
+                //a1[i]=resultSet.getString(1);
+                // a2[i]=resultSet.getString(2);
+                //a3[i]=resultSet.getString(3);
+                //a4[i]=resultSet.getString(4);
+                // a5[i]=resultSet.getString(5);
+                //a6[i]=resultSet.getString(6);
+                // i++;
+                Book book = new Book();
                 book.setBookNumber(resultSet.getString(1));
                 book.setName(resultSet.getString(2));
                 book.setPress(resultSet.getString(3));
@@ -62,14 +64,14 @@ public class ReaderSearchDao {
             //list.add(a3);
             //list.add(a4);
             //list.add(a5);
-           // list.add(a6);
+            // list.add(a6);
             return list;
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
- return null;
+        return null;
     }
 
 }

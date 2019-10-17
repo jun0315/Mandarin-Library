@@ -24,7 +24,7 @@ public class ReaderListServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Reader> readers = readerDao.getReaders();
-        request.setAttribute("readers",readers);
-        request.getRequestDispatcher("reader_list.jsp").forward(request,response);
+        request.setAttribute("readers", readers);
+        request.getRequestDispatcher("reader_list.jsp").forward(request, response);
     }
 }

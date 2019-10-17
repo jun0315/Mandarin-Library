@@ -105,9 +105,11 @@
                                                     <td>${librarian.getName()}</td>
                                                     <td>${librarian.getPhone()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${librarian.getAccount()}"
+                                                        <a href="#myModal_${li.index+1}" data-toggle="modal"
+                                                           value="${librarian.getAccount()}"
                                                            id="lastButton">
-                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
+                                                            <button type="button" class="btn btn-btn-primary"
+                                                                    style="color: white; background-color: rgb(224,79,61)">
                                                                 Delete
                                                             </button>
                                                         </a>
@@ -132,7 +134,7 @@
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
                                                                         <a href="DeleteLibrarian.do?account=${librarian.getAccount()}">
-<%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
+                                                                                <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -143,7 +145,8 @@
                                                             </div>
                                                         </div>
                                                         <a href="EditLibrarian.do?account=${librarian.getAccount()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
                                                         </a>

@@ -101,9 +101,11 @@
                                                     <td>${reader.getEmail()}</td>
                                                     <td>${reader.getDeposit()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${reader.getAccount()}"
-                                                           id="lastButton" >
-                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
+                                                        <a href="#myModal_${li.index+1}" data-toggle="modal"
+                                                           value="${reader.getAccount()}"
+                                                           id="lastButton">
+                                                            <button type="button" class="btn btn-btn-primary"
+                                                                    style="color: white; background-color: rgb(224,79,61)">
                                                                 Delete
                                                             </button>
                                                         </a>
@@ -115,7 +117,8 @@
                                                                 <div class="modal-content">
                                                                     <div class="modal-header">
                                                                         <h4 id="exampleModalLabel">Delete</h4>
-                                                                        <button type="button" data-dismiss="modal" aria-label="Close" class="close">
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                aria-label="Close" class="close">
                                                                             <span aria-hidden="true">×</span>
                                                                         </button>
                                                                     </div>
@@ -172,12 +175,6 @@
         alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
-    } else if (info == 'delete_error') {
-        alert("There is no account to delete!");
-        window.location.href = "ReaderList.do";
-    } else if (info == 'delete_success') {
-        alert("Successfully delete!");
-        window.location.href = "ReaderList.do";
     }
 </script>
 

@@ -5,7 +5,8 @@ public class BookCategory {
         this.category = category;
     }
 
-    public BookCategory(){}
+    public BookCategory() {
+    }
 
     public String getCategory() {
         return category;

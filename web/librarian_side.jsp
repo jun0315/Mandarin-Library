@@ -87,9 +87,9 @@
 
         <li><a href="#BusinessProcess" aria-expanded="false" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i>Business Process</a>
-            <ul id="BusinessProcess" class="${ tag eq 2 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="#">Borrow Business</a></li>
-                <li><a href="#">Return Business</a></li>
+            <ul id="BusinessProcess" class="collapse list-unstyled ">
+                <li><a href="BorrowBusiness.do">Borrow Business</a></li>
+                <li><a href="ReturnBusiness.do">Return Business</a></li>
             </ul>
         </li>
         <li><a href="#RecordQuery" aria-expanded="${ tag eq 3 ? "true" : "false" }" data-toggle="collapse"> <i

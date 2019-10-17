@@ -155,15 +155,6 @@
         <servlet-name>AddBookByISBN</servlet-name>
         <url-pattern>/AddBookByISBN.do</url-pattern>
     </servlet-mapping>
-<!--    add reader  -->
-    <servlet>
-        <servlet-name>ReaderAdd</servlet-name>
-        <servlet-class>servlet.ReaderAddServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ReaderAdd</servlet-name>
-        <url-pattern>/reader_add.do</url-pattern>
-    </servlet-mapping>
     <servlet>
         <servlet-name>EditReader</servlet-name>
         <servlet-class>servlet.ReaderEditServlet</servlet-class>
@@ -204,5 +195,37 @@
         <servlet-name>ReaderAdd</servlet-name>
         <url-pattern>/ReaderAdd.do</url-pattern>
     </servlet-mapping>
-<!--    end -->
+    <servlet>
+        <servlet-name>BorrowBusiness</servlet-name>
+        <servlet-class>servlet.LibrarianBorrowBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BorrowBusiness</servlet-name>
+        <url-pattern>/BorrowBusiness.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>BorrowReserveApprove</servlet-name>
+        <servlet-class>servlet.ReaderReserveApproveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BorrowReserveApprove</servlet-name>
+        <url-pattern>/BorrowReserveApprove.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LibrarianReturnBusiness</servlet-name>
+        <servlet-class>servlet.LibrarianReturnBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibrarianReturnBusiness</servlet-name>
+        <url-pattern>/ReturnBusiness.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReturnBook</servlet-name>
+        <servlet-class>servlet.ReturnBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReturnBook</servlet-name>
+        <url-pattern>/ReturnBook.do</url-pattern>
+    </servlet-mapping>
+    <!--    end -->
 </web-app>

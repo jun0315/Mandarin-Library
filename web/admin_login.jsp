@@ -44,7 +44,8 @@
                     </div>
                     <div class="mb2">
                         <!--                        <a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a>-->
-                        <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px"><strong>login</strong></button>
+                        <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px">
+                            <strong>login</strong></button>
                     </div>
                 </form>
             </div>
@@ -53,15 +54,14 @@
 </div><!-- /container -->
 <%
     session = request.getSession();
-    String account = (String)session.getAttribute("account");
-    if(account !=null)
-    {
+    String account = (String) session.getAttribute("account");
+    if (account != null) {
         response.sendRedirect("login");
     }
 %>
 <script>
     var error = '<%=request.getParameter("error")%>';
-    if(error=='yes'){
+    if (error == 'yes') {
         alert("Account or password wrong!");
     }
 </script>

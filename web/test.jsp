@@ -33,54 +33,54 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <body>
-    <div>
-        <form class="form-horizontal" action="reader_add.do" method="post">
-            <div class="form-group row">
-                <label class="col-sm-3 form-control-label">Account</label>
-                <div class="col-sm-9">
-                    <input id="inputHorizontalSuccess" name="account"
-                           class="form-control form-control-success">
-                    <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
-                </div>
+<div>
+    <form class="form-horizontal" action="reader_add.do" method="post">
+        <div class="form-group row">
+            <label class="col-sm-3 form-control-label">Account</label>
+            <div class="col-sm-9">
+                <input id="inputHorizontalSuccess" name="account"
+                       class="form-control form-control-success">
+                <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-3 form-control-label">Password</label>
-                <div class="col-sm-9">
-                    <input id="inputHorizontalWarning" name="password" value=""
-                           class="form-control form-control-warning">
-                    <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
-                </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 form-control-label">Password</label>
+            <div class="col-sm-9">
+                <input id="inputHorizontalWarning" name="password" value=""
+                       class="form-control form-control-warning">
+                <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-3 form-control-label">Name</label>
-                <div class="col-sm-9">
-                    <input id="inputHorizontalWarning" name="name"
-                           class="form-control form-control-warning">
-                    <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
-                </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 form-control-label">Name</label>
+            <div class="col-sm-9">
+                <input id="inputHorizontalWarning" name="name"
+                       class="form-control form-control-warning">
+                <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-3 form-control-label">Email</label>
-                <div class="col-sm-9">
-                    <input id="inputHorizontalWarning" name="email"
-                           class="form-control form-control-warning">
-                    <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
-                </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 form-control-label">Email</label>
+            <div class="col-sm-9">
+                <input id="inputHorizontalWarning" name="email"
+                       class="form-control form-control-warning">
+                <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-3 form-control-label">Deposit</label>
-                <div class="col-sm-9">
-                    <input id="inputHorizontalWarning" name="deposit"
-                           class="form-control form-control-warning">
-                    <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
-                </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-3 form-control-label">Deposit</label>
+            <div class="col-sm-9">
+                <input id="inputHorizontalWarning" name="deposit"
+                       class="form-control form-control-warning">
+                <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
             </div>
-            <div class="form-group row">
-                <div class="col-sm-9 offset-sm-3">
-                    <input type="submit" value="Add" class="btn btn-primary">
-                </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-9 offset-sm-3">
+                <input type="submit" value="Add" class="btn btn-primary">
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 </body>
 </html>

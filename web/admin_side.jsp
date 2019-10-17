@@ -42,6 +42,6 @@
                 <li><a href="${pageContext.request.contextPath}/admin_change_password.jsp">Change Password</a></li>
             </ul>
         </li>
-<%--        <li><a href="tables.html"> <i class="icon-grid"></i>(素材入口） </a></li>--%>
+        <%--        <li><a href="tables.html"> <i class="icon-grid"></i>(素材入口） </a></li>--%>
     </ul>
 </nav>
