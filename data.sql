@@ -29,7 +29,7 @@ CREATE TABLE `admin_setting` (
 /*Data for the table `admin_setting` */
 
 insert  into `admin_setting`(`book_fine_value`,`book_return_period`,`reader_security_deposit`) values 
-(1,30,100);
+(15,30,20);
 
 /*Table structure for table `book` */
 
@@ -53,7 +53,17 @@ CREATE TABLE `book` (
 /*Data for the table `book` */
 
 insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_floor`,`book_shelf`,`book_areacode`,`book_description`) values 
-('9787536025097','白银时代','上海三联书店',50,'王小波',NULL,NULL,NULL,NULL,NULL,NULL);
+('','librarianafadf','ewe',16,'阿迪斯发','arts',626,'2','22','177','阿道夫啊'),
+('1231231231234','','12',12,'','arts',12,'','','',''),
+('1236632125666','','',233,'','arts',23,'','','',''),
+('3263632563263','78782','7',36,'','arts',36,' 违法',' 违法',' 违法',' 违法我'),
+('3264692563263','78782','7',36,'阿迪斯发','music',82,'',' 违法',' 违法','88'),
+('3264692563633','78782','7',36,'阿迪斯发','music',82,'、4','82','','88'),
+('3264692563963','78782','7',36,'阿迪斯发','music',82,'、4','',' 违法','88'),
+('3269692563263','78782','7',36,'阿迪斯发','arts',36,' 违法',' 违法',' 违法',''),
+('9636548521236','','23',23,'',NULL,2323,'','','',''),
+('9787536025097','白银时代','上海三联书店',50,'王小波',NULL,NULL,NULL,NULL,NULL,NULL),
+('plokmnjuhbko2','','',12,'','arts',12,'','','','');
 
 /*Table structure for table `book_category` */
 
@@ -91,6 +101,7 @@ DROP TABLE IF EXISTS `book_detail`;
 CREATE TABLE `book_detail` (
   `book_number` char(13) NOT NULL,
   `copy_id` varchar(32) NOT NULL,
+  `status` int(4) NOT NULL,
   PRIMARY KEY (`copy_id`),
   KEY `book_id` (`book_number`),
   CONSTRAINT `book_detail_ibfk_1` FOREIGN KEY (`book_number`) REFERENCES `book` (`book_number`) ON UPDATE CASCADE
