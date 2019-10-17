@@ -41,5 +41,6 @@
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.48" level="application_server_libraries" />
     <orderEntry type="library" name="json-20190722" level="project" />
+    <orderEntry type="library" name="barcode4j-2.1" level="project" />
   </component>
 </module>

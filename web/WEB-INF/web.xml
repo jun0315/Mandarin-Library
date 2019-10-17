@@ -139,22 +139,13 @@
         <servlet-name>AddBookByISBN</servlet-name>
         <url-pattern>/AddBookByISBN.do</url-pattern>
     </servlet-mapping>
-    <!--    add reader  -->
-    <servlet>
-        <servlet-name>ReaderAdd</servlet-name>
-        <servlet-class>servlet.ReaderAddServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ReaderAdd</servlet-name>
-        <url-pattern>/reader_add.do</url-pattern>
-    </servlet-mapping>
     <servlet>
         <servlet-name>EditReader</servlet-name>
         <servlet-class>servlet.ReaderEditServlet</servlet-class>
-    </servlet>
+        </servlet>
     <servlet-mapping>
         <servlet-name>EditReader</servlet-name>
-        <url-pattern>/EditReader.do</url-pattern>
+        <url-pattern>/ReaderEdit.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>BookList</servlet-name>
@@ -179,6 +170,14 @@
     <servlet-mapping>
         <servlet-name>BorrowHistory</servlet-name>
         <url-pattern>/BorrowHistory.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReaderAdd</servlet-name>
+        <servlet-class>servlet.ReaderAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReaderAdd</servlet-name>
+        <url-pattern>/ReaderAdd.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>BorrowBusiness</servlet-name>

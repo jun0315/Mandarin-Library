@@ -53,31 +53,51 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian Edit</h2>
+                    <h2 class="no-margin-bottom">Category Edit</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian Edit</li>
+                    <li class="breadcrumb-item active">Category Edit</li>
                 </ul>
             </div>
             <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Edit this book category and location</p>
+                            <p>Edit book category and location</p>
                             <form class="form-horizontal" action="BookCategoryEdit.do" method="post">
                                 <%BookCategory bookCategory = (BookCategory) request.getAttribute("bookCategory");%>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Password</label>
+                                    <label class="col-sm-3 form-control-label">Category</label>
                                     <div class="col-sm-9">
                                         <input type="hidden" name="preCategory" value="<%=bookCategory.getCategory()%>">
                                         <input id="inputHorizontalWarning" name="category"
                                                value="<%=bookCategory.getCategory()%>"
                                                class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--  <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Floor</label>
+                                    <div class="col-sm-9">
+                                        <input type="hidden" name="preFloor" value="<%=bookCategory.getFloor()%>">
+                                        <input id="inputHorizontalWarning" name="floor"
+                                               value="<%=bookCategory.getFloor()%>"
+                                               class="form-control form-control-warning">
+                                        <%-- <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Shelf</label>
+                                    <div class="col-sm-9">
+                                        <input type="hidden" name="preShelf" value="<%=bookCategory.getShelf()%>">
+                                        <input id="inputHorizontalWarning" name="shelf"
+                                               value="<%=bookCategory.getShelf()%>"
+                                               class="form-control form-control-warning">
+                                        <%-- <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -113,8 +133,10 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully edit!");
+        window.location.href = "BookCategoryList.do";
     } else if (info == 'error') {
         alert("edit failure!");
+        window.location.href = "BookCategoryList.do";
     }
 </script>
 

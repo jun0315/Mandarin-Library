@@ -1,6 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.BookCategory" %>
+<%@ page import="entity.BookDetail" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -47,19 +49,19 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Book Category List</h2>
+                    <h2 class="no-margin-bottom">Librarian List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Book Category List</li>
+                    <li class="breadcrumb-item active">Librarian List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
@@ -78,69 +80,40 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div style="width: 1000px;height: 60px">
-                                        <a href="book_category_add.jsp">
-                                            <img src="img/addBook.png" style="float: left; length:40px; width:40px;">
+                                    <div style="width: 1000px;height: 40px">
+                                        <a href="librarian_add.jsp">
+                                            <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
                                             <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
-                                                <strong>Add Book Category and Location</strong></p>
+                                                <strong>Add Librarian</strong></p>
                                         </a>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>#</th>
-                                                <th>Category</th>
+                                                <th>Copy ID</th>
                                                 <th>Floor</th>
                                                 <th>Shelf</th>
-                                                <th>Operation</th>
+                                                <th>AreaCode</th>
+                                                <th>Barcode</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
-                                            <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
+                                            <%
+                                                List<BookDetail> bookdetails = (List<BookDetail>) (request.getAttribute("bookDetails"));
+                                                List<BookDetail> bookdetails1 = (List<BookDetail>) (request.getAttribute("bookDetails"));
+                                                int a = 0;
+                                                a++;
+                                            %>
+                                            <c:forEach items="${bookdetails}" var="bookdetail" varStatus="li">
                                                 <tr>
-                                                    <th>${li.index+1}</th>
-                                                    <td>${bookCategory.getCategory()}</td>
-                                                    <td>${bookCategory.getFloor()}</td>
-                                                    <td>${bookCategory.getShelf()}</td>
+                                                    <th>1</th>
+                                                    <td>${bookdetail.getFloor()}</td>
+                                                    <td>${bookdetail.getShelf()}</td>
+                                                    <td>${bookdetail.getAreaCode()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${bookCategory.getCategory()}"
-                                                           id="lastButton">
-                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
-                                                                Delete
-                                                            </button>
-                                                        </a>
-                                                            <%--   <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
-                                                        <!-- Modal-->
-                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
-                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
-                                                             class="modal fade text-left">
-                                                            <div role="document" class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h4 id="exampleModalLabel" class="modal-title">Delete</h4>
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                aria-label="Close" class="close"><span
-                                                                                aria-hidden="true">×</span></button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <p>Are you sure want to delete this category?</p>
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                                                                        <a href="BookCategoryDelete.do?category=${bookCategory.getCategory()}">
-                                                                            <button type="button" class="btn btn-primary">Delete</button>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <a href="BookCategoryEdit.do?category=${bookCategory.getCategory()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
-                                                                Edit
-                                                            </button>
-                                                        </a>
+                                                            ${bookdetail.getPath()}
+                                                            <%--                                                        <img src="cache/barcode/"+${bookdetail.getPath()}>--%>
                                                     </td>
                                                 </tr>
                                             </c:forEach>
@@ -158,11 +131,10 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
+                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                         </div>
                     </div>
                 </div>
@@ -178,14 +150,9 @@
         alert("successfully serach!");
     } else if (info == 'notFound') {
         alert("search failure!");
-    } else if (info == 'delete_error') {
-        alert("There is no category to delete!");
-        window.location.href = "BookCategoryList.do";
-    } else if (info == 'delete_success') {
-        alert("Successfully delete!");
-        window.location.href = "BookCategoryList.do";
     }
 </script>
+
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

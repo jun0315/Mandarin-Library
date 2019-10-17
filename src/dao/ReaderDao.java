@@ -125,6 +125,7 @@ public class ReaderDao {
 
     public void editReader(String account, String password, String name, String email, int deposit, String preAccount) {
         try {
+            //TODO BUG 修改reader后 再reader-borrow中当作外键 没办法修改
             String sql = "update reader set user_account=?,user_password=?,user_name=?,user_email=?,security_deposit=? where user_account=? ";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
@@ -143,7 +144,7 @@ public class ReaderDao {
 
     public void deleteReader(String account) {
         try {
-            String sql = "delete from reader where user_account=? ";
+            String sql = "delete from reader where user_account=?";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, account);

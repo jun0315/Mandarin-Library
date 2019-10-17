@@ -2,7 +2,13 @@ package servlet;
 
 import dao.BookCategoryDao;
 import dao.BookDao;
+import dao.BookDetailDao;
+import entity.Book;
 import entity.BookCategory;
+import entity.BookDetail;
+import jdk.nashorn.tools.Shell;
+import utils.BarCodeUtil;
+import utils.BuiltCopyID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,27 +32,51 @@ public class BookAddServlet extends HttpServlet {
         String Press = (String) request.getParameter("press");
         double Price = Double.parseDouble(request.getParameter("price"));
         String Category = request.getParameter("category");
+        int Floor = bookCategoryDao.getFloor(Category);
+        String Shelf = bookCategoryDao.getShelf(Category);
+
         String Author = (String) request.getParameter("author");
         String Description = request.getParameter("description");
         //数据类型可能不对
         String AmountString = (String) request.getParameter("amount");
         int Amount = Integer.parseInt(AmountString);
-        String Floor = (String) request.getParameter("floor");
-        String Shelf = (String) request.getParameter("shelf");
-        String AreaCode = (String) request.getParameter("areaCode");
+
         BookDao bookDao = new BookDao();
         boolean exit = bookDao.isExitInDB(BookNumber);
         if (exit) {
             response.sendRedirect("book_add.jsp?info=error");
         } else {
+            //在book中添加
             bookDao.addBook(BookNumber, Name, Press, Price, Author, Category
-                    , Amount, Floor, Shelf, AreaCode, Description);
-            response.sendRedirect("book_add.jsp?info=success");
+                    , Amount, Description);
+            ArrayList<String> copyIDs = BuiltCopyID.GetBuiltCopyID(BookNumber, Amount);
+
+            BookDetailDao bookDetailDao = new BookDetailDao();
+            //准备条形码页面
+            List<BookDetail> bookdetails = new ArrayList<BookDetail>();
+            for (int i = 0; i < copyIDs.size(); i++) {
+                //在bookdetail中添加
+                bookDetailDao.addBookDeatil(BookNumber,copyIDs.get(i));
+
+                String AreaCode = bookCategoryDao.getAreaCode(Category);
+                BookDetail bookDetail = new BookDetail();
+                bookDetail.setCopyID(copyIDs.get(i));
+                bookDetail.setShelf(Shelf);
+                bookDetail.setAreaCode(AreaCode);
+                bookDetail.setFloor(Floor);
+                String path = copyIDs.get(i) + ".png";
+                BarCodeUtil.GenerateBarCode(copyIDs.get(i),path,request);
+                bookDetail.setPath(path);
+                bookdetails.add(bookDetail);
+            }
+            request.setAttribute("bookDetails",bookdetails);
+
+            request.getRequestDispatcher("added_book_detail.jsp").forward(request,response);
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<BookCategory> bookCategories = bookCategoryDao.getCategories();
+        List<BookCategory> bookCategories = bookCategoryDao.getBookCategories();
         request.setAttribute("bookCategories", bookCategories);
         request.getRequestDispatcher("book_add.jsp").forward(request, response);
     }

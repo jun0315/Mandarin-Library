@@ -126,22 +126,16 @@
                                                                         <p>Are you sure want to delete this reader?</p>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                class="btn btn-secondary">Close
-                                                                        </button>
-                                                                        <a href="ReaderApprove.do?account=${reader.getAccount()}"
-                                                                           }>
-                                                                            <button type="button"
-                                                                                    class="btn btn-primary">Delete
-                                                                            </button>
+                                                                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                                                        <a href="DeleteReader.do?account=${reader.getAccount()}">
+                                                                            <button type="button" class="btn btn-primary">Delete</button>
                                                                         </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="ReaderEdit.do?account=${reader.getAccount()}">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                    style="color: white; background-color: rgb(46,203,112)">
+                                                        <a href="EditReader.do?account=${reader.getAccount()}">
+                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
                                                         </a>

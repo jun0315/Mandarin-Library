@@ -54,9 +54,6 @@ public class ReaderSearchDao {
                 book.setAuthor(resultSet.getString(5));
                 book.setCategory(resultSet.getString(6));
                 book.setAmount(resultSet.getInt(7));
-                book.setFloor(resultSet.getString(8));
-                book.setShelf(resultSet.getString(9));
-                book.setAreaCode(resultSet.getString(10));
                 book.setDescription(resultSet.getString(11));
                 list.add(book);
             }

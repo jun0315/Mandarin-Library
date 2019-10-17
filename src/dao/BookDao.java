@@ -25,9 +25,6 @@ public class BookDao {
                 String Author = resultSet.getString("book_author");
                 String Category = resultSet.getString("book_category");
                 int Amount = resultSet.getInt("book_amount");
-                String Floor = resultSet.getString("book_floor");
-                String Shelf = resultSet.getString("book_shelf");
-                String AreaCode = resultSet.getString("book_areacode");
                 String Description = resultSet.getString("book_description");
                 book.setBookNumber(BookNumber);
                 book.setName(Name);
@@ -36,9 +33,7 @@ public class BookDao {
                 book.setAuthor(Author);
                 book.setCategory(Category);
                 book.setAmount(Amount);
-                book.setFloor(Floor);
-                book.setShelf(Shelf);
-                book.setAreaCode(AreaCode);
+
                 book.setDescription(Description);
                 books.add(book);
             }
@@ -63,9 +58,6 @@ public class BookDao {
                 String Author = resultSet.getString("book_author");
                 String Category = resultSet.getString("book_category");
                 int Amount = resultSet.getInt("book_number");
-                String Floor = resultSet.getString("book_floor");
-                String Shelf = resultSet.getString("book_shelf");
-                String AreaCode = resultSet.getString("book_areacode");
                 String Description = resultSet.getString("book_description");
                 book.setBookNumber(BookNumber);
                 book.setName(Name);
@@ -74,9 +66,6 @@ public class BookDao {
                 book.setAuthor(Author);
                 book.setCategory(Category);
                 book.setAmount(Amount);
-                book.setFloor(Floor);
-                book.setShelf(Shelf);
-                book.setAreaCode(AreaCode);
                 book.setDescription(Description);
             }
         } catch (SQLException e) {
@@ -109,10 +98,9 @@ public class BookDao {
     //添加书籍到数据库中
     public void addBook(String bookNumber, String name, String press,
                         double price, String author, String category,
-                        int amount, String floor, String shelf,
-                        String areaCode, String description) {
+                        int amount, String description) {
         try {
-            String sql = "insert into book values(?,?,?,?,?,?,?,?,?,?,?);";
+            String sql = "insert into book values(?,?,?,?,?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, bookNumber);
@@ -122,26 +110,12 @@ public class BookDao {
             ps.setString(5, author);
             ps.setString(6, category);
             ps.setInt(7, amount);
-            ps.setString(8, floor);
-            ps.setString(9, shelf);
-            ps.setString(10, areaCode);
-            ps.setString(11, description);
+            ps.setString(8, description);
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-//    BookNumber = bookNumber;
-//    Name = name;
-//    Press = press;
-//    Price = price;
-//    Author = author;
-//    Category = category;
-//    Amount = amount;
-//    Floor = floor;
-//    Shelf = shelf;
-//    AreaCode = areaCode;
-//    Description = description;
     }
 
 
