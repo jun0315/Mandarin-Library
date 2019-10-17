@@ -32,7 +32,7 @@ public class BookAddServlet extends HttpServlet {
         String Press = (String) request.getParameter("press");
         double Price = Double.parseDouble(request.getParameter("price"));
         String Category = request.getParameter("category");
-        //TODO
+
         String Floor = "test";
         String Shelf = "test";
 
@@ -72,6 +72,7 @@ public class BookAddServlet extends HttpServlet {
                 bookdetails.add(bookDetail);
             }
             request.setAttribute("bookDetails",bookdetails);
+
             request.getRequestDispatcher("added_book_detail.jsp").forward(request,response);
         }
     }

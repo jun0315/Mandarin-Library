@@ -100,7 +100,7 @@ public class BookDao {
                         double price, String author, String category,
                         int amount, String description) {
         try {
-            String sql = "insert into book values(?,?,?,?,?,?,?,?,?,?,?);";
+            String sql = "insert into book values(?,?,?,?,?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, bookNumber);

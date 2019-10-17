@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
 <%@ page import="entity.BookDetail" %>
@@ -98,16 +99,21 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<BookDetail> bookdetails = (List<BookDetail>) request.getAttribute("bookDetails");%>
+                                            <%
+                                                List<BookDetail> bookdetails = (List<BookDetail>) (request.getAttribute("bookDetails"));
+                                                List<BookDetail> bookdetails1 = (List<BookDetail>) (request.getAttribute("bookDetails"));
+                                                int a = 0;
+                                                a++;
+                                            %>
                                             <c:forEach items="${bookdetails}" var="bookdetail" varStatus="li">
                                                 <tr>
-                                                    <td>${bookdetail.getCopyID()}</td>
+                                                    <th>1</th>
                                                     <td>${bookdetail.getFloor()}</td>
                                                     <td>${bookdetail.getShelf()}</td>
                                                     <td>${bookdetail.getAreaCode()}</td>
                                                     <td>
                                                             ${bookdetail.getPath()}
-<%--                                                        <img src="cache/barcode/"+${bookdetail.getPath()}>--%>
+                                                            <%--                                                        <img src="cache/barcode/"+${bookdetail.getPath()}>--%>
                                                     </td>
                                                 </tr>
                                             </c:forEach>
