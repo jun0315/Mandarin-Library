@@ -1,15 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: zcy10
-  Date: 2019/10/17
-  Time: 17:02
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.BookCategory" %>
-<%@ page import="entity.Book" %>
 <%@ page import="entity.BookDetail" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -57,19 +48,19 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="admin_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Book Detail</h2>
+                    <h2 class="no-margin-bottom">Librarian List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Book Detail</li>
+                    <li class="breadcrumb-item active">Librarian List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
@@ -88,6 +79,13 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <div style="width: 1000px;height: 40px">
+                                        <a href="librarian_add.jsp">
+                                            <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
+                                            <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
+                                                <strong>Add Librarian</strong></p>
+                                        </a>
+                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
@@ -106,7 +104,9 @@
                                                     <td>${bookdetails.getFloor()}</td>
                                                     <td>${bookdetails.getShelf()}</td>
                                                     <td>${bookdetails.getAreaCode()}</td>
-                                                    <td><img src=${bookdetails.getPath}"</td>
+                                                    <td>
+                                                        <img src=${bookdetail.getPath()}>
+                                                    </td>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>
@@ -123,11 +123,10 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
+                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                         </div>
                     </div>
                 </div>
@@ -135,6 +134,16 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'found') {
+        alert("successfully serach!");
+    } else if (info == 'notFound') {
+        alert("search failure!");
+    }
+</script>
 
 
 <!-- JavaScript files-->

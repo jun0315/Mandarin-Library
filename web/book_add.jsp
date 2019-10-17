@@ -169,30 +169,6 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Floor</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="floor"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Shelf</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="shelf"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">AreaCode</label>
-                                    <div class="col-sm-9">
-                                        <input name="areaCode"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
                                         <input type="submit" value="Submit" class="btn btn-primary">
                                     </div>

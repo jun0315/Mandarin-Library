@@ -35,7 +35,7 @@ public class BookAddByISBNSrvelet extends HttpServlet {
 //        book.setPress("test");
         request.setAttribute("bookFromISBN", book);
         BookCategoryDao bookCategoryDao = new BookCategoryDao();
-        List<BookCategory> bookCategories = bookCategoryDao.getCategories();
+        List<BookCategory> bookCategories = bookCategoryDao.getBookCategories();
         request.setAttribute("bookCategories", bookCategories);
         request.getRequestDispatcher("book_add.jsp").forward(request, response);
     }

@@ -116,17 +116,6 @@ public class BookDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-//    BookNumber = bookNumber;
-//    Name = name;
-//    Press = press;
-//    Price = price;
-//    Author = author;
-//    Category = category;
-//    Amount = amount;
-//    Floor = floor;
-//    Shelf = shelf;
-//    AreaCode = areaCode;
-//    Description = description;
     }
 
 

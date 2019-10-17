@@ -7,15 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="前端适量调整">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/DBHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/BookDetailDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/GetBookInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GetBookInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/added_book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/added_book_detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -388,6 +387,26 @@
           <url>file://$PROJECT_DIR$/src/servlet/ReaderEditServlet.java</url>
           <line>16</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookAddServlet.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookAddServlet.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookAddServlet.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/utils/BuiledCopyID.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
