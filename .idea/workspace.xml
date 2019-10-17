@@ -6,128 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbfcc33f-f912-404f-9799-4ae2de78314b" name="Default Changelist" comment="实现了librarian的borrow business和return business功能">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/library - test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/ReaderReserveDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/ReaderReserve.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianReturnBusinessServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderReserveApproveServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/ReturnBookServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/addBook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/addUser.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/adminLogin_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/librarian_book_list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/librarian_return_business.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/reader_list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/library_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/library___test_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="bbfcc33f-f912-404f-9799-4ae2de78314b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/DBHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LibrarianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LibrarianDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/BookCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/BookCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Librarian.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianSearchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LogoutServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderEditServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderSearchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HttpUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin_change_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_change_password.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin_find_liber_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_find_liber_password.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin_system_settings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_system_settings.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_category_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_category_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_category_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/charts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/demo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/fontastic.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/fontastic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.blue.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.default.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.green.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.green.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.pink.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.red.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.red.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.sea.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.sea.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.violet.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.violet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/data/addresses.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/data/addresses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/data/countries.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/data/countries.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/fonts/dashboard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forms.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/header_template.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header_template.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons-reference/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/fonts/dashboard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons-reference/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/icons-reference.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons-reference/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/charts-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/charts-custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/charts-home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/charts-home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/demo-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/demo-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/dialogue.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/dialogue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/front.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/rAF.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/rAF.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_borrowHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_borrowHistory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_borrow_business.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/chart.js/Chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/chart.js/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery-validation/additional-methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery-validation/additional-methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery-validation/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery-validation/jquery.validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery.cookie/cookie.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery.cookie/cookie.jquery.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery.cookie/jquery.cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery.cookie/jquery.cookie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery.slim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/popper.js/popper-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/popper.js/popper-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/popper.js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/popper.js/popper.js" afterDir="false" />
     </list>
     <list id="1ab7b3cc-1519-43e3-9963-252e7e8e337d" name="Revert: 修改了罚金计算逻辑；完成了LoginSevlet中的Reader的TODO；修改了ReaderBorrowDao的构造函数；重命名reader_view.jsp为reader_borrowHistory.jsp" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -158,16 +38,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/librarian_return_business.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="56" column="96" lean-forward="true" selection-start-line="56" selection-start-column="96" selection-end-line="56" selection-end-column="96" />
+            <state relative-caret-position="739">
+              <caret line="106" column="53" lean-forward="true" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/admin.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
@@ -571,7 +451,7 @@
       <workItem from="1570951305166" duration="4435000" />
       <workItem from="1570960420118" duration="4713000" />
       <workItem from="1570975007876" duration="530000" />
-      <workItem from="1571296367971" duration="21139000" />
+      <workItem from="1571296367971" duration="21683000" />
     </task>
     <task id="LOCAL-00001" summary="1.实现了Reader的View功能(ReaderBorrow.java, ReaderBorrowDao.java,ReaderBorrowServlet.java,reader_view.jsp&#10;2.封装了reader的侧边栏reader_view.jsp">
       <created>1569729646227</created>
@@ -587,11 +467,25 @@
       <option name="project" value="LOCAL" />
       <updated>1569745521950</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="实现了librarian的borrow business和return business功能">
+      <created>1571320799980</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571320799980</updated>
+    </task>
+    <task id="LOCAL-00004" summary="准备合并">
+      <created>1571320832253</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571320832253</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53726000" />
+    <option name="totallyTimeSpent" value="54270000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -769,7 +663,8 @@
     <MESSAGE value="1.实现了Reader的View功能(ReaderBorrow.java, ReaderBorrowDao.java,ReaderBorrowServlet.java,reader_view.jsp&#10;2.封装了reader的侧边栏reader_view.jsp" />
     <MESSAGE value="修改了罚金计算逻辑；完成了LoginSevlet中的Reader的TODO；修改了ReaderBorrowDao的构造函数；重命名reader_view.jsp为reader_borrowHistory.jsp" />
     <MESSAGE value="实现了librarian的borrow business和return business功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了librarian的borrow business和return business功能" />
+    <MESSAGE value="准备合并" />
+    <option name="LAST_COMMIT_MESSAGE" value="准备合并" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1181,17 +1076,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/librarian_return_business.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="56" column="96" lean-forward="true" selection-start-line="56" selection-start-column="96" selection-end-line="56" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/admin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/librarian_return_business.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="106" column="53" lean-forward="true" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="53" />
         </state>
       </provider>
     </entry>
