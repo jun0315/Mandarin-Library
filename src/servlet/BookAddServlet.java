@@ -32,9 +32,8 @@ public class BookAddServlet extends HttpServlet {
         String Press = (String) request.getParameter("press");
         double Price = Double.parseDouble(request.getParameter("price"));
         String Category = request.getParameter("category");
-
-        String Floor = "test";
-        String Shelf = "test";
+        int Floor = bookCategoryDao.getFloor(Category);
+        String Shelf = bookCategoryDao.getShelf(Category);
 
         String Author = (String) request.getParameter("author");
         String Description = request.getParameter("description");
@@ -59,8 +58,7 @@ public class BookAddServlet extends HttpServlet {
                 //在bookdetail中添加
                 bookDetailDao.addBookDeatil(BookNumber,copyIDs.get(i));
 
-                //TODO
-                String AreaCode = "test";
+                String AreaCode = bookCategoryDao.getAreaCode(Category);
                 BookDetail bookDetail = new BookDetail();
                 bookDetail.setCopyID(copyIDs.get(i));
                 bookDetail.setShelf(Shelf);
