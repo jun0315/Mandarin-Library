@@ -227,5 +227,29 @@
         <servlet-name>ReturnBook</servlet-name>
         <url-pattern>/ReturnBook.do</url-pattern>
     </servlet-mapping>
-    <!--    end -->
+    <servlet>
+        <servlet-name>DetailSearch</servlet-name>
+        <servlet-class>servlet.DetailSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailSearch</servlet-name>
+        <url-pattern>/DetailSearch</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Order</servlet-name>
+        <servlet-class>servlet.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Order</servlet-name>
+        <url-pattern>/Order</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Orderto</servlet-name>
+        <servlet-class>servlet.OrdertoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Orderto</servlet-name>
+        <url-pattern>/Orderto</url-pattern>
+    </servlet-mapping>
+<!--    end -->
 </web-app>

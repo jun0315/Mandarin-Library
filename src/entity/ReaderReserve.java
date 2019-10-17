@@ -19,10 +19,10 @@ public class ReaderReserve {
         this.reserve_time = new Date(System.currentTimeMillis());
     }
 
-    public ReaderReserve(String user_account, String copy_id, Date reserve_time) {
-        this.user_account = user_account;
-        this.copy_id = copy_id;
-        this.reserve_time = reserve_time;
+    public ReaderReserve(String user_account, String copy_id, Date reserve_time){
+        this.user_account=user_account;
+        this.copy_id=copy_id;
+        this.reserve_time=reserve_time;
     }
 
     public String getUser_account() {

@@ -64,10 +64,16 @@
                     <li class="breadcrumb-item active">Search</li>
                 </ul>
             </div>
+
             <section class="tables" style="padding: 20px">
 
                 <form class="input-group col-md-12" style="margin: 10px;position: relative" action="ReaderSearchServlet"
                       name="search" method="post">
+                        <select  name="signal">
+                            <option>name</option>
+                            <option>id</option>
+                            <option>author</option>
+                        </select>
                     <input type="text" class="form-control" name="message"
                            placeholder="Please enter the content you are searching for">
                     <span class="input-group-btn">
@@ -89,7 +95,8 @@
                                                 <th>Name</th>
                                                 <th>Press</th>
                                                 <th>Author</th>
-                                                <th>Operation</th>
+                                                <th>detail</th>
+
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -104,12 +111,17 @@
                                                     <td>${book.getPress()}</td>
                                                     <td>${book.getAuthor()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" style="color: #ff0c0c"
+                                                        <form  style="margin: 10px;position: relative" action="DetailSearch"
+                                                              name="search" method="post">
+                                                            <input type="hidden" name="number" value="${book.getBookNumber()}" />
+                                                        <%--<a href="book_detail.jsp?number=${book.getBookNumber()}" style="color: #ff0c0c"
                                                            data-toggle="modal" value="${book.getBookNumber()}"
-                                                           id="lastButton">详情</a>
+                                                           id="lastButton">details</a>--%>
+                                                            <input type="submit" value="detail">
+                                                        </form>  </td>
                                                             <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
-                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
+                                                     <%--   <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
                                                              aria-labelledby="exampleModalLabel" aria-hidden="true"
                                                              class="modal fade text-left">
                                                             <div role="document" class="modal-dialog">
@@ -129,7 +141,7 @@
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
                                                                         <a href="admin.jsp?account=${librarian.getAccount()}">
-                                                                                <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
+                                                                                &lt;%&ndash;                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">&ndash;%&gt;
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -138,10 +150,14 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}"
-                                                           style="color: #0000c6">预约</a>
-                                                    </td>
+                                                        </div>--%>
+                                                       <%-- <a href="EditLibrarian.do?account=${librarian.getAccount()}"
+                                                           style="color: #0000c6">order</a>--%>
+                                               <%-- <td>  <form  style="margin: 10px;position: relative" action="ReaderSearchServlet"
+                                                             name="search" method="post">
+                                                        <input type="hidden" name="number" value="${book.getBookNumber()}" />
+                                                        <input type="submit" value="order"></form>
+                                                    </td>--%>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>
