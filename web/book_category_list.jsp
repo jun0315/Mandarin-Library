@@ -91,6 +91,8 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Category</th>
+                                                <th>Floor</th>
+                                                <th>Shelf</th>
                                                 <th>Operation</th>
                                             </tr>
                                             </thead>
@@ -100,6 +102,8 @@
                                                 <tr>
                                                     <th>${li.index+1}</th>
                                                     <td>${bookCategory.getCategory()}</td>
+                                                    <td>${bookCategory.getFloor()}</td>
+                                                    <td>${bookCategory.getShelf()}</td>
                                                     <td>
                                                         <a href="#myModal_${li.index+1}" data-toggle="modal" value="${bookCategory.getCategory()}"
                                                            id="lastButton">
@@ -176,10 +180,10 @@
         alert("search failure!");
     } else if (info == 'delete_error') {
         alert("There is no category to delete!");
-        window.location.href = "book_category_list.do";
+        window.location.href = "BookCategoryList.do";
     } else if (info == 'delete_success') {
         alert("Successfully delete!");
-        window.location.href = "book_category_list.do";
+        window.location.href = "BookCategoryList.do";
     }
 </script>
 

@@ -17,7 +17,7 @@ public class BookCategoryDeleteServlet extends HttpServlet{
 
         String category = (String) request.getParameter("category");
         BookCategoryDao bookCategoryDao = new BookCategoryDao();
-        boolean exist = bookCategoryDao.isExitInDB(category);
+        boolean exist = bookCategoryDao.isExistInDB(category);
         if (!exist) {
             response.sendRedirect("book_category_list.jsp?info=delete_error");
         } else {

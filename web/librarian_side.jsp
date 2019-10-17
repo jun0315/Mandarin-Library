@@ -78,7 +78,7 @@
             <ul id="BookManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="BookList.do">Book List</a></li>
                 <li><a href="BookAdd.do">Add Book</a></li>
-                <li><a href="book_category_list.do" >Category List</a></li>
+                <li><a href="BookCategoryList.do" >Category List</a></li>
             </ul>
         </li>
 
