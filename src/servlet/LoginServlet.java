@@ -21,6 +21,7 @@ public class LoginServlet extends HttpServlet {
         //用于保存会话
         HttpSession session = request.getSession();
         request.setCharacterEncoding("UTF-8");
+        //
         String account = request.getParameter("account");
         String password = request.getParameter("password");
         dealAccount(request, response, account, password);

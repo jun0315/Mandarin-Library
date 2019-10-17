@@ -35,6 +35,24 @@ public class BookCategoryDao {
         }
         return bookCategories;
     }
+    public String getAreaCode(String Category){
+        String sql = "Select * from book where book_category= \'" + Category + "\'";
+        double Amount=1;
+        try{
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while(resultSet.next()){
+                Amount++;
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return String.valueOf(Amount);
+    }
 
     public boolean isExistInDB(String category){
         boolean exist = false;
