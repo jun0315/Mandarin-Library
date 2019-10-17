@@ -43,25 +43,14 @@ CREATE TABLE `book` (
   `book_author` varchar(2048) DEFAULT NULL,
   `book_category` varchar(2048) DEFAULT NULL,
   `book_amount` int(10) unsigned DEFAULT NULL,
-  `book_areacode` varchar(2048) DEFAULT NULL,
   `book_description` varchar(4096) DEFAULT NULL,
   PRIMARY KEY (`book_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `book` */
 
-insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_areacode`,`book_description`) values 
-('','librarianafadf','ewe',16,'阿迪斯发','arts',626,'177','阿道夫啊'),
-('1231231231234','','12',12,'','arts',12,'',''),
-('1236632125666','','',233,'','arts',23,'',''),
-('3263632563263','78782','7',36,'','arts',36,' 违法',' 违法我'),
-('3264692563263','78782','7',36,'阿迪斯发','music',82,' 违法','88'),
-('3264692563633','78782','7',36,'阿迪斯发','music',82,'','88'),
-('3264692563963','78782','7',36,'阿迪斯发','music',82,' 违法','88'),
-('3269692563263','78782','7',36,'阿迪斯发','arts',36,' 违法',''),
-('9636548521236','','23',23,'',NULL,2323,'',''),
-('9787536025097','白银时代','上海三联书店',50,'王小波',NULL,NULL,NULL,NULL),
-('plokmnjuhbko2','','',12,'','arts',12,'','');
+insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_description`) values 
+('9780131872486','Thinking in Java','Pearson Education',32,'Bruce Eckel','arts',5,'With humor and insight, the author introduces the fundamental concepts of the Java programming language, from object development to design patterns, with the help of straightforward examples. By the author of Thinking in C++++. Original. (Beginner).');
 
 /*Table structure for table `book_category` */
 
@@ -70,16 +59,13 @@ DROP TABLE IF EXISTS `book_category`;
 CREATE TABLE `book_category` (
   `category` varchar(2048) NOT NULL,
   `floor` int(11) DEFAULT NULL,
-  `shelf` varchar(16) DEFAULT NULL,
-  `areacode` int(11) DEFAULT NULL
+  `shelf` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `book_category` */
 
-insert  into `book_category`(`category`,`floor`,`shelf`,`areacode`) values 
-('arts',NULL,NULL,NULL),
-('music',NULL,NULL,NULL),
-('fiction',NULL,NULL,NULL);
+insert  into `book_category`(`category`,`floor`,`shelf`) values 
+('arts',1,'1');
 
 /*Table structure for table `book_deleted` */
 
@@ -109,6 +95,13 @@ CREATE TABLE `book_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `book_detail` */
+
+insert  into `book_detail`(`book_number`,`copy_id`,`status`) values 
+('9780131872486','97801318724860001',2),
+('9780131872486','97801318724860002',2),
+('9780131872486','97801318724860003',2),
+('9780131872486','97801318724860004',2),
+('9780131872486','97801318724860005',2);
 
 /*Table structure for table `reader` */
 

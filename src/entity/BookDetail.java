@@ -2,14 +2,14 @@ package entity;
 
 public class BookDetail {
     private String CopyID;
-    private String Floor;
+    private int Floor;
     private String Shelf;
     private String AreaCode;
     private String Path;
 
     public BookDetail(){
         this.CopyID=null;
-        this.Floor=null;
+        this.Floor=0;
         this.Shelf=null;
         this.AreaCode=null;
         this.Path=null;
@@ -24,11 +24,11 @@ public class BookDetail {
         CopyID = copyID;
     }
 
-    public String getFloor() {
+    public int getFloor() {
         return Floor;
     }
 
-    public void setFloor(String floor) {
+    public void setFloor(int floor) {
         Floor = floor;
     }
 

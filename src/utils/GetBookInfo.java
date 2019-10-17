@@ -54,13 +54,13 @@ public class GetBookInfo {
     }
 
     public String getAuthor() {
-        StringBuilder authorResult = new StringBuilder();
+        String authorResult = "";
         JSONArray authors = volumeInfo.getJSONArray("authors");
 
         for (Object author : authors) {
-            authorResult.append((String) author);
+            authorResult += ((String) author);
         }
-        return authorResult.toString();
+        return authorResult;
     }
 
     public String getPublisher() {

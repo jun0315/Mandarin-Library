@@ -11,14 +11,25 @@ public class Book {
     private String Description;
 
     public Book() {
-        this.BookNumber ="null" ;
+        this.BookNumber = "null";
         this.Name = "null";
         this.Press = "null";
         this.Price = 0;
         this.Author = "null";
         this.Category = "null";
         this.Amount = 0;
-        this.Description="null";
+        this.Description = "null";
+    }
+
+    public Book(String bookNumber, String name, String press, double price, String author, String category, int amount, String description) {
+        this.BookNumber = bookNumber;
+        this.Name = name;
+        this.Press = press;
+        this.Price = price;
+        this.Author = author;
+        this.Category = category;
+        this.Amount = amount;
+        this.Description = description;
     }
 
     public String getBookNumber() {
@@ -76,7 +87,6 @@ public class Book {
     public void setAmount(int amount) {
         Amount = amount;
     }
-
 
 
     public String getDescription() {

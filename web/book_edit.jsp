@@ -1,31 +1,15 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="entity.Librarian" %>
-<%@ page import="java.util.List" %>
-<%@ page import="entity.BookCategory" %>
-<%@ page import="dao.BookCategoryDao" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: kehan
+  Date: 2019/10/17
+  Time: 下午10:45
+  To change this template use File | Settings | File Templates.
+--%>
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 <%@ page import="entity.Book" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<script>
-    var ISBN_flag = true;
-
-    function changeISBN() {
-        var bookNo = document.getElementById("bookNo");
-        var ClickISBNorMSBN = document.getElementById("ClickISBNorMSBN");
-        var ImportISBN = document.getElementById("importISBN");
-        if (ISBN_flag) {
-            ISBN_flag = false;
-            bookNo.innerHTML = "MSBN";
-            ClickISBNorMSBN.innerHTML = "Have ISBN";
-            ImportISBN.style.display = 'none';
-        } else if (!ISBN_flag) {
-            ISBN_flag = true;
-            bookNo.innerHTML = "ISBN";
-            ClickISBNorMSBN.innerHTML = "Have No ISBN";
-            ImportISBN.style.display = "";
-        }
-    }
-</script>
 <html>
 <head>
     <meta charset="utf-8">
@@ -63,116 +47,98 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Add Book</h2>
+                    <h2 class="no-margin-bottom">Librarian Edit</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Add the new book</li>
+                    <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
+                    <li class="breadcrumb-item active">Librarian Edit</li>
                 </ul>
             </div>
-            <%! String nameFromAPI = "";%>
-            <%! String authorFromAPI = "";%>
-            <%! String pressFromAPI = "";%>
-            <%! String describeFromAPI = "";%>
-            <%! String bookNumberFromAPI = "";%>
-            <%
-                Book book = (Book) request.getAttribute("bookFromISBN");
-                request.setAttribute("bookFromISBN", null);
-                if (book != null) {
-                    bookNumberFromAPI = book.getBookNumber();
-                    nameFromAPI = book.getName();
-                    authorFromAPI = book.getAuthor();
-                    pressFromAPI = book.getPress();
-                    describeFromAPI = book.getDescription();
-                }
-            %>
-            <section
-                    class="tables">
+            <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Add the new book</p>
-                            <form class="form-horizontal" action="BookAdd.do" method="post">
+                            <p>Edit this account infomation</p>
+                            <form class="form-horizontal" action="EditLibrarian.do" method="post">
+                                <%Book book = (Book) request.getAttribute("book");%>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
+                                    <label class="col-sm-3 form-control-label">Book Number</label>
                                     <div class="col-sm-9">
-                                        <input name="BookNumber"
-                                               class="form-control form-control-success" value="<%=bookNumberFromAPI%>">
-                                        <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
-                                        <%--                                            <input type="submit" value="Submit" class="btn btn-primary" id="importISBN">Import ISBN</input>--%>
-                                        <a href="AddBookByISBN.do" id="importISBN">Import ISBN</a>
-
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <input type="hidden" name="perBookNumber" value="<%=book.getBookNumber()%>">
+                                        <input id="inputHorizontalSuccess" name="bookNumber"
+                                               value="<%=book.getBookNumber()%>"
+                                               class="form-control form-control-success">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="name"
-                                               class="form-control form-control-success" value="<%=nameFromAPI%>">
+                                        <input id="inputHorizontalWarning" name="name"
+                                               value="<%=book.getName()%>"
+                                               class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Press</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="press"
-                                               class="form-control form-control-success" value="<%=pressFromAPI%>">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label" }>Author</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="author"
-                                               class="form-control form-control-success" value="<%=authorFromAPI%>">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Description</label>
-                                    <div class="col-sm-9">
-                                        <input name="description"
-                                               class="form-control form-control-success" value="<%=describeFromAPI%>">
+                                        <input id="inputHorizontalWarning" name="press"
+                                               value="<%=book.getPress()%>"
+                                               class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Price</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="price"
-                                               class="form-control form-control-success">
+                                        <input id="inputHorizontalWarning" name="price"
+                                               value="<%=book.getPrice()%>"
+                                               class="form-control form-control-warning">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Author</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="author"
+                                               value="<%=book.getAuthor()%>"
+                                               class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Category</label>
                                     <div class="col-sm-9">
-                                        <select name="category" class="form-control form-control-success">
-                                            <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
-                                            <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
-                                                <option id="category"
-                                                        value="${bookCategory.getCategory()}">${bookCategory.getCategory()}
-                                                </option>
-                                            </c:forEach>
-                                        </select>
+                                        <input id="inputHorizontalWarning" name="category"
+                                               value="<%=book.getCategory()%>"
+                                               class="form-control form-control-warning">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Amount</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="amount"
-                                               class="form-control form-control-success">
+                                        <input id="inputHorizontalWarning" name="amount"
+                                               value="<%=book.getAmount()%>"
+                                               class="form-control form-control-warning">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Description</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="description"
+                                               value="<%=book.getDescription()%>"
+                                               class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Submit" class="btn btn-primary">
+                                        <input type="submit" value="Done" class="btn btn-primary">
                                     </div>
                                 </div>
                             </form>
@@ -185,7 +151,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
+                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -197,20 +163,22 @@
         </div>
     </div>
 </div>
+
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
-        alert("successfully add!");
+        alert("successfully edit!");
     } else if (info == 'error') {
-        alert("add failure because of have the same account!");
+        alert("edit failure because of have the same book number!");
     }
 </script>
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
-<script src="vendor/chart.js/Chart.min.js1"></script>
+<script src="vendor/chart.js/Chart.min.js"></script>
 <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
 <script src="js/charts-home.js"></script>
 <!-- Main File-->

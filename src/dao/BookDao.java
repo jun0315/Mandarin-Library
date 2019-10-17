@@ -57,7 +57,7 @@ public class BookDao {
                 double Price = resultSet.getDouble("book_price");
                 String Author = resultSet.getString("book_author");
                 String Category = resultSet.getString("book_category");
-                int Amount = resultSet.getInt("book_number");
+                int Amount = resultSet.getInt("book_amount");
                 String Description = resultSet.getString("book_description");
                 book.setBookNumber(BookNumber);
                 book.setName(Name);
@@ -100,7 +100,7 @@ public class BookDao {
                         double price, String author, String category,
                         int amount, String description) {
         try {
-            String sql = "insert into book values(?,?,?,?,?,?,?,?,?,?,?);";
+            String sql = "insert into book values(?,?,?,?,?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, bookNumber);
@@ -116,18 +116,43 @@ public class BookDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-//    BookNumber = bookNumber;
-//    Name = name;
-//    Press = press;
-//    Price = price;
-//    Author = author;
-//    Category = category;
-//    Amount = amount;
-//    Floor = floor;
-//    Shelf = shelf;
-//    AreaCode = areaCode;
-//    Description = description;
     }
 
+    public void editBook(String bookNumber, String name, String press, String price, String author, String category, String amount, String description) {
+        try {
+            String sql = "update book set book_name=?,book_press=?,book_price=?,book_author=?,book_category=?,book_amount=?,book_description=? where book_number=? ";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, name);
+            ps.setString(2, press);
+            ps.setString(3, price);
+            ps.setString(4, author);
+            ps.setString(5, category);
+            ps.setString(6, amount);
+            ps.setString(7, description);
+            ps.setString(8, bookNumber);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection, ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public void deleteBook(String bookNumber) {
+
+        String sql = "delete from book where book_number = \'" + bookNumber + "\'";
+
+        try {
+
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            int resultSet = statement.executeUpdate(sql);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return;
+    }
 
 }
