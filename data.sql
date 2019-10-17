@@ -130,7 +130,7 @@ CREATE TABLE `reader_borrow` (
   `copy_id` varchar(10) NOT NULL,
   `user_account` varchar(64) NOT NULL,
   `borrow_time` datetime DEFAULT NULL,
-  `isreturned` tinyint(1) NOT NULL,
+  `isReturned` tinyint(4) DEFAULT NULL,
   `fine` double DEFAULT NULL,
   PRIMARY KEY (`copy_id`,`user_account`),
   KEY `user_id` (`user_account`),
@@ -140,6 +140,11 @@ CREATE TABLE `reader_borrow` (
 
 /*Data for the table `reader_borrow` */
 
+insert  into `reader_borrow`(`copy_id`,`user_account`,`borrow_time`,`isReturned`,`fine`) values 
+('1','reader-test','2019-02-08 10:41:54',1,NULL),
+('2','reader-test','2019-09-28 10:42:16',1,NULL),
+('3','reader-test','2019-05-16 10:43:59',0,NULL);
+
 /*Table structure for table `reader_reserve` */
 
 DROP TABLE IF EXISTS `reader_reserve`;
@@ -147,7 +152,7 @@ DROP TABLE IF EXISTS `reader_reserve`;
 CREATE TABLE `reader_reserve` (
   `user_account` varchar(64) NOT NULL,
   `copy_id` varchar(32) NOT NULL,
-  `reservetime` datetime DEFAULT NULL,
+  `reserve_time` datetime DEFAULT NULL,
   PRIMARY KEY (`user_account`,`copy_id`),
   KEY `copy_id` (`copy_id`),
   CONSTRAINT `reader_reserve_ibfk_1` FOREIGN KEY (`user_account`) REFERENCES `reader` (`user_account`),
@@ -155,6 +160,10 @@ CREATE TABLE `reader_reserve` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader_reserve` */
+
+insert  into `reader_reserve`(`user_account`,`copy_id`,`reserve_time`) values 
+('reader-test','234','2019-10-17 00:11:04'),
+('reader-test','345','2019-10-18 00:11:17');
 
 /*Table structure for table `staff` */
 
