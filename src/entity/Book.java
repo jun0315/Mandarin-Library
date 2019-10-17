@@ -8,9 +8,6 @@ public class Book {
     private String Author;
     private String Category;
     private int Amount;
-    private String Floor;
-    private String Shelf;
-    private String AreaCode;
     private String Description;
 
     public Book() {
@@ -21,9 +18,6 @@ public class Book {
         this.Author = "null";
         this.Category = "null";
         this.Amount = 0;
-        this.Floor = "null";
-        this.Shelf = "null";
-        this.AreaCode="null";
         this.Description="null";
     }
 
@@ -83,29 +77,7 @@ public class Book {
         Amount = amount;
     }
 
-    public String getFloor() {
-        return Floor;
-    }
 
-    public void setFloor(String floor) {
-        Floor = floor;
-    }
-
-    public String getShelf() {
-        return Shelf;
-    }
-
-    public void setShelf(String shelf) {
-        Shelf = shelf;
-    }
-
-    public String getAreaCode() {
-        return AreaCode;
-    }
-
-    public void setAreaCode(String areaCode) {
-        AreaCode = areaCode;
-    }
 
     public String getDescription() {
         return Description;

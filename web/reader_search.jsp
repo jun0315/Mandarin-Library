@@ -105,11 +105,7 @@
                                                     <td>
                                                         <a href="#myModal_${li.index+1}" style="color: #ff0c0c"
                                                            data-toggle="modal" value="${book.getBookNumber()}"
-                                                           id="lastButton">
-                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(121,106,238)">
-                                                                详情
-                                                            </button>
-                                                        </a>
+                                                           id="lastButton">详情</a>
                                                             <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
                                                         <!-- Modal-->
                                                         <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
@@ -142,11 +138,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(23,162,184)">
-                                                                预约
-                                                            </button>
-                                                        </a>
+                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}"
+                                                           style="color: #0000c6">预约</a>
                                                     </td>
                                                 </tr>
                                             </c:forEach>

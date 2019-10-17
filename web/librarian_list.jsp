@@ -131,7 +131,7 @@
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="admin.jsp?account=${librarian.getAccount()}">
+                                                                        <a href="DeleteLibrarian.do?account=${librarian.getAccount()}">
 <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
