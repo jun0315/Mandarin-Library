@@ -39,9 +39,7 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <nav class="side-navbar">
-            <jsp:include page="librarian_side.jsp"></jsp:include>
-        </nav>
+        <jsp:include page="librarian_side.jsp"></jsp:include>
         <div class="content-inner">
             <!-- Page Header 黑色粗体title-->
             <header class="page-header">
@@ -63,7 +61,7 @@
                     <div class="card">
                         <div class="card-body">
                             <p>Sign up for a new reader.</p>
-                            <form class="form-horizontal" action="reader_add.do" method="post">
+                            <form class="form-horizontal" action="ReaderAdd.do" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Account</label>
                                     <div class="col-sm-9">
@@ -140,6 +138,7 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("Successfully add!");
+        window.location.href = "ReaderList.do";
     } else if (info == 'error') {
         alert("Add failure because of have the same account!");
     }

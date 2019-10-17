@@ -1,8 +1,14 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: 刘威
+  Date: 2019/9/25
+  Time: 16：32
+  用于实现读者的View功能，可查看个人借阅情况和罚金信息
+--%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="entity.Librarian" %>
+<%@ page import="entity.ReaderBorrow" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.BookCategory" %>
-<%@ page import="entity.Book" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -30,18 +36,6 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-
-    <script src="js/dialogue.js"></script>
-
-    <%--    <script type="text/javascript">--%>
-    <%--        function deleteClick() {--%>
-    <%--            var con;--%>
-    <%--            con = confirm("Are you sure you want to delete?\n");--%>
-    <%--            if(con==true) {--%>
-    <%--                window.location.href("index.jsp");--%>
-    <%--            }--%>
-    <%--        }--%>
-    <%--    </script>--%>
 </head>
 <body>
 <div class="page">
@@ -49,32 +43,24 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="reader_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">View Borrowing History</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item"><a href="reader_borrowHistory.jsp">Home</a></li>
+                    <li class="breadcrumb-item active">View</li>
                 </ul>
             </div>
+
+            <%--显示借阅记录 --%>
             <section class="tables" style="padding: 20px">
-
-                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
-                      name="search" method="post">
-                    <input type="text" class="form-control" name="searchAccount"
-                           placeholder="Please enter the account of the administrator who needs to query">
-                    <span class="input-group-btn">
-                            <button type="submit" class="btn btn-info btn-search">search</button>
-                        </span>
-                </form>
-
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -84,26 +70,33 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Book Number</th>
-                                                <th>Name</th>
-                                                <th>Press</th>
-                                                <th>Price</th>
-                                                <th>Author</th>
-                                                <th>Category</th>
-                                                <th>Amount</th>
+                                                <th>#</th>
+                                                <th>Account</th>
+                                                <th>Book Copy ID</th>
+                                                <th>Borrow Time</th>
+                                                <th>Status</th>
+                                                <th>Fine</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Book> books = (List<Book>) request.getAttribute("books");%>
-                                            <c:forEach items="${books}" var="book" varStatus="li">
+                                            <%List<ReaderBorrow> readerBorrowList = (List<ReaderBorrow>) request.getAttribute("readerBorrowList");%>
+                                            <c:forEach items="${readerBorrowList}" var="readerBorrow" varStatus="li">
                                                 <tr>
-                                                    <td>${book.getBookNumber()}</td>
-                                                    <td>${book.getName()}</td>
-                                                    <td>${book.getPress()}</td>
-                                                    <td>${book.getPrice()}</td>
-                                                    <td>${book.getAuthor()}</td>
-                                                    <td>${book.getCategory()}</td>
-                                                    <td>${book.getAmount()}</td>
+                                                    <th>${li.index+1}</th>
+                                                    <td>${readerBorrow.getUser_account()}</td>
+                                                    <td>${readerBorrow.getCopy_id()}</td>
+                                                    <td>${readerBorrow.getBorrow_time().toString()}</td>
+                                                    <td>
+                                                        <c:choose>
+                                                            <c:when test="${readerBorrow.getIsReturned() ==1}">
+                                                                Returned
+                                                            </c:when>
+                                                            <c:otherwise>
+                                                                Not Returned
+                                                            </c:otherwise>
+                                                        </c:choose>
+                                                    </td>
+                                                    <td>${readerBorrow.getFine().toString()}$</td>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>
@@ -115,12 +108,16 @@
                     </div>
                 </div>
             </section>
+
+
             <!-- Page Footer-->
             <footer class="main-footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
+                            <p>Copyright &copy; 2019. <a
+                                    href="http://www.cssmoban.com/" target="_blank" title=""></a>
+                                <a href="http://www.cssmoban.com/" title="" target="_blank"></a></p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -132,8 +129,6 @@
         </div>
     </div>
 </div>
-
-
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
@@ -144,6 +139,5 @@
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
-
 </body>
 </html>

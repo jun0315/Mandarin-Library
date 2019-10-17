@@ -8,13 +8,15 @@ public class Reader {
     private int security_deposit;
     private String type = "Reader";
 
-    public Reader(){
-        this.name = "null";
-        this.password = "null";
-        this.account = "null";
-        this.email = "null";
-        this.security_deposit = 0;
+    public Reader(String account, String password, String name, String email, int deposit){
+        this.account = account;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.security_deposit = deposit;
     }
+
+    public Reader(){ }
 
     public String getPassword() {
         return password;

@@ -1,12 +1,10 @@
 package servlet;
 
-import dao.AdminDao;
-import dao.AdminSettingsDao;
-import dao.LibrarianDao;
-import dao.LoginDao;
+import dao.*;
 import entity.Admin;
 import entity.AdminSettings;
 import entity.Librarian;
+import entity.Reader;
 import utils.UserType;
 
 import javax.servlet.ServletException;
@@ -55,9 +53,13 @@ public class LoginServlet extends HttpServlet {
             LibrarianDao librarianDao = new LibrarianDao();
             Librarian librarian = librarianDao.info(account);
             session.setAttribute("name", librarian.getName());
+            session.setAttribute("type",librarian.getType());
 
         } else if (userType == UserType.Reader) {
-            //TODO建立reader相应的dao和entity
+            ReaderDao readerDao = ReaderDao.getInstance();
+            Reader reader = readerDao.info(account);
+            session.setAttribute("name", reader.getName());
+            session.setAttribute("type", reader.getType());
         }
         if (userType != UserType.None) {
 
