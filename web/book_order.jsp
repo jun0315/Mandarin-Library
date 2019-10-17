@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="entity.Librarian" %>
 <%@ page import="entity.Book" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
@@ -31,6 +33,15 @@
 
     <script src="js/dialogue.js"></script>
 
+    <%--    <script type="text/javascript">--%>
+    <%--        function deleteClick() {--%>
+    <%--            var con;--%>
+    <%--            con = confirm("Are you sure you want to delete?\n");--%>
+    <%--            if(con==true) {--%>
+    <%--                window.location.href("index.jsp");--%>
+    <%--            }--%>
+    <%--        }--%>
+    <%--    </script>--%>
 </head>
 <body>
 <div class="page">
@@ -50,39 +61,60 @@
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active"><a href="reader_search.jsp">Search</a></li>
+                    <li class="breadcrumb-item active">Search</li>
                 </ul>
             </div>
 
 
-                <div class="">
-                   <%-- <div class="row">
+                <div class="container-fluid">
+                    <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="table-responsive">--%>
-                                        <h3>number： ${book.getBookNumber()}</h3>
-                                        <h3>name:  ${book.getName()}</h3>
-                                        <h3>press:  ${book.getPress()}</h3>
-                                        <h3>author:  ${book.getAuthor()}</h3>
-                                        <h3>Category:  ${book.getCategory()}</h3>
-                                        <h3>amount:  ${book.getAmount()}</h3>
-                                        <h3>Floor:  ${book.getFloor()}</h3>
-                                        <h3>Shelf:  ${book.getShelf()}</h3>
-                                        <h3>AreaCode:   ${book.getAreaCode  ()}</h3>
-                       <form action="Order"
-                             name="order" method="post">
-                           <input type="hidden" name="number" value="${book.getBookNumber()}" />
-                           <input type="submit" value="order">
-                       </form>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Bnumber</th>
+                                                <th>id</th>
+                                                <th>state</th>
+                                                <th>Order</th>
 
-                                  <%--  </div>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <%request.getAttribute("wa");
+                                            %>
+                                            <c:forEach items="${wa}" var="detail" varStatus="li">
+                                                <tr>
+                                                    <td>${detail.getBookNumber()}</td>
+                                                    <td>${detail.getCopyid()}</td>
+                                                    <td>
+                                                        <c:if test="${detail.getState()==0}">已外借</c:if>
+                                                        <c:if test="${detail.getState()==1}">已预约</c:if>
+                                                        <c:if test="${detail.getState()==2}">可借</c:if>
+                                                        <%--<c:otherwise><form  style="margin: 10px;position: relative" action="Order"
+                                                               name="search" method="post">
+                                                            <input type="hidden" name="number" value="" />
+
+                                                            <input type="submit" value="Order">
+                                                        </form> </c:otherwise> --%></td>
+                                                    <td><form  style="margin: 10px;position: relative" action="Orderto"
+                                                               name="search" method="post">
+                                                        <input type="hidden" name="number" value="${detail.getState()}" />
+                                                        <input type="hidden" name="id" value="${detail.getCopyid()}" />
+                                                        <input type="submit" value="Order"></td>
+                                                </tr>
+                                            </c:forEach>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>--%>
+                    </div>
                 </div>
-
+            </section>
             <!-- Page Footer-->
             <footer class="main-footer">
                 <div class="container-fluid">
