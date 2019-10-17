@@ -99,7 +99,6 @@
                                                     </td>
                                                     <td>${readerBorrow.getFine().toString()}$</td>
                                                     <td>
-                                                            <%--TODO--%>
                                                         <a href="ReturnBook.do?book_copy_id=${readerBorrow.getCopy_id()}&user_account=${readerBorrow.getUser_account()}">
                                                             <button type="button" class="btn btn-primary">Return
                                                             </button>
