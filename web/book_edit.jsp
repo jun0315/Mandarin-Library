@@ -62,7 +62,7 @@
                     <div class="card">
                         <div class="card-body">
                             <p>Edit this account infomation</p>
-                            <form class="form-horizontal" action="EditLibrarian.do" method="post">
+                            <form class="form-horizontal" action="EditBook.do" method="post">
                                 <%Book book = (Book) request.getAttribute("book");%>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Book Number</label>
@@ -70,7 +70,7 @@
                                         <input type="hidden" name="perBookNumber" value="<%=book.getBookNumber()%>">
                                         <input id="inputHorizontalSuccess" name="bookNumber"
                                                value="<%=book.getBookNumber()%>"
-                                               class="form-control form-control-success">
+                                               class="form-control form-control-success" >
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -109,24 +109,8 @@
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Category</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="category"
-                                               value="<%=book.getCategory()%>"
-                                               class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Amount</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="amount"
-                                               value="<%=book.getAmount()%>"
-                                               class="form-control form-control-warning">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
+                                <input type="hidden" name="category" value="<%=book.getCategory()%>">
+                                <input type="hidden" name="amount" value="<%=book.getAmount()%>">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Description</label>
                                     <div class="col-sm-9">
