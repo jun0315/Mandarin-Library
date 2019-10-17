@@ -148,5 +148,13 @@
         <servlet-name>BorrowHistory</servlet-name>
         <url-pattern>/BorrowHistory.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>DetailSearch</servlet-name>
+        <servlet-class>servlet.DetailSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DetailSearch</servlet-name>
+        <url-pattern>/DetailSearch</url-pattern>
+    </servlet-mapping>
 <!--    end -->
 </web-app>
