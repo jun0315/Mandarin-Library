@@ -16,6 +16,14 @@ public class Reader {
         this.security_deposit = 0;
     }
 
+    public Reader(String account, String password, String name, String email, int security_deposit) {
+        this.account = account;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.security_deposit = security_deposit;
+    }
+
     public String getPassword() {
         return password;
     }

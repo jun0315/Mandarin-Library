@@ -2,18 +2,132 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="library:Web exploded" />
+      <artifact name="library - test:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbfcc33f-f912-404f-9799-4ae2de78314b" name="Default Changelist" comment="注释掉了LoginDao中一行无用又产生异常的代码。修改了ReaderDao的info函数。修改了LoginServlet">
-      <change afterPath="$PROJECT_DIR$/web/reader_account_setting.jsp" afterDir="false" />
+    <list default="true" id="bbfcc33f-f912-404f-9799-4ae2de78314b" name="Default Changelist" comment="实现了librarian的borrow business和return business功能">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/library - test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/ReaderReserveDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/ReaderReserve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianReturnBusinessServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderReserveApproveServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ReturnBookServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/addBook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/addUser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/adminLogin_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/librarian_book_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/librarian_return_business.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/reader_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/library_Web_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/library___test_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LoginDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/servlet/LoginServlet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/classes/utils/DBHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/LibrarianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LibrarianDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/ReaderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/BookCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/BookCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Librarian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Librarian.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookCategoryEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianSearchServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderDeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/ReaderSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ReaderSearchServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HttpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_change_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_change_password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_find_liber_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_find_liber_password.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_system_settings.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_system_settings.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_category_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_category_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_category_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/charts.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/charts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/fontastic.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/fontastic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.green.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.red.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.sea.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.sea.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.violet.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.violet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data/addresses.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/data/addresses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data/countries.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/data/countries.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/fonts/dashboard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/forms.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header_template.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/header_template.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons-reference/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/fonts/dashboard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons-reference/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons-reference/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/charts-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/charts-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/charts-home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/charts-home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/demo-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/demo-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/dialogue.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/dialogue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/front.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/rAF.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/rAF.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_borrowHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_borrowHistory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_borrow_business.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/tables.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/chart.js/Chart.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/chart.js/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery-validation/additional-methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery-validation/additional-methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery-validation/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery-validation/jquery.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery.cookie/cookie.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery.cookie/cookie.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery.cookie/jquery.cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery.cookie/jquery.cookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery.slim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/popper.js/popper-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/popper.js/popper-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/popper.js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/popper.js/popper.js" afterDir="false" />
     </list>
     <list id="1ab7b3cc-1519-43e3-9963-252e7e8e337d" name="Revert: 修改了罚金计算逻辑；完成了LoginSevlet中的Reader的TODO；修改了ReaderBorrowDao的构造函数；重命名reader_view.jsp为reader_borrowHistory.jsp" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,19 +159,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/reader_account_setting.jsp">
+        <entry file="file://$PROJECT_DIR$/web/librarian_return_business.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="171" column="45" lean-forward="true" selection-start-line="171" selection-start-column="45" selection-end-line="171" selection-end-column="45" />
+            <state relative-caret-position="302">
+              <caret line="56" column="96" lean-forward="true" selection-start-line="56" selection-start-column="96" selection-end-line="56" selection-end-column="96" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/servlet/LoginServlet.java">
+        <entry file="file://$PROJECT_DIR$/web/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+            <state relative-caret-position="19">
+              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/librarian_borrow_business.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="95" column="180" selection-start-line="95" selection-start-column="180" selection-end-line="95" selection-end-column="180" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlet/ReaderBorrowServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,28 +198,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/LoginDao.java">
+        <entry file="file://$PROJECT_DIR$/src/servlet/ReturnBookServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="285">
+              <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/librarian_list.jsp">
+        <entry file="file://$PROJECT_DIR$/src/servlet/ReaderReserveApproveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1900">
-              <caret line="100" column="73" selection-start-line="100" selection-start-column="68" selection-end-line="100" selection-end-column="73" />
+            <state relative-caret-position="456">
+              <caret line="33" column="72" selection-start-line="32" selection-start-column="7" selection-end-line="33" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/librarian_side.jsp">
+        <entry file="file://$PROJECT_DIR$/src/dao/ReaderBorrowDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+            <state relative-caret-position="292">
+              <caret line="140" column="13" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -95,8 +227,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+            <state relative-caret-position="259">
+              <caret line="208" column="34" selection-start-line="208" selection-start-column="34" selection-end-line="208" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -106,6 +238,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -131,24 +264,35 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/utils/DBHelper.java" />
         <option value="$PROJECT_DIR$/src/servlet/ReaderTestServlet.java" />
         <option value="$PROJECT_DIR$/src/entity/ReaderBorrow.java" />
-        <option value="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" />
         <option value="$PROJECT_DIR$/web/reader_view.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/ReaderBorrowServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java" />
         <option value="$PROJECT_DIR$/web/test.jsp" />
         <option value="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/reader_search.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/SystemSettingsServlet.java" />
         <option value="$PROJECT_DIR$/web/reader_side.jsp" />
-        <option value="$PROJECT_DIR$/src/entity/Reader.java" />
         <option value="$PROJECT_DIR$/web/reader_account_setting.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/dao/ReaderDao.java" />
         <option value="$PROJECT_DIR$/src/dao/LoginDao.java" />
+        <option value="$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java" />
+        <option value="$PROJECT_DIR$/src/entity/Reader.java" />
+        <option value="$PROJECT_DIR$/src/utils/DBHelper.java" />
+        <option value="$PROJECT_DIR$/src/entity/ReaderReserve.java" />
+        <option value="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlet/ReaderReserveDeleteServlet.java" />
+        <option value="$PROJECT_DIR$/web/reader_list.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/ReaderReserveApproveServlet.java" />
+        <option value="$PROJECT_DIR$/src/dao/ReaderReserveDao.java" />
+        <option value="$PROJECT_DIR$/web/librarian_side.jsp" />
+        <option value="$PROJECT_DIR$/src/servlet/LibrarianReturnBusinessServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" />
+        <option value="$PROJECT_DIR$/src/servlet/ReturnBookServlet.java" />
+        <option value="$PROJECT_DIR$/web/librarian_borrow_business.jsp" />
+        <option value="$PROJECT_DIR$/web/librarian_return_business.jsp" />
       </list>
     </option>
   </component>
@@ -176,7 +320,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -188,18 +331,6 @@
               <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
               <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="libraries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
@@ -245,6 +376,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -259,7 +391,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20574713" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
@@ -339,12 +471,13 @@
       </method>
     </configuration>
     <configuration name="Tomcat 8.0.48" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.48" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/library___test_war_exploded/" />
       <option name="BROWSER_ID" value="b2a9dca7-9d0b-4e1e-98a8-afb19c1328d2" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="library:Web exploded">
+        <artifact name="library - test:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/library___test_war_exploded" />
           </settings>
         </artifact>
       </deployment>
@@ -407,7 +540,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="library:Web exploded" />
+          <artifact name="library - test:war exploded" />
         </option>
       </method>
     </configuration>
@@ -438,6 +571,7 @@
       <workItem from="1570951305166" duration="4435000" />
       <workItem from="1570960420118" duration="4713000" />
       <workItem from="1570975007876" duration="530000" />
+      <workItem from="1571296367971" duration="21139000" />
     </task>
     <task id="LOCAL-00001" summary="1.实现了Reader的View功能(ReaderBorrow.java, ReaderBorrowDao.java,ReaderBorrowServlet.java,reader_view.jsp&#10;2.封装了reader的侧边栏reader_view.jsp">
       <created>1569729646227</created>
@@ -457,7 +591,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31998000" />
+    <option name="totallyTimeSpent" value="53726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -470,20 +604,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.73177844" visible="true" weight="0.22520107" />
-      <window_info id="Structure" order="1" sideWeight="0.2682216" side_tool="true" weight="0.20375335" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7298658" visible="true" weight="0.1930295" />
+      <window_info id="Structure" order="1" sideWeight="0.27083334" side_tool="true" weight="0.1930295" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.2682216" side_tool="true" weight="0.20375335" />
-      <window_info id="Web" order="7" sideWeight="0.2682216" side_tool="true" weight="0.20375335" />
+      <window_info id="Web" order="7" sideWeight="0.27013424" side_tool="true" weight="0.1930295" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932975" weight="0.3281471" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731904" weight="0.50708216" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.41501418" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932975" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731904" weight="0.25212464" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.25637394" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.32719547" />
@@ -491,10 +624,10 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.19830029" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50268096" side_tool="true" weight="0.2970297" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49932975" weight="0.3281471" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49932975" weight="0.32719547" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49932975" weight="0.21246459" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.22521247" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.76487255" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -505,6 +638,40 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7298658" visible="true" weight="0.1930295" />
+      <window_info id="Structure" order="1" sideWeight="0.27083334" side_tool="true" weight="0.1930295" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.2682216" side_tool="true" weight="0.20375335" />
+      <window_info id="Web" order="7" sideWeight="0.27013424" side_tool="true" visible="true" weight="0.1930295" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932975" weight="0.32719547" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49731904" visible="true" weight="0.15580736" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.25637394" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.32719547" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49798927" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.19830029" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50268096" side_tool="true" weight="0.2970297" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49932975" weight="0.32719547" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49932975" weight="0.21246459" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.76487255" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -601,7 +768,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.实现了Reader的View功能(ReaderBorrow.java, ReaderBorrowDao.java,ReaderBorrowServlet.java,reader_view.jsp&#10;2.封装了reader的侧边栏reader_view.jsp" />
     <MESSAGE value="修改了罚金计算逻辑；完成了LoginSevlet中的Reader的TODO；修改了ReaderBorrowDao的构造函数；重命名reader_view.jsp为reader_borrowHistory.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了罚金计算逻辑；完成了LoginSevlet中的Reader的TODO；修改了ReaderBorrowDao的构造函数；重命名reader_view.jsp为reader_borrowHistory.jsp" />
+    <MESSAGE value="实现了librarian的borrow business和return business功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了librarian的borrow business和return business功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -613,16 +781,52 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlet/LoginServlet.java</url>
-          <line>58</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/entity/Reader.java</url>
-          <line>55</line>
+          <line>52</line>
           <properties />
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ReaderReserveApproveServlet.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/librarian_return_business.jsp</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/librarian_return_business.jsp</url>
+          <line>82</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianReturnBusinessServlet.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/LibrarianReturnBusinessServlet.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ReaderBorrowServlet.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ReaderBorrowServlet.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -632,92 +836,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderTestServlet.java" />
-    <entry file="jar://D:/Java/jdk1.8.0_221/src.zip!/java/sql/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="156" column="18" selection-start-line="156" selection-start-column="18" selection-end-line="156" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_221/src.zip!/java/text/SimpleDateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="420" column="13" selection-start-line="420" selection-start-column="13" selection-end-line="420" selection-end-column="13" />
-          <folding>
-            <element signature="e#23443#23444#0" expanded="true" />
-            <element signature="e#23515#23516#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/AdminChangeSettingsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianEditServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_221/src.zip!/java/sql/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/AdminSettingsDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-452">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/LibrarianDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/reader.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="68" column="30" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/ReaderBorrow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -736,41 +858,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/BookListServlet.java" />
     <entry file="file://$PROJECT_DIR$/web/reader_view.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderBorrowServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/ReaderSearchServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-227">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="47" lean-forward="true" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/ReaderBorrowDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -785,13 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin_side.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="34" column="85" selection-start-line="34" selection-start-column="64" selection-end-line="34" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -867,65 +951,247 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/reader_account_setting.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="171" column="45" lean-forward="true" selection-start-line="171" selection-start-column="45" selection-end-line="171" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/librarian_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1900">
-          <caret line="100" column="73" selection-start-line="100" selection-start-column="68" selection-end-line="100" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/librarian_side.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+        <state relative-caret-position="228">
+          <caret line="87" column="102" selection-start-line="87" selection-start-column="90" selection-end-line="87" selection-end-column="102" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/LoginDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="570">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/ReaderDao.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="55" column="51" lean-forward="true" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+        <state relative-caret-position="97">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderEditServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entity/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="418">
+          <caret line="67" column="19" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="19" />
           <folding>
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
             <element signature="e#998#999#0" expanded="true" />
             <element signature="e#1037#1038#0" expanded="true" />
             <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/librarian_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/librarian_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/BookDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="108" column="15" lean-forward="true" selection-start-line="108" selection-start-column="15" selection-end-line="108" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderDeleteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
+        <state relative-caret-position="299">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/reader_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="126" column="94" selection-start-line="126" selection-start-column="94" selection-end-line="126" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/ReaderReserve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding>
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#843#844#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/reader_borrowHistory.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="131" column="24" lean-forward="true" selection-start-line="131" selection-start-column="24" selection-end-line="131" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin_side.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/librarian_side.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/ReaderBorrow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/LibrarianReturnBusinessServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ReaderReserveDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="47" column="34" lean-forward="true" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ReaderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="127" column="75" lean-forward="true" selection-start-line="127" selection-start-column="75" selection-end-line="127" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/ReaderBorrowDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="140" column="13" selection-start-line="140" selection-start-column="13" selection-end-line="140" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderReserveApproveServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="33" column="72" selection-start-line="32" selection-start-column="7" selection-end-line="33" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ReaderBorrowServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="208" column="34" selection-start-line="208" selection-start-column="34" selection-end-line="208" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlet/ReturnBookServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/librarian_borrow_business.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="95" column="180" selection-start-line="95" selection-start-column="180" selection-end-line="95" selection-end-column="180" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/librarian_return_business.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="56" column="96" lean-forward="true" selection-start-line="56" selection-start-column="96" selection-end-line="56" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -935,11 +1201,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>library:Web exploded</last-edited>
+          <last-edited>library - test:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.20574713" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -947,7 +1214,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (library - test)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -981,7 +1248,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>library - test</last-edited>
+          <last-edited>Web|library - test</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

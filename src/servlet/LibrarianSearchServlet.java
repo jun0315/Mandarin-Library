@@ -20,14 +20,13 @@ public class LibrarianSearchServlet extends HttpServlet {
         String account = (String) request.getParameter("searchAccount");
         LibrarianDao librarianDao = new LibrarianDao();
         Librarian librarian = librarianDao.info(account);
-        if(librarian!=null){
+        if (librarian != null) {
             //为了和list页面统一，放入列表中
             List<Librarian> librarians = new ArrayList<Librarian>();
             librarians.add(librarian);
-            request.setAttribute("librarians",librarians);
+            request.setAttribute("librarians", librarians);
             request.getRequestDispatcher("librarian_list.jsp?info=found").forward(request, response);
-        }
-        else {
+        } else {
             response.sendRedirect("librarian_list.jsp?info=notFound");
         }
     }

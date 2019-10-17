@@ -9,11 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderDao {
-    private ReaderDao() {
-    }
-
     public static ReaderDao getInstance() {
         return new ReaderDao();
+    }
+
+    public int getTotal() {
+        int total = 0;
+        try {
+            Connection c = DBHelper.getInstance().getConnection();
+            Statement s = c.createStatement();
+            String sql = "select count(*) from reader";
+            ResultSet rs = s.executeQuery(sql);
+
+            while (rs.next()) {
+                total = rs.getInt(1);
+            }
+            DBHelper.closeConnection(c, s, rs);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return total;
     }
 
     public List<Reader> getReaders() {
@@ -26,12 +41,14 @@ public class ReaderDao {
             while (resultSet.next()) {
                 Reader reader = new Reader();
                 String account = resultSet.getString("user_account");
+                String password = resultSet.getString("user_password");
                 String name = resultSet.getString("user_name");
                 String email = resultSet.getString("user_email");
                 int deposit = resultSet.getInt("security_deposit");
+                reader.setAccount(account);
+                reader.setPassword(password);
                 reader.setName(name);
                 reader.setEmail(email);
-                reader.setAccount(account);
                 reader.setDeposit(deposit);
                 readers.add(reader);
             }
@@ -54,6 +71,8 @@ public class ReaderDao {
                 String nameInDB = resultSet.getString("user_name");
                 String emailInDB = resultSet.getString("user_email");
                 int depositInDB = resultSet.getInt("security_deposit");
+                reader.setAccount(account);
+                reader.setPassword(passwordInDB);
                 reader.setName(nameInDB);
                 reader.setEmail(emailInDB);
                 reader.setDeposit(depositInDB);
@@ -69,7 +88,7 @@ public class ReaderDao {
     public boolean isExistInDB(String account) {
         boolean Exist = false;
         try {
-            String sql = "select * from reader";
+            String sql = "select * from reader where user_account = \'" + account + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -115,6 +134,19 @@ public class ReaderDao {
             ps.setString(4, email);
             ps.setInt(5, deposit);
             ps.setString(6, preAccount);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection, ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteReader(String account) {
+        try {
+            String sql = "delete from reader where user_account=? ";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, account);
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {

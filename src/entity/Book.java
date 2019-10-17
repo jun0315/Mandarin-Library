@@ -4,7 +4,7 @@ public class Book {
     private String BookNumber;
     private String Name;
     private String Press;
-    private Double Price;
+    private double Price;
     private String Author;
     private String Category;
     private int Amount;
@@ -14,19 +14,18 @@ public class Book {
     private String Description;
 
     public Book() {
-        this.BookNumber="NULL";
+        this.BookNumber = "null";
         this.Name = "null";
         this.Press = "null";
-        this.Price = 0.0;
+        this.Price = 0;
         this.Author = "null";
         this.Category = "null";
         this.Amount = 0;
         this.Floor = "null";
         this.Shelf = "null";
-        this.AreaCode="null";
-        this.Description="null";
+        this.AreaCode = "null";
+        this.Description = "null";
     }
-
 
     public String getBookNumber() {
         return BookNumber;
@@ -52,11 +51,11 @@ public class Book {
         Press = press;
     }
 
-    public Double getPrice() {
+    public double getPrice() {
         return Price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(double price) {
         Price = price;
     }
 

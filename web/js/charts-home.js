@@ -87,7 +87,6 @@ $(document).ready(function () {
     });
 
 
-
     // ------------------------------------------------------- //
     // Line Chart 1
     // ------------------------------------------------------ //
@@ -149,7 +148,6 @@ $(document).ready(function () {
     });
 
 
-
     // ------------------------------------------------------- //
     // Pie Chart
     // ------------------------------------------------------ //
@@ -197,20 +195,20 @@ $(document).ready(function () {
     var barChartHome = new Chart(BARCHARTHOME, {
         type: 'bar',
         options:
-        {
-            scales:
             {
-                xAxes: [{
+                scales:
+                    {
+                        xAxes: [{
+                            display: false
+                        }],
+                        yAxes: [{
+                            display: false
+                        }],
+                    },
+                legend: {
                     display: false
-                }],
-                yAxes: [{
-                    display: false
-                }],
+                }
             },
-            legend: {
-                display: false
-            }
-        },
         data: {
             labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "November", "December"],
             datasets: [

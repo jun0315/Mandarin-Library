@@ -53,6 +53,7 @@ public class LoginServlet extends HttpServlet {
             LibrarianDao librarianDao = new LibrarianDao();
             Librarian librarian = librarianDao.info(account);
             session.setAttribute("name", librarian.getName());
+            session.setAttribute("type", librarian.getType());
 
         } else if (userType == UserType.Reader) {
             ReaderDao readerDao = ReaderDao.getInstance();
@@ -60,6 +61,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("name", reader.getName());
             session.setAttribute("email", reader.getEmail());
             session.setAttribute("securityDeposit", reader.getDeposit());
+            session.setAttribute("type", reader.getType());
         }
         if (userType != UserType.None) {
 

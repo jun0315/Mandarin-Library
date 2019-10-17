@@ -28,16 +28,16 @@ public class BookCategoryDao {
         return bookCategories;
     }
 
-    public boolean isExitInDB(String category){
+    public boolean isExitInDB(String category) {
         boolean Exit = false;
         try {
-            String sql = "select * from book_category where category = \'" + category +"\'";
+            String sql = "select * from book_category where category = \'" + category + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 String accountInDB = resultSet.getString("category");
-                if(accountInDB.equals(category)){
+                if (accountInDB.equals(category)) {
                     Exit = true;
                     break;
                 }
@@ -67,28 +67,28 @@ public class BookCategoryDao {
         return bookCategory;
     }
 
-    public void addCategory(String category){
+    public void addCategory(String category) {
         try {
             String sql = "insert into book_category values(?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, category);
             ps.executeUpdate();
-            DBHelper.closeConnection(connection,ps);
+            DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public void editLibrarian(String category,String preCategory){
+    public void editLibrarian(String category, String preCategory) {
         try {
             String sql = "update book_category set category=? where category=? ";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, category);
-            ps.setString(2,preCategory);
+            ps.setString(2, preCategory);
             ps.executeUpdate();
-            DBHelper.closeConnection(connection,ps);
+            DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
