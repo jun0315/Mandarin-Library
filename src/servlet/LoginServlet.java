@@ -22,6 +22,9 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         request.setCharacterEncoding("UTF-8");
         //
+//        BookCategoryDao dao = new BookCategoryDao();
+//        System.out.println(dao.getFloor("arts"));
+//        System.out.println(dao.getShelf("arts"));
         String account = request.getParameter("account");
         String password = request.getParameter("password");
         dealAccount(request, response, account, password);

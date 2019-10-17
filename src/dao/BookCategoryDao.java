@@ -53,7 +53,34 @@ public class BookCategoryDao {
 
         return String.valueOf(Amount);
     }
-
+    public int getFloor(String Category){
+        String sql = "Select * from book_category where category= \'" + Category + "\'";
+        int floor = 0;
+        try{
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            resultSet.next();
+            floor = resultSet.getInt("floor");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return floor;
+    }
+    public String getShelf(String Category){
+        String sql = "Select * from book_category where category= \'" + Category + "\'";
+        String Shelf=null;
+        try{
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            resultSet.next();
+            Shelf  = resultSet.getString("shelf");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Shelf;
+    }
     public boolean isExistInDB(String category){
         boolean exist = false;
         try {
