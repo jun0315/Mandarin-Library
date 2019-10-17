@@ -37,7 +37,7 @@ public class BookCategoryDao {
     }
     public String getAreaCode(String Category){
         String sql = "Select * from book,book_detail where book.book_number=book_detail.book_number and book.book_category= \'" + Category + "\'";
-        double Amount=1;
+        double Amount=0;
         try{
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
