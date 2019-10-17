@@ -57,7 +57,7 @@ public class BookDao {
                 double Price = resultSet.getDouble("book_price");
                 String Author = resultSet.getString("book_author");
                 String Category = resultSet.getString("book_category");
-                int Amount = resultSet.getInt("book_number");
+                int Amount = resultSet.getInt("book_amount");
                 String Description = resultSet.getString("book_description");
                 book.setBookNumber(BookNumber);
                 book.setName(Name);
@@ -117,6 +117,27 @@ public class BookDao {
             e.printStackTrace();
         }
     }
+
+    public void editBook(String bookNumber, String name, String press, String price, String author, String category, String amount, String description) {
+        try {
+            String sql = "update book set book_name=?,book_press=?,book_price=?,book_author=?,book_category=?,book_amount=?,book_description=? where book_number=? ";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, name);
+            ps.setString(2, press);
+            ps.setString(3, price);
+            ps.setString(4, author);
+            ps.setString(5, category);
+            ps.setString(6, amount);
+            ps.setString(7, description);
+            ps.setString(8, bookNumber);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection, ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     public void deleteBook(String bookNumber) {
 

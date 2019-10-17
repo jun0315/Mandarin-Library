@@ -108,6 +108,14 @@
         <url-pattern>/DeleteBook.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>EditBook</servlet-name>
+        <servlet-class>servlet.BookEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditBook</servlet-name>
+        <url-pattern>/EditBook.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>AdminChangePassword</servlet-name>
         <servlet-class>servlet.AdminChangePasswordServlet</servlet-class>
     </servlet>

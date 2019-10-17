@@ -142,7 +142,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditLibrarian.do?account=${librarian.getAccount()}">
+                                                        <a href="EditBook.do?booknumber=${book.getBookNumber()}">
                                                             <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
