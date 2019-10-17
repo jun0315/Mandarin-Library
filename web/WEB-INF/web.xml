@@ -73,7 +73,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>BookCategoryAdd</servlet-name>
-        <url-pattern>/book_category_add.do</url-pattern>
+        <url-pattern>/BookCategoryAdd.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>BookCategoryList</servlet-name>
@@ -81,7 +81,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>BookCategoryList</servlet-name>
-        <url-pattern>/book_category_list.do</url-pattern>
+        <url-pattern>/BookCategoryList.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>BookCategoryEdit</servlet-name>

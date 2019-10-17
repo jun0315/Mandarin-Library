@@ -6,10 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="调试条形码列表">
+    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="add book 测试完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/added_book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/added_book_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -264,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571319873659</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add book 测试完成">
+      <created>1571323019028</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1571323019028</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,14 +308,15 @@
     <MESSAGE value="准备生成条形码" />
     <MESSAGE value="准备合并zcy" />
     <MESSAGE value="调试条形码列表" />
-    <option name="LAST_COMMIT_MESSAGE" value="调试条形码列表" />
+    <MESSAGE value="add book 测试完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="add book 测试完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java</url>
-          <line>35</line>
+          <line>33</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
