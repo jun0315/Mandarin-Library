@@ -116,9 +116,9 @@ DROP TABLE IF EXISTS `reader`;
 
 CREATE TABLE `reader` (
   `user_account` varchar(64) NOT NULL,
-  `user_name` varchar(2048) CHARACTER SET latin1 DEFAULT NULL,
-  `user_password` varchar(64) CHARACTER SET latin1 NOT NULL,
-  `user_email` varchar(128) CHARACTER SET latin1 DEFAULT NULL,
+  `user_name` varchar(2048) DEFAULT NULL,
+  `user_password` varchar(64) NOT NULL,
+  `user_email` varchar(128) DEFAULT NULL,
   `security_deposit` int(11) DEFAULT '0',
   PRIMARY KEY (`user_account`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -152,11 +152,14 @@ CREATE TABLE `reader_borrow` (
 DROP TABLE IF EXISTS `reader_reserve`;
 
 CREATE TABLE `reader_reserve` (
-  `user_account` varchar(64) DEFAULT NULL,
-  `book_id` varchar(128) DEFAULT NULL,
-  `isbn` int(11) DEFAULT NULL,
-  `reservetime` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `user_account` varchar(64) NOT NULL,
+  `copy_id` varchar(32) NOT NULL,
+  `reservetime` datetime DEFAULT NULL,
+  PRIMARY KEY (`user_account`,`copy_id`),
+  KEY `copy_id` (`copy_id`),
+  CONSTRAINT `reader_reserve_ibfk_1` FOREIGN KEY (`user_account`) REFERENCES `reader` (`user_account`),
+  CONSTRAINT `reader_reserve_ibfk_2` FOREIGN KEY (`copy_id`) REFERENCES `book_detail` (`copy_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader_reserve` */
 
