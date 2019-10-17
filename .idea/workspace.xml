@@ -7,14 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbfcc33f-f912-404f-9799-4ae2de78314b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dao/ChangeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderReserveDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderReserveDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/ReaderReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/ReaderReserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/OrdertoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/OrdertoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/book_order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/failed.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/failed.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/successed.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/successed.jsp" afterDir="false" />
     </list>
     <list id="1ab7b3cc-1519-43e3-9963-252e7e8e337d" name="Revert: 修改了罚金计算逻辑；完成了LoginSevlet中的Reader的TODO；修改了ReaderBorrowDao的构造函数；重命名reader_view.jsp为reader_borrowHistory.jsp" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -265,7 +259,7 @@
       <workItem from="1570797936114" duration="27000" />
       <workItem from="1570880750478" duration="1910000" />
       <workItem from="1571292408827" duration="6025000" />
-      <workItem from="1571310168242" duration="13370000" />
+      <workItem from="1571310168242" duration="14862000" />
     </task>
     <task id="LOCAL-00001" summary="1.实现了Reader的View功能(ReaderBorrow.java, ReaderBorrowDao.java,ReaderBorrowServlet.java,reader_view.jsp&#10;2.封装了reader的侧边栏reader_view.jsp">
       <created>1569729646227</created>
@@ -302,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571319861386</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="detail2">
+      <created>1571324390214</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571324390214</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

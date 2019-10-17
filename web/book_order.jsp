@@ -90,9 +90,9 @@
                                                     <td>${detail.getBookNumber()}</td>
                                                     <td>${detail.getCopyid()}</td>
                                                     <td>
-                                                        <c:if test="${detail.getState()==0}">已外借</c:if>
-                                                        <c:if test="${detail.getState()==1}">已预约</c:if>
-                                                        <c:if test="${detail.getState()==2}">可借</c:if></td>
+                                                        <c:if test="${detail.getState()==0}">borrowed</c:if>
+                                                        <c:if test="${detail.getState()==1}">ordered</c:if>
+                                                        <c:if test="${detail.getState()==2}">vacant</c:if></td>
                                                         <%--<c:otherwise><form  style="margin: 10px;position: relative" action="Order"
                                                                name="search" method="post">
                                                             <input type="hidden" name="number" value="" />
