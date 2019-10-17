@@ -36,7 +36,7 @@ public class BookCategoryDao {
         return bookCategories;
     }
     public String getAreaCode(String Category){
-        String sql = "Select * from book_detail where category= \'" + Category + "\'";
+        String sql = "Select * from book,book_detail where book.book_number=book_detail.book_number and book.book_category= \'" + Category + "\'";
         double Amount=1;
         try{
             Connection connection = DBHelper.getInstance().getConnection();
@@ -51,7 +51,7 @@ public class BookCategoryDao {
             e.printStackTrace();
         }
 
-        return String.valueOf(Amount);
+        return String.valueOf(Integer.valueOf(new Double(Amount).intValue()));
     }
     public int getFloor(String Category){
         String sql = "Select * from book_category where category= \'" + Category + "\'";
@@ -167,6 +167,4 @@ public class BookCategoryDao {
             e.printStackTrace();
         }
     }
-
-
 }
