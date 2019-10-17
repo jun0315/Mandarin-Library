@@ -118,5 +118,20 @@ public class BookDao {
         }
     }
 
+    public void deleteBook(String bookNumber) {
+
+        String sql = "delete from book where book_number = \'" + bookNumber + "\'";
+
+        try {
+
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            int resultSet = statement.executeUpdate(sql);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return;
+    }
 
 }
