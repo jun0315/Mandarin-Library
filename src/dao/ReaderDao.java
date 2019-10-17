@@ -141,7 +141,7 @@ public class ReaderDao {
 
     public void deleteReader(String account){
         try {
-            String sql = "delete from reader where user_account=? ";
+            String sql = "delete from reader where user_account=?";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, account);

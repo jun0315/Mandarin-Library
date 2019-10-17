@@ -3,6 +3,8 @@ package servlet;
 import dao.BookCategoryDao;
 import dao.BookDao;
 import entity.BookCategory;
+import entity.BookDetail;
+import utils.BuiledCopyID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,22 +33,22 @@ public class BookAddServlet extends HttpServlet {
         //数据类型可能不对
         String AmountString = (String) request.getParameter("amount");
         int Amount = Integer.parseInt(AmountString);
-        String Floor = (String) request.getParameter("floor");
-        String Shelf = (String) request.getParameter("shelf");
-        String AreaCode = (String) request.getParameter("areaCode");
         BookDao bookDao = new BookDao();
+//        ArrayList<String> CopyIDs=null;
         boolean exit = bookDao.isExitInDB(BookNumber);
         if (exit) {
             response.sendRedirect("book_add.jsp?info=error");
         } else {
             bookDao.addBook(BookNumber, Name, Press, Price, Author, Category
-                    , Amount, Floor, Shelf, AreaCode, Description);
-            response.sendRedirect("book_add.jsp?info=success");
+                    , Amount, Description);
+//            response.sendRedirect("book_add.jsp?info=success");
+                //test
+//            List<BookDetail> bookdetails =
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<BookCategory> bookCategories = bookCategoryDao.getCategories();
+        List<BookCategory> bookCategories = bookCategoryDao.getBookCategories();
         request.setAttribute("bookCategories", bookCategories);
         request.getRequestDispatcher("book_add.jsp").forward(request, response);
     }

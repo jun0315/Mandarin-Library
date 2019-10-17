@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Add Book Category</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -40,14 +40,14 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Add Category</h2>
+                    <h2 class="no-margin-bottom">Add Book Category</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Add the category of the book and its corresponding location</li>
+                    <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
+                    <li class="breadcrumb-item active">Add Book Category</li>
                 </ul>
             </div>
             <section class="tables">
@@ -55,18 +55,34 @@
                     <div class="card">
                         <div class="card-body">
                             <p>Add the category of the book and its corresponding location</p>
-                            <form class="form-horizontal" action="book_category_add.do" method="post">
+                            <form class="form-horizontal" action="BookCategoryAdd.do" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Category</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="category"
                                                class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--   <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Floor</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="floor"
+                                               class="form-control form-control-warning">
+                                        <%--   <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Shelf</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="shelf"
+                                               class="form-control form-control-warning">
+                                        <%--   <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Submit" class="btn btn-primary">
+                                        <input type="submit" value="Add" class="btn btn-primary">
                                     </div>
                                 </div>
                             </form>
@@ -94,10 +110,10 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
-        alert("successfully add!");
-        window.location.href = "book_category_list.do";
+        alert("Successfully Add!");
+        window.location.href = "BookCategoryList.do";
     } else if (info == 'error') {
-        alert("add failure because of have the same category!");
+        alert("Add Failure because have the Same Category!");
     }
 </script>
 <!-- JavaScript files-->

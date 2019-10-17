@@ -759,5 +759,6 @@
     <script src="js/charts-home.js"></script>
     <!-- Main File-->
     <script src="js/front.js"></script>
+</div>
 </body>
 </html>
