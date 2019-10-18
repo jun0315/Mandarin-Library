@@ -9,6 +9,7 @@ import java.sql.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 public class ReaderSearchDao {
@@ -35,6 +36,7 @@ public class ReaderSearchDao {
             ResultSetMetaData rsmd = resultSet.getMetaData();
             List<Book> list = new ArrayList<>();
 
+            BookCategoryDao bookCategoryDao = new BookCategoryDao();
 
             while (resultSet.next()) {
                 Book book = new Book();
@@ -43,9 +45,12 @@ public class ReaderSearchDao {
                 book.setPress(resultSet.getString(3));
                 book.setPrice(resultSet.getDouble(4));
                 book.setAuthor(resultSet.getString(5));
-                book.setCategory(resultSet.getString(6));
+                String category = resultSet.getString(6);
+                book.setCategory(category);
                 book.setAmount(resultSet.getInt(7));
                 book.setDescription(resultSet.getString(8));
+                book.setFloor(bookCategoryDao.getFloor(category));
+                book.setShelf(bookCategoryDao.getShelf(category));
                 list.add(book);
             }
             return list;

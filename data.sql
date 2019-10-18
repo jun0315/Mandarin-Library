@@ -89,6 +89,7 @@ CREATE TABLE `book_detail` (
   `book_number` char(13) NOT NULL,
   `copy_id` varchar(32) NOT NULL,
   `status` int(4) NOT NULL,
+  `areacode` varchar(8) DEFAULT NULL,
   PRIMARY KEY (`copy_id`),
   KEY `book_id` (`book_number`),
   CONSTRAINT `book_detail_ibfk_1` FOREIGN KEY (`book_number`) REFERENCES `book` (`book_number`) ON UPDATE CASCADE
@@ -96,12 +97,12 @@ CREATE TABLE `book_detail` (
 
 /*Data for the table `book_detail` */
 
-insert  into `book_detail`(`book_number`,`copy_id`,`status`) values 
-('9780131872486','97801318724860001',2),
-('9780131872486','97801318724860002',2),
-('9780131872486','97801318724860003',2),
-('9780131872486','97801318724860004',2),
-('9780131872486','97801318724860005',2);
+insert  into `book_detail`(`book_number`,`copy_id`,`status`,`areacode`) values 
+('9780131872486','97801318724860001',2,'0'),
+('9780131872486','97801318724860002',1,'1'),
+('9780131872486','97801318724860003',2,'2'),
+('9780131872486','97801318724860004',2,'3'),
+('9780131872486','97801318724860005',2,'4');
 
 /*Table structure for table `reader` */
 
@@ -163,7 +164,8 @@ CREATE TABLE `reader_reserve` (
 
 insert  into `reader_reserve`(`user_account`,`copy_id`,`reserve_time`) values 
 ('reader-test','234','2019-10-17 00:11:04'),
-('reader-test','345','2019-10-18 00:11:17');
+('reader-test','345','2019-10-18 00:11:17'),
+('reader-test','97801318724860002','2019-10-18 00:00:00');
 
 /*Table structure for table `staff` */
 

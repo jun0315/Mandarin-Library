@@ -32,16 +32,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
     <script src="js/dialogue.js"></script>
-
-    <%--    <script type="text/javascript">--%>
-    <%--        function deleteClick() {--%>
-    <%--            var con;--%>
-    <%--            con = confirm("Are you sure you want to delete?\n");--%>
-    <%--            if(con==true) {--%>
-    <%--                window.location.href("index.jsp");--%>
-    <%--            }--%>
-    <%--        }--%>
-    <%--    </script>--%>
 </head>
 <body>
 <div class="page">
@@ -66,54 +56,62 @@
             </div>
 
 
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Bnumber</th>
+                                            <th>id</th>
+                                            <th>state</th>
+                                            <th>floor</th>
+                                            <th>shelf</th>
+                                            <th>areacode</th>
+                                            <th>Order</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <%
+                                            request.getAttribute("wa");
+                                        %>
+                                        <c:forEach items="${wa}" var="detail" varStatus="li">
                                             <tr>
-                                                <th>Bnumber</th>
-                                                <th>id</th>
-                                                <th>state</th>
-                                                <th>Order</th>
+                                                <td>${detail.getBookNumber()}</td>
+                                                <td>${detail.getCopyid()}</td>
+                                                <td>
+                                                    <c:if test="${detail.getState()==0}">borrowed</c:if>
+                                                    <c:if test="${detail.getState()==1}">ordered</c:if>
+                                                    <c:if test="${detail.getState()==2}">vacant</c:if></td>
+                                                    <%--<c:otherwise><form  style="margin: 10px;position: relative" action="Order"
+                                                           name="search" method="post">
+                                                        <input type="hidden" name="number" value="" />
 
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <%request.getAttribute("wa");
-                                            %>
-                                            <c:forEach items="${wa}" var="detail" varStatus="li">
-                                                <tr>
-                                                    <td>${detail.getBookNumber()}</td>
-                                                    <td>${detail.getCopyid()}</td>
-                                                    <td>
-                                                        <c:if test="${detail.getState()==0}">borrowed</c:if>
-                                                        <c:if test="${detail.getState()==1}">ordered</c:if>
-                                                        <c:if test="${detail.getState()==2}">vacant</c:if></td>
-                                                        <%--<c:otherwise><form  style="margin: 10px;position: relative" action="Order"
-                                                               name="search" method="post">
-                                                            <input type="hidden" name="number" value="" />
-
-                                                            <input type="submit" value="Order">
-                                                        </form> </c:otherwise> --%>
-                                                    <td><form  style="margin: 10px;position: relative" action="Orderto"
-                                                               name="" method="post">
+                                                        <input type="submit" value="Order">
+                                                    </form> </c:otherwise> --%>
+                                                <td>${detail.getFloor()}</td>
+                                                <td>${detail.getShelf()}</td>
+                                                <td>${detail.getAreacode()}</td>
+                                                <td>
+                                                    <form style="margin: 10px;position: relative" action="Orderto"
+                                                          name="" method="post">
                                                         <input type="hidden" name="number" value="${detail.getState()}">
                                                         <input type="hidden" name="id" value="${detail.getCopyid()}">
-                                                        <input type="submit" value="Order"></form></td>
-                                                </tr>
-                                            </c:forEach>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                                        <input type="submit" value="Order"></form>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
             <!-- Page Footer-->
             <footer class="main-footer">

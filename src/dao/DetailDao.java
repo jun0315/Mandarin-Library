@@ -20,7 +20,7 @@ public class DetailDao {
             ResultSet resultSet = statement.executeQuery(sql);
 
             ResultSetMetaData rsmd = resultSet.getMetaData();
-
+            BookCategoryDao bookCategoryDao = new BookCategoryDao();
 
             Book book = new Book();
             while (resultSet.next()) {
@@ -30,6 +30,8 @@ public class DetailDao {
                 book.setPrice(resultSet.getDouble(4));
                 book.setAuthor(resultSet.getString(5));
                 book.setCategory(resultSet.getString(6));
+                book.setFloor(bookCategoryDao.getFloor(resultSet.getString(6)));
+                book.setShelf(bookCategoryDao.getShelf(resultSet.getString(6)));
                 book.setAmount(resultSet.getInt(7));
                 book.setDescription(resultSet.getString(8));
             }

@@ -1,6 +1,7 @@
 package dao;
 
 import entity.Book;
+import entity.BookCategory;
 import utils.DBHelper;
 
 import java.sql.*;
@@ -51,6 +52,7 @@ public class BookDao {
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
+            BookCategoryDao bookCategoryDao = new BookCategoryDao();
             while (resultSet.next()) {
                 String Name = resultSet.getString("book_name");
                 String Press = resultSet.getString("book_press");
@@ -65,6 +67,8 @@ public class BookDao {
                 book.setPrice(Price);
                 book.setAuthor(Author);
                 book.setCategory(Category);
+                book.setFloor(bookCategoryDao.getFloor(Category));
+                book.setShelf(bookCategoryDao.getShelf(Category));
                 book.setAmount(Amount);
                 book.setDescription(Description);
             }

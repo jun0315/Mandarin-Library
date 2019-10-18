@@ -10,6 +10,26 @@ public class Book {
     private int Amount;
     private String Description;
 
+    public int getFloor() {
+        return Floor;
+    }
+
+    public void setFloor(int floor) {
+        Floor = floor;
+    }
+
+    public String getShelf() {
+        return Shelf;
+    }
+
+    public void setShelf(String shelf) {
+        Shelf = shelf;
+    }
+
+    //不屬於book屬性
+    private int Floor;
+    private String Shelf;
+
     public Book() {
         this.BookNumber = "null";
         this.Name = "null";
@@ -30,6 +50,19 @@ public class Book {
         this.Category = category;
         this.Amount = amount;
         this.Description = description;
+    }
+
+    public Book(String bookNumber, String name, String press, double price, String author, String category, int amount, String description,int Floor,String Shelf) {
+        this.BookNumber = bookNumber;
+        this.Name = name;
+        this.Press = press;
+        this.Price = price;
+        this.Author = author;
+        this.Category = category;
+        this.Amount = amount;
+        this.Description = description;
+        this.Floor = Floor;
+        this.Shelf = Shelf;
     }
 
     public String getBookNumber() {

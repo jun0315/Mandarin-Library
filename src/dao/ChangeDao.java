@@ -9,7 +9,7 @@ public class ChangeDao {
     public void changed(String a) {
         try {
            /* String ma="%"+message+"%";*/
-            String sql ="UPDATE book_detail SET state=1 WHERE copy_id=?";
+            String sql ="UPDATE book_detail SET status=1 WHERE copy_id=?";
 
 
             Connection connection = DBHelper.getInstance().getConnection();

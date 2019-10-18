@@ -95,8 +95,9 @@
                                                 <th>Name</th>
                                                 <th>Press</th>
                                                 <th>Author</th>
+                                                <th>Floor</th>
+                                                <th>Shelf</th>
                                                 <th>detail</th>
-
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -110,6 +111,8 @@
                                                     <td>${book.getName()}</td>
                                                     <td>${book.getPress()}</td>
                                                     <td>${book.getAuthor()}</td>
+                                                    <td>${book.getFloor()}</td>
+                                                    <td>${book.getShelf()}</td>
                                                     <td>
                                                         <form  style="margin: 10px;position: relative" action="DetailSearch"
                                                               name="search" method="post">

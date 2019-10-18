@@ -55,33 +55,21 @@
             </div>
 
 
-                <div class="">
-                   <%-- <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">--%>
-                                        <h3>number： ${book.getBookNumber()}</h3>
-                                        <h3>name:  ${book.getName()}</h3>
-                                        <h3>press:  ${book.getPress()}</h3>
-                                        <h3>author:  ${book.getAuthor()}</h3>
-                                        <h3>Category:  ${book.getCategory()}</h3>
-                                        <h3>amount:  ${book.getAmount()}</h3>
-                                        <h3>Floor:  ${book.getFloor()}</h3>
-                                        <h3>Shelf:  ${book.getShelf()}</h3>
-                                        <h3>AreaCode:   ${book.getAreaCode  ()}</h3>
-                       <form action="Order"
-                             name="order" method="post">
-                           <input type="hidden" name="number" value="${book.getBookNumber()}" />
-                           <input type="submit" value="order">
-                       </form>
-
-                                  <%--  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>--%>
-                </div>
+            <div class="">
+                <h3>number： ${book.getBookNumber()}</h3>
+                <h3>name: ${book.getName()}</h3>
+                <h3>press: ${book.getPress()}</h3>
+                <h3>author: ${book.getAuthor()}</h3>
+                <h3>category: ${book.getCategory()}</h3>
+                <h3>floor: ${book.getFloor()}</h3>
+                <h3>shelf: ${book.getShelf()}</h3>
+                <h3>amount: ${book.getAmount()}</h3>
+                <form action="Order"
+                      name="order" method="post">
+                    <input type="hidden" name="number" value="${book.getBookNumber()}"/>
+                    <input type="submit" value="order">
+                </form>
+            </div>
 
             <!-- Page Footer-->
             <footer class="main-footer">
