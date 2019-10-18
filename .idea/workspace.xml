@@ -8,19 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookDetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDetailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ChangeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ChangeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/DetailDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DetailDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderSearchDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Detail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Detail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/ReaderReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/ReaderReserve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_borrow_business.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_borrow_business.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -169,6 +159,7 @@
       <workItem from="1570874931675" duration="1385000" />
       <workItem from="1571295621945" duration="269000" />
       <workItem from="1571359849063" duration="3744000" />
+      <workItem from="1571365124131" duration="1173000" />
     </task>
     <task id="LOCAL-00001" summary="更新.gitignore">
       <created>1569579494657</created>

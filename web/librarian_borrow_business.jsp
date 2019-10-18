@@ -79,7 +79,9 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Reader ID</th>
+                                                <th>Reader Bar</th>
                                                 <th>Copy ID</th>
+                                                <th>Copy Bar</th>
                                                 <th>Reserve Time</th>
                                                 <th>Operation</th>
                                             </tr>
@@ -91,6 +93,12 @@
                                                     <th>${li.index+1}</th>
                                                     <td>${readerReserve.getUser_account()}</td>
                                                     <td>${readerReserve.getCopy_id()}</td>
+                                                    <td>
+                                                        <img src="cache/barcode/${readerReserve.getAccount_barpath()}">
+                                                    </td>
+                                                    <td>
+                                                        <img src="cache/barcode/${readerReserve.getCopy_barpath()}">
+                                                    </td>
                                                     <td>${readerReserve.getReserve_time()}</td>
                                                     <td>
                                                         <a href="BorrowReserveApprove.do?user_account=${readerReserve.getUser_account()}&book_copy_id=${readerReserve.getCopy_id()}">
