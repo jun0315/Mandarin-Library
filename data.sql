@@ -120,6 +120,7 @@ CREATE TABLE `reader` (
 /*Data for the table `reader` */
 
 insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`) values 
+('13855447008','jun1','123','13',0),
 ('reader','123','123','123',300),
 ('reader-test','jun','123','1072505283@qq.com',0);
 
@@ -161,11 +162,6 @@ CREATE TABLE `reader_reserve` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader_reserve` */
-
-insert  into `reader_reserve`(`user_account`,`copy_id`,`reserve_time`) values 
-('reader-test','234','2019-10-17 00:11:04'),
-('reader-test','345','2019-10-18 00:11:17'),
-('reader-test','97801318724860002','2019-10-18 00:00:00');
 
 /*Table structure for table `staff` */
 
