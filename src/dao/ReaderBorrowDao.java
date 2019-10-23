@@ -85,7 +85,9 @@ public class ReaderBorrowDao {
             ps.setString(1, copy_id);
             ps.setString(2, user_account);
             //借书时间设置为系统当前时间
-            ps.setDate(3, new Date(System.currentTimeMillis()));
+            java.util.Date date = new java.util.Date();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String datestr = simpleDateFormat.format(date);
             ps.setInt(4, 0);
             ps.setDouble(5, 0.0);
             ps.executeUpdate();
