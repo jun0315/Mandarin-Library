@@ -104,6 +104,19 @@ insert  into `book_detail`(`book_number`,`copy_id`,`status`,`areacode`) values
 ('9780131872486','97801318724860004',2,'3'),
 ('9780131872486','97801318724860005',2,'4');
 
+/*Table structure for table `notice` */
+
+DROP TABLE IF EXISTS `notice`;
+
+CREATE TABLE `notice` (
+  `notice_topic` varchar(12) DEFAULT NULL,
+  `notice_content` varchar(64) DEFAULT NULL,
+  `notice_id` int(10) NOT NULL,
+  PRIMARY KEY (`notice_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `notice` */
+
 /*Table structure for table `reader` */
 
 DROP TABLE IF EXISTS `reader`;
