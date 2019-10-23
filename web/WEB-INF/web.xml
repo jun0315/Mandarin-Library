@@ -243,5 +243,13 @@
         <servlet-name>Orderto</servlet-name>
         <url-pattern>/Orderto</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ReaderAccountSetting</servlet-name>
+        <servlet-class>servlet.ReaderAccountSettingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReaderAccountSetting</servlet-name>
+        <url-pattern>/ReaderAccountSetting.do</url-pattern>
+    </servlet-mapping>
 <!--    end -->
 </web-app>

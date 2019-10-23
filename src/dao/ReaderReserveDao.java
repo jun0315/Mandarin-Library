@@ -4,6 +4,7 @@ import utils.DBHelper;
 import entity.ReaderReserve;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +43,10 @@ public class ReaderReserveDao {
             ps.setString(1, user_account);
             ps.setString(2, copy_id);
             //预约时间设置为系统当前时间
-            ps.setDate(3, new Date(System.currentTimeMillis()));
+            java.util.Date date = new java.util.Date();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String datestr = simpleDateFormat.format(date);
+            ps.setString(3, datestr);
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {

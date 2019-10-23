@@ -53,7 +53,7 @@
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
+                    <li class="breadcrumb-item"><a href="reader.jsp">Home</a></li>
                     <li class="breadcrumb-item active">Account Setting</li>
                 </ul>
             </div>
@@ -90,47 +90,86 @@
                                                     %>
                                                 </td>
                                                 <td>
-                                                    <a href="#myModal_${li.index+1}" style="color: #0096e6"
-                                                    <%--TODO--%>
-                                                       data-toggle="modal" value="${book.getBookNumber()}"
-                                                       id="lastButton">Reset</a>
-                                                    <%--                                                        <% String thisaccount = "${librarians[li.index+1].getAccount()}";%>--%>
+                                                    <a href="#myModal_1" style="color: #0096e6"
+                                                       data-toggle="modal"
+                                                       id="lastButton1">Reset</a>
                                                     <!-- Modal-->
-                                                    <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
-                                                         aria-labelledby="exampleModalLabel" aria-hidden="true"
-                                                         class="modal fade text-left">
-                                                        <div role="document" class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 id="exampleModalLabel" class="modal-title">
-                                                                        Reset</h4>
-                                                                    <button type="button" data-dismiss="modal"
-                                                                            aria-label="Close" class="close"><span
-                                                                            aria-hidden="true">×</span></button>
-                                                                </div>
-                                                                <%-- TODO--%>
-                                                                <div class="form-group">
-                                                                    <label class="form-control-label">Please type your
-                                                                        new account number.</label>
-                                                                    <input type="text"
-                                                                           name="newAccountNumber"
-                                                                           class="form-control">
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" data-dismiss="modal"
-                                                                            class="btn btn-secondary">Cancel
-                                                                    </button>
-                                                                    <a href="admin.jsp?account=${librarian.getAccount()}">
-                                                                        <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
-                                                                        <button type="button"
-                                                                                class="btn btn-primary">
-                                                                            Submit
+                                                    <form class="form-basic"
+                                                          action="ReaderAccountSetting.do?item=account" method="post">
+                                                        <div id="myModal_1" tabindex="-1" role="dialog"
+                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                                             class="modal fade text-left">
+                                                            <div role="document" class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 id="exampleModalLabel" class="modal-title">
+                                                                            Reset</h4>
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                aria-label="Close" class="close"><span
+                                                                                aria-hidden="true">×</span></button>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-control-label">Please type
+                                                                            your new account number.</label>
+                                                                        <input type="text"
+                                                                               name="newItemValue"
+                                                                               value=<% out.println(account); %>
+                                                                                       class="form-control">
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                class="btn btn-secondary">Cancel
                                                                         </button>
-                                                                    </a>
+                                                                        <input type="submit" value="Submit"
+                                                                               class="btn btn-primary">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Password</th>
+                                                <td>******</td>
+                                                <td>
+                                                    <form class="form-basic"
+                                                          action="ReaderAccountSetting.do?item=password" method="post">
+                                                        <a href="#myModal_2" style="color: #0096e6"
+                                                           data-toggle="modal"
+                                                           id="lastButton2">Reset</a>
+                                                        <!-- Modal-->
+                                                        <div id="myModal_2" tabindex="-1" role="dialog"
+                                                             aria-labelledby="exampleModalLabe2" aria-hidden="true"
+                                                             class="modal fade text-left">
+                                                            <div role="document" class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 id="exampleModalLabe2" class="modal-title">
+                                                                            Reset</h4>
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                aria-label="Close" class="close"><span
+                                                                                aria-hidden="true">×</span></button>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-control-label">Please type
+                                                                            your
+                                                                            new password.</label>
+                                                                        <input type="text"
+                                                                               name="newItemValue"
+                                                                               class="form-control">
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                class="btn btn-secondary">Cancel
+                                                                        </button>
+                                                                        <input type="submit" value="Submit"
+                                                                               class="btn btn-primary">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -141,6 +180,46 @@
                                                         out.println(name);
                                                     %>
                                                 </td>
+                                                <td>
+                                                    <form class="form-basic"
+                                                          action="ReaderAccountSetting.do?item=name" method="post">
+                                                        <a href="#myModal_3" style="color: #0096e6"
+                                                           data-toggle="modal"
+                                                           id="lastButton3">Reset</a>
+                                                        <!-- Modal-->
+                                                        <div id="myModal_3" tabindex="-1" role="dialog"
+                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                                             class="modal fade text-left">
+                                                            <div role="document" class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 id="exampleModalLabe3" class="modal-title">
+                                                                            Reset</h4>
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                aria-label="Close" class="close"><span
+                                                                                aria-hidden="true">×</span></button>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-control-label">Please type
+                                                                            your
+                                                                            new username.</label>
+                                                                        <input type="text"
+                                                                               name="newItemValue"
+                                                                               value=<% out.println(name); %>
+                                                                                       class="form-control">
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                class="btn btn-secondary">Cancel
+                                                                        </button>
+                                                                        <input type="submit" value="Submit"
+                                                                               class="btn btn-primary">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <th>Email</th>
@@ -149,6 +228,46 @@
                                                         String email = (String) session.getAttribute("email");
                                                         out.println(email);
                                                     %>
+                                                </td>
+                                                <td>
+                                                    <form class="form-basic"
+                                                          action="ReaderAccountSetting.do?item=email" method="post">
+                                                        <a href="#myModal_4" style="color: #0096e6"
+                                                           data-toggle="modal"
+                                                           id="lastButton4">Reset</a>
+                                                        <!-- Modal-->
+                                                        <div id="myModal_4" tabindex="-1" role="dialog"
+                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                                             class="modal fade text-left">
+                                                            <div role="document" class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 id="exampleModalLabe4" class="modal-title">
+                                                                            Reset</h4>
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                aria-label="Close" class="close"><span
+                                                                                aria-hidden="true">×</span></button>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label class="form-control-label">Please type
+                                                                            your
+                                                                            new email.</label>
+                                                                        <input type="text"
+                                                                               name="newItemValue"
+                                                                               value=<% out.println(email); %>
+                                                                                       class="form-control">
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                class="btn btn-secondary">Cancel
+                                                                        </button>
+                                                                        <input type="submit" value="Submit"
+                                                                               class="btn btn-primary">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -185,6 +304,12 @@
     </div>
 </div>
 
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == "reset_success") {
+        alert("Successfully Reset!");
+    }
+</script>
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
