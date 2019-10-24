@@ -107,12 +107,12 @@ public class NoticeDao {
 
     public void editNotice(String id, String topic, String content, String preid) {
         try {
-            String sql = "update notice set notice_id=?,notice_topic=?,motice_content=?,notice_posttime=? where notice_id=?";
+            String sql = "update notice set notice_topic=?,motice_content=?,notice_id=?,notice_date=? where notice_id=?";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, id);
-            ps.setString(2, topic);
-            ps.setString(3, content);
+            ps.setString(1, topic);
+            ps.setString(2, content);
+            ps.setString(3, id);
             ps.setDate(4, new Date(System.currentTimeMillis()));
             ps.setString(5, preid);
             ps.executeUpdate();

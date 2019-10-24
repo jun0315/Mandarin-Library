@@ -54,6 +54,6 @@ public class NoticeEditServlet extends HttpServlet {
         NoticeDao noticeDao = new NoticeDao();
         Notice notice = noticeDao.info(id);
         request.setAttribute("notice", notice);
-        request.getRequestDispatcher("librarian.jsp").forward(request, response);
+        request.getRequestDispatcher("notice_edit.jsp?info=success").forward(request, response);
     }
 }

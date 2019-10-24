@@ -74,7 +74,7 @@
                     <div class="card">
                         <div class="card-body">
                             <p>Edit Notice</p>
-                            <form class="form-horizontal" action="NoticeEdit.do" method="post">
+                            <form class="form-horizontal" action="EditNotice.do" method="post">
                                 <%Notice notice = (Notice) request.getAttribute("notice");%>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">ID</label>
@@ -134,7 +134,7 @@
     }
 </script>
 
-<
+
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

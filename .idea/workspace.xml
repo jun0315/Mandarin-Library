@@ -7,8 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/notice_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/NoticeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_category_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/notice_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/notice_edit.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -478,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571928968960</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="notice_edit.jsp">
+      <created>1571930283526</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1571930283526</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +543,8 @@
     <MESSAGE value="初步修改书籍" />
     <MESSAGE value="update notice function" />
     <MESSAGE value="edit function" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit function" />
+    <MESSAGE value="notice_edit.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="notice_edit.jsp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
