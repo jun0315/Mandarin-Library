@@ -22,8 +22,8 @@ public class BookAddByISBNServlet extends HttpServlet {
     //TODO ISBN处理
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-//        String ISBN = request.getParameter("BookNumber");
-        String ISBN = "9780131872486";
+        //String ISBN = request.getParameter("BookNumber");
+        String ISBN = "9780133432381";
         GetBookInfo getBookInfo = new GetBookInfo(ISBN);
         Book book = new Book();
         book.setBookNumber(ISBN);
