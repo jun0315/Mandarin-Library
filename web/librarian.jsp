@@ -44,12 +44,12 @@
             <section class="dashboard-counts no-padding-bottom">
                 <div class="container-fluid">
                     <div class="row bg-white has-shadow">
-                        <div style="width: 260px;">
-                            <img src="img/logo.png" style="margin-top: 0px; margin-left: 10px" height="90%" width="80%">
+                        <div class="col-xl-3 col-sm-6">
+                            <img src="img/logo.png" height="90%" width="90%">
                         </div>
                         <!-- Item -->
-                        <div style="width: 320px">
-                            <div class="item d-flex align-items-center" style="width: 300px">
+                        <div class="col-xl-2 col-sm-6">
+                            <div class="item d-flex align-items-center">
                                 <div class="icon bg-violet"><i class="icon-user"></i></div>
                                 <div class="title"><span>New<br>Readers</span>
                                     <div class="progress">
@@ -61,8 +61,8 @@
                             </div>
                         </div>
                         <!-- Item -->
-                        <div style="width: 320px">
-                            <div class="item d-flex align-items-center" style="width: 300px">
+                        <div class="col-xl-2 col-sm-6">
+                            <div class="item d-flex align-items-center">
                                 <div class="icon bg-red"><i class="icon-padnote"></i></div>
                                 <div class="title"><span>Borrow<br>Businesses</span>
                                     <div class="progress">
@@ -74,8 +74,8 @@
                             </div>
                         </div>
                         <!-- Item -->
-                        <div style="width: 320px">
-                            <div class="item d-flex align-items-center" style="width: 300px">
+                        <div class="col-xl-2 col-sm-6">
+                            <div class="item d-flex align-items-center">
                                 <div class="icon bg-green"><i class="icon-bill"></i></div>
                                 <div class="title"><span>Borrowed<br>Books</span>
                                     <div class="progress">
@@ -87,8 +87,8 @@
                             </div>
                         </div>
                         <!-- Item -->
-                        <div style="width: 320px">
-                            <div class="item d-flex align-items-center" style="width: 300px">
+                        <div class="col-xl-3 col-sm-5">
+                            <div class="item d-flex align-items-center">
                                 <div class="icon bg-orange"><i class="icon-check"></i></div>
                                 <div class="title"><span>Reserved<br>Books</span>
                                     <div class="progress">
@@ -106,11 +106,13 @@
             <!-- search -->
             <form class="input-group col-md-12" style="margin-top: 40px; position: relative" action="ReaderSearchServlet"
                   name="search" method="post">
-                <select  name="signal">
-                    <option>name</option>
-                    <option>id</option>
-                    <option>author</option>
-                </select>
+                <span class="input-group-btn">
+                    <select  name="signal" class="btn btn-info btn-search">
+                        <option>Name</option>
+                        <option>ID</option>
+                        <option>Author</option>
+                    </select>
+                </span>
                 <input type="text" class="form-control" name="message"
                        placeholder="Please enter the content you are searching for">
                 <a href="ReaderSearch.do">
@@ -121,7 +123,7 @@
             </form>
 
             <!-- notice -->
-            <div>
+            <div style="margin-top: 40px;">
                 <h1>这里是Notice。</h1>
             </div>
             <!-- Page Footer-->
