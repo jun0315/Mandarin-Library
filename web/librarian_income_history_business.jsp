@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: 刘威
-  Date: 2019/10/17
-  Time: 20:34
+  Date: 2019/10/24
+  Time: 18:50
   To change this template use File | Settings | File Templates.
 --%>
 
@@ -37,7 +37,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
-<body>
+
 <div class="page">
     <!-- Main Navbar-->
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
@@ -48,18 +48,16 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">View Borrowing Information</h2>
+                    <h2 class="no-margin-bottom">View Librarian Income History</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">View</li>
+                    <li class="breadcrumb-item active">View Income History</li>
                 </ul>
             </div>
-
-            <%--显示借阅记录 --%>
             <section class="tables" style="padding: 20px">
                 <div class="container-fluid">
                     <div class="row">
@@ -70,42 +68,37 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>#</th>
-                                                <th>Reader Account</th>
-                                                <th>Book Copy ID</th>
-                                                <th>Borrow Time</th>
-                                                <th>Status</th>
-                                                <th>Fine</th>
-                                                <th>Option</th>
+                                                <th>Income From Fine</th>
+                                                <th></th>
+                                                <th>Income From Deposit</th>
+                                                <th></th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<ReaderBorrow> readerBorrowList = (List<ReaderBorrow>) request.getAttribute("readerBorrowList");%>
-                                            <c:forEach items="${readerBorrowList}" var="readerBorrow" varStatus="li">
                                                 <tr>
-                                                    <th>${li.index+1}</th>
-                                                    <td>${readerBorrow.getUser_account()}</td>
-                                                    <td>${readerBorrow.getCopy_id()}</td>
-                                                    <td>${readerBorrow.getBorrow_time().toString()}</td>
-                                                    <td>
-                                                        <c:choose>
-                                                            <c:when test="${readerBorrow.getIsReturned() ==1}">
-                                                                Returned
-                                                            </c:when>
-                                                            <c:otherwise>
-                                                                Not Returned
-                                                            </c:otherwise>
-                                                        </c:choose>
-                                                    </td>
-                                                    <td>${readerBorrow.getFine().toString()}$</td>
-                                                    <td>
-                                                        <a href="ReturnBook.do?book_copy_id=${readerBorrow.getCopy_id()}&user_account=${readerBorrow.getUser_account()}">
-                                                            <button type="button" class="btn btn-primary">Return
-                                                            </button>
-                                                        </a>
-                                                    </td>
+                                                    <th>Today</th>
+                                                    <td>${todayFine}</td>
+                                                    <th>Today</th>
+                                                    <td>${todayDeposit}</td>
                                                 </tr>
-                                            </c:forEach>
+                                                <tr>
+                                                    <th>This Week</th>
+                                                    <td>${weekFine}</td>
+                                                    <th>This Week</th>
+                                                    <td>${weekDeposit}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>This Month</th>
+                                                    <td>${monthFine}</td>
+                                                    <th>This Month</th>
+                                                    <td>${monthDeposit}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total Fine</th>
+                                                    <td>${totalFine}</td>
+                                                    <th>Total Deposit</th>
+                                                    <td>${totalDeposit}</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -115,16 +108,11 @@
                     </div>
                 </div>
             </section>
-
-
-            <!-- Page Footer-->
             <footer class="main-footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. <a
-                                    href="http://www.cssmoban.com/" target="_blank" title=""></a>
-                                <a href="http://www.cssmoban.com/" title="" target="_blank"></a></p>
+                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -137,13 +125,6 @@
     </div>
 </div>
 
-<script>
-    var info = '<%=request.getParameter("info")%>';
-    if (info == "return_success") {
-        alert("Successfully Return!");
-    }
-</script>
-
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
@@ -151,8 +132,9 @@
 <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
 <script src="vendor/chart.js/Chart.min.js"></script>
 <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-<script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
+
 </body>
 </html>
+

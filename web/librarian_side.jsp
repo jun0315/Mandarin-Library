@@ -90,6 +90,7 @@
             <ul id="BusinessProcess" class="collapse list-unstyled ">
                 <li><a href="BorrowBusiness.do">Borrow Business</a></li>
                 <li><a href="ReturnBusiness.do">Return Business</a></li>
+                <li><a href="IncomeHistory.do">Income History</a></li>
             </ul>
         </li>
         <li><a href="#RecordQuery" aria-expanded="${ tag eq 3 ? "true" : "false" }" data-toggle="collapse"> <i
