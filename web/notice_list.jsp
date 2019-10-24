@@ -99,7 +99,7 @@
                                             <c:forEach items="${notices}" var="notice" varStatus="li">
                                                 <tr>
                                                     <td>${notice.getID()}</td>
-                                                    <td>${notice.getTopic}</td>
+                                                    <td>${notice.getTopic()}</td>
                                                     <td>${notice.getContent()}</td>
                                                     <td>
                                                         <a href="#myModal_${li.index+1}" data-toggle="modal" value="${notice.getAccount()}"
@@ -128,7 +128,7 @@
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="DeleteNotice.do?ID=${notice.getID()}">
+                                                                        <a href="DeleteNotice.do?id=${notice.getID()}">
                                                                                 <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
                                                                             <button type="button"
                                                                                     class="btn btn-primary">

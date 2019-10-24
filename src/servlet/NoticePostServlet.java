@@ -34,11 +34,8 @@ public class NoticePostServlet extends HttpServlet {
         } else {
             //在notice中添加
             noticeDao.addNotice(id, topic, content);
-
-            List<Notice> notices = noticeDao.getNotice();
-            request.setAttribute("notices", notices);
-            request.getRequestDispatcher("notice_post.jsp").forward(request, response);
-        }
+            response.sendRedirect("notice_post.jsp?info=success");
+    }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

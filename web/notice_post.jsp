@@ -80,7 +80,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">ID</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="ID"
+                                        <input id="inputHorizontalSuccess" name="id"
                                                class="form-control form-control-success" value="<%=IDFromAPI%>">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
