@@ -15,7 +15,7 @@ import java.util.List;
 public class BookDeleteDao {
 
 
-    public List<BookDelete> getBookDeletes() {
+    public static List<BookDelete> getBookDeletes() {
         List<BookDelete> BookDeletes = new ArrayList<BookDelete>();
         String sql = "Select * from book_deleted";
         try{
