@@ -13,6 +13,7 @@
           <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.20-bin.jar" />
           <element id="library" level="project" name="json-20190722" />
           <element id="library" level="project" name="barcode4j-2.1" />
+          <element id="library" level="project" name="mail-1.4" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="library - test/web/Web" />
