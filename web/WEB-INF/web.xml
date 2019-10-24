@@ -251,5 +251,13 @@
         <servlet-name>ReaderAccountSetting</servlet-name>
         <url-pattern>/ReaderAccountSetting.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>BookDetail</servlet-name>
+        <servlet-class>servlet.BookDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookDetail</servlet-name>
+        <url-pattern>/BookDetail.do</url-pattern>
+    </servlet-mapping>
 <!--    end -->
 </web-app>

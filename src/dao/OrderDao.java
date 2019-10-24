@@ -12,6 +12,7 @@ public class OrderDao {
     public OrderDao() {
     }
 
+    //也可用来book detail的使用
     public List<Detail> Search(String number) {
         try {
             String ma = number;

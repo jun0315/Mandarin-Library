@@ -142,15 +142,15 @@ public class BookDao {
         }
     }
 
-
+    //删除具体的副本
     public void deleteBook(String bookNumber) {
         try {
-            String sql = "delete from book where book_number =?";
+            String sql = "delete from book_detail where copy_id =?";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, bookNumber);
             ps.executeUpdate();
-            DBHelper.closeConnection(connection,ps);
+            DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }

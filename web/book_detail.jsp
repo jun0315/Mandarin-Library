@@ -53,8 +53,6 @@
                     <li class="breadcrumb-item active"><a href="reader_search.jsp">Search</a></li>
                 </ul>
             </div>
-
-
             <div class="">
                 <h3>number： ${book.getBookNumber()}</h3>
                 <h3>name: ${book.getName()}</h3>
