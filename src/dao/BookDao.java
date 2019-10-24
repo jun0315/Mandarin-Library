@@ -177,10 +177,10 @@ public class BookDao {
             }
 
             //在book表中数量减一
-            sql = "update book set book_amount=? where book_number=? ";
+            sql = "update book set book_amount=? where book_number=\'" + book_number + "\'";
             connection = DBHelper.getInstance().getConnection();
             ps = connection.prepareStatement(sql);
-            ps.setString(1,String.valueOf(amount_int));
+            ps.setString(1, String.valueOf(amount_int));
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
 
