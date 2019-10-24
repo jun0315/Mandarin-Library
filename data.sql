@@ -1,6 +1,6 @@
 /*
 SQLyog Community v13.1.5  (64 bit)
-MySQL - 5.6.45-log : Database - lib_system
+MySQL - 5.6.15 : Database - lib_system
 *********************************************************************
 */
 
@@ -112,10 +112,14 @@ CREATE TABLE `notice` (
   `notice_topic` varchar(12) DEFAULT NULL,
   `notice_content` varchar(64) DEFAULT NULL,
   `notice_id` int(10) NOT NULL,
+  `notice_date` datetime DEFAULT NULL,
   PRIMARY KEY (`notice_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `notice` */
+
+insert  into `notice`(`notice_topic`,`notice_content`,`notice_id`,`notice_date`) values 
+('123','111',111,NULL);
 
 /*Table structure for table `reader` */
 
