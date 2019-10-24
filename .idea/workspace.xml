@@ -8,6 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/OrdertoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/OrdertoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_order.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,6 +166,8 @@
       <workItem from="1571669266565" duration="576000" />
       <workItem from="1571792101055" duration="31000" />
       <workItem from="1571813515042" duration="1441000" />
+      <workItem from="1571904330204" duration="1561000" />
+      <workItem from="1571906442165" duration="3616000" />
     </task>
     <task id="LOCAL-00001" summary="更新.gitignore">
       <created>1569579494657</created>
@@ -497,7 +503,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/book_detail.jsp</url>
-          <line>60</line>
+          <line>143</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
