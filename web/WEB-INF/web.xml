@@ -140,6 +140,14 @@
         <url-pattern>/AdminChangeSettingsServlet.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>BookDeletedList</servlet-name>
+        <servlet-class>servlet.BookDeletedListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookDeletedList</servlet-name>
+        <url-pattern>/BookDeletedList.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>AddBookByISBN</servlet-name>
         <servlet-class>servlet.BookAddByISBNSrvelet</servlet-class>
     </servlet>
@@ -271,6 +279,7 @@
         <servlet-name>DeleteNotice</servlet-name>
         <url-pattern>/DeleteNotice.do</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>EditNotice</servlet-name>
         <servlet-class>servlet.NoticeEditServlet</servlet-class>
@@ -299,5 +308,6 @@
         <servlet-name>forgetpassword</servlet-name>
         <url-pattern>/ForgetPassword.do</url-pattern>
     </servlet-mapping>
+
 <!--    end -->
 </web-app>

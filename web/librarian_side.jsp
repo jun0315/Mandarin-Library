@@ -95,7 +95,7 @@
                 class="icon-interface-windows"></i><strong>Record Query</strong></a>
             <ul id="RecordQuery" class="${ tag eq 3 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="#"><strong>Reader History</strong></a></li>
-                <li><a href="#"><strong>Book Deletion</strong></a></li>
+                <li><a href="BookDeletedList.do"><strong>Book Deletion</strong></a></li>
                 <li><a href="#"><strong>Total Deposit</strong></a></li>
                 <li><a href="#"><strong>Total Fine</strong></a></li>
 
