@@ -80,7 +80,7 @@
                                     <label class="col-sm-3 form-control-label">ID</label>
                                     <div class="col-sm-9">
                                         <input type="hidden" name="preid" value="<%=notice.getID()%>">
-                                        <input id="inputHorizontalWarning" name="notice"
+                                        <input id="inputHorizontalWarning" name="id"
                                                value="<%=notice.getID()%>"
                                                class="form-control form-control-warning">
                                         <%--  <small class="form-text">Example help text that remains unchanged.</small>--%>
@@ -89,7 +89,6 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Topic</label>
                                     <div class="col-sm-9">
-                                        <input type="hidden" name="preTopic" value="<%=notice.getTopic()%>">
                                         <input id="inputHorizontalWarning" name="topic"
                                                value="<%=notice.getTopic()%>"
                                                class="form-control form-control-warning">
@@ -99,7 +98,6 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Content</label>
                                     <div class="col-sm-9">
-                                        <input type="hidden" name="preShelf" value="<%=notice.getContent()%>">
                                         <input id="inputHorizontalWarning" name="content"
                                                value="<%=notice.getContent()%>"
                                                class="form-control form-control-warning">

@@ -8,10 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="done fix small">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/NoticeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/notice_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/notice_edit.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -750,6 +749,16 @@
           <url>file://$PROJECT_DIR$/src/dao/ReaderDao.java</url>
           <line>174</line>
           <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/NoticeEditServlet.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/NoticeEditServlet.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="108" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
