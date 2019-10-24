@@ -142,21 +142,53 @@ public class BookDao {
         }
     }
 
-
-    public void deleteBook(String bookNumber) {
-
-        String sql = "delete from book where book_number = \'" + bookNumber + "\'";
-
+    //删除具体的副本
+    public void deleteBook(String copy_id) {
         try {
-
+            //获取number
+            String book_number = "";
+            String sql = "Select * from book_detail where copy_id= \'" + copy_id + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
-            int resultSet = statement.executeUpdate(sql);
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                book_number = resultSet.getString("book_number");
+                break;
+            }
+
+            sql = "delete from book_detail where copy_id =?";
+            connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, copy_id);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection, ps);
+
+            //获取数量
+            String amount;
+            int amount_int = 0;
+            sql = "Select * from book where book_number= \'" + book_number + "\'";
+            connection = DBHelper.getInstance().getConnection();
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                amount = resultSet.getString("book_amount");
+                amount_int = Integer.parseInt(amount) - 1;
+                break;
+            }
+
+            //在book表中数量减一
+            sql = "update book set book_amount=? where book_number=? ";
+            connection = DBHelper.getInstance().getConnection();
+            ps = connection.prepareStatement(sql);
+            ps.setString(1,String.valueOf(amount_int));
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection, ps);
+
+            //在删书表中加入数据
+
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return;
     }
-
 }

@@ -67,11 +67,10 @@
                                         <tr>
                                             <th>Bnumber</th>
                                             <th>id</th>
-                                            <th>state</th>
                                             <th>floor</th>
                                             <th>shelf</th>
                                             <th>areacode</th>
-                                            <th>Order</th>
+                                            <th>Operation</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -82,24 +81,55 @@
                                             <tr>
                                                 <td>${detail.getBookNumber()}</td>
                                                 <td>${detail.getCopyid()}</td>
-                                                <td>
-                                                    <c:if test="${detail.getState()==0}">borrowed</c:if>
-                                                    <c:if test="${detail.getState()==1}">ordered</c:if>
-                                                    <c:if test="${detail.getState()==2}">vacant</c:if></td>
-                                                    <%--<c:otherwise><form  style="margin: 10px;position: relative" action="Order"
-                                                           name="search" method="post">
-                                                        <input type="hidden" name="number" value="" />
-                                                        <input type="submit" value="Order">
-                                                    </form> </c:otherwise> --%>
                                                 <td>${detail.getFloor()}</td>
                                                 <td>${detail.getShelf()}</td>
                                                 <td>${detail.getAreacode()}</td>
                                                 <td>
-                                                    <form style="margin: 10px;position: relative" action="Orderto"
-                                                          name="" method="post">
-                                                        <input type="hidden" name="number" value="${detail.getState()}">
-                                                        <input type="hidden" name="id" value="${detail.getCopyid()}">
-                                                        <input type="submit" value="Order"></form>
+                                                    <a href="#myModal_${li.index+1}" data-toggle="modal"
+                                                       value="${librarian.getAccount()}"
+                                                       id="lastButton">
+                                                        <button type="button" class="btn btn-btn-primary"
+                                                                style="color: white; background-color: rgb(224,79,61)">
+                                                            Delete
+                                                        </button>
+                                                    </a>
+                                                    <!-- Modal-->
+                                                    <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
+                                                         aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                                         class="modal fade text-left">
+                                                        <div role="document" class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h4 id="exampleModalLabel" class="modal-title">
+                                                                        Delete</h4>
+                                                                    <button type="button" data-dismiss="modal"
+                                                                            aria-label="Close" class="close"><span
+                                                                            aria-hidden="true">×</span></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <p>Are you sure want to delete this account?</p>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" data-dismiss="modal"
+                                                                            class="btn btn-secondary">Close
+                                                                    </button>
+                                                                    <a href="DeleteBook.do?bookCpoyID=${detail.getCopyid()}">
+                                                                            <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
+                                                                        <button type="button"
+                                                                                class="btn btn-primary">
+                                                                            Delete
+                                                                        </button>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="EditBook.do?booknumber=${book.getBookNumber()}">
+                                                        <button type="button" class="btn btn-secondary"
+                                                                style="color: white; background-color: rgb(46,203,112)">
+                                                            Edit
+                                                        </button>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         </c:forEach>

@@ -77,8 +77,8 @@
                     <input type="text" class="form-control" name="message"
                            placeholder="Please enter the content you are searching for">
                     <span class="input-group-btn">
-                            <button type="submit" class="btn btn-info btn-search">search</button>
-                        </span>
+                        <button type="submit" class="btn btn-info btn-search">search</button>
+                    </span>
                 </form>
 
                 <div class="container-fluid">
@@ -91,7 +91,7 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Bnumber</th>
+                                                <th>BookNumber</th>
                                                 <th>Name</th>
                                                 <th>Press</th>
                                                 <th>Author</th>

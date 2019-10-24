@@ -17,7 +17,6 @@ import java.util.List;
  **/
 
 public class ReaderBorrowDao {
-
     private double getFine(Date pastDate, java.util.Date currentDate, int isReturned, int book_return_period, int book_fine_value) {
         double fine;
         //计算当前时间和借书时间相差的天数

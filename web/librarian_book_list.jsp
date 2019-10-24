@@ -80,6 +80,13 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <div style="width: 1000px;height: 60px">
+                                        <a href="BookAdd.do">
+                                            <img src="img/addBook.png" style="float: left; length:40px; width:40px;">
+                                            <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
+                                                <strong>Add Book</strong></p>
+                                        </a>
+                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
@@ -106,45 +113,15 @@
                                                     <td>${book.getCategory()}</td>
                                                     <td>${book.getAmount()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${librarian.getAccount()}"
-                                                           id="lastButton">
-                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
-                                                                Delete
+                                                        <a href="BookDetail.do?bookNumber=${book.getBookNumber()}">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    style="color: white; background-color: rgb(23,162,184)">
+                                                                Detail
                                                             </button>
                                                         </a>
-                                                        <!-- Modal-->
-                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
-                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
-                                                             class="modal fade text-left">
-                                                            <div role="document" class="modal-dialog">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-header">
-                                                                        <h4 id="exampleModalLabel" class="modal-title">
-                                                                            Delete</h4>
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                aria-label="Close" class="close"><span
-                                                                                aria-hidden="true">×</span></button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <p>Are you sure want to delete this account?</p>
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                class="btn btn-secondary">Close
-                                                                        </button>
-                                                                        <a href="DeleteBook.do?booknumber=${book.getBookNumber()}">
-                                                                                <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
-                                                                            <button type="button"
-                                                                                    class="btn btn-primary">
-                                                                                Delete
-                                                                            </button>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <a href="EditBook.do?booknumber=${book.getBookNumber()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
+                                                        <a href="EditBook.do?bookNumber=${book.getBookNumber()}">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
                                                         </a>
@@ -161,23 +138,21 @@
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
 
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'delete_error') {
+        alert("There is no category to delete!");
+        window.location.href = "BookList.do";
+    } else if (info == 'delete_success') {
+        alert("Successfully delete!");
+        window.location.href = "BookList.do";
+    }
+</script>
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

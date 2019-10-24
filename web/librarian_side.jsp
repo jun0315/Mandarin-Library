@@ -63,7 +63,7 @@
         <div class="title">
             <h1 class="h4">
                 <%
-                    String account = (String) session.getAttribute("name");
+                    String account = (String) session.getAttribute("account");
                     out.println(account);
                 %>
             </h1>
@@ -74,39 +74,38 @@
     <%--    侧边栏的目录      --%>
     <ul class="list-unstyled">
         <li><a href="#BookManage" aria-expanded="${ tag eq 1 ? "true" : "false" }" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i>Book Manage</a>
+                class="icon-interface-windows"></i><strong>Book Manage</strong></a>
             <ul id="BookManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="BookList.do">Book List</a></li>
-                <li><a href="BookAdd.do">Add Book</a></li>
-                <li><a href="BookCategoryList.do" >Category List</a></li>
+                <li><a href="BookList.do"><strong>Book List</strong></a></li>
+                <li><a href="BookCategoryList.do" ><strong>Category List</strong></a></li>
             </ul>
         </li>
 
         <li><a href="ReaderList.do"> <i
-                class="icon-interface-windows"></i>Reader Manage</a></li>
+                class="icon-interface-windows"></i><strong>Reader Manage</strong></a></li>
 
         <li><a href="#BusinessProcess" aria-expanded="false" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i>Business Process</a>
+                class="icon-interface-windows"></i><strong>Business Process</strong></a>
             <ul id="BusinessProcess" class="collapse list-unstyled ">
-                <li><a href="BorrowBusiness.do">Borrow Business</a></li>
-                <li><a href="ReturnBusiness.do">Return Business</a></li>
+                <li><a href="BorrowBusiness.do"><strong>Borrow Business</strong></a></li>
+                <li><a href="ReturnBusiness.do"><strong>Return Business</strong></a></li>
             </ul>
         </li>
         <li><a href="#RecordQuery" aria-expanded="${ tag eq 3 ? "true" : "false" }" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i>Record Query</a>
+                class="icon-interface-windows"></i><strong>Record Query</strong></a>
             <ul id="RecordQuery" class="${ tag eq 3 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="#">Reader History</a></li>
-                <li><a href="#">Book Deletion</a></li>
-                <li><a href="#">Total Deposit</a></li>
-                <li><a href="#">Total Fine</a></li>
+                <li><a href="#"><strong>Reader History</strong></a></li>
+                <li><a href="#"><strong>Book Deletion</strong></a></li>
+                <li><a href="#"><strong>Total Deposit</strong></a></li>
+                <li><a href="#"><strong>Total Fine</strong></a></li>
 
             </ul>
         </li>
         <li><a href="#NoticeEdit" aria-expanded="${ tag eq 4 ? "true" : "false" }" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i>Notice</a>
+                class="icon-interface-windows"></i><strong>Notice</strong></a>
             <ul id="NoticeEdit" class="${ tag eq 4 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="#">Notice List</a></li>
-                <li><a href="#">Post Notice</a></li>
+                <li><a href="#"><strong>Notice List</strong></a></li>
+                <li><a href="#"><strong>Post Notice</strong></a></li>
             </ul>
         </li>
     </ul>

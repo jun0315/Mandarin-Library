@@ -175,6 +175,12 @@
         alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
+    } else if (info == 'delete_error') {
+        alert("There is no account to delete!");
+        window.location.href = "ReaderList.do";
+    } else if (info == 'delete_success') {
+        alert("Successfully delete!");
+        window.location.href = "ReaderList.do";
     }
 </script>
 

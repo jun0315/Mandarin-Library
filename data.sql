@@ -127,15 +127,16 @@ CREATE TABLE `reader` (
   `user_password` varchar(64) NOT NULL,
   `user_email` varchar(128) DEFAULT NULL,
   `security_deposit` int(11) DEFAULT '0',
+  `register_time` date DEFAULT NULL,
   PRIMARY KEY (`user_account`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader` */
 
-insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`) values 
-('13855447008','jun1','123','13',0),
-('reader','123','123','123',300),
-('reader-test','jun','123','1072505283@qq.com',0);
+insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`,`register_time`) values 
+('','123','','1072505283@qq.com',300,NULL),
+('13855447008','jun1','123','13',0,NULL),
+('reader-test','jun','','1072505283@qq.com',0,NULL);
 
 /*Table structure for table `reader_borrow` */
 
