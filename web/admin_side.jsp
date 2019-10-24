@@ -37,12 +37,11 @@
                 <li><a href="findBackLibrarianPassword.do"><strong>Find Back Librarian Password</strong></a></li>
             </ul>
         </li>
-        <li><a href="#SystemSettings" aria-expanded="false" data-toggle="collapse"> <i
+
+        <li><a href="${pageContext.request.contextPath}/SystemSettingsServlet"> <i
                 class="icon-interface-windows"></i><strong>System Settings</strong></a>
-            <ul id="SystemSettings" class="collapse list-unstyled ">
-                <li><a href="${pageContext.request.contextPath}/SystemSettingsServlet"><strong>System Settings</strong></a></li>
-            </ul>
         </li>
+
         <li><a href="#AccountSettings" aria-expanded="false" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i><strong>Account Settings</strong></a>
             <ul id="AccountSettings" class="collapse list-unstyled ">

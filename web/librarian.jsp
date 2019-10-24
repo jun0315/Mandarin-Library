@@ -115,11 +115,9 @@
                 </span>
                 <input type="text" class="form-control" name="message"
                        placeholder="Please enter the content you are searching for">
-                <a href="ReaderSearch.do">
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-info btn-search">Search</button>
-                    </span>
-                </a>
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-info btn-search">Search</button>
+                </span>
             </form>
 
             <!-- notice -->
