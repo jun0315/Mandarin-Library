@@ -6,17 +6,30 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="">
+    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="update notice function">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/NoticeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Notice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeDeleteServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticePostServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeSearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/notice_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/notice_post.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/ReaderReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/ReaderReserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_borrow_business.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_borrow_business.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -27,6 +40,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -36,6 +54,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1RPqP6ymFBFQa4phWQqlN8gFMoN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -44,7 +65,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../课程/大三/企业级开发/exce/ex3" />
+    <property name="last_opened_file_path" value="$USER_HOME$/课程/大三/企业级开发/exce/ex3" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -141,7 +168,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="" />
+      <changelist id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="" />
       <created>1569579052360</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -160,6 +187,12 @@
       <workItem from="1571295621945" duration="269000" />
       <workItem from="1571359849063" duration="3744000" />
       <workItem from="1571365124131" duration="1173000" />
+      <workItem from="1571791968389" duration="596000" />
+      <workItem from="1571838285996" duration="93000" />
+      <workItem from="1571838637029" duration="6487000" />
+      <workItem from="1571877730445" duration="711000" />
+      <workItem from="1571878688840" duration="5154000" />
+      <workItem from="1571899031148" duration="10846000" />
     </task>
     <task id="LOCAL-00001" summary="更新.gitignore">
       <created>1569579494657</created>
@@ -318,7 +351,8 @@
     <MESSAGE value="调试条形码列表" />
     <MESSAGE value="add book 测试完成" />
     <MESSAGE value="book list small modify" />
-    <option name="LAST_COMMIT_MESSAGE" value="book list small modify" />
+    <MESSAGE value="update notice function" />
+    <option name="LAST_COMMIT_MESSAGE" value="update notice function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
