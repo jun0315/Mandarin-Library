@@ -23,26 +23,17 @@
         <div id="large-header" class="large-header">
             <canvas id="demo-canvas"></canvas>
             <div class="logo_box">
-                <h3>Welcome</h3>
+                <h3>Input your account,and we will send to your email</h3>
                 <form action="login" name="f" method="post">
                     <div class="input_outer">
                         <span class="u_user"></span>
                         <input name="account" class="text" style="color: #FFFFFF !important" type="text"
                                placeholder="Your account">
                     </div>
-                    <div class="input_outer">
-                        <span class="us_uer"></span>
-                        <input name="password" class="text"
-                               style="color: #FFFFFF !important; position:absolute; z-index:100;" value=""
-                               type="password" placeholder="Your password">
-                    </div>
                     <div class="mb2">
                         <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px">
-                            login
+                            send email
                         </button>
-                        <a href="forget.jsp" class="act-but submit" id="forget" style="color: #FFFFFF; width: 330px">
-                            forget password
-                        </a>
                     </div>
                 </form>
             </div>
@@ -61,10 +52,7 @@
     if (error == 'yes') {
         alert("Account or password wrong!");
     }
-    var forget = '<%=request.getParameter("forget")%>';
-    if (forget == 'yes') {
-        alert("We have send a email and you can retire your password");
-    }</script>
+</script>
 <script src="js/TweenLite.min.js"></script>
 <script src="js/EasePack.min.js"></script>
 <script src="js/rAF.js"></script>

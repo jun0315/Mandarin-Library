@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderDao {
-    public static ReaderDao getInstance(){
+    public static ReaderDao getInstance() {
         return new ReaderDao();
     }
 
@@ -151,5 +151,21 @@ public class ReaderDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public String getEmailByAccount(String account) {
+        String user_email = "";
+        try {
+            String sql = "select * from reader where user_account = \'" + account + "\'";
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                user_email = resultSet.getString("user_email");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user_email;
     }
 }
