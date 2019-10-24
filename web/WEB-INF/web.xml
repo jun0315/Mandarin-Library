@@ -247,6 +247,38 @@
         <servlet-name>ReaderAccountSetting</servlet-name>
         <servlet-class>servlet.ReaderAccountSettingServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NoticePost</servlet-name>
+        <servlet-class>servlet.NoticePostServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoticePost</servlet-name>
+        <url-pattern>/NoticePost.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NoticeList</servlet-name>
+        <servlet-class>servlet.NoticeListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoticeList</servlet-name>
+        <url-pattern>/NoticeList.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteNotice</servlet-name>
+        <servlet-class>servlet.NoticeDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteNotice</servlet-name>
+        <url-pattern>/DeleteNotice.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EditNotice</servlet-name>
+        <servlet-class>servlet.NoticeEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditNotice</servlet-name>
+        <url-pattern>/EditNotice.do</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ReaderAccountSetting</servlet-name>
         <url-pattern>/ReaderAccountSetting.do</url-pattern>
