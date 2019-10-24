@@ -24,11 +24,11 @@ public class NoticeDao {
                 String ID = resultSet.getString("notice_ID");
                 String Topic = resultSet.getString("notice_topic");
                 String Content = resultSet.getString("notice_content");
-                Date Posttime = resultSet.getDate("posttime");
+                Date Posttime = resultSet.getDate("notice_date");
                 notice.setID(ID);
                 notice.setTopic(Topic);
                 notice.setContent(Content);
-                notice.getPosttime(Posttime);
+                notice.setPosttime(Posttime);
 
                 notices.add(notice);
             }
@@ -52,11 +52,11 @@ public class NoticeDao {
                 String ID = resultSet.getString("notice_ID");
                 String Topic = resultSet.getString("notice_topic");
                 String Content = resultSet.getString("notice_content");
-                Date Posttime = resultSet.getDate("posttime");
+                Date Posttime = resultSet.getDate("notice_date");
                 notice.setID(ID);
                 notice.setTopic(Topic);
                 notice.setContent(Content);
-                notice.getPosttime(Posttime);
+                notice.setPosttime(Posttime);
 
                 noticeDao.addNotice(notices.getID(), notices.getTopic(), notices.getContent());
             }

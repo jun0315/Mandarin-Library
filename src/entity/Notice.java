@@ -16,7 +16,7 @@ public class Notice {
 
     }
 
-    public Notice(String ID, String topic, String content){
+    public Notice(String ID, String topic, String content) {
         this.ID = ID;
         this.topic = topic;
         this.content = content;
@@ -35,7 +35,9 @@ public class Notice {
         return topic;
     }
 
-    public void setTopic(String topic) { this.topic = topic; }
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
 
     public String getContent() {
         return content;
@@ -45,10 +47,12 @@ public class Notice {
         this.content = content;
     }
 
-    public Date getPosttime(Date posttime) { return this.posttime; }
+
+    public Date getPosttime() {
+        return posttime;
+    }
 
     public void setPosttime(Date posttime) {
         this.posttime = posttime;
     }
-
 }

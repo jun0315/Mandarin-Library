@@ -102,10 +102,10 @@
             </ul>
         </li>
         <li><a href="#NoticeEdit" aria-expanded="${ tag eq 4 ? "true" : "false" }" data-toggle="collapse"> <i
-                class="icon-interface-windows"></i><strong>Notice</strong></a>
+                class="icon-interface-windows"></i>Notice</a>
             <ul id="NoticeEdit" class="${ tag eq 4 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="#"><strong>Notice List</strong></a></li>
-                <li><a href="#"><strong>Post Notice</strong></a></li>
+                <li><a href="NoticeList.do">Notice List</a></li>
+                <li><a href="NoticePost.do">Post Notice</a></li>
             </ul>
         </li>
     </ul>

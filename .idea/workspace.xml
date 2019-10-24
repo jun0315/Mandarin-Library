@@ -6,20 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="完成了reader的账户设置功能；完善了ReaderReserveDao的addReaderReserve方法;修改了reader的侧边栏">
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookDetailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_detail_librarian.jsp" afterDir="false" />
+    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="初步修改书籍">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookEditServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/NoticeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Notice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Notice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_order.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_book_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_book_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -454,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571329032570</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="初步修改书籍">
+      <created>1571922297422</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1571922297422</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +506,8 @@
     <MESSAGE value="调试条形码列表" />
     <MESSAGE value="add book 测试完成" />
     <MESSAGE value="book list small modify" />
-    <option name="LAST_COMMIT_MESSAGE" value="book list small modify" />
+    <MESSAGE value="初步修改书籍" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步修改书籍" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,6 +667,21 @@
           <line>149</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/NoticeListServlet.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/notice_list.jsp</url>
+          <line>88</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/notice_list.jsp</url>
+          <line>91</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -673,14 +689,5 @@
         <watch expression="bookdetails" language="JSP" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="watch">
-      <expression>
-        <expression-string>bookdetails</expression-string>
-        <language-id>JSP</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
   </component>
 </project>
