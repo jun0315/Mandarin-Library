@@ -4,6 +4,7 @@ import entity.Book;
 import entity.BookCategory;
 import entity.Notice;
 import utils.DBHelper;
+import java.sql.Date;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -23,9 +24,11 @@ public class NoticeDao {
                 String ID = resultSet.getString("notice_ID");
                 String Topic = resultSet.getString("notice_topic");
                 String Content = resultSet.getString("notice_content");
+                Date Posttime = resultSet.getDate("posttime");
                 notice.setID(ID);
                 notice.setTopic(Topic);
                 notice.setContent(Content);
+                notice.getPosttime(Posttime);
 
                 notices.add(notice);
             }
@@ -36,10 +39,10 @@ public class NoticeDao {
     }
 
     //通过notice_ID返回notice实体
-    public Notice info(String topic) {
+    public Notice info(String id) {
         Notice notice = new Notice();
         try {
-            String sql = "Select * from notice where notice_ID= \'" + topic + "\'";
+            String sql = "Select * from notice where notice_ID= \'" + id + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -49,9 +52,12 @@ public class NoticeDao {
                 String ID = resultSet.getString("notice_ID");
                 String Topic = resultSet.getString("notice_topic");
                 String Content = resultSet.getString("notice_content");
+                Date Posttime = resultSet.getDate("posttime");
                 notice.setID(ID);
                 notice.setTopic(Topic);
                 notice.setContent(Content);
+                notice.getPosttime(Posttime);
+
                 noticeDao.addNotice(notices.getID(), notices.getTopic(), notices.getContent());
             }
         } catch (SQLException e) {
@@ -85,12 +91,13 @@ public class NoticeDao {
     //添加公告到数据库中
     public void addNotice(String id, String topic, String content) {
         try {
-            String sql = "insert into notice values(?,?,?);";
+            String sql = "insert into notice values(?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, id);
             ps.setString(2, topic);
             ps.setString(3, content);
+            ps.setDate(4, new Date(System.currentTimeMillis()));
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
@@ -100,12 +107,13 @@ public class NoticeDao {
 
     public void editNotice(String id, String topic, String content) {
         try {
-            String sql = "update notice set notice_id=?,notice_topic=?,motice_content=?";
+            String sql = "update notice set notice_id=?,notice_topic=?,motice_content=?,notice_posttime=?";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, id);
             ps.setString(2, topic);
             ps.setString(3, content);
+            ps.setDate(4, new Date(System.currentTimeMillis()));
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {

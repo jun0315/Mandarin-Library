@@ -1,23 +1,26 @@
 package entity;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
+import java.sql.Date;
 
 public class Notice {
 
     private String ID;
     private String topic;
     private String content;
+    private Date posttime;
 
     public Notice() {
         this.ID = "null";
         this.topic = "null";
         this.content = "null";
+
     }
 
     public Notice(String ID, String topic, String content){
         this.ID = ID;
         this.topic = topic;
         this.content = content;
+        posttime = new Date(System.currentTimeMillis());
     }
 
     public String getID() {
@@ -40,6 +43,12 @@ public class Notice {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Date getPosttime(Date posttime) { return this.posttime; }
+
+    public void setPosttime(Date posttime) {
+        this.posttime = posttime;
     }
 
 }

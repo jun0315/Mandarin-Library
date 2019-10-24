@@ -260,14 +260,6 @@
         <url-pattern>/NoticeList.do</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>SearchNotice</servlet-name>
-        <servlet-class>servlet.NoticeSearchServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SearchNotice</servlet-name>
-        <url-pattern>/SearchNotice.do</url-pattern>
-    </servlet-mapping>
-    <servlet>
         <servlet-name>DeleteNotice</servlet-name>
         <servlet-class>servlet.NoticeDeleteServlet</servlet-class>
     </servlet>

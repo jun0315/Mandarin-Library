@@ -70,16 +70,6 @@
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
-
-                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchNotice.do"
-                      name="search" method="post">
-                    <input type="text" class="form-control" name="searchNotice"
-                           placeholder="Please enter the topic of the notice which needs to query">
-                    <span class="input-group-btn">
-                            <button type="submit" class="btn btn-info btn-search">search</button>
-                        </span>
-                </form>
-
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -92,6 +82,7 @@
                                                 <th>ID</th>
                                                 <th>Topic</th>
                                                 <th>Content</th>
+                                                <th>PostTime</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -101,6 +92,7 @@
                                                     <td>${notice.getID()}</td>
                                                     <td>${notice.getTopic()}</td>
                                                     <td>${notice.getContent()}</td>
+                                                    <td>${notice.getPosttime()}</td>
                                                     <td>
                                                         <a href="#myModal_${li.index+1}" data-toggle="modal" value="${notice.getAccount()}"
                                                            id="lastButton">
@@ -139,7 +131,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditNotice.do?ID=${notice.getID()}">
+                                                        <a href="EditNotice.do?id=${notice.getID()}">
                                                             <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
