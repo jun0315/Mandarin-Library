@@ -14,13 +14,14 @@ import java.util.List;
 @WebServlet(name = "BookListServlet")
 public class BookListServlet extends HttpServlet {
     BookDao bookDao = new BookDao();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Book> books = bookDao.getBooks();
-        request.setAttribute("books",books);
-        request.getRequestDispatcher("librarian_book_list.jsp").forward(request,response);
+        request.setAttribute("books", books);
+        request.getRequestDispatcher("librarian_book_list.jsp").forward(request, response);
     }
 }

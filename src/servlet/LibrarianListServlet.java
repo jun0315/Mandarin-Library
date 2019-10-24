@@ -14,6 +14,7 @@ import java.util.List;
 @WebServlet(name = "LibrarianListServlet")
 public class LibrarianListServlet extends HttpServlet {
     private LibrarianDao librarianDao = new LibrarianDao();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -21,7 +22,7 @@ public class LibrarianListServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Librarian> librarians = librarianDao.getLibrarians();
-        request.setAttribute("librarians",librarians);
-        request.getRequestDispatcher("librarian_list.jsp").forward(request,response);
+        request.setAttribute("librarians", librarians);
+        request.getRequestDispatcher("librarian_list.jsp").forward(request, response);
     }
 }

@@ -49,7 +49,7 @@ public class Reader {
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public int getDeposit(){ return security_deposit;}
 
     public void setDeposit(int deposit){ this.security_deposit = deposit;}

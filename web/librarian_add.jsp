@@ -134,19 +134,7 @@
                 <%--                </div>--%>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
@@ -154,7 +142,7 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully add!");
-    }else if(info == 'erroe'){
+    } else if (info == 'erroe') {
         alert("add failure because of have the same account!");
     }
 </script>

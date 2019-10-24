@@ -9,7 +9,6 @@ import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
 
-
 public class HttpUtil {
 
     static String sendGet(String url) {

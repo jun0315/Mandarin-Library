@@ -23,11 +23,12 @@ public class LibrarianAddServlet extends HttpServlet {
         if (exit) {
             response.sendRedirect("librarian_add.jsp?info=error");
         } else {
-            librarianDao.addLibrarian(name,account,password,phone);
+            librarianDao.addLibrarian(name, account, password, phone);
             response.sendRedirect("librarian_add.jsp?info=success");
         }
     }
-//this is git test
+
+    //this is git test
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //        response.sendRedirect("librarian_add.jsp?info=success");
     }

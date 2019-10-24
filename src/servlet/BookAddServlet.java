@@ -56,9 +56,8 @@ public class BookAddServlet extends HttpServlet {
             List<BookDetail> bookdetails = new ArrayList<BookDetail>();
             for (int i = 0; i < copyIDs.size(); i++) {
                 //在bookdetail中添加
-                bookDetailDao.addBookDeatil(BookNumber,copyIDs.get(i));
-
                 String AreaCode = bookCategoryDao.getAreaCode(Category);
+                bookDetailDao.addBookDeatil(BookNumber,copyIDs.get(i),AreaCode);
                 BookDetail bookDetail = new BookDetail();
                 bookDetail.setCopyID(copyIDs.get(i));
                 bookDetail.setShelf(Shelf);

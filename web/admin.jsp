@@ -107,15 +107,21 @@
                         <div class="statistics col-lg-3 col-12">
                             <div class="statistic d-flex align-items-center bg-white has-shadow">
                                 <div class="icon bg-red"><i class="fa fa-tasks"></i></div>
-                                <div class="text"><strong>234</strong><br><small>Applications</small></div>
+                                <div class="text"><strong>234</strong><br>
+                                    <small>Applications</small>
+                                </div>
                             </div>
                             <div class="statistic d-flex align-items-center bg-white has-shadow">
                                 <div class="icon bg-green"><i class="fa fa-calendar-o"></i></div>
-                                <div class="text"><strong>152</strong><br><small>Interviews</small></div>
+                                <div class="text"><strong>152</strong><br>
+                                    <small>Interviews</small>
+                                </div>
                             </div>
                             <div class="statistic d-flex align-items-center bg-white has-shadow">
                                 <div class="icon bg-orange"><i class="fa fa-paper-plane-o"></i></div>
-                                <div class="text"><strong>147</strong><br><small>Forwards</small></div>
+                                <div class="text"><strong>147</strong><br>
+                                    <small>Forwards</small>
+                                </div>
                             </div>
                         </div>
                         <!-- Line Chart            -->
@@ -127,14 +133,19 @@
                         <div class="chart col-lg-3 col-12">
                             <!-- Bar Chart   -->
                             <div class="bar-chart has-shadow bg-white">
-                                <div class="title"><strong class="text-violet">95%</strong><br><small>Current Server
-                                    Uptime</small></div>
+                                <div class="title"><strong class="text-violet">95%</strong><br>
+                                    <small>Current Server
+                                        Uptime
+                                    </small>
+                                </div>
                                 <canvas id="barChartHome"></canvas>
                             </div>
                             <!-- Numbers-->
                             <div class="statistic d-flex align-items-center bg-white has-shadow">
                                 <div class="icon bg-green"><i class="fa fa-line-chart"></i></div>
-                                <div class="text"><strong>99.9%</strong><br><small>Success Rate</small></div>
+                                <div class="text"><strong>99.9%</strong><br>
+                                    <small>Success Rate</small>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -151,7 +162,8 @@
                                     <div class="image has-shadow"><img src="img/project-1.jpg" alt="..."
                                                                        class="img-fluid"></div>
                                     <div class="text">
-                                        <h3 class="h4">Project Title</h3><small>Lorem Ipsum Dolor</small>
+                                        <h3 class="h4">Project Title</h3>
+                                        <small>Lorem Ipsum Dolor</small>
                                     </div>
                                 </div>
                                 <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
@@ -176,7 +188,8 @@
                                     <div class="image has-shadow"><img src="img/project-2.jpg" alt="..."
                                                                        class="img-fluid"></div>
                                     <div class="text">
-                                        <h3 class="h4">Project Title</h3><small>Lorem Ipsum Dolor</small>
+                                        <h3 class="h4">Project Title</h3>
+                                        <small>Lorem Ipsum Dolor</small>
                                     </div>
                                 </div>
                                 <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
@@ -201,7 +214,8 @@
                                     <div class="image has-shadow"><img src="img/project-3.jpg" alt="..."
                                                                        class="img-fluid"></div>
                                     <div class="text">
-                                        <h3 class="h4">Project Title</h3><small>Lorem Ipsum Dolor</small>
+                                        <h3 class="h4">Project Title</h3>
+                                        <small>Lorem Ipsum Dolor</small>
                                     </div>
                                 </div>
                                 <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
@@ -226,7 +240,8 @@
                                     <div class="image has-shadow"><img src="img/project-4.jpg" alt="..."
                                                                        class="img-fluid"></div>
                                     <div class="text">
-                                        <h3 class="h4">Project Title</h3><small>Lorem Ipsum Dolor</small>
+                                        <h3 class="h4">Project Title</h3>
+                                        <small>Lorem Ipsum Dolor</small>
                                     </div>
                                 </div>
                                 <div class="project-date"><span class="hidden-sm-down">Today at 4:24 AM</span></div>
@@ -265,7 +280,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h3>Work Hours</h3><small>Lorem ipsum dolor sit amet.</small>
+                                    <h3>Work Hours</h3>
+                                    <small>Lorem ipsum dolor sit amet.</small>
                                     <div class="chart text-center">
                                         <div class="text"><strong>90</strong><br><span>Hours</span></div>
                                         <canvas id="pieChart"></canvas>
@@ -299,9 +315,15 @@
                                     </div>
                                     <div class="client-info">
                                         <div class="row">
-                                            <div class="col-4"><strong>20</strong><br><small>Photos</small></div>
-                                            <div class="col-4"><strong>54</strong><br><small>Videos</small></div>
-                                            <div class="col-4"><strong>235</strong><br><small>Tasks</small></div>
+                                            <div class="col-4"><strong>20</strong><br>
+                                                <small>Photos</small>
+                                            </div>
+                                            <div class="col-4"><strong>54</strong><br>
+                                                <small>Videos</small>
+                                            </div>
+                                            <div class="col-4"><strong>235</strong><br>
+                                                <small>Tasks</small>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="client-social d-flex justify-content-between"><a href="#"
@@ -330,7 +352,8 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h3>Total Overdue</h3><small>Lorem ipsum dolor sit amet.</small>
+                                    <h3>Total Overdue</h3>
+                                    <small>Lorem ipsum dolor sit amet.</small>
                                     <div class="number text-center">$20,000</div>
                                     <div class="chart">
                                         <canvas id="lineChart1"></canvas>
@@ -369,36 +392,51 @@
                                         <div class="image"><img src="img/avatar-1.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
-                                            Aria Smith. </small></div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
+                                            <small>Posted on 5th June 2017 by
+                                                Aria Smith.
+                                            </small>
+                                        </div>
                                     </div>
                                     <div class="item d-flex align-items-center">
                                         <div class="image"><img src="img/avatar-2.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
-                                            Frank Williams. </small></div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
+                                            <small>Posted on 5th June 2017 by
+                                                Frank Williams.
+                                            </small>
+                                        </div>
                                     </div>
                                     <div class="item d-flex align-items-center">
                                         <div class="image"><img src="img/avatar-3.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
-                                            Ashley Wood. </small></div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
+                                            <small>Posted on 5th June 2017 by
+                                                Ashley Wood.
+                                            </small>
+                                        </div>
                                     </div>
                                     <div class="item d-flex align-items-center">
                                         <div class="image"><img src="img/avatar-4.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
-                                            Jason Doe. </small></div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
+                                            <small>Posted on 5th June 2017 by
+                                                Jason Doe.
+                                            </small>
+                                        </div>
                                     </div>
                                     <div class="item d-flex align-items-center">
                                         <div class="image"><img src="img/avatar-5.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
-                                            Sam Martinez. </small></div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
+                                            <small>Posted on 5th June 2017 by
+                                                Sam Martinez.
+                                            </small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -567,11 +605,14 @@
                                                     class="img-fluid rounded-circle"></a>
                                                 <div class="content">
                                                     <h5>Aria Smith</h5><span>Posted a new blog </span>
-                                                    <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small>
+                                                    <div class="full-date">
+                                                        <small>Today 5:60 pm - 12.06.2014</small>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="date text-right"><small>5min ago</small></div>
+                                            <div class="date text-right">
+                                                <small>5min ago</small>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- Item-->
@@ -583,7 +624,8 @@
                                                     class="img-fluid rounded-circle"></a>
                                                 <div class="content">
                                                     <h5>Frank Williams</h5><span>Posted a new blog </span>
-                                                    <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small>
+                                                    <div class="full-date">
+                                                        <small>Today 5:60 pm - 12.06.2014</small>
                                                     </div>
                                                     <div class="CTAs"><a href="#" class="btn btn-xs btn-secondary"><i
                                                             class="fa fa-thumbs-up"> </i>Like</a><a href="#"
@@ -591,7 +633,9 @@
                                                             class="fa fa-heart"> </i>Love </a></div>
                                                 </div>
                                             </div>
-                                            <div class="date text-right"><small>5min ago</small></div>
+                                            <div class="date text-right">
+                                                <small>5min ago</small>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- Item-->
@@ -603,15 +647,21 @@
                                                     class="img-fluid rounded-circle"></a>
                                                 <div class="content">
                                                     <h5>Ashley Wood</h5><span>Posted a new blog </span>
-                                                    <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small>
+                                                    <div class="full-date">
+                                                        <small>Today 5:60 pm - 12.06.2014</small>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="date text-right"><small>5min ago</small></div>
+                                            <div class="date text-right">
+                                                <small>5min ago</small>
+                                            </div>
                                         </div>
-                                        <div class="quote has-shadow"><small>Lorem Ipsum is simply dummy text of the
-                                            printing and typesetting industry. Lorem Ipsum has been the industry's
-                                            standard dummy text ever since the 1500s. Over the years.</small></div>
+                                        <div class="quote has-shadow">
+                                            <small>Lorem Ipsum is simply dummy text of the
+                                                printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy text ever since the 1500s. Over the years.
+                                            </small>
+                                        </div>
                                         <div class="CTAs pull-right"><a href="#" class="btn btn-xs btn-secondary"><i
                                                 class="fa fa-thumbs-up"> </i>Like</a></div>
                                     </div>
@@ -689,21 +739,7 @@
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. <a
-                                    href="http://www.cssmoban.com/" target="_blank" title=""></a>
-                                <a href="http://www.cssmoban.com/" title="" target="_blank"></a></p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>

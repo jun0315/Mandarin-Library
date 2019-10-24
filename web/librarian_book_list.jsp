@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.BookCategory" %>
 <%@ page import="entity.Book" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -7,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Book List</title>
+    <title>Home</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -52,17 +54,18 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Book List</h2>
+                    <h2 class="no-margin-bottom">Librarian List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Book List</li>
+                    <li class="breadcrumb-item active">Librarian List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
+
                 <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
                       name="search" method="post">
                     <input type="text" class="form-control" name="searchAccount"
@@ -77,6 +80,13 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
+                                    <div style="width: 1000px;height: 60px">
+                                        <a href="BookAdd.do">
+                                            <img src="img/addBook.png" style="float: left; length:40px; width:40px;">
+                                            <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
+                                                <strong>Add Book</strong></p>
+                                        </a>
+                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
@@ -88,6 +98,7 @@
                                                 <th>Author</th>
                                                 <th>Category</th>
                                                 <th>Amount</th>
+                                                <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -125,21 +136,16 @@
                                                                         <p>Are you sure want to delete this account?</p>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <button type="button" data-dismiss="modal"
-                                                                                class="btn btn-secondary">Close
-                                                                        </button>
-                                                                        <a href="DeleteBook.do?booknumber=${book.getBookNumber()}">
-                                                                                <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
-                                                                            <button type="button"
-                                                                                    class="btn btn-primary">
-                                                                                Delete
-                                                                            </button>
+                                                                        <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                                                                        <a href="DeleteBook.do?bookNumber=${book.getBookNumber()}">
+                                                                                <%--    <a href="admin.jsp?account=${librarian.getAccount()}">--%>
+                                                                            <button type="button" class="btn btn-primary">Delete</button>
                                                                         </a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <a href="EditBook.do?booknumber=${book.getBookNumber()}">
+                                                        <a href="EditBook.do?bookNumber=${book.getBookNumber()}">
                                                             <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
@@ -157,23 +163,21 @@
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
 
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'delete_error') {
+        alert("There is no category to delete!");
+        window.location.href = "BookList.do";
+    } else if (info == 'delete_success') {
+        alert("Successfully delete!");
+        window.location.href = "BookList.do";
+    }
+</script>
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

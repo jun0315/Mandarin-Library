@@ -67,10 +67,10 @@
                 <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
                       name="search" method="post">
                     <input type="text" class="form-control" name="searchAccount"
-                           placeholder="Please enter the Account of the Librarian">
+                           placeholder="Please enter the account of the administrator who needs to query">
                     <span class="input-group-btn">
-                        <button type="submit" class="btn btn-info btn-search">search</button>
-                    </span>
+                            <button type="submit" class="btn btn-info btn-search">search</button>
+                        </span>
                 </form>
 
                 <div class="container-fluid">
@@ -105,9 +105,11 @@
                                                     <td>${librarian.getName()}</td>
                                                     <td>${librarian.getPhone()}</td>
                                                     <td>
-                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${librarian.getAccount()}"
+                                                        <a href="#myModal_${li.index+1}" data-toggle="modal"
+                                                           value="${librarian.getAccount()}"
                                                            id="lastButton">
-                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
+                                                            <button type="button" class="btn btn-btn-primary"
+                                                                    style="color: white; background-color: rgb(224,79,61)">
                                                                 Delete
                                                             </button>
                                                         </a>
@@ -132,7 +134,7 @@
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
                                                                         <a href="DeleteLibrarian.do?account=${librarian.getAccount()}">
-<%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
+                                                                                <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
                                                                             <button type="button"
                                                                                     class="btn btn-primary">
                                                                                 Delete
@@ -143,7 +145,8 @@
                                                             </div>
                                                         </div>
                                                         <a href="EditLibrarian.do?account=${librarian.getAccount()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
                                                         </a>
@@ -160,18 +163,7 @@
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
@@ -180,9 +172,9 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'found') {
-        alert("Successfully search!");
+        alert("successfully search!");
     } else if (info == 'notFound') {
-        alert("Search failure!");
+        alert("search failure!");
     }
 </script>
 

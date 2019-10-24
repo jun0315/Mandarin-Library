@@ -21,9 +21,6 @@ public class LoginServlet extends HttpServlet {
         //用于保存会话
         HttpSession session = request.getSession();
         request.setCharacterEncoding("UTF-8");
-        //
-        BookCategoryDao dao = new BookCategoryDao();
-        System.out.println(dao.getAreaCode("arts"));
         String account = request.getParameter("account");
         String password = request.getParameter("password");
         dealAccount(request, response, account, password);
@@ -56,12 +53,14 @@ public class LoginServlet extends HttpServlet {
             LibrarianDao librarianDao = new LibrarianDao();
             Librarian librarian = librarianDao.info(account);
             session.setAttribute("name", librarian.getName());
-            session.setAttribute("type",librarian.getType());
+            session.setAttribute("type", librarian.getType());
 
         } else if (userType == UserType.Reader) {
             ReaderDao readerDao = ReaderDao.getInstance();
             Reader reader = readerDao.info(account);
             session.setAttribute("name", reader.getName());
+            session.setAttribute("email", reader.getEmail());
+            session.setAttribute("securityDeposit", reader.getDeposit());
             session.setAttribute("type", reader.getType());
         }
         if (userType != UserType.None) {
