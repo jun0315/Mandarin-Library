@@ -95,7 +95,7 @@
                                                     <td>${notice.getContent()}</td>
                                                     <td>${notice.getPosttime()}</td>
                                                     <td>
-                                                        <a href="xxx.do?id=${notice.getID()}">
+                                                        <a href="EditNotice.do?id=${notice.getID()}">
                                                             <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>

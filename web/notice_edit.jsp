@@ -1,7 +1,13 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: 陈书语
+  Date: 2019/10/24
+  Time: 23:08
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="entity.Librarian" %>
+<%@ page import="entity.Notice" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.BookCategory" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -53,49 +59,49 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Category Edit</h2>
+                    <h2 class="no-margin-bottom">Notice Edit</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Category Edit</li>
+                    <li class="breadcrumb-item active">Notice Edit</li>
                 </ul>
             </div>
             <section class="tables">
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Edit book category and location</p>
-                            <form class="form-horizontal" action="BookCategoryEdit.do" method="post">
-                                <%BookCategory bookCategory = (BookCategory) request.getAttribute("bookCategory");%>
+                            <p>Edit Notice</p>
+                            <form class="form-horizontal" action="EditNotice.do" method="post">
+                                <%Notice notice = (Notice) request.getAttribute("notice");%>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Category</label>
+                                    <label class="col-sm-3 form-control-label">ID</label>
                                     <div class="col-sm-9">
-                                        <input type="hidden" name="preCategory" value="<%=bookCategory.getCategory()%>">
-                                        <input id="inputHorizontalWarning" name="category"
-                                               value="<%=bookCategory.getCategory()%>"
+                                        <input type="hidden" name="preid" value="<%=notice.getID()%>">
+                                        <input id="inputHorizontalWarning" name="notice"
+                                               value="<%=notice.getID()%>"
                                                class="form-control form-control-warning">
                                         <%--  <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Floor</label>
+                                    <label class="col-sm-3 form-control-label">Topic</label>
                                     <div class="col-sm-9">
-                                        <input type="hidden" name="preFloor" value="<%=bookCategory.getFloor()%>">
-                                        <input id="inputHorizontalWarning" name="floor"
-                                               value="<%=bookCategory.getFloor()%>"
+                                        <input type="hidden" name="preTopic" value="<%=notice.getTopic()%>">
+                                        <input id="inputHorizontalWarning" name="topic"
+                                               value="<%=notice.getTopic()%>"
                                                class="form-control form-control-warning">
                                         <%-- <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Shelf</label>
+                                    <label class="col-sm-3 form-control-label">Content</label>
                                     <div class="col-sm-9">
-                                        <input type="hidden" name="preShelf" value="<%=bookCategory.getShelf()%>">
-                                        <input id="inputHorizontalWarning" name="shelf"
-                                               value="<%=bookCategory.getShelf()%>"
+                                        <input type="hidden" name="preShelf" value="<%=notice.getContent()%>">
+                                        <input id="inputHorizontalWarning" name="content"
+                                               value="<%=notice.getContent()%>"
                                                class="form-control form-control-warning">
                                         <%-- <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -121,10 +127,10 @@
     var info = '<%=request.getParameter("info")%>';
     if (info == 'success') {
         alert("successfully edit!");
-        window.location.href = "BookCategoryList.do";
+        window.location.href = "NoticeList.do";
     } else if (info == 'error') {
         alert("edit failure!");
-        window.location.href = "BookCategoryList.do";
+        window.location.href = "NoticeList.do";
     }
 </script>
 
