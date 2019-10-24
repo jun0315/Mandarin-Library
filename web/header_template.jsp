@@ -13,8 +13,9 @@
             <div class="navbar-holder d-flex align-items-center justify-content-between">
                 <!-- Navbar Header-->
                 <div class="navbar-header">
-                    <!-- Navbar Brand --><a href="index.html" class="navbar-brand d-none d-sm-inline-block">
-                    <div class="brand-text d-none d-lg-inline-block"><span>Mandarin </span><strong>Library</strong>
+                    <!-- Navbar Brand --><a href="index.jsp" class="navbar-brand d-none d-sm-inline-block">
+                    <div class="brand-text d-none d-lg-inline-block">
+                        <span>Mandarin-</span><strong>Library</strong><span style="margin-left: 10px;">Automation</span>
                     </div>
                     <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
                 </a>
@@ -24,8 +25,12 @@
                 <!-- Navbar Menu -->
                 <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                     <!-- Logout    -->
-                    <li class="nav-item"><a href="logout" class="nav-link logout"> <span
-                            class="d-none d-sm-inline">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                    <li class="nav-item">
+                        <a href="logout" class="nav-link logout">
+                            <span class="d-none d-sm-inline" style="font-size: larger">Logout</span>
+                            <i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

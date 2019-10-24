@@ -17,13 +17,8 @@ public class ReaderDeleteServlet extends HttpServlet{
 
         String account = (String) request.getParameter("account");
         ReaderDao readerDao = new ReaderDao();
-        boolean exist = readerDao.isExistInDB(account);
-        if (!exist) {
-            response.sendRedirect("reader_list.jsp?info=delete_error");
-        } else {
-            readerDao.deleteReader(account);
-            response.sendRedirect("reader_list.jsp?info=delete_success");
-        }
+        readerDao.deleteReader(account);
+        request.getRequestDispatcher("reader_list.jsp?info=delete_success").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

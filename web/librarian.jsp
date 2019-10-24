@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Librarian</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -38,21 +38,24 @@
         <!-- Side Navbar -->
         <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
-            <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Dashboard</h2>
+                    <h2 class="no-margin-bottom">Home</h2>
                 </div>
             </header>
-            <!-- Dashboard Counts Section-->
+
+            <!-- Page Header-->
             <section class="dashboard-counts no-padding-bottom">
                 <div class="container-fluid">
                     <div class="row bg-white has-shadow">
+                        <div class="col-xl-3 col-sm-6">
+                            <img src="img/logo.png" style="margin-top: 0px; margin-left: 10px" height="90%" width="80%">
+                        </div>
                         <!-- Item -->
                         <div class="col-xl-3 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-violet"><i class="icon-user"></i></div>
-                                <div class="title"><span>New<br>Clients</span>
+                                <div class="title"><span>New<br>Readers</span>
                                     <div class="progress">
                                         <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25"
                                              aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
@@ -65,26 +68,26 @@
                         <div class="col-xl-3 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                                <div class="title"><span>Work<br>Orders</span>
+                                <div class="title"><span>Borrow<br>Businesses</span>
                                     <div class="progress">
-                                        <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="70"
+                                        <div role="progressbar" style="width: 13%; height: 4px;" aria-valuenow="13"
                                              aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
                                     </div>
                                 </div>
-                                <div class="number"><strong>70</strong></div>
+                                <div class="number"><strong>13</strong></div>
                             </div>
                         </div>
                         <!-- Item -->
                         <div class="col-xl-3 col-sm-6">
                             <div class="item d-flex align-items-center">
                                 <div class="icon bg-green"><i class="icon-bill"></i></div>
-                                <div class="title"><span>New<br>Invoices</span>
+                                <div class="title"><span>Borrowed<br>Books</span>
                                     <div class="progress">
-                                        <div role="progressbar" style="width: 40%; height: 4px;" aria-valuenow="40"
-                                             aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
+                                        <div role="progressbar" style="width: 41%; height: 4px;" aria-valuenow="410"
+                                             aria-valuemin="0" aria-valuemax="1000" class="progress-bar bg-green"></div>
                                     </div>
                                 </div>
-                                <div class="number"><strong>40</strong></div>
+                                <div class="number"><strong>410</strong></div>
                             </div>
                         </div>
                         <!-- Item -->
@@ -284,8 +287,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h3>Work Hours</h3>
-                                    <small>Lorem ipsum dolor sit amet.</small>
+                                    <h3>Work Hours</h3><small>Lorem ipsum dolor sit amet.</small>
                                     <div class="chart text-center">
                                         <div class="text"><strong>90</strong><br><span>Hours</span></div>
                                         <canvas id="pieChart"></canvas>
@@ -319,15 +321,9 @@
                                     </div>
                                     <div class="client-info">
                                         <div class="row">
-                                            <div class="col-4"><strong>20</strong><br>
-                                                <small>Photos</small>
-                                            </div>
-                                            <div class="col-4"><strong>54</strong><br>
-                                                <small>Videos</small>
-                                            </div>
-                                            <div class="col-4"><strong>235</strong><br>
-                                                <small>Tasks</small>
-                                            </div>
+                                            <div class="col-4"><strong>20</strong><br><small>Photos</small></div>
+                                            <div class="col-4"><strong>54</strong><br><small>Videos</small></div>
+                                            <div class="col-4"><strong>235</strong><br><small>Tasks</small></div>
                                         </div>
                                     </div>
                                     <div class="client-social d-flex justify-content-between"><a href="#"
@@ -356,8 +352,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <h3>Total Overdue</h3>
-                                    <small>Lorem ipsum dolor sit amet.</small>
+                                    <h3>Total Overdue</h3><small>Lorem ipsum dolor sit amet.</small>
                                     <div class="number text-center">$20,000</div>
                                     <div class="chart">
                                         <canvas id="lineChart1"></canvas>
@@ -396,51 +391,36 @@
                                         <div class="image"><img src="img/avatar-1.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
-                                            <small>Posted on 5th June 2017 by
-                                                Aria Smith.
-                                            </small>
-                                        </div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
+                                            Aria Smith. </small></div>
                                     </div>
                                     <div class="item d-flex align-items-center">
                                         <div class="image"><img src="img/avatar-2.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
-                                            <small>Posted on 5th June 2017 by
-                                                Frank Williams.
-                                            </small>
-                                        </div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
+                                            Frank Williams. </small></div>
                                     </div>
                                     <div class="item d-flex align-items-center">
                                         <div class="image"><img src="img/avatar-3.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
-                                            <small>Posted on 5th June 2017 by
-                                                Ashley Wood.
-                                            </small>
-                                        </div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
+                                            Ashley Wood. </small></div>
                                     </div>
                                     <div class="item d-flex align-items-center">
                                         <div class="image"><img src="img/avatar-4.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
-                                            <small>Posted on 5th June 2017 by
-                                                Jason Doe.
-                                            </small>
-                                        </div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
+                                            Jason Doe. </small></div>
                                     </div>
                                     <div class="item d-flex align-items-center">
                                         <div class="image"><img src="img/avatar-5.jpg" alt="..."
                                                                 class="img-fluid rounded-circle"></div>
                                         <div class="text"><a href="#">
-                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a>
-                                            <small>Posted on 5th June 2017 by
-                                                Sam Martinez.
-                                            </small>
-                                        </div>
+                                            <h3 class="h5">Lorem Ipsum Dolor</h3></a><small>Posted on 5th June 2017 by
+                                            Sam Martinez. </small></div>
                                     </div>
                                 </div>
                             </div>
@@ -495,6 +475,7 @@
                                             elit.</label>
                                     </div>
                                 </div>
+                                <div class="number"><strong>210</strong></div>
                             </div>
                         </div>
                     </div>
@@ -609,14 +590,11 @@
                                                     class="img-fluid rounded-circle"></a>
                                                 <div class="content">
                                                     <h5>Aria Smith</h5><span>Posted a new blog </span>
-                                                    <div class="full-date">
-                                                        <small>Today 5:60 pm - 12.06.2014</small>
+                                                    <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="date text-right">
-                                                <small>5min ago</small>
-                                            </div>
+                                            <div class="date text-right"><small>5min ago</small></div>
                                         </div>
                                     </div>
                                     <!-- Item-->
@@ -628,8 +606,7 @@
                                                     class="img-fluid rounded-circle"></a>
                                                 <div class="content">
                                                     <h5>Frank Williams</h5><span>Posted a new blog </span>
-                                                    <div class="full-date">
-                                                        <small>Today 5:60 pm - 12.06.2014</small>
+                                                    <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small>
                                                     </div>
                                                     <div class="CTAs"><a href="#" class="btn btn-xs btn-secondary"><i
                                                             class="fa fa-thumbs-up"> </i>Like</a><a href="#"
@@ -637,9 +614,7 @@
                                                             class="fa fa-heart"> </i>Love </a></div>
                                                 </div>
                                             </div>
-                                            <div class="date text-right">
-                                                <small>5min ago</small>
-                                            </div>
+                                            <div class="date text-right"><small>5min ago</small></div>
                                         </div>
                                     </div>
                                     <!-- Item-->
@@ -651,21 +626,15 @@
                                                     class="img-fluid rounded-circle"></a>
                                                 <div class="content">
                                                     <h5>Ashley Wood</h5><span>Posted a new blog </span>
-                                                    <div class="full-date">
-                                                        <small>Today 5:60 pm - 12.06.2014</small>
+                                                    <div class="full-date"><small>Today 5:60 pm - 12.06.2014</small>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="date text-right">
-                                                <small>5min ago</small>
-                                            </div>
+                                            <div class="date text-right"><small>5min ago</small></div>
                                         </div>
-                                        <div class="quote has-shadow">
-                                            <small>Lorem Ipsum is simply dummy text of the
-                                                printing and typesetting industry. Lorem Ipsum has been the industry's
-                                                standard dummy text ever since the 1500s. Over the years.
-                                            </small>
-                                        </div>
+                                        <div class="quote has-shadow"><small>Lorem Ipsum is simply dummy text of the
+                                            printing and typesetting industry. Lorem Ipsum has been the industry's
+                                            standard dummy text ever since the 1500s. Over the years.</small></div>
                                         <div class="CTAs pull-right"><a href="#" class="btn btn-xs btn-secondary"><i
                                                 class="fa fa-thumbs-up"> </i>Like</a></div>
                                     </div>
@@ -743,21 +712,7 @@
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. <a
-                                    href="http://www.cssmoban.com/" target="_blank" title=""></a>
-                                <a href="http://www.cssmoban.com/" title="" target="_blank"></a></p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
