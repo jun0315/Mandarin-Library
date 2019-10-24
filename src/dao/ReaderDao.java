@@ -168,4 +168,19 @@ public class ReaderDao {
         }
         return user_email;
     }
+
+    public void editPasswordByEmail(String account, String password) {
+        try {
+            //TODO BUG 修改reader后 再reader-borrow中当作外键 没办法修改
+            String sql = "update reader set user_password=? where user_account=? ";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, password);
+            ps.setString(2, account);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection, ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

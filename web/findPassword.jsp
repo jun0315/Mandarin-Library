@@ -25,10 +25,13 @@
             <div class="logo_box">
                 <h3>Input your account,and we will send to your email</h3>
                 <form action="ForgetPassword.do" name="f" method="post">
+                    <%String account = (String)request.getParameter("account");
+                        System.out.println(account);
+                    %>
                     <div class="input_outer">
                         <span class="u_user"></span>
                         <input name="account" class="text" style="color: #FFFFFF !important" type="text"
-                               placeholder="Your account">
+                               value="<%=account%>" readonly>
                     </div>
                     <div class="input_outer">
                         <span class="u_user"></span>
@@ -45,13 +48,7 @@
         </div>
     </div>
 </div><!-- /container -->
-<%
-    session = request.getSession();
-    String account = (String) session.getAttribute("account");
-    if (account != null) {
-        response.sendRedirect("login");
-    }
-%>
+
 <script>
     var error = '<%=request.getParameter("error")%>';
     if (error == 'yes') {

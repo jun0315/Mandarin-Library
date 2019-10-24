@@ -6,12 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/findPassword.jsp" afterDir="false" />
+    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="done fix small">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReaderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/forget.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/FindReaderPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FindReaderPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/findPassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/findPassword.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -473,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571929245168</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="small fix forgetpwd">
+      <created>1571929610351</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1571929610351</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,7 +536,8 @@
     <MESSAGE value="ready to merge" />
     <MESSAGE value="complete delete book" />
     <MESSAGE value="ready to retire psw" />
-    <option name="LAST_COMMIT_MESSAGE" value="ready to retire psw" />
+    <MESSAGE value="small fix forgetpwd" />
+    <option name="LAST_COMMIT_MESSAGE" value="small fix forgetpwd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -717,6 +726,31 @@
           <url>file://$PROJECT_DIR$/src/dao/BookDao.java</url>
           <line>158</line>
           <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/utils/FindReaderPassword.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/ReaderDao.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

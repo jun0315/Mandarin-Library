@@ -63,8 +63,12 @@
     }
     var forget = '<%=request.getParameter("forget")%>';
     if (forget == 'yes') {
-        alert("We have send a email and you can retire your password");
-    }</script>
+        alert("We have send a email and you can retire your password!");
+    }
+    if(forget=='done'){
+        alert("You have successfully changed your password!");
+    }
+</script>
 <script src="js/TweenLite.min.js"></script>
 <script src="js/EasePack.min.js"></script>
 <script src="js/rAF.js"></script>
