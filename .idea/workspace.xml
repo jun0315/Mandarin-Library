@@ -6,11 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="update notice function">
+    <list default="true" id="c89e4f51-b4b3-4348-837b-f9b966f0aa9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/notice_edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/NoticeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/notice_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/notice_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="jsf" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -472,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571922297422</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="edit function">
+      <created>1571928968960</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1571928968960</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +531,9 @@
     <MESSAGE value="add book 测试完成" />
     <MESSAGE value="book list small modify" />
     <MESSAGE value="初步修改书籍" />
-    <option name="LAST_COMMIT_MESSAGE" value="初步修改书籍" />
+    <MESSAGE value="update notice function" />
+    <MESSAGE value="edit function" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
