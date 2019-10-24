@@ -291,5 +291,13 @@
         <servlet-name>BookDetail</servlet-name>
         <url-pattern>/BookDetail.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>forgetpassword</servlet-name>
+        <servlet-class>servlet.ForgetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>forgetpassword</servlet-name>
+        <url-pattern>/ForgetPassword.do</url-pattern>
+    </servlet-mapping>
 <!--    end -->
 </web-app>

@@ -7,11 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/forget.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/findPassword.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/forget.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/forget.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -466,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571926417123</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="ready to retire psw">
+      <created>1571929245168</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1571929245168</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +527,8 @@
     <MESSAGE value="book list small modify" />
     <MESSAGE value="ready to merge" />
     <MESSAGE value="complete delete book" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete delete book" />
+    <MESSAGE value="ready to retire psw" />
+    <option name="LAST_COMMIT_MESSAGE" value="ready to retire psw" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

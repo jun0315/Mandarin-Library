@@ -30,6 +30,11 @@
                         <input name="account" class="text" style="color: #FFFFFF !important" type="text"
                                placeholder="Your account">
                     </div>
+                    <div class="input_outer">
+                        <span class="u_user"></span>
+                        <input name="password" class="text" style="color: #FFFFFF !important" type="text"
+                               placeholder="Your New password">
+                    </div>
                     <div class="mb2">
                         <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px">
                             send email
