@@ -44,10 +44,11 @@
         tag = 3;
     }
 
-    String[] Notice = {
-            "/.jsp",
+    String[] NoticeEdit = {
+            "/notice_list.jsp",
+            "/notice_post.jsp",
     };
-    boolean isContains4 = Arrays.asList(Notice).contains(path);
+    boolean isContains4 = Arrays.asList(NoticeEdit).contains(path);
     if(isContains4){
         tag = 4;
     }
@@ -105,8 +106,8 @@
         <li><a href="#NoticeEdit" aria-expanded="${ tag eq 4 ? "true" : "false" }" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i>Notice</a>
             <ul id="NoticeEdit" class="${ tag eq 4 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="#">Notice List</a></li>
-                <li><a href="#">Post Notice</a></li>
+                <li><a href="NoticeList.do">Notice List</a></li>
+                <li><a href="NoticePost.do">Post Notice</a></li>
             </ul>
         </li>
     </ul>
