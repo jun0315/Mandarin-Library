@@ -62,6 +62,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("email", reader.getEmail());
             session.setAttribute("securityDeposit", reader.getDeposit());
             session.setAttribute("type", reader.getType());
+            session.setAttribute("registerTime",reader.getRegister_time());
         }
         if (userType != UserType.None) {
 
