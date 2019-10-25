@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="dao.ReaderDao" %>
+<%@ page import="dao.LibrarianDao" %>
 
 <%
     String path = request.getServletPath();
@@ -63,10 +65,18 @@
         <div class="title">
             <h1 class="h4">
                 <%
-                    String account = (String) session.getAttribute("name");
-                    out.println(account);
+                    String account = (String) session.getAttribute("account");
+                    LibrarianDao librarianDao = new LibrarianDao();
+                    String name = (String) librarianDao.info(account).getName();
+                    out.println(name);
                 %>
             </h1>
+            <p>
+                <%
+                    String user_type = (String) librarianDao.info(account).getType();
+                    out.println(user_type);
+                %>
+            </p>
         </div>
     </div>
     <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
