@@ -5,6 +5,10 @@
   Time: 18:44
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.List" %>
+<%@ page import="entity.Notice" %>
+<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -137,11 +141,46 @@
         </div>
     </div>
 
-    <div class="" style="margin-top: 40px;">
-        <h1>这里是Notice。</h1>
+    <div class="">
+        <section class="tables" style="padding: 20px">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Topic</th>
+                                            <th>Content</th>
+                                            <th>PostTime</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>
+                                        <c:forEach items="${notices}" var="notice" varStatus="li">
+                                            <tr>
+                                                <td>${notice.getID()}</td>
+                                                <td>${notice.getTopic()}</td>
+                                                <td>${notice.getContent()}</td>
+                                                <td>${notice.getPosttime()}</td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <jsp:include page="footer.jsp" flush="true"></jsp:include>
+
 </div>
+<jsp:include page="footer.jsp" flush="true"></jsp:include>
 </body>
 </html>

@@ -63,7 +63,7 @@
         <div class="title">
             <h1 class="h4">
                 <%
-                    String account = (String) session.getAttribute("account");
+                    String account = (String) session.getAttribute("name");
                     out.println(account);
                 %>
             </h1>
@@ -95,10 +95,8 @@
                 class="icon-interface-windows"></i><strong>Record Query</strong></a>
             <ul id="RecordQuery" class="${ tag eq 3 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="#"><strong>Reader History</strong></a></li>
-                <li><a href="#"><strong>Book Deletion</strong></a></li>
-                <li><a href="#"><strong>Total Deposit</strong></a></li>
-                <li><a href="#"><strong>Total Fine</strong></a></li>
-
+                <li><a href="BookDeletedList.do"><strong>Book Deletion</strong></a></li>
+                <li><a href="IncomeHistory.do"><strong>Income History</strong></a></li>
             </ul>
         </li>
         <li><a href="#NoticeEdit" aria-expanded="${ tag eq 4 ? "true" : "false" }" data-toggle="collapse"> <i

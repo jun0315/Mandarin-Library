@@ -8,6 +8,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.ReaderBorrow" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.sql.Date" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -265,6 +266,15 @@
                                                     <%
                                                         int securityDeposit = (int) session.getAttribute("securityDeposit");
                                                         out.println(securityDeposit);
+                                                    %>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Register Time</th>
+                                                <td>
+                                                    <%
+                                                        Date registerTime = (Date) session.getAttribute("registerTime");
+                                                        out.println(registerTime.toString());
                                                     %>
                                                 </td>
                                             </tr>

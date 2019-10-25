@@ -1,7 +1,9 @@
 package servlet;
 
 import dao.BookDao;
-import dao.LibrarianDao;
+import dao.BookDeleteDao;
+import entity.Book;
+import entity.BookDelete;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,21 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(name = "BookDeleteServlet")
-public class BookDeleteServlet extends HttpServlet {
+@WebServlet(name = "BookDeletedListServlet")
+public class BookDeletedListServlet extends HttpServlet {
+    BookDeleteDao bookDeleteDao=new BookDeleteDao();
+
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=utf-8");
-        String bookNumber = (String) request.getParameter("bookCpoyID");
- 
-        BookDao bookDao = new BookDao();
-        bookDao.deleteBook(bookNumber);
-        request.getRequestDispatcher("librarian_book_list.jsp?info=delete_success").forward(request, response);
+        List<BookDelete> bookDeletes=BookDeleteDao.getBookDeletes();
+        request.setAttribute("bookDeletes",bookDeletes);
+        request.getRequestDispatcher("book_delete_list.jsp").forward(request, response);
     }
 }

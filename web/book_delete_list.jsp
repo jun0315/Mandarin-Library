@@ -1,13 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 陈书语
-  Date: 2019/10/23
-  Time: 22:18
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.Notice" %>
+<%@ page import="entity.BookCategory" %>
+<%@ page import="entity.Book" %>
+<%@ page import="entity.BookDelete" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -59,17 +55,27 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Notice List</h2>
+                    <h2 class="no-margin-bottom">Book Deleted List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Notice List</li>
+                    <li class="breadcrumb-item active">Book Deleted List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
+                    //先不刪
+                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
+                      name="search" method="post">
+                    <input type="text" class="form-control" name="searchAccount"
+                           placeholder="Please enter the account of the administrator who needs to query">
+                    <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info btn-search">search</button>
+                        </span>
+                </form>
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -79,28 +85,18 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>ID</th>
-                                                <th>Topic</th>
-                                                <th>Content</th>
-                                                <th>PostTime</th>
-                                                <th>Operation</th>
+                                                <th>Book Number</th>
+                                                <th>Deleted Time</th>
+                                                <th>Staff ID</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>
-                                            <c:forEach items="${notices}" var="notice" varStatus="li">
+                                            <%List<BookDelete> bookDeletes = (List<BookDelete>) request.getAttribute("bookDeletes");%>
+                                            <c:forEach items="${bookDeletes}" var="bookDelete" varStatus="li">
                                                 <tr>
-                                                    <td>${notice.getID()}</td>
-                                                    <td>${notice.getTopic()}</td>
-                                                    <td>${notice.getContent()}</td>
-                                                    <td>${notice.getPosttime()}</td>
-                                                    <td>
-                                                        <a href="EditNotice.do?id=${notice.getID()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
-                                                                Edit
-                                                            </button>
-                                                        </a>
-                                                    </td>
+                                                    <td>${bookDelete.getCopy_id()}</td>
+                                                    <td>${bookDelete.getDelete_time()}</td>
+                                                    <td>${bookDelete.getStaff_id()}</td>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>

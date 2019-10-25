@@ -60,9 +60,9 @@
         <url-pattern>/ReaderSearchServlet</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>BookCategoryAdd</servlet-name>
-        <servlet-class>servlet.BookCategoryAddServlet</servlet-class>
-    </servlet>
+    <servlet-name>BookCategoryAdd</servlet-name>
+    <servlet-class>servlet.BookCategoryAddServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>BookCategoryAdd</servlet-name>
         <url-pattern>/BookCategoryAdd.do</url-pattern>
@@ -90,6 +90,14 @@
     <servlet-mapping>
         <servlet-name>BookAdd</servlet-name>
         <url-pattern>/BookAdd.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VisitorSearch</servlet-name>
+        <servlet-class>servlet.VisitorSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitorSearch</servlet-name>
+        <url-pattern>/VisitorSearch.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>DeleteBook</servlet-name>
@@ -138,6 +146,14 @@
     <servlet-mapping>
         <servlet-name>AdminChangeSettingsServlet</servlet-name>
         <url-pattern>/AdminChangeSettingsServlet.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>BookDeletedList</servlet-name>
+        <servlet-class>servlet.BookDeletedListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookDeletedList</servlet-name>
+        <url-pattern>/BookDeletedList.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>AddBookByISBN</servlet-name>
@@ -271,6 +287,7 @@
         <servlet-name>DeleteNotice</servlet-name>
         <url-pattern>/DeleteNotice.do</url-pattern>
     </servlet-mapping>
+
     <servlet>
         <servlet-name>EditNotice</servlet-name>
         <servlet-class>servlet.NoticeEditServlet</servlet-class>
@@ -299,5 +316,14 @@
         <servlet-name>forgetpassword</servlet-name>
         <url-pattern>/ForgetPassword.do</url-pattern>
     </servlet-mapping>
-<!--    end -->
+    <servlet>
+        <servlet-name>IncomeHistory</servlet-name>
+        <servlet-class>servlet.IncomeHistoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncomeHistory</servlet-name>
+        <url-pattern>/IncomeHistory.do</url-pattern>
+    </servlet-mapping>
+
+    <!--    end -->
 </web-app>

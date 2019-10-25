@@ -1,13 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
-  User: 陈书语
-  Date: 2019/10/23
-  Time: 22:18
+  User: 刘威
+  Date: 2019/10/24
+  Time: 18:50
   To change this template use File | Settings | File Templates.
 --%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="entity.ReaderBorrow" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.Notice" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -35,20 +36,8 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-
-    <script src="js/dialogue.js"></script>
-
-    <%--    <script type="text/javascript">--%>
-    <%--        function deleteClick() {--%>
-    <%--            var con;--%>
-    <%--            con = confirm("Are you sure you want to delete?\n");--%>
-    <%--            if(con==true) {--%>
-    <%--                window.location.href("index.jsp");--%>
-    <%--            }--%>
-    <%--        }--%>
-    <%--    </script>--%>
 </head>
-<body>
+
 <div class="page">
     <!-- Main Navbar-->
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
@@ -59,14 +48,14 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Notice List</h2>
+                    <h2 class="no-margin-bottom">View Librarian Income History</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Notice List</li>
+                    <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
+                    <li class="breadcrumb-item active">View Income History</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
@@ -79,30 +68,37 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>ID</th>
-                                                <th>Topic</th>
-                                                <th>Content</th>
-                                                <th>PostTime</th>
-                                                <th>Operation</th>
+                                                <th>Income From Fine</th>
+                                                <th></th>
+                                                <th>Income From Deposit</th>
+                                                <th></th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>
-                                            <c:forEach items="${notices}" var="notice" varStatus="li">
                                                 <tr>
-                                                    <td>${notice.getID()}</td>
-                                                    <td>${notice.getTopic()}</td>
-                                                    <td>${notice.getContent()}</td>
-                                                    <td>${notice.getPosttime()}</td>
-                                                    <td>
-                                                        <a href="EditNotice.do?id=${notice.getID()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
-                                                                Edit
-                                                            </button>
-                                                        </a>
-                                                    </td>
+                                                    <th>Today</th>
+                                                    <td>${todayFine}</td>
+                                                    <th>Today</th>
+                                                    <td>${todayDeposit}</td>
                                                 </tr>
-                                            </c:forEach>
+                                                <tr>
+                                                    <th>This Week</th>
+                                                    <td>${weekFine}</td>
+                                                    <th>This Week</th>
+                                                    <td>${weekDeposit}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>This Month</th>
+                                                    <td>${monthFine}</td>
+                                                    <th>This Month</th>
+                                                    <td>${monthDeposit}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Total Fine</th>
+                                                    <td>${totalFine}</td>
+                                                    <th>Total Deposit</th>
+                                                    <td>${totalDeposit}</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -112,12 +108,11 @@
                     </div>
                 </div>
             </section>
-            <!-- Page Footer-->
             <footer class="main-footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
+                            <p>Copyright &copy; 2019.Company name All rights reserved.More Templates test</p>
                         </div>
                         <div class="col-sm-6 text-right">
                             <p></p>
@@ -130,7 +125,6 @@
     </div>
 </div>
 
-
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
@@ -138,9 +132,9 @@
 <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
 <script src="vendor/chart.js/Chart.min.js"></script>
 <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-<script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
 
 </body>
 </html>
+

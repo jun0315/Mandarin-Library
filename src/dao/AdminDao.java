@@ -11,6 +11,7 @@ import java.sql.Statement;
 
 public class AdminDao {
     //通过account返回admin实体
+
     public Admin info(String account) {
 
         Admin admin = new Admin();

@@ -1,13 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: 陈书语
-  Date: 2019/10/23
-  Time: 22:18
+  Date: 2019/10/24
+  Time: 23:08
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="java.util.List" %>
 <%@ page import="entity.Notice" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -59,76 +59,79 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Notice List</h2>
+                    <h2 class="no-margin-bottom">Notice Edit</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Notice List</li>
+                    <li class="breadcrumb-item active">Notice Edit</li>
                 </ul>
             </div>
-            <section class="tables" style="padding: 20px">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Topic</th>
-                                                <th>Content</th>
-                                                <th>PostTime</th>
-                                                <th>Operation</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>
-                                            <c:forEach items="${notices}" var="notice" varStatus="li">
-                                                <tr>
-                                                    <td>${notice.getID()}</td>
-                                                    <td>${notice.getTopic()}</td>
-                                                    <td>${notice.getContent()}</td>
-                                                    <td>${notice.getPosttime()}</td>
-                                                    <td>
-                                                        <a href="EditNotice.do?id=${notice.getID()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
-                                                                Edit
-                                                            </button>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </c:forEach>
-                                            </tbody>
-                                        </table>
+            <section class="tables">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Edit Notice</p>
+                            <form class="form-horizontal" action="EditNotice.do" method="post">
+                                <%Notice notice = (Notice) request.getAttribute("notice");%>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">ID</label>
+                                    <div class="col-sm-9">
+                                        <input type="hidden" name="preid" value="<%=notice.getID()%>">
+                                        <input id="inputHorizontalWarning" name="id"
+                                               value="<%=notice.getID()%>"
+                                               class="form-control form-control-warning">
+                                        <%--  <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Topic</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="topic"
+                                               value="<%=notice.getTopic()%>"
+                                               class="form-control form-control-warning">
+                                        <%-- <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Content</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="content"
+                                               value="<%=notice.getContent()%>"
+                                               class="form-control form-control-warning">
+                                        <%-- <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-9 offset-sm-3">
+                                        <input type="submit" value="Done" class="btn btn-primary">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
+
+
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'success') {
+        alert("successfully edit!");
+        window.location.href = "NoticeList.do";
+    } else if (info == 'error') {
+        alert("edit failure!");
+        window.location.href = "NoticeList.do";
+    }
+</script>
+
 
 
 <!-- JavaScript files-->
