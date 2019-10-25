@@ -5,6 +5,10 @@
   Time: 18:44
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.List" %>
+<%@ page import="entity.Notice" %>
+<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -82,7 +86,36 @@
 <body>
 <div class="page">
     <!-- Main Navbar-->
-    <jsp:include page="header_template.jsp" flush="true"></jsp:include>
+    <header class="header">
+        <nav class="navbar">
+            <!-- Search Box-->
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <!-- Navbar Header-->
+                    <div class="navbar-header">
+                        <!-- Navbar Brand --><a href="index.jsp" class="navbar-brand d-none d-sm-inline-block">
+                        <div class="brand-text d-none d-lg-inline-block">
+                            <span>Mandarin-</span><strong>Library</strong><span style="margin-left: 10px;">Automation</span>
+                        </div>
+                        <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
+                    </a>
+                        <!-- Toggle Button--><a id="toggle-btn" href="#"
+                                                class="menu-btn active"><span></span><span></span><span></span></a>
+                    </div>
+                    <!-- Navbar Menu -->
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Logout    -->
+                        <li class="nav-item">
+                            <a href="login" class="nav-link logout">
+                                <span class="d-none d-sm-inline" style="font-size: larger">Login</span>
+                                <i class="fa fa-sign-out"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <div class="effect1">
         <span style="position: absolute; left: 38%;">
             <img src="img/logo.png" style="margin-top: 30px; ">
@@ -108,8 +141,42 @@
         </div>
     </div>
 
-    <div class="" style="margin-top: 40px;">
-        <h1>这里是Notice。</h1>
+    <div class="">
+        <section class="tables" style="padding: 20px">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Topic</th>
+                                            <th>Content</th>
+                                            <th>PostTime</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>
+                                        <c:forEach items="${notices}" var="notice" varStatus="li">
+                                            <tr>
+                                                <td>${notice.getID()}</td>
+                                                <td>${notice.getTopic()}</td>
+                                                <td>${notice.getContent()}</td>
+                                                <td>${notice.getPosttime()}</td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <jsp:include page="footer.jsp" flush="true"></jsp:include>

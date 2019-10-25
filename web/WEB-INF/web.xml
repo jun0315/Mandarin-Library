@@ -149,7 +149,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>AddBookByISBN</servlet-name>
-        <servlet-class>servlet.BookAddByISBNSrvelet</servlet-class>
+        <servlet-class>servlet.BookAddByISBNS2rvelet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddBookByISBN</servlet-name>
@@ -158,7 +158,7 @@
     <servlet>
         <servlet-name>EditReader</servlet-name>
         <servlet-class>servlet.ReaderEditServlet</servlet-class>
-        </servlet>
+    </servlet>
     <servlet-mapping>
         <servlet-name>EditReader</servlet-name>
         <url-pattern>/ReaderEdit.do</url-pattern>
@@ -316,6 +316,21 @@
         <servlet-name>IncomeHistory</servlet-name>
         <url-pattern>/IncomeHistory.do</url-pattern>
     </servlet-mapping>
-
+    <servlet>
+        <servlet-name>HomePageNotice</servlet-name>
+        <servlet-class>servlet.HomePageLNoticeListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomePageNotice</servlet-name>
+        <url-pattern>/homePage.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VisitorSearch</servlet-name>
+        <servlet-class>servlet.VisitorSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitorSearch</servlet-name>
+        <url-pattern>/VisitorSearch.do</url-pattern>
+    </servlet-mapping>
     <!--    end -->
 </web-app>

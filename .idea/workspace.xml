@@ -6,10 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="done fix small">
+    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="small modify income function">
+      <change afterPath="$PROJECT_DIR$/src/servlet/HomePageLNoticeListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/effect_homepage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/homePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/visitor_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/visitor_search.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +52,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -61,6 +65,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\大学\web\library - test\web\img" />
+      <recent name="H:\大学\web\library - test\web\css" />
       <recent name="D:\Code\BilobiliLibrary\lib" />
     </key>
   </component>
@@ -330,7 +336,8 @@
       <workItem from="1571813515042" duration="1441000" />
       <workItem from="1571818103743" duration="16991000" />
       <workItem from="1571925327831" duration="74000" />
-      <workItem from="1571965080468" duration="794000" />
+      <workItem from="1571965080468" duration="5344000" />
+      <workItem from="1571971022834" duration="1196000" />
     </task>
     <task id="LOCAL-00001" summary="更新.gitignore">
       <created>1569579494657</created>
@@ -479,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571929610351</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="small modify income function">
+      <created>1571965892749</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1571965892749</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +549,8 @@
     <MESSAGE value="complete delete book" />
     <MESSAGE value="ready to retire psw" />
     <MESSAGE value="small fix forgetpwd" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fix forgetpwd" />
+    <MESSAGE value="small modify income function" />
+    <option name="LAST_COMMIT_MESSAGE" value="small modify income function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -779,6 +794,41 @@
           <url>file://$PROJECT_DIR$/src/entity/Reader.java</url>
           <line>75</line>
           <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/NoticePostServlet.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/VisitorSearchServlet.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/ReaderSearchDao.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/ReaderSearchDao.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/visitor_search.jsp</url>
+          <line>98</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/visitor_search.jsp</url>
+          <line>99</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/visitor_search.jsp</url>
+          <line>94</line>
+          <option name="timeStamp" value="119" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
