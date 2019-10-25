@@ -308,6 +308,14 @@
         <servlet-name>forgetpassword</servlet-name>
         <url-pattern>/ForgetPassword.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>IncomeHistory</servlet-name>
+        <servlet-class>servlet.IncomeHistoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncomeHistory</servlet-name>
+        <url-pattern>/IncomeHistory.do</url-pattern>
+    </servlet-mapping>
 
-<!--    end -->
+    <!--    end -->
 </web-app>
