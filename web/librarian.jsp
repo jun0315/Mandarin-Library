@@ -711,6 +711,28 @@
                     </div>
                 </div>
             </section>
+
+            <!-- search -->
+            <form class="input-group col-md-12" style="margin-top: 40px; position: relative" action="ReaderSearchServlet"
+                  name="search" method="post">
+                <span class="input-group-btn">
+                    <select  name="signal" class="btn btn-info btn-search">
+                        <option>Name</option>
+                        <option>ID</option>
+                        <option>Author</option>
+                    </select>
+                </span>
+                <input type="text" class="form-control" name="message"
+                       placeholder="Please enter the content you are searching for">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-info btn-search">Search</button>
+                </span>
+            </form>
+
+            <!-- notice -->
+            <div style="margin-top: 40px;">
+                <h1>这里是Notice。</h1>
+            </div>
             <!-- Page Footer-->
             <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>

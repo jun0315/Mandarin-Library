@@ -1,4 +1,4 @@
-<%--
+<%@ page import="dao.ReaderDao" %><%--
   Created by IntelliJ IDEA.
   User: 刘威
   Date: 2019/9/25
@@ -13,10 +13,18 @@
         <div class="title">
             <h1 class="h4">
                 <%
-                    String account = (String) session.getAttribute("name");
-                    out.println(account);
+                    String account = (String) session.getAttribute("account");
+                    ReaderDao readerDao = new ReaderDao();
+                    String name = (String) readerDao.info(account).getName();
+                    out.println(name);
                 %>
             </h1>
+            <p>
+                <%
+                    String user_type = (String) readerDao.info(account).getType();
+                    out.println(user_type);
+                %>
+            </p>
         </div>
     </div>
     <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>

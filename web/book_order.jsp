@@ -98,13 +98,38 @@
                                                     <form style="margin: 10px;position: relative" action="Orderto"
                                                           name="" method="post">
                                                         <input type="hidden" name="number" value="${detail.getState()}">
+                                                        <input type="hidden" name="sa" value="${detail.getBookNumber()}">
                                                         <input type="hidden" name="id" value="${detail.getCopyid()}">
                                                         <input type="submit" value="Order"></form>
+                                                   <%-- <%
+                                                        String errorInfo = (String)request.getAttribute("loginError");
+                                                        if(errorInfo != null) {
+                                                    %>
+                                                    <script type="text/javascript" language="javascript">
+                                                        alert("<%=errorInfo%>");
+                                                    </script>
+
+                                                    <%
+                                                    }
+                                                %>--%>
+
+
                                                 </td>
                                             </tr>
                                         </c:forEach>
                                         </tbody>
                                     </table>
+                                    <%
+                                        String errorInfo = (String)request.getAttribute("loginError");
+                                        if(errorInfo != null) {
+                                    %>
+                                    <script type="text/javascript" language="javascript">
+                                        alert("<%=errorInfo%>");
+                                    </script>
+
+                                    <%
+                                        }
+                                    %>
                                 </div>
                             </div>
                         </div>

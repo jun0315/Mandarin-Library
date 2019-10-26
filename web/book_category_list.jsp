@@ -107,7 +107,8 @@
                                                     <td>
                                                         <a href="#myModal_${li.index+1}" data-toggle="modal" value="${bookCategory.getCategory()}"
                                                            id="lastButton">
-                                                            <button type="button" class="btn btn-btn-primary" style="color: white; background-color: rgb(224,79,61)">
+                                                            <button type="button" class="btn btn-btn-primary"
+                                                                    style="color: white; background-color: rgb(224,79,61);">
                                                                 Delete
                                                             </button>
                                                         </a>

@@ -21,11 +21,11 @@ public class ReaderSearchDao {
         try {
             String ma = "%" + message + "%";
             String sql = null;
-            if (signal.equals("name")) {
+            if (signal.equals("Name")) {
                 sql = "select * from book where book_name like \'" + ma + "\'";
-            } else if (signal.equals("id")) {
+            } else if (signal.equals("ID")) {
                 sql = "select * from book where book_number like \'" + ma + "\'";
-            } else {
+            } else if (signal.equals("Author")){
                 sql = "select * from book where book_author like \'" + ma + "\'";
             }
 
