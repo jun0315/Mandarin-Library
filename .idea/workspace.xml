@@ -6,8 +6,12 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="small modify income function">
-      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
+    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/BookDeleteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDeleteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_delete_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_delete_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/notice_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/notice_list.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +50,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="H:/JAVA/IDEA project/web/ex5" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -332,6 +336,9 @@
       <workItem from="1571925327831" duration="74000" />
       <workItem from="1571965080468" duration="5344000" />
       <workItem from="1571971022834" duration="1196000" />
+      <workItem from="1572056052214" duration="655000" />
+      <workItem from="1572070590522" duration="883000" />
+      <workItem from="1572190475642" duration="987000" />
     </task>
     <task id="LOCAL-00001" summary="更新.gitignore">
       <created>1569579494657</created>
@@ -487,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571965892749</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="merge sjy book detail front">
+      <created>1571972921674</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1571972921674</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +558,8 @@
     <MESSAGE value="ready to retire psw" />
     <MESSAGE value="small fix forgetpwd" />
     <MESSAGE value="small modify income function" />
-    <option name="LAST_COMMIT_MESSAGE" value="small modify income function" />
+    <MESSAGE value="merge sjy book detail front" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge sjy book detail front" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

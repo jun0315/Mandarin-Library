@@ -68,6 +68,14 @@
         <url-pattern>/BookCategoryAdd.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>BookCategoryDelete</servlet-name>
+        <servlet-class>servlet.BookCategoryDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookCategoryDelete</servlet-name>
+        <url-pattern>/BookCategoryDelete.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>BookCategoryList</servlet-name>
         <servlet-class>servlet.BookCategoryListServlet</servlet-class>
     </servlet>

@@ -95,8 +95,45 @@
                                                     <td>${notice.getContent()}</td>
                                                     <td>${notice.getPosttime()}</td>
                                                     <td>
+                                                        <a href="#myModal_${li.index+1}" data-toggle="modal" value="${notice.getID()}"
+                                                           id="lastButton">
+                                                            <button type="button" class="btn btn-btn-primary"
+                                                                    style="color: white; background-color: rgb(224,79,61);">
+                                                                Delete
+                                                            </button>
+                                                        </a>
+                                                        <div id="myModal_${li.index+1}" tabindex="-1" role="dialog"
+                                                             aria-labelledby="exampleModalLabel" aria-hidden="true"
+                                                             class="modal fade text-left">
+                                                            <div role="document" class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h4 id="exampleModalLabel" class="modal-title">
+                                                                            Delete</h4>
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                aria-label="Close" class="close"><span
+                                                                                aria-hidden="true">×</span></button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>Are you sure want to delete this
+                                                                            notice?</p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" data-dismiss="modal"
+                                                                                class="btn btn-secondary">Close
+                                                                        </button>
+                                                                        <a href="NoticeDelete.do?category=${notice.getID()}">
+                                                                            <button type="button"
+                                                                                    class="btn btn-primary">Delete
+                                                                            </button>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <a href="EditNotice.do?id=${notice.getID()}">
-                                                            <button type="button" class="btn btn-secondary" style="color: white; background-color: rgb(46,203,112)">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
                                                             </button>
                                                         </a>

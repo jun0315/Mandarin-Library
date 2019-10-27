@@ -25,7 +25,7 @@ public class BookDeleteDao {
             while(resultSet.next()){
                 BookDelete bookDelete=new BookDelete();
                 String copy_id=resultSet.getString("copy_id");
-                Date delete_time=resultSet.getTime("delete_time");
+                Date delete_time=resultSet.getDate("delete_time");
                 String staff_id=resultSet.getString("staff_id");
                 bookDelete.setCopy_id(copy_id);
                 bookDelete.setDelete_time(delete_time);
@@ -39,6 +39,4 @@ public class BookDeleteDao {
         }
         return  BookDeletes;
     }
-
-
 }
