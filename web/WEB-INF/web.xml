@@ -60,9 +60,9 @@
         <url-pattern>/ReaderSearchServlet</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>BookCategoryAdd</servlet-name>
-        <servlet-class>servlet.BookCategoryAddServlet</servlet-class>
-    </servlet>
+    <servlet-name>BookCategoryAdd</servlet-name>
+    <servlet-class>servlet.BookCategoryAddServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>BookCategoryAdd</servlet-name>
         <url-pattern>/BookCategoryAdd.do</url-pattern>
@@ -98,6 +98,14 @@
     <servlet-mapping>
         <servlet-name>BookAdd</servlet-name>
         <url-pattern>/BookAdd.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VisitorSearch</servlet-name>
+        <servlet-class>servlet.VisitorSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitorSearch</servlet-name>
+        <url-pattern>/VisitorSearch.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>DeleteBook</servlet-name>
