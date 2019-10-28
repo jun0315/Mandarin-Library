@@ -293,7 +293,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteNotice</servlet-name>
-        <url-pattern>/DeleteNotice.do</url-pattern>
+        <url-pattern>/NoticeDelete.do</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -340,13 +340,6 @@
         <servlet-name>HomePageNotice</servlet-name>
         <url-pattern>/homePage.do</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>VisitorSearch</servlet-name>
-        <servlet-class>servlet.VisitorSearchServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>VisitorSearch</servlet-name>
-        <url-pattern>/VisitorSearch.do</url-pattern>
-    </servlet-mapping>
+
     <!--    end -->
 </web-app>

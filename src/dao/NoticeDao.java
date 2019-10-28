@@ -73,7 +73,7 @@ public class NoticeDao {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
-                String idINDB = resultSet.getString("id");
+                String idINDB = resultSet.getString("notice_id");
                 if (idINDB.equals(id)) {
                     Exit = true;
                     break;
@@ -123,7 +123,7 @@ public class NoticeDao {
 
     public void deleteNotice(String id) {
         try {
-            String sql = "delete from notice where notice_id?";
+            String sql = "delete from notice where notice_id = ?";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, id);

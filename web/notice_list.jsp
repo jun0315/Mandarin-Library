@@ -121,7 +121,7 @@
                                                                         <button type="button" data-dismiss="modal"
                                                                                 class="btn btn-secondary">Close
                                                                         </button>
-                                                                        <a href="NoticeDelete.do?category=${notice.getID()}">
+                                                                        <a href="NoticeDelete.do?id=${notice.getID()}">
                                                                             <button type="button"
                                                                                     class="btn btn-primary">Delete
                                                                             </button>
