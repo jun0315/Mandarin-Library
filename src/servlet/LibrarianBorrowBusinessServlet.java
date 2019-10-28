@@ -40,6 +40,8 @@ public class LibrarianBorrowBusinessServlet extends HttpServlet {
             ReaderBorrowDao readerBorrowDao = new ReaderBorrowDao();
             readerBorrowDao.addReaderBorrow(user_account, copy_id, book_name);
             bookDetailDao.changeBookStatus(copy_id, 0);
+            //reader的borrow_count加1
+            reader.setBorrowing_count(reader.getBorrowing_count()+1);
             response.sendRedirect("librarian_borrow_business.jsp?info=borrow_success");
         }
     }
