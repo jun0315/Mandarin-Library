@@ -26,10 +26,12 @@
 <body>
 <div class="container demo-1">
     <div class="content">
-        <div id="large-header" class="large-header" style="background-image: url('img/adminLogin_bg.jpg')">
+        <div id="large-header" class="large-header">
             <canvas id="demo-canvas"></canvas>
-            <div class="logo_box" style="left: 23%;">
-                <h1>Welcome! Administrator</h1>
+            <div class="logo_box">
+                <div style="width: 330px; height: 140px; vertical-align: center">
+                   <h1>Welcome! Administrator</h1>
+                </div>
                 <form action="login" name="f" method="post">
                     <div class="input_outer">
                         <span class="u_user"></span>
@@ -43,9 +45,10 @@
                                type="password" placeholder="Your password">
                     </div>
                     <div class="mb2">
-                        <!--                        <a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a>-->
-                        <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px">
-                            <strong>login</strong></button>
+                        <button type="submit" class="act-but submit" id="button"
+                                style="color: #FFFFFF; width: 330px;">
+                            <strong>Login</strong>
+                        </button>
                     </div>
                 </form>
             </div>

@@ -1,4 +1,6 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="entity.Book" %><%--
   Created by IntelliJ IDEA.
   User: Liu_PiPiPi
   Date: 2019/10/24
@@ -6,6 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -56,7 +59,7 @@
             <form class="input-group col-md-12" style="margin: 10px;position: relative" action="VisitorSearch.do"
                   name="search" method="post">
                     <span class="input-group-btn">
-                        <select  name="signal" class="btn btn-info btn-search">
+                        <select name="signal" class="btn btn-info btn-search">
                             <option>Name</option>
                             <option>ID</option>
                             <option>Author</option>
@@ -90,7 +93,8 @@
                                         </thead>
                                         <tbody>
                                         <%
-                                            request.getAttribute("list");
+                                            List<Book> list = (List<Book>) request.getAttribute("list");
+                                            request.setAttribute("list", list);
                                         %>
                                         <c:forEach items="${list}" var="book" varStatus="li">
                                             <tr>
@@ -102,10 +106,13 @@
                                                 <td>${book.getFloor()}</td>
                                                 <td>${book.getShelf()}</td>
                                                 <td>
-                                                    <button type="submit" class="btn btn-info btn-search">Detail</button>
-                                                    <form  style="margin: 10px;position: relative" action="DetailSearch" name="search" method="post">
-                                                        <input type="hidden" name="number" value="${book.getBookNumber()}" />
-                                                    </form>
+                                                    <button type="submit" class="btn btn-info btn-search">Detail
+                                                    </button>
+                                                        <%--                                                    <form style="margin: 10px;position: relative" action="DetailSearch"--%>
+                                                        <%--                                                          name="search" method="post">--%>
+                                                        <%--                                                        <input type="hidden" name="number"--%>
+                                                        <%--                                                               value="${book.getBookNumber()}"/>--%>
+                                                        <%--                                                    </form>--%>
                                                 </td>
                                             </tr>
                                         </c:forEach>

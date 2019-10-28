@@ -6,36 +6,124 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="---">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/barcode4j_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/barcode4j-2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/BookDetailDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/BarCodeUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/BuiltCopyID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_edit.jsp" afterDir="false" />
+    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="small modify income function">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mail_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/mail-1.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/BookDeleteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/ChangeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/DetailDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/NoticeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dao/ReaderReserveDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/BookDelete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Detail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Notice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/ReaderReserve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookDeletedListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/BookDetailServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/DetailSearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/HomePageLNoticeListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/IncomeHistoryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianReturnBusinessServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeDeleteServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/NoticePostServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/OrderServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/OrdertoServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderAccountSettingServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderReserveApproveServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/servlet/ReturnBookServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/FindReaderPassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/MailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_delete_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_detail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_detail_librarian.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/book_order.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/effect_homepage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/failed.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/findPassword.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/forget.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/Login_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/back.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/librarian_borrow_business.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/librarian_income_history_business.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/librarian_return_business.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/notice_edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/notice_list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/notice_post.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/reader_account_setting.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/successed.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/library_Web_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/library___test_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/library___test_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/library - test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/library - test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/library_war_exploded/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdminDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/ReaderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/BookDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/BookDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlet/BookEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookEditServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/BuiledCopyID.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/DBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/DBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/GetBookInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/GetBookInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/added_book_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/added_book_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/book_category_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/fontastic.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/fontastic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.green.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.red.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.sea.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.sea.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.violet.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.violet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data/addresses.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/data/addresses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data/countries.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/data/countries.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/fonts/dashboard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/homePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons-reference/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/fonts/dashboard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons-reference/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons-reference/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/adminLogin_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/img/demo-1-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/charts-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/charts-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/charts-home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/charts-home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/demo-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/demo-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/dialogue.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/dialogue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/front.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/rAF.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/rAF.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/librarian_book_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_book_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_borrowHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_borrowHistory.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reader_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/chart.js/Chart.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/chart.js/Chart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery-validation/additional-methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery-validation/additional-methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery-validation/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery-validation/jquery.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery.cookie/cookie.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery.cookie/cookie.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery.cookie/jquery.cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery.cookie/jquery.cookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery.slim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/popper.js/popper-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/popper.js/popper-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/vendor/popper.js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/popper.js/popper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/visitor_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/visitor_search.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,66 +134,15 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utils/DBHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/homePage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="79" column="65" selection-start-line="79" selection-start-column="65" selection-end-line="79" selection-end-column="65" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#span#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/visitor_search.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -115,74 +152,33 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="650" />
-    <option name="y" value="100" />
-    <option name="width" value="1750" />
-    <option name="height" value="980" />
-  </component>
   <component name="ProjectId" id="1RPqP6ymFBFQa4phWQqlN8gFMoN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BilobiliLibrary" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BilobiliLibrary" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\大学\web\library - test\web\img" />
+      <recent name="H:\大学\web\library - test\web\css" />
+      <recent name="D:\Code\BilobiliLibrary\lib" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -197,18 +193,18 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.45" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.45" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
+    <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.24" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/library___test_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="library - test:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/library___test_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_library_-_test_2" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_BilobiliLibrary" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -216,7 +212,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="2263" />
+        <option name="DEBUG_PORT" value="65484" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -270,6 +266,78 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_BilobiliLibrary" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="65484" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -293,7 +361,22 @@
       <workItem from="1569804431175" duration="1457000" />
       <workItem from="1570874931675" duration="1385000" />
       <workItem from="1571295621945" duration="269000" />
-      <workItem from="1571328648894" duration="232000" />
+      <workItem from="1571359849063" duration="3744000" />
+      <workItem from="1571365124131" duration="1173000" />
+      <workItem from="1571369018435" duration="1010000" />
+      <workItem from="1571411352493" duration="100000" />
+      <workItem from="1571669266565" duration="576000" />
+      <workItem from="1571792101055" duration="31000" />
+      <workItem from="1571813515042" duration="1441000" />
+      <workItem from="1571818103743" duration="16991000" />
+      <workItem from="1571925327831" duration="74000" />
+      <workItem from="1571965080468" duration="5344000" />
+      <workItem from="1571971022834" duration="1196000" />
+      <workItem from="1572142966744" duration="2072000" />
+      <workItem from="1572250570639" duration="197000" />
+      <workItem from="1572250884141" duration="10000" />
+      <workItem from="1572269037065" duration="1368000" />
+      <workItem from="1572272146649" duration="6365000" />
     </task>
     <task id="LOCAL-00001" summary="更新.gitignore">
       <created>1569579494657</created>
@@ -407,83 +490,50 @@
       <option name="project" value="LOCAL" />
       <updated>1571323019028</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="book list small modify">
+      <created>1571329032570</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1571329032570</updated>
+    </task>
+    <task id="LOCAL-00018" summary="ready to merge">
+      <created>1571925955452</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1571925955452</updated>
+    </task>
+    <task id="LOCAL-00019" summary="complete delete book">
+      <created>1571926417123</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1571926417123</updated>
+    </task>
+    <task id="LOCAL-00020" summary="ready to retire psw">
+      <created>1571929245168</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1571929245168</updated>
+    </task>
+    <task id="LOCAL-00021" summary="small fix forgetpwd">
+      <created>1571929610351</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1571929610351</updated>
+    </task>
+    <task id="LOCAL-00022" summary="small modify income function">
+      <created>1571965892749</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1571965892749</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1003000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" weight="0.18053691" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
-      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49932885" weight="0.13739377" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.2917847" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49932885" visible="true" weight="0.2917847" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49798658" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18993288" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -494,12 +544,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -539,8 +583,13 @@
     <MESSAGE value="准备合并zcy" />
     <MESSAGE value="调试条形码列表" />
     <MESSAGE value="add book 测试完成" />
-    <MESSAGE value="---" />
-    <option name="LAST_COMMIT_MESSAGE" value="---" />
+    <MESSAGE value="book list small modify" />
+    <MESSAGE value="ready to merge" />
+    <MESSAGE value="complete delete book" />
+    <MESSAGE value="ready to retire psw" />
+    <MESSAGE value="small fix forgetpwd" />
+    <MESSAGE value="small modify income function" />
+    <option name="LAST_COMMIT_MESSAGE" value="small modify income function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -548,188 +597,277 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java</url>
           <line>33</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookCategoryListServlet.java</url>
           <line>21</line>
-          <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookListServlet.java</url>
-          <line>22</line>
-          <properties />
+          <line>23</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dao/BookDao.java</url>
-          <line>15</line>
-          <properties />
+          <line>16</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dao/BookDao.java</url>
-          <line>20</line>
-          <properties />
+          <line>21</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/librarian_book_list.jsp</url>
           <line>87</line>
-          <properties />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/librarian_book_list.jsp</url>
           <line>99</line>
-          <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlet/ReaderBorrowServlet.java</url>
-          <line>30</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/dao/ReaderBorrowDao.java</url>
-          <line>40</line>
-          <properties />
+          <line>41</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/dao/ReaderBorrowDao.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlet/LogoutServlet.java</url>
-          <line>17</line>
-          <properties />
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/GetBookInfo.java</url>
           <line>32</line>
-          <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/GetBookInfo.java</url>
           <line>34</line>
-          <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/GetBookInfo.java</url>
           <line>56</line>
-          <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/GetBookInfo.java</url>
           <line>47</line>
-          <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/GetBookInfo.java</url>
           <line>38</line>
-          <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/GetBookInfo.java</url>
           <line>37</line>
-          <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/GetBookInfo.java</url>
           <line>27</line>
-          <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/GetBookInfo.java</url>
           <line>26</line>
-          <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java</url>
           <line>24</line>
-          <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java</url>
           <line>26</line>
-          <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/ReaderEditServlet.java</url>
           <line>16</line>
-          <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookAddServlet.java</url>
           <line>25</line>
-          <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookAddServlet.java</url>
           <line>50</line>
-          <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
           <line>105</line>
-          <properties />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
           <line>108</line>
-          <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/librarian_list.jsp</url>
           <line>100</line>
-          <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/librarian_list.jsp</url>
           <line>102</line>
-          <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
           <line>107</line>
-          <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/servlet/BookAddServlet.java</url>
-          <line>73</line>
-          <properties />
+          <line>72</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/web/added_book_detail.jsp</url>
           <line>102</line>
-          <properties />
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ReaderAccountSettingServlet.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookEditServlet.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookEditServlet.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/BookDeleteServlet.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookDao.java</url>
+          <line>152</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookDao.java</url>
+          <line>149</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookDao.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookDao.java</url>
+          <line>170</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/BookDao.java</url>
+          <line>158</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/utils/FindReaderPassword.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/ReaderDao.java</url>
+          <line>174</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/NoticeEditServlet.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/NoticeEditServlet.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/IncomeHistoryServlet.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/IncomeHistoryServlet.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/IncomeHistoryServlet.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/entity/Reader.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/NoticePostServlet.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlet/VisitorSearchServlet.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/ReaderSearchDao.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/dao/ReaderSearchDao.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/visitor_search.jsp</url>
+          <line>98</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/visitor_search.jsp</url>
+          <line>99</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/visitor_search.jsp</url>
+          <line>94</line>
+          <option name="timeStamp" value="119" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -739,22 +877,76 @@
       </configuration>
     </watches-manager>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml" />
-    <entry file="file://$PROJECT_DIR$/src/servlet/BookListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="23" column="57" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/admin_find_liber_password.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="83" column="64" selection-start-line="83" selection-start-column="64" selection-end-line="83" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlet/BookAddByISBNSrvelet.java" />
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>library - test</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

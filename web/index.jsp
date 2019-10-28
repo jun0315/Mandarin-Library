@@ -7,7 +7,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>login</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="css/demo.css"/>
     <!--必要样式-->
@@ -20,10 +20,22 @@
 <body>
 <div class="container demo-1">
     <div class="content">
-        <div id="large-header" class="large-header">
+        <div id="large-header" class="large-header" style="background-image: url('img/login_bg.jpg');">
             <canvas id="demo-canvas"></canvas>
+            <div style="width: 100px; height: 37px; position: absolute; left: 5%; top: 2%">
+                <a href="homePage.jsp">
+                    <div style="width: 37%; height: 100%; float: left">
+                        <img src="img/back.png" style="width: 100%; height: 100%">
+                    </div>
+                    <p style="font-size: 30px; margin: 0px; float: right; width: 63%; color: white">
+                        <strong>BACK</strong>
+                    </p>
+                </a>
+            </div>
             <div class="logo_box">
-                <h3>Welcome</h3>
+                <div style="width: 330px; height: 138px; margin-bottom: 30px">
+                    <img src="img/logo.png" style="width: 100%; height: 100%">
+                </div>
                 <form action="login" name="f" method="post">
                     <div class="input_outer">
                         <span class="u_user"></span>
@@ -37,10 +49,14 @@
                                type="password" placeholder="Your password">
                     </div>
                     <div class="mb2">
-                        <!--                        <a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a>-->
                         <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px">
-                            登陆
+                            <strong>Login</strong>
                         </button>
+                        <a href="forget.jsp">
+                            <button class="act-but submit" id="forget" style="background: #13BDCE; color: #FFFFFF; width: 330px">
+                                <strong>Forget Password</strong>
+                            </button>
+                        </a>
                     </div>
                 </form>
             </div>
@@ -58,6 +74,13 @@
     var error = '<%=request.getParameter("error")%>';
     if (error == 'yes') {
         alert("Account or password wrong!");
+    }
+    var forget = '<%=request.getParameter("forget")%>';
+    if (forget == 'yes') {
+        alert("We have send a email and you can retire your password!");
+    }
+    if(forget=='done'){
+        alert("You have successfully changed your password!");
     }
 </script>
 <script src="js/TweenLite.min.js"></script>

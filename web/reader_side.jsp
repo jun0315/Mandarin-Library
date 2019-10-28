@@ -29,8 +29,9 @@
     </div>
     <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
     <ul class="list-unstyled">
-        <li><a href="BorrowHistory.do"> <i class="icon-bill"></i><strong>Borrowing History</strong></a></li>
-        <li><a href="reader_search.jsp"> <i class="icon-search"></i><strong>Search Book</strong></a></li>
-        <li><a href="reader_account_setting.jsp"> <i class="icon-home"></i><strong>Account Setting</strong></a></li>
+        <li><a href="reader.jsp"> <i class="icon-bill"></i>Home</a></li>
+        <li><a href="BorrowHistory.do"> <i class="icon-bill"></i>Borrowing History</a></li>
+        <li><a href="reader_search.jsp"> <i class="icon-search"></i>Search Book</a></li>
+        <li><a href="reader_account_setting.jsp"> <i class="icon-home"></i>Account Setting</a></li>
     </ul>
 </nav>

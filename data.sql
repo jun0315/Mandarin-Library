@@ -1,6 +1,6 @@
 /*
 SQLyog Community v13.1.5  (64 bit)
-MySQL - 5.6.45-log : Database - lib_system
+MySQL - 5.6.15 : Database - lib_system
 *********************************************************************
 */
 
@@ -89,6 +89,7 @@ CREATE TABLE `book_detail` (
   `book_number` char(13) NOT NULL,
   `copy_id` varchar(32) NOT NULL,
   `status` int(4) NOT NULL,
+  `areacode` varchar(8) DEFAULT NULL,
   PRIMARY KEY (`copy_id`),
   KEY `book_id` (`book_number`),
   CONSTRAINT `book_detail_ibfk_1` FOREIGN KEY (`book_number`) REFERENCES `book` (`book_number`) ON UPDATE CASCADE
@@ -96,12 +97,29 @@ CREATE TABLE `book_detail` (
 
 /*Data for the table `book_detail` */
 
-insert  into `book_detail`(`book_number`,`copy_id`,`status`) values 
-('9780131872486','97801318724860001',2),
-('9780131872486','97801318724860002',2),
-('9780131872486','97801318724860003',2),
-('9780131872486','97801318724860004',2),
-('9780131872486','97801318724860005',2);
+insert  into `book_detail`(`book_number`,`copy_id`,`status`,`areacode`) values 
+('9780131872486','97801318724860001',2,'0'),
+('9780131872486','97801318724860002',1,'1'),
+('9780131872486','97801318724860003',2,'2'),
+('9780131872486','97801318724860004',2,'3'),
+('9780131872486','97801318724860005',2,'4');
+
+/*Table structure for table `notice` */
+
+DROP TABLE IF EXISTS `notice`;
+
+CREATE TABLE `notice` (
+  `notice_topic` varchar(12) DEFAULT NULL,
+  `notice_content` varchar(64) DEFAULT NULL,
+  `notice_id` int(10) NOT NULL,
+  `notice_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`notice_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/*Data for the table `notice` */
+
+insert  into `notice`(`notice_topic`,`notice_content`,`notice_id`,`notice_date`) values 
+('123','111',111,NULL);
 
 /*Table structure for table `reader` */
 
@@ -113,14 +131,16 @@ CREATE TABLE `reader` (
   `user_password` varchar(64) NOT NULL,
   `user_email` varchar(128) DEFAULT NULL,
   `security_deposit` int(11) DEFAULT '0',
+  `register_time` date DEFAULT NULL,
   PRIMARY KEY (`user_account`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader` */
 
-insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`) values 
-('reader','123','123','123',300),
-('reader-test','jun','123','1072505283@qq.com',0);
+insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`,`register_time`) values 
+('','123','','1072505283@qq.com',300,NULL),
+('13855447008','jun1','123','13',0,NULL),
+('reader-test','jun','','1072505283@qq.com',0,NULL);
 
 /*Table structure for table `reader_borrow` */
 
@@ -130,7 +150,7 @@ CREATE TABLE `reader_borrow` (
   `copy_id` varchar(10) NOT NULL,
   `user_account` varchar(64) NOT NULL,
   `borrow_time` datetime DEFAULT NULL,
-  `isreturned` tinyint(1) NOT NULL,
+  `isReturned` tinyint(4) DEFAULT NULL,
   `fine` double DEFAULT NULL,
   PRIMARY KEY (`copy_id`,`user_account`),
   KEY `user_id` (`user_account`),
@@ -140,6 +160,11 @@ CREATE TABLE `reader_borrow` (
 
 /*Data for the table `reader_borrow` */
 
+insert  into `reader_borrow`(`copy_id`,`user_account`,`borrow_time`,`isReturned`,`fine`) values 
+('1','reader-test','2019-02-08 10:41:54',1,NULL),
+('2','reader-test','2019-09-28 10:42:16',1,NULL),
+('3','reader-test','2019-05-16 10:43:59',0,NULL);
+
 /*Table structure for table `reader_reserve` */
 
 DROP TABLE IF EXISTS `reader_reserve`;
@@ -147,7 +172,7 @@ DROP TABLE IF EXISTS `reader_reserve`;
 CREATE TABLE `reader_reserve` (
   `user_account` varchar(64) NOT NULL,
   `copy_id` varchar(32) NOT NULL,
-  `reservetime` datetime DEFAULT NULL,
+  `reserve_time` datetime DEFAULT NULL,
   PRIMARY KEY (`user_account`,`copy_id`),
   KEY `copy_id` (`copy_id`),
   CONSTRAINT `reader_reserve_ibfk_1` FOREIGN KEY (`user_account`) REFERENCES `reader` (`user_account`),

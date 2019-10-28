@@ -6,6 +6,38 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="dao.LibrarianDao" %>
+
+<%
+    String path = request.getServletPath();
+    //out.print( request.getServletPath() );
+    pageContext.setAttribute("path",path);
+
+    int tag = 0;
+    String[] LibrarianManage = {
+            "/librarian_list.jsp",
+            "/librarian_add.jsp",
+            "/findBackLibrarianPassword.do",
+    };
+    boolean isContains1 = Arrays.asList(LibrarianManage).contains(path);
+    if(isContains1) {
+        tag = 1;
+    }
+
+    String[] AccountSettings = {
+            "admin_info/.jsp",
+            "admin_change_password.jsp",
+    };
+    boolean isContains2 = Arrays.asList(AccountSettings).contains(path);
+    if(isContains2){
+        tag = 2;
+    }
+
+    //out.print( tag );
+    pageContext.setAttribute("tag",tag);
+%>
+
 <nav class="side-navbar">
     <!-- Sidebar Header-->
     <div class="sidebar-header d-flex align-items-center">
@@ -29,9 +61,9 @@
     </div>
     <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
     <ul class="list-unstyled">
-        <li><a href="#LibrarianManage" aria-expanded="false" data-toggle="collapse"> <i
+        <li><a href="#LibrarianManage" aria-expanded="${ tag eq 1 ? "true" : "false" }" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i><strong>Librarian Manage</strong></a>
-            <ul id="LibrarianManage" class="collapse list-unstyled ">
+            <ul id="LibrarianManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="LibrarianListPage"><strong>Librarian List</strong></a></li>
                 <li><a href="librarian_add.jsp"><strong>Add Librarian</strong></a></li>
                 <li><a href="findBackLibrarianPassword.do"><strong>Find Back Librarian Password</strong></a></li>
@@ -42,9 +74,9 @@
                 class="icon-interface-windows"></i><strong>System Settings</strong></a>
         </li>
 
-        <li><a href="#AccountSettings" aria-expanded="false" data-toggle="collapse"> <i
+        <li><a href="#AccountSettings" aria-expanded="${ tag eq 2 ? "true" : "false" }" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i><strong>Account Settings</strong></a>
-            <ul id="AccountSettings" class="collapse list-unstyled ">
+            <ul id="AccountSettings" class="${ tag eq 2 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="admin_info.jsp"><strong>About Account</strong></a></li>
                 <li><a href="${pageContext.request.contextPath}/admin_change_password.jsp"><strong>Change Password</strong></a></li>
             </ul>
