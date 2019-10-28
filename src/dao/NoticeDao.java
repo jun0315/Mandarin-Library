@@ -42,7 +42,7 @@ public class NoticeDao {
     public Notice info(String id) {
         Notice notice = new Notice();
         try {
-            String sql = "Select * from notice where notice_ID= \'" + id + "\'";
+            String sql = "Select * from notice where notice_id= \'" + id + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -68,7 +68,7 @@ public class NoticeDao {
     public boolean isExitInDB(String id) {
         boolean Exit = false;
         try {
-            String sql = "Select * from notice where notice_ID= \'" + id + "\'";
+            String sql = "Select * from notice where notice_id= \'" + id + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -123,7 +123,7 @@ public class NoticeDao {
 
     public void deleteNotice(String id) {
         try {
-            String sql = "delete from notice_list where ID=?";
+            String sql = "delete from notice where notice_id?";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, id);
