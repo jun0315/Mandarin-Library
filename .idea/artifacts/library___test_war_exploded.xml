@@ -14,6 +14,7 @@
           <element id="library" level="project" name="json-20190722" />
           <element id="library" level="project" name="barcode4j-2.1" />
           <element id="library" level="project" name="mail-1.4" />
+          <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="library - test/web/Web" />

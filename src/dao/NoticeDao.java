@@ -122,19 +122,16 @@ public class NoticeDao {
 
 
     public void deleteNotice(String id) {
-
-        String sql = "delete from notice where notice_id = \'" + id + "\'";
-
         try {
-
+            String sql = "delete from notice_list where ID=?";
             Connection connection = DBHelper.getInstance().getConnection();
-            Statement statement = connection.createStatement();
-            int resultSet = statement.executeUpdate(sql);
-
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection,ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return;
     }
 
 }

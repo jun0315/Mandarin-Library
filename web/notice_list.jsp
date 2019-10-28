@@ -115,8 +115,7 @@
                                                                                 aria-hidden="true">×</span></button>
                                                                     </div>
                                                                     <div class="modal-body">
-                                                                        <p>Are you sure want to delete this
-                                                                            notice?</p>
+                                                                        <p>Are you sure want to delete this notice?</p>
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" data-dismiss="modal"
@@ -167,6 +166,16 @@
     </div>
 </div>
 
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'delete_error') {
+        alert("There is no category to delete!");
+        window.location.href = "NoticeList.do";
+    } else if (info == 'delete_success') {
+        alert("Successfully delete!");
+        window.location.href = "NoticeList.do";
+    }
+</script>
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

@@ -164,7 +164,7 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'found') {
-        alert("successfully serach!");
+        alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
     } else if (info == 'delete_error') {

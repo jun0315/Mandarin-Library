@@ -11,6 +11,9 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -43,5 +46,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.45" level="application_server_libraries" />
     <orderEntry type="library" name="mail-1.4" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="Spring-4.3.18.RELEASE" level="project" />
   </component>
 </module>
