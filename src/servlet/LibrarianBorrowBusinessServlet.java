@@ -1,6 +1,7 @@
 package servlet;
 
-import dao.ReaderReserveDao;
+import dao.*;
+import entity.Reader;
 import entity.ReaderReserve;
 import utils.BarCodeUtil;
 
@@ -19,22 +20,31 @@ public class LibrarianBorrowBusinessServlet extends HttpServlet {
     private ReaderReserveDao readerReserveDao = new ReaderReserveDao();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String user_account = (String) request.getParameter("user_account");
+        String copy_id = (String) request.getParameter("copy_id");
+        ReaderDao readerDao = new ReaderDao();
+        Reader reader = readerDao.info(user_account);
+        //如果读者的押金不足
+        if (reader.getDeposit() <= 0)
+            response.sendRedirect("librarian_borrow_business.jsp?info=deposit_not_enough");
+            //如果读者借书已经达到3本
+        else if (reader.getBorrowing_count() >= 3)
+            response.sendRedirect("librarian_borrow_business.jsp?info=reach_the_upper_limit");
+        else {
+            //获取书名
+            BookDetailDao bookDetailDao = new BookDetailDao();
+            String book_number = bookDetailDao.getBookNumberByCopyID(copy_id);
+            BookDao bookDao = new BookDao();
+            String book_name = bookDao.getBookNameByBookNumber(book_number);
+            //增加借阅记录并修改副本状态
+            ReaderBorrowDao readerBorrowDao = new ReaderBorrowDao();
+            readerBorrowDao.addReaderBorrow(user_account, copy_id, book_name);
+            bookDetailDao.changeBookStatus(copy_id, 0);
+            response.sendRedirect("librarian_borrow_business.jsp?info=borrow_success");
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        List<ReaderReserve> readerReserveList = readerReserveDao.getReaderReserveList();
-        for (int i = 0; i < readerReserveList.size(); i++)
-        {
-            String copyid_path = readerReserveList.get(i).getCopy_id() + ".png";
-            readerReserveList.get(i).setCopy_barpath(copyid_path);
-            BarCodeUtil.GenerateBarCode(readerReserveList.get(i).getCopy_id(),copyid_path,request);
-            String account_path = readerReserveList.get(i).getUser_account() + ".png";
-            readerReserveList.get(i).setAccount_barpath(account_path);
-            BarCodeUtil.GenerateBarCode(readerReserveList.get(i).getUser_account(),account_path,request);
-        }
-        session.setAttribute("readerReserveList", readerReserveList);
-        request.getRequestDispatcher("librarian_borrow_business.jsp").forward(request, response);
+
     }
 }

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: 刘威
-  Date: 2019/10/17
-  Time: 15:57
+  Date: 2019/10/28
+  Time: 20:31
   To change this template use File | Settings | File Templates.
 --%>
 
@@ -56,43 +56,64 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Borrow Business</h2>
+                    <h2 class="no-margin-bottom">Reserve Business</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Borrow Business</li>
+                    <li class="breadcrumb-item active">Reserve Business</li>
                 </ul>
             </div>
-            <section
-                    class="tables">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <p>Borrow Book</p>
-                            <form class="form-horizontal" action="BorrowBusiness.do" method="post">
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">User Account</label>
-                                    <div class="col-sm-9">
-                                        <input id="UserAccount" name="user_account"
-                                               class="form-control form-control-success">
+            <section class="tables" style="padding: 20px">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Reader ID</th>
+                                                <th>Reader Bar</th>
+                                                <th>Copy ID</th>
+                                                <th>Copy Bar</th>
+                                                <th>Reserve Time</th>
+                                                <th>Operation</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <%List<ReaderReserve> readerReserveList = (List<ReaderReserve>) request.getAttribute("readerReserveList");%>
+                                            <c:forEach items="${readerReserveList}" var="readerReserve" varStatus="li">
+                                                <tr>
+                                                    <th>${li.index+1}</th>
+                                                    <td>${readerReserve.getUser_account()}</td>
+                                                    <td>${readerReserve.getCopy_id()}</td>
+                                                    <td>
+                                                        <img src="cache/barcode/${readerReserve.getAccount_barpath()}">
+                                                    </td>
+                                                    <td>
+                                                        <img src="cache/barcode/${readerReserve.getCopy_barpath()}">
+                                                    </td>
+                                                    <td>${readerReserve.getReserve_time()}</td>
+                                                    <td>
+                                                        <a href="BorrowReserveApprove.do?user_account=${readerReserve.getUser_account()}&book_copy_id=${readerReserve.getCopy_id()}">
+                                                            <button type="button" class="btn btn-primary">Approve
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                        <%--                                                    TODO--%>
+                                                </tr>
+                                            </c:forEach>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Book Copy ID</label>
-                                    <div class="col-sm-9">
-                                        <input id="BookCopyID" name="copy_id"
-                                               class="form-control form-control-success">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Post" class="btn btn-primary">
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -117,14 +138,11 @@
 
 <script>
     var info = '<%=request.getParameter("info")%>';
-    if (info == "borrow_success") {
-        alert("Successfully Borrow!");
+    if (info == "approve_success") {
+        alert("Successfully Approve!");
     }
-    if (info == "reach_the_upper_limit") {
-        alert("You have reached the upper limit of borrowing, please return first!");
-    }
-    if (info == "deposit_not_enough") {
-        alert("Sorry, your deposit is not enough!");
+    if (info == "delete_success") {
+        alert("Delete Successfully")
     }
 </script>
 
@@ -142,4 +160,5 @@
 
 </body>
 </html>
+
 

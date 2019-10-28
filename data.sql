@@ -98,8 +98,8 @@ CREATE TABLE `book_detail` (
 /*Data for the table `book_detail` */
 
 insert  into `book_detail`(`book_number`,`copy_id`,`status`,`areacode`) values 
-('9780131872486','97801318724860001',2,'0'),
-('9780131872486','97801318724860002',1,'1'),
+('9780131872486','97801318724860001',0,'0'),
+('9780131872486','97801318724860002',2,'1'),
 ('9780131872486','97801318724860003',2,'2'),
 ('9780131872486','97801318724860004',2,'3'),
 ('9780131872486','97801318724860005',2,'4');
@@ -132,26 +132,28 @@ CREATE TABLE `reader` (
   `user_email` varchar(128) DEFAULT NULL,
   `security_deposit` int(11) DEFAULT '0',
   `register_time` date DEFAULT NULL,
+  `borrowing_count` int(11) DEFAULT NULL,
   PRIMARY KEY (`user_account`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `reader` */
 
-insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`,`register_time`) values 
-('','123','','1072505283@qq.com',300,NULL),
-('13855447008','jun1','123','13',0,NULL),
-('reader-test','jun','','1072505283@qq.com',0,NULL);
+insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`,`register_time`,`borrowing_count`) values 
+('13855447008','jun1','123','13',0,'2019-10-28',0),
+('reader','123','123','1072505283@qq.com',300,'2019-10-17',3),
+('reader-test','jun','123','1072505283@qq.com',300,NULL,0);
 
 /*Table structure for table `reader_borrow` */
 
 DROP TABLE IF EXISTS `reader_borrow`;
 
 CREATE TABLE `reader_borrow` (
-  `copy_id` varchar(10) NOT NULL,
+  `copy_id` varchar(32) NOT NULL,
   `user_account` varchar(64) NOT NULL,
   `borrow_time` datetime DEFAULT NULL,
   `isReturned` tinyint(4) DEFAULT NULL,
   `fine` double DEFAULT NULL,
+  `book_name` varchar(2048) DEFAULT NULL,
   PRIMARY KEY (`copy_id`,`user_account`),
   KEY `user_id` (`user_account`),
   CONSTRAINT `copy_id` FOREIGN KEY (`copy_id`) REFERENCES `book_detail` (`copy_id`),
@@ -160,10 +162,10 @@ CREATE TABLE `reader_borrow` (
 
 /*Data for the table `reader_borrow` */
 
-insert  into `reader_borrow`(`copy_id`,`user_account`,`borrow_time`,`isReturned`,`fine`) values 
-('1','reader-test','2019-02-08 10:41:54',1,NULL),
-('2','reader-test','2019-09-28 10:42:16',1,NULL),
-('3','reader-test','2019-05-16 10:43:59',0,NULL);
+insert  into `reader_borrow`(`copy_id`,`user_account`,`borrow_time`,`isReturned`,`fine`,`book_name`) values 
+('1','reader-test','2019-02-08 10:41:54',1,NULL,''),
+('2','reader-test','2019-09-28 10:42:16',1,NULL,''),
+('3','reader-test','2019-05-16 10:43:59',0,NULL,'');
 
 /*Table structure for table `reader_reserve` */
 
