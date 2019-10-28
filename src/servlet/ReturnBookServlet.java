@@ -1,6 +1,8 @@
 package servlet;
 
+import dao.BookDetailDao;
 import dao.ReaderBorrowDao;
+import entity.BookDetail;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,6 +26,9 @@ public class ReturnBookServlet extends HttpServlet {
         //还书
         ReaderBorrowDao readerBorrowDao = new ReaderBorrowDao();
         readerBorrowDao.ReturnBook(copy_id, user_account);
+        //修改book_detail的status为空闲的vacant
+        BookDetailDao bookDetailDao = new BookDetailDao();
+        bookDetailDao.changeBookStatus(copy_id,2);
         //操作成功后返回到原页面，等同于刷新原页面
         response.sendRedirect("ReturnBusiness.do?info=return_success");
     }

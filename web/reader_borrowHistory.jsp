@@ -9,6 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.ReaderBorrow" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.Book" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -71,7 +72,7 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Account</th>
+                                                <th>Book Name</th>
                                                 <th>Book Copy ID</th>
                                                 <th>Borrow Time</th>
                                                 <th>Status</th>
@@ -79,11 +80,13 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<ReaderBorrow> readerBorrowList = (List<ReaderBorrow>) request.getAttribute("readerBorrowList");%>
+                                            <%
+                                                List<ReaderBorrow> readerBorrowList = (List<ReaderBorrow>) request.getAttribute("readerBorrowList");
+                                            %>
                                             <c:forEach items="${readerBorrowList}" var="readerBorrow" varStatus="li">
                                                 <tr>
                                                     <th>${li.index+1}</th>
-                                                    <td>${readerBorrow.getUser_account()}</td>
+                                                    <td>${readerBorrow.getBook_name()}</td>
                                                     <td>${readerBorrow.getCopy_id()}</td>
                                                     <td>${readerBorrow.getBorrow_time().toString()}</td>
                                                     <td>

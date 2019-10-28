@@ -75,12 +75,14 @@ public class ReaderDao {
                 String emailInDB = resultSet.getString("user_email");
                 int depositInDB = resultSet.getInt("security_deposit");
                 Date register_time = resultSet.getDate("register_time");
+                int borrowing_count = resultSet.getInt("borrowing_count");
                 reader.setAccount(account);
                 reader.setPassword(passwordInDB);
                 reader.setName(nameInDB);
                 reader.setEmail(emailInDB);
                 reader.setDeposit(depositInDB);
                 reader.setRegister_time(register_time);
+                reader.setBorrowing_count(borrowing_count);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -123,7 +125,7 @@ public class ReaderDao {
             java.util.Date date = new java.util.Date();
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String register_time = simpleDateFormat.format(date);
-            ps.setString(6,register_time);
+            ps.setString(6, register_time);
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
