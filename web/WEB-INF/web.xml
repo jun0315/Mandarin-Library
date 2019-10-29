@@ -165,7 +165,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>AddBookByISBN</servlet-name>
-        <servlet-class>servlet.BookAddByISBNSrvelet</servlet-class>
+        <servlet-class>servlet.BookAddByISBNServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddBookByISBN</servlet-name>
@@ -226,6 +226,14 @@
     <servlet-mapping>
         <servlet-name>BorrowReserveApprove</servlet-name>
         <url-pattern>/BorrowReserveApprove.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReserveBusiness</servlet-name>
+        <servlet-class>servlet.LibrarianReserveBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReserveBusiness</servlet-name>
+        <url-pattern>/ReserveBusiness.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>LibrarianReturnBusiness</servlet-name>
