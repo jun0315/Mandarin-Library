@@ -62,11 +62,12 @@ public class ReaderBorrowDao {
                 Date borrow_time = resultSet.getDate("borrow_time");
                 int isReturned = resultSet.getInt("isReturned");
                 double fine = resultSet.getDouble("fine");
+                String book_name = resultSet.getString("book_name");
                 //如果罚金没有被管理员设置为已交罚金，则计算罚金
-                if (fine == 0) {
+                if (fine == 0 && isReturned == 0) {
                     fine = getFine(borrow_time, new java.util.Date(), book_return_period, book_fine_value);
                 }
-                ReaderBorrow readerBorrow = new ReaderBorrow(copy_id, user_account, borrow_time, isReturned, fine);
+                ReaderBorrow readerBorrow = new ReaderBorrow(copy_id, user_account, borrow_time, isReturned, fine, book_name);
                 readerBorrowList.add(readerBorrow);
             }
             DBHelper.closeConnection(connection, statement, resultSet);
@@ -77,9 +78,9 @@ public class ReaderBorrowDao {
     }
 
     //增加借阅记录
-    public void addReaderBorrow(String user_account, String copy_id) {
+    public void addReaderBorrow(String user_account, String copy_id, String book_name) {
         try {
-            String sql = "insert into reader_borrow values(?,?,?,?,?);";
+            String sql = "insert into reader_borrow values(?,?,?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, copy_id);
@@ -88,8 +89,10 @@ public class ReaderBorrowDao {
             java.util.Date date = new java.util.Date();
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String datestr = simpleDateFormat.format(date);
+            ps.setString(3, datestr);
             ps.setInt(4, 0);
             ps.setDouble(5, 0.0);
+            ps.setString(6, book_name);
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
@@ -125,11 +128,12 @@ public class ReaderBorrowDao {
                 Date borrow_time = resultSet.getDate("borrow_time");
                 int isReturned = resultSet.getInt("isReturned");
                 double fine = resultSet.getDouble("fine");
+                String book_name = resultSet.getString("book_name");
                 //如果罚金没有被管理员设置为已交罚金，则计算罚金;否则设置罚金为0
-                if (fine == 0) {
+                if (fine == 0 && isReturned == 0) {
                     fine = getFine(borrow_time, new java.util.Date(), book_return_period, book_fine_value);
                 }
-                ReaderBorrow readerBorrow = new ReaderBorrow(copy_id, user_account, borrow_time, isReturned, fine);
+                ReaderBorrow readerBorrow = new ReaderBorrow(copy_id, user_account, borrow_time, isReturned, fine, book_name);
                 readerBorrowList.add(readerBorrow);
             }
             DBHelper.closeConnection(connection, statement, resultSet);
@@ -165,7 +169,7 @@ public class ReaderBorrowDao {
             }
             //计算当前罚金
             double fine = getFine(pastDate, new java.util.Date(), book_return_period, book_fine_value);
-            //修改数据库
+            //修改reader_borrow数据库,设置借阅记录为已归还，并记录罚金
             String sql3 = "update reader_borrow set isReturned=1,fine=? where copy_id=? and user_account=?";
             PreparedStatement ps = connection.prepareStatement(sql3);
             ps.setDouble(1, fine);

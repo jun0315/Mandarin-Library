@@ -1,22 +1,22 @@
 <%--
   Created by IntelliJ IDEA.
   User: 刘威
-  Date: 2019/9/25
-  Time: 16：32
-  用于实现读者的View功能，可查看个人借阅情况和罚金信息
+  Date: 2019/10/28
+  Time: 20:31
+  To change this template use File | Settings | File Templates.
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="entity.ReaderBorrow" %>
+<%@ page import="entity.Reader" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.Book" %>
+<%@ page import="entity.ReaderReserve" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Borrow Business</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -37,31 +37,37 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+    <script src="js/dialogue.js"></script>
+
+    <!--  侧边栏效果 -->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
 </head>
+
 <body>
 <div class="page">
     <!-- Main Navbar-->
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="reader_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">View Borrowing History</h2>
+                    <h2 class="no-margin-bottom">Reserve Business</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="reader.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">View</li>
+                    <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
+                    <li class="breadcrumb-item active">Reserve Business</li>
                 </ul>
             </div>
-
-            <%--显示借阅记录 --%>
             <section class="tables" style="padding: 20px">
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
@@ -72,34 +78,35 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Book Name</th>
-                                                <th>Book Copy ID</th>
-                                                <th>Borrow Time</th>
-                                                <th>Status</th>
-                                                <th>Fine</th>
+                                                <th>Reader ID</th>
+                                                <th>Reader Bar</th>
+                                                <th>Copy ID</th>
+                                                <th>Copy Bar</th>
+                                                <th>Reserve Time</th>
+                                                <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%
-                                                List<ReaderBorrow> readerBorrowList = (List<ReaderBorrow>) request.getAttribute("readerBorrowList");
-                                            %>
-                                            <c:forEach items="${readerBorrowList}" var="readerBorrow" varStatus="li">
+                                            <%List<ReaderReserve> readerReserveList = (List<ReaderReserve>) request.getAttribute("readerReserveList");%>
+                                            <c:forEach items="${readerReserveList}" var="readerReserve" varStatus="li">
                                                 <tr>
                                                     <th>${li.index+1}</th>
-                                                    <td>${readerBorrow.getBook_name()}</td>
-                                                    <td>${readerBorrow.getCopy_id()}</td>
-                                                    <td>${readerBorrow.getBorrow_time().toString()}</td>
+                                                    <td>${readerReserve.getUser_account()}</td>
+                                                    <td>${readerReserve.getCopy_id()}</td>
                                                     <td>
-                                                        <c:choose>
-                                                            <c:when test="${readerBorrow.getIsReturned() ==1}">
-                                                                Returned
-                                                            </c:when>
-                                                            <c:otherwise>
-                                                                Not Returned
-                                                            </c:otherwise>
-                                                        </c:choose>
+                                                        <img src="cache/barcode/${readerReserve.getAccount_barpath()}">
                                                     </td>
-                                                    <td>${readerBorrow.getFine().toString()}$</td>
+                                                    <td>
+                                                        <img src="cache/barcode/${readerReserve.getCopy_barpath()}">
+                                                    </td>
+                                                    <td>${readerReserve.getReserve_time()}</td>
+                                                    <td>
+                                                        <a href="BorrowReserveApprove.do?user_account=${readerReserve.getUser_account()}&book_copy_id=${readerReserve.getCopy_id()}">
+                                                            <button type="button" class="btn btn-primary">Approve
+                                                            </button>
+                                                        </a>
+                                                    </td>
+                                                        <%--                                                    TODO--%>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>
@@ -111,13 +118,35 @@
                     </div>
                 </div>
             </section>
-
-
             <!-- Page Footer-->
-            <jsp:include page="footer.jsp" flush="true"></jsp:include>
+            <footer class="main-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </div>
+
+
+<script>
+    var info = '<%=request.getParameter("info")%>';
+    if (info == "approve_success") {
+        alert("Successfully Approve!");
+    }
+    if (info == "delete_success") {
+        alert("Delete Successfully")
+    }
+</script>
+
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
@@ -128,5 +157,8 @@
 <script src="js/charts-home.js"></script>
 <!-- Main File-->
 <script src="js/front.js"></script>
+
 </body>
 </html>
+
+

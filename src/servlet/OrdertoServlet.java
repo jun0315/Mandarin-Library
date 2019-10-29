@@ -29,7 +29,7 @@ public class OrdertoServlet extends HttpServlet {
 
         /*    out.print(id);*/
         if(number.equals("0")||number.equals("1")){
-            request.setAttribute("loginError", "your order is failed");
+            request.setAttribute("loginError", "your order is failed because the book has been borrowed or ordered");
             List<Detail> list=OrderDao.Search(sa);
             request.setAttribute("wa", list);
             RequestDispatcher dispatcher=request.getRequestDispatcher("book_order.jsp");
@@ -38,11 +38,14 @@ public class OrdertoServlet extends HttpServlet {
         else if(number.equals("2")){
             HttpSession session = request.getSession();
             String m=(String) session.getAttribute("account");
+            int s=(int) session.getAttribute("borrowing_count");
             ReaderReserveDao a=new ReaderReserveDao();
-            a.addReaderReserve(m, id);
             ChangeDao b=new ChangeDao();
+            if(s<3){
             b.changed(id);
-            request.setAttribute("loginError", "your order is successed");
+            a.addReaderReserve(m, id);
+            request.setAttribute("loginError", "your order is successed");}
+            else{ request.setAttribute("loginError", "your order is failed because you have borrowed three books");}
             List<Detail> list=OrderDao.Search(sa);
             request.setAttribute("wa", list);
             RequestDispatcher dispatcher=request.getRequestDispatcher("book_order.jsp");

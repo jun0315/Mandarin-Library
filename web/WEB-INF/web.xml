@@ -165,7 +165,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>AddBookByISBN</servlet-name>
-        <servlet-class>servlet.BookAddByISBNS2rvelet</servlet-class>
+        <servlet-class>servlet.BookAddByISBNSrvelet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddBookByISBN</servlet-name>
@@ -293,7 +293,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteNotice</servlet-name>
-        <url-pattern>/NoticeDelete.do</url-pattern>
+        <url-pattern>/DeleteNotice.do</url-pattern>
     </servlet-mapping>
 
     <servlet>
