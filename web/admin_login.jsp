@@ -28,6 +28,17 @@
     <div class="content">
         <div id="large-header" class="large-header">
             <canvas id="demo-canvas"></canvas>
+            <!-- back -->
+            <div style="width: 100px; height: 37px; position: absolute; left: 5%; top: 2%">
+                <a href="homePage.jsp">
+                    <div style="width: 37%; height: 100%; float: left">
+                        <img src="img/back.png" style="width: 100%; height: 100%">
+                    </div>
+                    <p style="font-size: 30px; margin: 0px; float: right; width: 63%; color: white">
+                        <strong>BACK</strong>
+                    </p>
+                </a>
+            </div>
             <div class="logo_box">
                 <div style="width: 330px; height: 140px; vertical-align: center">
                    <h1>Welcome! Administrator</h1>

@@ -22,6 +22,7 @@
     <div class="content">
         <div id="large-header" class="large-header" style="background-image: url('img/login_bg.jpg');">
             <canvas id="demo-canvas"></canvas>
+            <!-- back -->
             <div style="width: 100px; height: 37px; position: absolute; left: 5%; top: 2%">
                 <a href="homePage.jsp">
                     <div style="width: 37%; height: 100%; float: left">
@@ -53,7 +54,7 @@
                             <strong>Login</strong>
                         </button>
                         <a href="forget.jsp">
-                            <button class="act-but submit" id="forget" style="background: #13BDCE; color: #FFFFFF; width: 330px">
+                            <button type="button" class="act-but submit" id="forget" style="background: #13BDCE; color: #FFFFFF; width: 330px">
                                 <strong>Forget Password</strong>
                             </button>
                         </a>

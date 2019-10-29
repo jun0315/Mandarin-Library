@@ -54,14 +54,14 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">Book List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item active">Book List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
@@ -123,6 +123,12 @@
                                                             <button type="button" class="btn btn-secondary"
                                                                     style="color: white; background-color: rgb(46,203,112)">
                                                                 Edit
+                                                            </button>
+                                                        </a>
+                                                        <a href="BookDetail.do?bookNumber=${book.getBookNumber()}">
+                                                            <button type="button" class="btn btn-btn-primary"
+                                                                    style="color: white; background-color: rgb(224,79,61);">
+                                                                Delete
                                                             </button>
                                                         </a>
                                                     </td>

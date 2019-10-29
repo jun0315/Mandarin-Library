@@ -40,6 +40,14 @@
         <url-pattern>/librarian_add.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>EditLibrarian</servlet-name>
+        <servlet-class>servlet.LibrarianEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditLibrarian</servlet-name>
+        <url-pattern>/EditLibrarian.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>DeleteLibrarian</servlet-name>
         <servlet-class>servlet.LibrarianDeleteServlet</servlet-class>
     </servlet>

@@ -65,7 +65,6 @@
                 class="icon-interface-windows"></i><strong>Librarian Manage</strong></a>
             <ul id="LibrarianManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="LibrarianListPage"><strong>Librarian List</strong></a></li>
-                <li><a href="librarian_add.jsp"><strong>Add Librarian</strong></a></li>
                 <li><a href="findBackLibrarianPassword.do"><strong>Find Back Librarian Password</strong></a></li>
             </ul>
         </li>

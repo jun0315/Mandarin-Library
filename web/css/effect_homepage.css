@@ -1258,8 +1258,8 @@ html, body, #__layout {
   background: -webkit-linear-gradient(45deg, #5a3694 0%, #13bdce 33%, #0094d9 66%, #6fc7b5 100%);
   background: -o-linear-gradient(45deg, #5a3694 0%, #13bdce 33%, #0094d9 66%, #6fc7b5 100%);
   background: linear-gradient(45deg, #5a3694 0%, #13bdce 33%, #0094d9 66%, #6fc7b5 100%);
-  background-size: 100%;
-  background-position: 0% 0%;
+  background-size: 400%;
+  background-position: 0% 100%;
   -webkit-animation: gradient 7.5s ease-in-out infinite;
   animation: gradient 7.5s ease-in-out infinite; }
 
@@ -2403,11 +2403,12 @@ html, body, #__layout {
       .container .search h1 img {
         width: 230px; }
     .container .search h2 {
-        text-align: center;
-        color: #fff;
-        font-weight: bold;
-        font-size: 100px;
-        font-family: "webfontx" !important;}
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+        padding-bottom: 50px;
+        font-size: 44px; }
     .container .search ul {
       line-height: 40px;
       width: 600px;

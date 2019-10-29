@@ -67,7 +67,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Password</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="password" value="00010001"
+                                        <input id="inputHorizontalWarning" name="password"
                                                class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Signin" class="btn btn-primary">
+                                        <input type="submit" value="Sign in" class="btn btn-primary">
                                     </div>
                                 </div>
                             </form>

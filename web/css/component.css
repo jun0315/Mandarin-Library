@@ -35,6 +35,16 @@
     padding: 0 0 35px 0;
 }
 
+.logo_box h2 {
+    text-align: center;
+    height: 30px;
+    font: 30px "microsoft yahei", Helvetica, Tahoma, Arial, "Microsoft jhengHei", sans-serif;
+    color: #FFFFFF;
+    line-height: 40px;
+    padding: 0 0 35px 0;
+    vertical-align: center
+}
+
 .logo_box h3 {
     text-align: center;
     height: 20px;
