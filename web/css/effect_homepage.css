@@ -658,7 +658,8 @@ html, body, #__layout {
     .container .search h2 {
       text-align: center;
       color: #fff;
-      font-weight: normal;
+      font-weight: bold;
+      font-size: 100px;
       font-family: "webfontx" !important; }
     .container .search ul {
       display: -webkit-box;
@@ -2402,12 +2403,12 @@ html, body, #__layout {
       .container .search h1 img {
         width: 230px; }
     .container .search h2 {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 0 100%;
-          -ms-flex: 1 0 100%;
-              flex: 1 0 100%;
-      padding-bottom: 50px;
-      font-size: 44px; }
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+        flex: 1 0 100%;
+        padding-bottom: 50px;
+        font-size: 44px; }
     .container .search ul {
       line-height: 40px;
       width: 600px;
@@ -2481,12 +2482,11 @@ html, body, #__layout {
       .container .search h1 img {
         width: 230px; }
     .container .search h2 {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 0 100%;
-          -ms-flex: 1 0 100%;
-              flex: 1 0 100%;
-      padding-bottom: 50px;
-      font-size: 44px; }
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 100px;
+        font-family: "webfontx" !important; }
     .container .search ul {
       line-height: 40px;
       width: 600px;

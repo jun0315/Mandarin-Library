@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <title>Book Detail</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -39,23 +39,21 @@
     <jsp:include page="header_template.jsp" flush="true"></jsp:include>
     <div class="page-content d-flex align-items-stretch">
         <!-- Side Navbar -->
-        <jsp:include page="reader_side.jsp" flush="true"></jsp:include>
+        <jsp:include page="librarian_side.jsp" flush="true"></jsp:include>
         <div class="content-inner">
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">orderdetail</h2>
+                    <h2 class="no-margin-bottom">Book Detail</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active"></li>
+                    <li class="breadcrumb-item active">Book Detail</li>
                 </ul>
             </div>
-
-
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
@@ -80,7 +78,7 @@
                                         <c:forEach items="${wa}" var="detail" varStatus="li">
                                             <tr>
                                                 <td>${detail.getBookNumber()}</td>
-                                                <td>${detail.getCopyid()}</td>
+                                                <td>${detail.getCopyId()}</td>
                                                 <td>${detail.getFloor()}</td>
                                                 <td>${detail.getShelf()}</td>
                                                 <td>${detail.getAreacode()}</td>
@@ -107,13 +105,13 @@
                                                                             aria-hidden="true">×</span></button>
                                                                 </div>
                                                                 <div class="modal-body">
-                                                                    <p>Are you sure want to delete this account?</p>
+                                                                    <p>Are you sure want to delete this book?</p>
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" data-dismiss="modal"
                                                                             class="btn btn-secondary">Close
                                                                     </button>
-                                                                    <a href="DeleteBook.do?bookCpoyID=${detail.getCopyid()}">
+                                                                    <a href="DeleteBook.do?bookCopyID=${detail.getCopyId()}">
                                                                             <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
                                                                         <button type="button"
                                                                                 class="btn btn-primary">

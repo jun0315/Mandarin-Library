@@ -20,7 +20,7 @@ public class BookDeleteServlet extends HttpServlet {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
-        String bookNumber = (String) request.getParameter("bookCpoyID");
+        String bookNumber = (String) request.getParameter("bookCopyID");
  
         BookDao bookDao = new BookDao();
         bookDao.deleteBook(bookNumber);

@@ -3,6 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <welcome-file-list>
+        <welcome-file>homePage.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
     <servlet>
         <servlet-name>loginServlet</servlet-name>
         <servlet-class>servlet.LoginServlet</servlet-class>
@@ -36,6 +40,14 @@
         <url-pattern>/librarian_add.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>EditLibrarian</servlet-name>
+        <servlet-class>servlet.LibrarianEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditLibrarian</servlet-name>
+        <url-pattern>/EditLibrarian.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>DeleteLibrarian</servlet-name>
         <servlet-class>servlet.LibrarianDeleteServlet</servlet-class>
     </servlet>
@@ -60,9 +72,9 @@
         <url-pattern>/ReaderSearchServlet</url-pattern>
     </servlet-mapping>
     <servlet>
-    <servlet-name>BookCategoryAdd</servlet-name>
-    <servlet-class>servlet.BookCategoryAddServlet</servlet-class>
-</servlet>
+        <servlet-name>BookCategoryAdd</servlet-name>
+        <servlet-class>servlet.BookCategoryAddServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BookCategoryAdd</servlet-name>
         <url-pattern>/BookCategoryAdd.do</url-pattern>
