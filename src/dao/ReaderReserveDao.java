@@ -37,7 +37,8 @@ public class ReaderReserveDao {
 
     public void addReaderReserve(String user_account, String copy_id) {
         try {
-            String sql = "insert into reader_reserve values(?,?,?);";
+            //向reader_reserve表插入数据
+            String sql = "insert into reader_reserve values(?,?,?)";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, user_account);

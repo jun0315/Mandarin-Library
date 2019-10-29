@@ -5,11 +5,12 @@ import entity.Reader;
 import utils.DBHelper;
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderDao {
-    public static ReaderDao getInstance(){
+    public static ReaderDao getInstance() {
         return new ReaderDao();
     }
 
@@ -45,11 +46,13 @@ public class ReaderDao {
                 String name = resultSet.getString("user_name");
                 String email = resultSet.getString("user_email");
                 int deposit = resultSet.getInt("security_deposit");
+                Date register_time = resultSet.getDate("register_time");
                 reader.setAccount(account);
                 reader.setPassword(password);
                 reader.setName(name);
                 reader.setEmail(email);
                 reader.setDeposit(deposit);
+                reader.setRegister_time(register_time);
                 readers.add(reader);
             }
         } catch (SQLException e) {
@@ -71,11 +74,15 @@ public class ReaderDao {
                 String nameInDB = resultSet.getString("user_name");
                 String emailInDB = resultSet.getString("user_email");
                 int depositInDB = resultSet.getInt("security_deposit");
+                Date register_time = resultSet.getDate("register_time");
+                int borrowing_count = resultSet.getInt("borrowing_count");
                 reader.setAccount(account);
                 reader.setPassword(passwordInDB);
                 reader.setName(nameInDB);
                 reader.setEmail(emailInDB);
                 reader.setDeposit(depositInDB);
+                reader.setRegister_time(register_time);
+                reader.setBorrowing_count(borrowing_count);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -106,7 +113,7 @@ public class ReaderDao {
 
     public void addReader(String account, String password, String name, String email, int deposit) {
         try {
-            String sql = "insert into reader values(?,?,?,?,?);";
+            String sql = "insert into reader values(?,?,?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, account);
@@ -114,6 +121,11 @@ public class ReaderDao {
             ps.setString(3, name);
             ps.setString(4, email);
             ps.setInt(5, deposit);
+            //预约时间设置为系统当前时间
+            java.util.Date date = new java.util.Date();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String register_time = simpleDateFormat.format(date);
+            ps.setString(6, register_time);
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {
@@ -146,6 +158,37 @@ public class ReaderDao {
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, account);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection, ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public String getEmailByAccount(String account) {
+        String user_email = "";
+        try {
+            String sql = "select * from reader where user_account = \'" + account + "\'";
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                user_email = resultSet.getString("user_email");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return user_email;
+    }
+
+    public void editPasswordByEmail(String account, String password) {
+        try {
+            //TODO BUG 修改reader后 再reader-borrow中当作外键 没办法修改
+            String sql = "update reader set user_password=? where user_account=? ";
+            Connection connection = DBHelper.getInstance().getConnection();
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, password);
+            ps.setString(2, account);
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
         } catch (SQLException e) {

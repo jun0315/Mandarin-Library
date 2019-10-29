@@ -69,16 +69,18 @@
 
                 <form class="input-group col-md-12" style="margin: 10px;position: relative" action="ReaderSearchServlet"
                       name="search" method="post">
-                    <select name="signal">
-                        <option>name</option>
-                        <option>id</option>
-                        <option>author</option>
-                    </select>
+                    <span class="input-group-btn">
+                        <select  name="signal" class="btn btn-info btn-search">
+                            <option>Name</option>
+                            <option>ID</option>
+                            <option>Author</option>
+                        </select>
+                    </span>
                     <input type="text" class="form-control" name="message"
                            placeholder="Please enter the content you are searching for">
                     <span class="input-group-btn">
-                            <button type="submit" class="btn btn-info btn-search">search</button>
-                        </span>
+                        <button type="submit" class="btn btn-info btn-search">search</button>
+                    </span>
                 </form>
 
                 <div class="container-fluid">
@@ -91,13 +93,13 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Bnumber</th>
+                                                <th>BookNumber</th>
                                                 <th>Name</th>
                                                 <th>Press</th>
                                                 <th>Author</th>
                                                 <th>Floor</th>
                                                 <th>Shelf</th>
-                                                <th>detail</th>
+                                                <th>Detail</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -176,19 +178,7 @@
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. test</p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
@@ -197,7 +187,7 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'found') {
-        alert("successfully serach!");
+        alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
     }

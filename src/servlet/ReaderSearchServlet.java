@@ -1,6 +1,5 @@
 package servlet;
 
-import dao.LibrarianDao;
 import dao.ReaderSearchDao;
 import entity.Book;
 
@@ -11,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.sql.*;
 import java.util.List;
 
 

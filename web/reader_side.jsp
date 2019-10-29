@@ -1,4 +1,4 @@
-<%--
+<%@ page import="dao.ReaderDao" %><%--
   Created by IntelliJ IDEA.
   User: 刘威
   Date: 2019/9/25
@@ -13,10 +13,16 @@
         <div class="title">
             <h1 class="h4">
                 <%
-                    String account = (String) session.getAttribute("name");
-                    out.println(account);
+                    String name = (String) session.getAttribute("name");
+                    out.println(name);
                 %>
             </h1>
+            <p>
+                <%
+                    String user_type = (String) session.getAttribute("type");
+                    out.println(user_type);
+                %>
+            </p>
         </div>
     </div>
     <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
@@ -24,6 +30,6 @@
         <li><a href="reader.jsp"> <i class="icon-bill"></i>Home</a></li>
         <li><a href="BorrowHistory.do"> <i class="icon-bill"></i>Borrowing History</a></li>
         <li><a href="reader_search.jsp"> <i class="icon-search"></i>Search Book</a></li>
-        <li><a href="reader_account_setting.jsp"> <i class="icon-home"></i>Account Setting</a></li>
+        <li><a href="reader_account_setting.jsp"> <i class="icon-home"></i>Account Information</a></li>
     </ul>
 </nav>

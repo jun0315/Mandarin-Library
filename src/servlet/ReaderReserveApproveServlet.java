@@ -1,7 +1,9 @@
 package servlet;
 
-import dao.ReaderBorrowDao;
-import dao.ReaderReserveDao;
+import dao.*;
+import entity.Book;
+import entity.BookDetail;
+import entity.Reader;
 import entity.ReaderReserve;
 
 import javax.servlet.ServletException;
@@ -27,9 +29,20 @@ public class ReaderReserveApproveServlet extends HttpServlet {
         //从reader_reserve表中删除要通过的预约
         ReaderReserveDao readerReserveDao = new ReaderReserveDao();
         readerReserveDao.deleteReaderReserve(user_account, copy_id);
+        //获取书名
+        BookDetailDao bookDetailDao = new BookDetailDao();
+        String book_number = bookDetailDao.getBookNumberByCopyID(copy_id);
+        BookDao bookDao = new BookDao();
+        String book_name = bookDao.getBookNameByBookNumber(book_number);
         //增加借阅记录
         ReaderBorrowDao readerBorrowDao = new ReaderBorrowDao();
-        readerBorrowDao.addReaderBorrow(user_account, copy_id);
+        readerBorrowDao.addReaderBorrow(user_account, copy_id, book_name);
+        //修改借阅副本的状态为已借出borrowed
+        bookDetailDao.changeBookStatus(copy_id, 0);
+        //增加reader的borrow_count加1
+        ReaderDao readerDao= new ReaderDao();
+        Reader reader =readerDao.info(user_account);
+        reader.setBorrowing_count(reader.getBorrowing_count()+1);
         //操作成功后返回到原页面，等同于刷新原页面
         response.sendRedirect("BorrowBusiness.do?info=approve_success");
     }

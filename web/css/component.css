@@ -2,15 +2,16 @@
 .large-header {
     position: relative;
     width: 100%;
-    background: #333;
     overflow: hidden;
     background-size: cover;
-    background-position: center center;
+    background: #333 center center;
     z-index: 1;
 }
 
 .demo-1 .large-header {
-    background-image: url('../img/demo-1-bg.jpg');
+    background-image: url('../img/login_bg.jpg');
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
 }
 
 .logo_box {
@@ -19,10 +20,29 @@
     padding: 35px;
     color: #EEE;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 23%;
+    top: 40%;
     margin-left: -200px;
     margin-top: -250px;
+}
+
+.logo_box h1 {
+    text-align: center;
+    height: 40px;
+    font: 40px "microsoft yahei", Helvetica, Tahoma, Arial, "Microsoft jhengHei", sans-serif;
+    color: #FFFFFF;
+    line-height: 60px;
+    padding: 0 0 35px 0;
+}
+
+.logo_box h2 {
+    text-align: center;
+    height: 30px;
+    font: 30px "microsoft yahei", Helvetica, Tahoma, Arial, "Microsoft jhengHei", sans-serif;
+    color: #FFFFFF;
+    line-height: 40px;
+    padding: 0 0 35px 0;
+    vertical-align: center
 }
 
 .logo_box h3 {

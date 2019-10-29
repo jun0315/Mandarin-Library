@@ -78,7 +78,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div style="width: 1000px;height: 40px">
+                                    <div style="width: 1000px;height: 60px">
                                         <a href="librarian_add.jsp">
                                             <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
                                             <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
@@ -163,18 +163,7 @@
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
@@ -183,7 +172,7 @@
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == 'found') {
-        alert("successfully serach!");
+        alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
     }

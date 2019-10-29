@@ -152,18 +152,7 @@
                 </div>
             </section>
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>
@@ -175,6 +164,12 @@
         alert("successfully search!");
     } else if (info == 'notFound') {
         alert("search failure!");
+    } else if (info == 'delete_error') {
+        alert("There is no account to delete!");
+        window.location.href = "ReaderList.do";
+    } else if (info == 'delete_success') {
+        alert("Successfully delete!");
+        window.location.href = "ReaderList.do";
     }
 </script>
 

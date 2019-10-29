@@ -140,7 +140,7 @@ public class BookCategoryDao {
 
     public void addBookCategory(String category, int floor, String shelf){
         try {
-            String sql = "insert into book_category values(?,?,?,1);";
+            String sql = "insert into book_category values(?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, category);

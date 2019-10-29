@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.List;
 
 
-public class BookAddByISBNSrvelet extends HttpServlet {
+public class BookAddByISBNServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 

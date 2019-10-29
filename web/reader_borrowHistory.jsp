@@ -9,6 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.ReaderBorrow" %>
 <%@ page import="java.util.List" %>
+<%@ page import="entity.Book" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -71,7 +72,7 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Account</th>
+                                                <th>Book Name</th>
                                                 <th>Book Copy ID</th>
                                                 <th>Borrow Time</th>
                                                 <th>Status</th>
@@ -79,11 +80,13 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<ReaderBorrow> readerBorrowList = (List<ReaderBorrow>) request.getAttribute("readerBorrowList");%>
+                                            <%
+                                                List<ReaderBorrow> readerBorrowList = (List<ReaderBorrow>) request.getAttribute("readerBorrowList");
+                                            %>
                                             <c:forEach items="${readerBorrowList}" var="readerBorrow" varStatus="li">
                                                 <tr>
                                                     <th>${li.index+1}</th>
-                                                    <td>${readerBorrow.getUser_account()}</td>
+                                                    <td>${readerBorrow.getBook_name()}</td>
                                                     <td>${readerBorrow.getCopy_id()}</td>
                                                     <td>${readerBorrow.getBorrow_time().toString()}</td>
                                                     <td>
@@ -111,21 +114,7 @@
 
 
             <!-- Page Footer-->
-            <footer class="main-footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <p>Copyright &copy; 2019. <a
-                                    href="http://www.cssmoban.com/" target="_blank" title=""></a>
-                                <a href="http://www.cssmoban.com/" title="" target="_blank"></a></p>
-                        </div>
-                        <div class="col-sm-6 text-right">
-                            <p></p>
-                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <jsp:include page="footer.jsp" flush="true"></jsp:include>
         </div>
     </div>
 </div>

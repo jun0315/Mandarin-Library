@@ -3,6 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <welcome-file-list>
+        <welcome-file>homePage.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
     <servlet>
         <servlet-name>loginServlet</servlet-name>
         <servlet-class>servlet.LoginServlet</servlet-class>
@@ -34,6 +38,14 @@
     <servlet-mapping>
         <servlet-name>LibrarianAdd</servlet-name>
         <url-pattern>/librarian_add.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EditLibrarian</servlet-name>
+        <servlet-class>servlet.LibrarianEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditLibrarian</servlet-name>
+        <url-pattern>/EditLibrarian.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>DeleteLibrarian</servlet-name>
@@ -68,6 +80,14 @@
         <url-pattern>/BookCategoryAdd.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>BookCategoryDelete</servlet-name>
+        <servlet-class>servlet.BookCategoryDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookCategoryDelete</servlet-name>
+        <url-pattern>/BookCategoryDelete.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>BookCategoryList</servlet-name>
         <servlet-class>servlet.BookCategoryListServlet</servlet-class>
     </servlet>
@@ -90,6 +110,14 @@
     <servlet-mapping>
         <servlet-name>BookAdd</servlet-name>
         <url-pattern>/BookAdd.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VisitorSearch</servlet-name>
+        <servlet-class>servlet.VisitorSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VisitorSearch</servlet-name>
+        <url-pattern>/VisitorSearch.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>DeleteBook</servlet-name>
@@ -140,8 +168,16 @@
         <url-pattern>/AdminChangeSettingsServlet.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>BookDeletedList</servlet-name>
+        <servlet-class>servlet.BookDeletedListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookDeletedList</servlet-name>
+        <url-pattern>/BookDeletedList.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>AddBookByISBN</servlet-name>
-        <servlet-class>servlet.BookAddByISBNSrvelet</servlet-class>
+        <servlet-class>servlet.BookAddByISBNServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddBookByISBN</servlet-name>
@@ -150,7 +186,7 @@
     <servlet>
         <servlet-name>EditReader</servlet-name>
         <servlet-class>servlet.ReaderEditServlet</servlet-class>
-        </servlet>
+    </servlet>
     <servlet-mapping>
         <servlet-name>EditReader</servlet-name>
         <url-pattern>/ReaderEdit.do</url-pattern>
@@ -204,6 +240,14 @@
         <url-pattern>/BorrowReserveApprove.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>ReserveBusiness</servlet-name>
+        <servlet-class>servlet.LibrarianReserveBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReserveBusiness</servlet-name>
+        <url-pattern>/ReserveBusiness.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>LibrarianReturnBusiness</servlet-name>
         <servlet-class>servlet.LibrarianReturnBusinessServlet</servlet-class>
     </servlet>
@@ -247,9 +291,75 @@
         <servlet-name>ReaderAccountSetting</servlet-name>
         <servlet-class>servlet.ReaderAccountSettingServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NoticePost</servlet-name>
+        <servlet-class>servlet.NoticePostServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoticePost</servlet-name>
+        <url-pattern>/NoticePost.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NoticeList</servlet-name>
+        <servlet-class>servlet.NoticeListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoticeList</servlet-name>
+        <url-pattern>/NoticeList.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteNotice</servlet-name>
+        <servlet-class>servlet.NoticeDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteNotice</servlet-name>
+        <url-pattern>/DeleteNotice.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditNotice</servlet-name>
+        <servlet-class>servlet.NoticeEditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditNotice</servlet-name>
+        <url-pattern>/EditNotice.do</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ReaderAccountSetting</servlet-name>
         <url-pattern>/ReaderAccountSetting.do</url-pattern>
     </servlet-mapping>
-<!--    end -->
+    <servlet>
+        <servlet-name>BookDetail</servlet-name>
+        <servlet-class>servlet.BookDetailServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookDetail</servlet-name>
+        <url-pattern>/BookDetail.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>forgetpassword</servlet-name>
+        <servlet-class>servlet.ForgetPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>forgetpassword</servlet-name>
+        <url-pattern>/ForgetPassword.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>IncomeHistory</servlet-name>
+        <servlet-class>servlet.IncomeHistoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncomeHistory</servlet-name>
+        <url-pattern>/IncomeHistory.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>HomePageNotice</servlet-name>
+        <servlet-class>servlet.HomePageLNoticeListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomePageNotice</servlet-name>
+        <url-pattern>/homePage.do</url-pattern>
+    </servlet-mapping>
+
+    <!--    end -->
 </web-app>

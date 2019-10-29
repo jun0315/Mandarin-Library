@@ -54,8 +54,91 @@
                 </ul>
             </div>
 
-
-            <div class="">
+            <section class="tables">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-close">
+                                    <div class="dropdown">
+                                        <button type="button" id="closeCard3" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i
+                                                class="fa fa-ellipsis-v"></i></button>
+                                        <div aria-labelledby="closeCard3"
+                                             class="dropdown-menu dropdown-menu-right has-shadow"><a href="#"
+                                                                                                     class="dropdown-item remove">
+                                            <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit">
+                                            <i class="fa fa-gear"></i>Edit</a></div>
+                                    </div>
+                                </div>
+                                <div class="card-header d-flex align-items-center">
+                                    <h3 class="h4">Book Detail</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-hover">
+                                            <tr>
+                                                <th>Book Number</th>
+                                                <td>
+                                                    ${book.getBookNumber()}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Book Name</th>
+                                                <td>
+                                                    ${book.getName()}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Book Press</th>
+                                                <td>
+                                                    ${book.getPress()}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Book Author</th>
+                                                <td>
+                                                    ${book.getAuthor()}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Book Category</th>
+                                                <td>
+                                                    ${book.getCategory()}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Book Floor</th>
+                                                <td>
+                                                    ${book.getFloor()}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Book Shelf</th>
+                                                <td>
+                                                    ${book.getShelf()}
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Book Amount</th>
+                                                <td>
+                                                    ${book.getAmount()}
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <form action="Order"
+                                              name="order" method="post">
+                                            <input type="hidden" name="number" value="${book.getBookNumber()}"/>
+                                            <input type="submit" value="order">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<%--            <div class="">
                 <h3>number： ${book.getBookNumber()}</h3>
                 <h3>name: ${book.getName()}</h3>
                 <h3>press: ${book.getPress()}</h3>
@@ -69,7 +152,7 @@
                     <input type="hidden" name="number" value="${book.getBookNumber()}"/>
                     <input type="submit" value="order">
                 </form>
-            </div>
+            </div>--%>
 
             <!-- Page Footer-->
             <footer class="main-footer">

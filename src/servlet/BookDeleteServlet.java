@@ -20,10 +20,10 @@ public class BookDeleteServlet extends HttpServlet {
 
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
-        String booknumber = (String) request.getParameter("booknumber");
-
+        String bookNumber = (String) request.getParameter("bookCopyID");
+ 
         BookDao bookDao = new BookDao();
-        bookDao.deleteBook(booknumber);
-        request.getRequestDispatcher("librarian.jsp").forward(request, response);
+        bookDao.deleteBook(bookNumber);
+        request.getRequestDispatcher("librarian_book_list.jsp?info=delete_success").forward(request, response);
     }
 }
