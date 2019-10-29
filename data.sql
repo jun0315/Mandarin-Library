@@ -1,6 +1,6 @@
 /*
 SQLyog Community v13.1.5  (64 bit)
-MySQL - 5.6.15 : Database - lib_system
+MySQL - 5.6.45-log : Database - lib_system
 *********************************************************************
 */
 
@@ -141,7 +141,7 @@ CREATE TABLE `reader` (
 insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`,`register_time`,`borrowing_count`) values 
 ('13855447008','jun1','123','13',0,'2019-10-28',0),
 ('reader','123','123','1072505283@qq.com',300,'2019-10-17',3),
-('reader-test','jun','123','1072505283@qq.com',300,NULL,0);
+('reader-test','jun','123','1072505283@qq.com',300,'2019-10-22',0);
 
 /*Table structure for table `reader_borrow` */
 
