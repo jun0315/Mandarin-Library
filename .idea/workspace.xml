@@ -6,125 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e59409dd-bb2a-4399-9339-fe9c9c5ae8c4" name="Default Changelist" comment="small modify income function">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mail_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mail-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/BookDeleteDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/ChangeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/DetailDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/NoticeDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/ReaderReserveDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/BookDelete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Detail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Notice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/ReaderReserve.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookDeletedListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/BookDetailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/DetailSearchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/ForgetPasswordServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/HomePageLNoticeListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/IncomeHistoryServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianBorrowBusinessServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/LibrarianReturnBusinessServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeEditServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/NoticeListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/NoticePostServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/OrderServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/OrdertoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderAccountSettingServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/ReaderReserveApproveServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlet/ReturnBookServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/FindReaderPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/MailSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_delete_list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_detail_librarian.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/book_order.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/effect_homepage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/failed.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/findPassword.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/forget.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/Login_bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/librarian_borrow_business.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/librarian_income_history_business.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/librarian_return_business.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/notice_edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/notice_list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/notice_post.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/reader_account_setting.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/successed.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/library_Web_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/library___test_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/library___test_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/library - test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/library - test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/AdminDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdminDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookCategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderBorrowDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ReaderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ReaderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookAddByISBNServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookAddByISBNServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/BookEditServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/BookEditServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin_login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/admin_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin_side.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_add.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_add.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/book_category_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/book_category_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/component.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/demo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/fontastic.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/fontastic.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.blue.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.default.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.green.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.green.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.pink.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.red.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.red.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.sea.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.sea.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/style.violet.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/style.violet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/data/addresses.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/data/addresses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/data/countries.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/data/countries.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/fonts/dashboard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/homePage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons-reference/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/fonts/dashboard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons-reference/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/icons-reference.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/icons-reference/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons-reference/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/adminLogin_bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/img/demo-1-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/charts-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/charts-custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/charts-home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/charts-home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/demo-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/demo-1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/dialogue.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/dialogue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/front.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/rAF.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/rAF.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_book_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_book_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/librarian_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/librarian_side.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_borrowHistory.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_borrowHistory.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/reader_side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reader_side.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/chart.js/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/chart.js/Chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/chart.js/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/chart.js/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery-validation/additional-methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery-validation/additional-methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery-validation/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery-validation/jquery.validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery.cookie/cookie.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery.cookie/cookie.jquery.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery.cookie/jquery.cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery.cookie/jquery.cookie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/jquery/jquery.slim.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/jquery/jquery.slim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/popper.js/popper-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/popper.js/popper-utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/vendor/popper.js/popper.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vendor/popper.js/popper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/visitor_search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/visitor_search.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="7f9efbfb-e6eb-4543-8a91-17a26106e6bb" name="Default Changelist" comment="因为一波操作导致该项目的时候git没开&#10;所以一次上传，不知道能不能看到改动" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +25,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
