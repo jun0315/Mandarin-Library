@@ -79,7 +79,7 @@
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                         <!-- Logout    -->
                         <li class="nav-item">
-                            <a href="login" class="nav-link logout">
+                            <a href="index.jsp" class="nav-link logout">
                                 <span class="d-none d-sm-inline" style="font-size: 20px;">Login</span>
                                 <i class="fa fa-sign-out"></i>
                             </a>
