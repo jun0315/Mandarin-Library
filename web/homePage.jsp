@@ -36,56 +36,6 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
-    <style>
-        .effect1 {
-            height: 600px;
-            background: #0299d8;
-            background: -webkit-linear-gradient(45deg, #5a3694 0%, #13bdce 33%, #0094d9 66%, #6fc7b5 100%);
-            background: -o-linear-gradient(45deg, #5a3694 0%, #13bdce 33%, #0094d9 66%, #6fc7b5 100%);
-            background: linear-gradient(45deg, #5a3694 0%, #13bdce 33%, #0094d9 66%, #6fc7b5 100%);
-            background-size: 400%;
-            background-position: 0% 100%;
-            -webkit-animation: gradient 7.5s ease-in-out infinite;
-            animation: gradient 7.5s ease-in-out infinite;
-        }
-
-        .search {
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -webkit-justify-content: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            position: absolute;
-            top: 50%;
-            z-index: 9;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            margin-top: -15px;
-            -webkit-transition: color 0.5s;
-            -o-transition: color 0.5s;
-            transition: color 0.5s;
-        }
-
-        .search h2 {
-            text-align: center;
-            color: #fff;
-            font-weight: bold;
-            font-size: 100px;
-            font-family: "webfontx" !important;
-        }
-    </style>
     <link data-n-head="true" rel="stylesheet" href="css/effect_homepage.css">
 </head>
 <body>
@@ -105,6 +55,7 @@
                         <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong></strong></div>
                     </a>
                         <!-- Toggle Button-->
+                        <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                     </div>
                     <!-- Navbar Menu -->
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
@@ -144,46 +95,73 @@
             </form>
         </div>
     </div>
-
-    <div class="">
-        <section class="tables" style="padding: 20px">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Topic</th>
-                                            <th>Content</th>
-                                            <th>PostTime</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>
-                                        <c:forEach items="${notices}" var="notice" varStatus="li">
-                                            <tr>
-                                                <td>${notice.getID()}</td>
-                                                <td>${notice.getTopic()}</td>
-                                                <td>${notice.getContent()}</td>
-                                                <td>${notice.getPosttime()}</td>
-                                            </tr>
-                                        </c:forEach>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+    <div class="tables" style="padding: 20px">
+        <div class="card">
+            <div class="card-body">
+                <p style="font-size: 30px; border-bottom: rgba(129,129,130,0.42) solid">
+                    <strong>Notice</strong></p>
+                <div class="" style="width: 100%; margin-top: 30px">
+                    <div style="width: 80%; margin-left: auto; margin-right: auto">
+                        <div id="mq" style="width:100%; height:200px; font-size: 30px; overflow:hidden"
+                             οnmοuseοver="iScrollAmount=0" οnmοuseοut="iScrollAmount=1">
+                            　　this is a notice.<br/>
+                            　　this is a notice.<br/>
+                            　　<br/>
+                            　　this is a notice.<br/>
+                            　　this is a notice.<br/>
+                            　　<br/>
                         </div>
+<%--                        <tbody>--%>
+<%--                        <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>--%>
+<%--                        <c:forEach items="${notices}" var="notice" varStatus="li">--%>
+<%--                            <tr>--%>
+<%--                                <td>${notice.getID()}</td>--%>
+<%--                                <td>${notice.getTopic()}</td>--%>
+<%--                                <td>${notice.getContent()}</td>--%>
+<%--                                <td>${notice.getPosttime()}</td>--%>
+<%--                            </tr>--%>
+<%--                        </c:forEach>--%>
+<%--                        </tbody>--%>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-
-    <jsp:include page="footer.jsp" flush="true"></jsp:include>
+    <footer style="position: absolute;
+                width: 100%;
+                background: #2f333e;
+                color: #fff;
+                padding: 20px 10px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p></p>
+                    <!-- Please do not remove the back link to us . It is part of the license conditions. :)-->
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
+<script>
+    var oMarquee = document.getElementById("mq"); //滚动对象
+    var iLineHeight = 40; //单行高度，像素
+    var iLineCount = 7; //实际行数
+    var iScrollAmount = 1; //每次滚动高度，像素
+    function run() {
+        oMarquee.scrollTop += iScrollAmount;
+        if ( oMarquee.scrollTop == iLineCount * iLineHeight )
+            oMarquee.scrollTop = 0;
+        if ( oMarquee.scrollTop % iLineHeight == 0 ) {
+            window.setTimeout( "run()", 2000 );
+        } else {
+            window.setTimeout( "run()", 50 );
+        }
+    }
+    oMarquee.innerHTML += oMarquee.innerHTML;
+    window.setTimeout( "run()", 2000 );
+</script>
 </body>
 </html>
