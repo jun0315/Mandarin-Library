@@ -6,12 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f9efbfb-e6eb-4543-8a91-17a26106e6bb" name="Default Changelist" comment="homePage.jsp的修改（滚动notice)">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="7f9efbfb-e6eb-4543-8a91-17a26106e6bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/effect_homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/effect_homepage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/homePage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/homePage.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -300,7 +296,8 @@
       <workItem from="1572250884141" duration="10000" />
       <workItem from="1572269037065" duration="1368000" />
       <workItem from="1572272146649" duration="6365000" />
-      <workItem from="1572407532442" duration="5909000" />
+      <workItem from="1572407532442" duration="6278000" />
+      <workItem from="1572415213811" duration="454000" />
     </task>
     <task id="LOCAL-00001" summary="更新.gitignore">
       <created>1569579494657</created>
@@ -463,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572361650240</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="homePage.jsp的修改（滚动notice + 简化了effect_homePage.css-极大压缩了它的空间)">
+      <created>1572413562984</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1572413562985</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +525,8 @@
     <MESSAGE value="small fix forgetpwd" />
     <MESSAGE value="small modify income function" />
     <MESSAGE value="因为一波操作导致该项目的时候git没开&#10;所以一次上传，不知道能不能看到改动" />
-    <option name="LAST_COMMIT_MESSAGE" value="因为一波操作导致该项目的时候git没开&#10;所以一次上传，不知道能不能看到改动" />
+    <MESSAGE value="homePage.jsp的修改（滚动notice + 简化了effect_homePage.css-极大压缩了它的空间)" />
+    <option name="LAST_COMMIT_MESSAGE" value="homePage.jsp的修改（滚动notice + 简化了effect_homePage.css-极大压缩了它的空间)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
