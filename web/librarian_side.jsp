@@ -89,6 +89,7 @@
             <ul id="BookManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="BookList.do"><strong>Book List</strong></a></li>
                 <li><a href="BookCategoryList.do"><strong>Category List</strong></a></li>
+                <li><a href="librarian_book_borrow_list.jsp"><strong>Borrow List</strong></a></li>
             </ul>
         </li>
 
@@ -117,5 +118,6 @@
                 <li><a href="NoticePost.do">Post Notice</a></li>
             </ul>
         </li>
+
     </ul>
 </nav>

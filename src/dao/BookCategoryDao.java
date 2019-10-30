@@ -5,7 +5,6 @@ import utils.DBHelper;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class BookCategoryDao {
@@ -37,29 +36,45 @@ public class BookCategoryDao {
         return bookCategories;
     }
     public String getAreaCode(String Category){
-        String sql = "Select * from book,book_detail where book.book_number=book_detail.book_number " +
-                "and book.book_category= \'" + Category + "\'";
+//        String sql = "Select * from book,book_detail where book.book_number=book_detail.book_number " +
+//                "and book.book_category= \'" + Category + "\'";
+//        double Amount=0;
+//        ArrayList<Integer> AllAreaCode=null;
+//        try{
+//            Connection connection = DBHelper.getInstance().getConnection();
+//            Statement statement = connection.createStatement();
+//            ResultSet resultSet = statement.executeQuery(sql);
+//            while(resultSet.next()){
+//                AllAreaCode.add(Integer.parseInt(resultSet.getString("areacode")));
+//                Amount++;
+//            }
+//            Collections.sort(AllAreaCode);
+//            if(Amount==AllAreaCode.size()){
+//                return String.valueOf(Amount);
+//            }else{
+//                for(int i=0;i<AllAreaCode.size();i++){
+//                    if(AllAreaCode.get(i)!=i){
+//                        return String.valueOf(i);
+//                    }
+//                    break;
+//                }
+//            }
+//
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return String.valueOf(Integer.valueOf(new Double(Amount).intValue()));
+        String sql = "Select * from book,book_detail where book.book_number=book_detail.book_number and book.book_category= \'" + Category + "\'";
         double Amount=0;
-        ArrayList<Integer> AllAreaCode=null;
         try{
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while(resultSet.next()){
-                AllAreaCode.add(Integer.parseInt(resultSet.getString("areacode")));
                 Amount++;
             }
-            Collections.sort(AllAreaCode);
-            if(Amount==AllAreaCode.size()){
-                return String.valueOf(Amount);
-            }else{
-                for(int i=0;i<AllAreaCode.size();i++){
-                    if(AllAreaCode.get(i)!=i){
-                        return String.valueOf(i);
-                    }
-                    break;
-                }
-            }
+
 
         } catch (SQLException e) {
             e.printStackTrace();

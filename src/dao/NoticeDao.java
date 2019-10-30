@@ -1,10 +1,7 @@
 package dao;
 
-import entity.Book;
-import entity.BookCategory;
 import entity.Notice;
 import utils.DBHelper;
-import java.sql.Date;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -92,9 +89,9 @@ public class NoticeDao {
             String sql = "insert into notice values(?,?,?,?);";
             Connection connection = DBHelper.getInstance().getConnection();
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, id);
-            ps.setString(2, topic);
-            ps.setString(3, content);
+            ps.setString(3, id);
+            ps.setString(1, topic);
+            ps.setString(2, content);
             ps.setDate(4, new Date(System.currentTimeMillis()));
             ps.executeUpdate();
             DBHelper.closeConnection(connection, ps);
