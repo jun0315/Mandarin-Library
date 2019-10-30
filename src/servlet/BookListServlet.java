@@ -21,7 +21,7 @@ public class BookListServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Book> books = bookDao.getBooks();
-        request.setAttribute("books", books);
+        request.setAttribute("list", books);
         request.getRequestDispatcher("librarian_book_list.jsp").forward(request, response);
     }
 }

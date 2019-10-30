@@ -337,6 +337,14 @@
         <url-pattern>/BookDetail.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>LibSearch</servlet-name>
+        <servlet-class>servlet.LibSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibSearch</servlet-name>
+        <url-pattern>/LibSearch</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>forgetpassword</servlet-name>
         <servlet-class>servlet.ForgetPasswordServlet</servlet-class>
     </servlet>
