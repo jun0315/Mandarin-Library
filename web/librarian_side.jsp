@@ -99,7 +99,8 @@
         <li><a href="#BusinessProcess" aria-expanded="${ tag eq 2 ? "true" : "false" }" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i><strong>Business Process</strong></a>
             <ul id="BusinessProcess" class="${ tag eq 2 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="BorrowBusiness.do"><strong>Borrow Business</strong></a></li>
+                <li><a href="librarian_borrow_business.jsp"><strong>Borrow Business</strong></a></li>
+                <li><a href="ReserveBusiness.do"><strong>Reserve Business</strong></a></li>
                 <li><a href="ReturnBusiness.do"><strong>Return Business</strong></a></li>
             </ul>
         </li>
