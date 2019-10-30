@@ -65,7 +65,10 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Account</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="account"
+                                        <input
+                                                id="inputHorizontalSuccess" name="account"
+                                               required minlength="11" maxlength="11"
+                                               required oninvalid="setCustomValidity('Please enter 11 digits');" oninput="setCustomValidity('');"
                                                class="form-control form-control-success">
                                         <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -73,7 +76,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Password</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="password" value=""
+                                        <input id="inputHorizontalWarning" name="password" value="12345678"
                                                class="form-control form-control-warning">
                                         <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -82,6 +85,7 @@
                                     <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="name"
+                                               required
                                                class="form-control form-control-warning">
                                         <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -89,15 +93,21 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Email</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="email"
-                                               class="form-control form-control-warning">
+                                        <input type="email"
+                                                id="inputHorizontalWarning" name="email"
+                                               required oninvalid="setCustomValidity('Please include @ in your email address');" oninput="setCustomValidity('');"
+                                               class="form-control form-control-success">
+
                                         <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Deposit</label>
                                     <div class="col-sm-9">
-                                        <input id="inputHorizontalWarning" name="deposit"
+                                        <input  type="number"
+                                                value="300"
+                                                id="inputHorizontalWarning" name="deposit"
+                                                required
                                                class="form-control form-control-warning">
                                         <%--<small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>

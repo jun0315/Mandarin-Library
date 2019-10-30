@@ -99,7 +99,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
                                     <div class="col-sm-9">
-                                        <input id="BookNumber"
+                                        <input id="BookNumber" name="BookNumber"
                                                class="form-control form-control-success" value="<%=bookNumberFromAPI%>">
                                         <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
                                         <%--                                            <input type="submit" value="Submit" class="btn btn-primary" id="importISBN">Import ISBN</input>--%>

@@ -89,6 +89,7 @@
             <ul id="BookManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="BookList.do"><strong>Book List</strong></a></li>
                 <li><a href="BookCategoryList.do"><strong>Category List</strong></a></li>
+                <li><a href="librarian_book_borrow_list.jsp"><strong>Borrow List</strong></a></li>
             </ul>
         </li>
 
@@ -98,7 +99,8 @@
         <li><a href="#BusinessProcess" aria-expanded="${ tag eq 2 ? "true" : "false" }" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i><strong>Business Process</strong></a>
             <ul id="BusinessProcess" class="${ tag eq 2 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="BorrowBusiness.do"><strong>Borrow Business</strong></a></li>
+                <li><a href="librarian_borrow_business.jsp"><strong>Borrow Business</strong></a></li>
+                <li><a href="ReserveBusiness.do"><strong>Reserve Business</strong></a></li>
                 <li><a href="ReturnBusiness.do"><strong>Return Business</strong></a></li>
             </ul>
         </li>
@@ -117,5 +119,6 @@
                 <li><a href="NoticePost.do">Post Notice</a></li>
             </ul>
         </li>
+
     </ul>
 </nav>
