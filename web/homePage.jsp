@@ -37,23 +37,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
     <link data-n-head="true" rel="stylesheet" href="css/effect_homepage.css">
-    <style>
-        .search {
-            display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;
-            -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center;
-            justify-content: center; -webkit-box-align: center; -webkit-align-items: center;
-            -ms-flex-align: center; align-items: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap;
-            flex-wrap: wrap; position: absolute; top: 50%; z-index: 9;
-            left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); margin-top: -15px;
-            -webkit-transition: color 0.5s; -o-transition: color 0.5s; transition: color 0.5s; }
-        .search h2 {
-            text-align: center;
-            color: #fff;
-            font-weight: bold;
-            font-size: 100px;
-            font-family: "webfontx" !important; }
-    </style>
 </head>
 <body>
 <div class="page">
@@ -65,13 +48,12 @@
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <!-- Navbar Header-->
                     <div class="navbar-header">
-                        <!-- Navbar Brand -->
-                        <a href="homePage.jsp" class="navbar-brand d-none d-sm-inline-block">
-                            <div class="brand-text d-none d-lg-inline-block">
-                                <span>Mandarin-</span><strong>Library</strong><span style="margin-left: 10px;">Automation</span>
-                            </div>
-                            <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
-                        </a>
+                        <!-- Navbar Brand --><a href="index.jsp" class="navbar-brand d-none d-sm-inline-block">
+                        <div class="brand-text d-none d-lg-inline-block">
+                            <span></span><strong></strong><span style="margin-left: 10px;"></span>
+                        </div>
+                        <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong></strong></div>
+                    </a>
                         <!-- Toggle Button-->
                         <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                     </div>
@@ -80,7 +62,7 @@
                         <!-- Logout    -->
                         <li class="nav-item">
                             <a href="index.jsp" class="nav-link logout">
-                                <span class="d-none d-sm-inline" style="font-size: 20px;">Login</span>
+                                <span class="d-none d-sm-inline" style="font-size: larger">Login</span>
                                 <i class="fa fa-sign-out"></i>
                             </a>
                         </li>
@@ -90,9 +72,10 @@
         </nav>
     </header>
     <div class="effect1">
-        <div style="position: absolute; top: 11%; left: 40%">
-            <img src="img/logo.png" style="width: 100%; height: 100%">
-        </div>
+        <span style="position: absolute; left: 38%;">
+            <img src="img/logo.png" style="margin-top: 30px; ">
+        </span>
+
         <div class="search">
             <h2>Mandarin-Library Automation</h2>
             <form class="input-group col-md-12" style="margin-top: 50px; position: relative" action="VisitorSearch.do"
@@ -112,46 +95,73 @@
             </form>
         </div>
     </div>
-
-    <div class="">
-        <section class="tables" style="padding: 20px">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Topic</th>
-                                            <th>Content</th>
-                                            <th>PostTime</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>
-                                        <c:forEach items="${notices}" var="notice" varStatus="li">
-                                            <tr>
-                                                <td>${notice.getID()}</td>
-                                                <td>${notice.getTopic()}</td>
-                                                <td>${notice.getContent()}</td>
-                                                <td>${notice.getPosttime()}</td>
-                                            </tr>
-                                        </c:forEach>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+    <div class="tables" style="padding: 20px">
+        <div class="card">
+            <div class="card-body">
+                <p style="font-size: 30px; border-bottom: rgba(129,129,130,0.42) solid">
+                    <strong>Notice</strong></p>
+                <div class="" style="width: 100%; margin-top: 30px">
+                    <div style="width: 80%; margin-left: auto; margin-right: auto">
+                        <div id="mq" style="width:100%; height:200px; font-size: 30px; overflow:hidden"
+                             οnmοuseοver="iScrollAmount=0" οnmοuseοut="iScrollAmount=1">
+                            　　this is a notice.<br/>
+                            　　this is a notice.<br/>
+                            　　<br/>
+                            　　this is a notice.<br/>
+                            　　this is a notice.<br/>
+                            　　<br/>
                         </div>
+<%--                        <tbody>--%>
+<%--                        <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>--%>
+<%--                        <c:forEach items="${notices}" var="notice" varStatus="li">--%>
+<%--                            <tr>--%>
+<%--                                <td>${notice.getID()}</td>--%>
+<%--                                <td>${notice.getTopic()}</td>--%>
+<%--                                <td>${notice.getContent()}</td>--%>
+<%--                                <td>${notice.getPosttime()}</td>--%>
+<%--                            </tr>--%>
+<%--                        </c:forEach>--%>
+<%--                        </tbody>--%>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
-
-    <jsp:include page="footer.jsp" flush="true"></jsp:include>
+    <footer style="position: absolute;
+                width: 100%;
+                background: #2f333e;
+                color: #fff;
+                padding: 20px 10px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Copyright &copy; 2019.Mandarin Library Automation all rights reserved.</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p></p>
+                    <!-- Please do not remove the back link to us . It is part of the license conditions. :)-->
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
+<script>
+    var oMarquee = document.getElementById("mq"); //滚动对象
+    var iLineHeight = 40; //单行高度，像素
+    var iLineCount = 7; //实际行数
+    var iScrollAmount = 1; //每次滚动高度，像素
+    function run() {
+        oMarquee.scrollTop += iScrollAmount;
+        if ( oMarquee.scrollTop == iLineCount * iLineHeight )
+            oMarquee.scrollTop = 0;
+        if ( oMarquee.scrollTop % iLineHeight == 0 ) {
+            window.setTimeout( "run()", 2000 );
+        } else {
+            window.setTimeout( "run()", 50 );
+        }
+    }
+    oMarquee.innerHTML += oMarquee.innerHTML;
+    window.setTimeout( "run()", 2000 );
+</script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="BilobiliLibrary-master:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/BilobiliLibrary_master_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="BilobiliLibrary-master" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.20-bin.jar" />
+          <element id="library" level="project" name="lib" />
+          <element id="file-copy" path="C:/apache-tomcat-9.0.24/webapps/examples/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" />
+          <element id="file-copy" path="C:/apache-tomcat-9.0.24/webapps/examples/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="BilobiliLibrary-master/web/Web" />
+    </root>
+  </artifact>
+</component>
