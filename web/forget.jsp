@@ -52,19 +52,7 @@
         </div>
     </div>
 </div><!-- /container -->
-<%
-    session = request.getSession();
-    String account = (String) session.getAttribute("account");
-    if (account != null) {
-        response.sendRedirect("login");
-    }
-%>
-<script>
-    var error = '<%=request.getParameter("error")%>';
-    if (error == 'yes') {
-        alert("Account or password wrong!");
-    }
-</script>
+
 <script src="js/TweenLite.min.js"></script>
 <script src="js/EasePack.min.js"></script>
 <script src="js/rAF.js"></script>

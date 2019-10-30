@@ -80,6 +80,14 @@
         <url-pattern>/BookCategoryAdd.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>BookCategoryDelete</servlet-name>
+        <servlet-class>servlet.BookCategoryDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookCategoryDelete</servlet-name>
+        <url-pattern>/BookCategoryDelete.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>BookCategoryList</servlet-name>
         <servlet-class>servlet.BookCategoryListServlet</servlet-class>
     </servlet>
@@ -169,7 +177,7 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>AddBookByISBN</servlet-name>
-        <servlet-class>servlet.BookAddByISBNS2rvelet</servlet-class>
+        <servlet-class>servlet.BookAddByISBNServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AddBookByISBN</servlet-name>
@@ -230,6 +238,14 @@
     <servlet-mapping>
         <servlet-name>BorrowReserveApprove</servlet-name>
         <url-pattern>/BorrowReserveApprove.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReserveBusiness</servlet-name>
+        <servlet-class>servlet.LibrarianReserveBusinessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReserveBusiness</servlet-name>
+        <url-pattern>/ReserveBusiness.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>LibrarianReturnBusiness</servlet-name>
@@ -344,5 +360,6 @@
         <servlet-name>HomePageNotice</servlet-name>
         <url-pattern>/homePage.do</url-pattern>
     </servlet-mapping>
+
     <!--    end -->
 </web-app>

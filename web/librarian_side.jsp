@@ -12,7 +12,7 @@
 <%
     String path = request.getServletPath();
     //out.print( request.getServletPath() );
-    pageContext.setAttribute("path",path);
+    pageContext.setAttribute("path", path);
 
     int tag = 0;
     String[] BookManage = {
@@ -24,7 +24,7 @@
             "/book_category_list.jsp",
     };
     boolean isContains1 = Arrays.asList(BookManage).contains(path);
-    if(isContains1) {
+    if (isContains1) {
         tag = 1;
     }
 
@@ -33,7 +33,7 @@
             "/librarian_return_business.jsp",
     };
     boolean isContains2 = Arrays.asList(BusinessProcess).contains(path);
-    if(isContains2){
+    if (isContains2) {
         tag = 2;
     }
 
@@ -42,7 +42,7 @@
             "/IncomeHistory.do",
     };
     boolean isContains3 = Arrays.asList(RecordQuery).contains(path);
-    if(isContains3){
+    if (isContains3) {
         tag = 3;
     }
 
@@ -51,12 +51,12 @@
             "/NoticePost.do",
     };
     boolean isContains4 = Arrays.asList(Notice).contains(path);
-    if(isContains4){
+    if (isContains4) {
         tag = 4;
     }
 
     //out.print( tag );
-    pageContext.setAttribute("tag",tag);
+    pageContext.setAttribute("tag", tag);
 %>
 
 <nav class="side-navbar">
@@ -88,7 +88,7 @@
                 class="icon-interface-windows"></i><strong>Book Manage</strong></a>
             <ul id="BookManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="BookList.do"><strong>Book List</strong></a></li>
-                <li><a href="BookCategoryList.do" ><strong>Category List</strong></a></li>
+                <li><a href="BookCategoryList.do"><strong>Category List</strong></a></li>
             </ul>
         </li>
 

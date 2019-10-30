@@ -17,13 +17,17 @@ public class NoticeDeleteServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
         request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html;charset=utf-8");
-        String id = (String) request.getParameter("id");
+        response.setContentType("text/html; charset=utf-8");
 
+        String id = (String) request.getParameter("id");
         NoticeDao noticeDao = new NoticeDao();
-        noticeDao.deleteNotice(id);
-        request.getRequestDispatcher("librarian.jsp").forward(request, response);
+        boolean exist = noticeDao.isExitInDB(id);
+        if (!exist) {
+            response.sendRedirect("notice_list.jsp?info=delete_error");
+        } else {
+            noticeDao.deleteNotice(id);
+            response.sendRedirect("notice_list.jsp?info=delete_success");
+        }
     }
 }

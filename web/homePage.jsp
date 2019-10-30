@@ -48,13 +48,12 @@
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <!-- Navbar Header-->
                     <div class="navbar-header">
-                        <!-- Navbar Brand -->
-                        <a href="homePage.jsp" class="navbar-brand d-none d-sm-inline-block">
-                            <div class="brand-text d-none d-lg-inline-block">
-                                <span>Mandarin-</span><strong>Library</strong><span style="margin-left: 10px;">Automation</span>
-                            </div>
-                            <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
-                        </a>
+                        <!-- Navbar Brand --><a href="index.jsp" class="navbar-brand d-none d-sm-inline-block">
+                        <div class="brand-text d-none d-lg-inline-block">
+                            <span></span><strong></strong><span style="margin-left: 10px;"></span>
+                        </div>
+                        <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong></strong></div>
+                    </a>
                         <!-- Toggle Button-->
                         <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                     </div>
@@ -62,8 +61,8 @@
                     <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                         <!-- Logout    -->
                         <li class="nav-item">
-                            <a href="login" class="nav-link logout">
-                                <span class="d-none d-sm-inline" style="font-size: 20px;">Login</span>
+                            <a href="index.jsp" class="nav-link logout">
+                                <span class="d-none d-sm-inline" style="font-size: larger">Login</span>
                                 <i class="fa fa-sign-out"></i>
                             </a>
                         </li>
@@ -73,9 +72,10 @@
         </nav>
     </header>
     <div class="effect1">
-        <div style="position: absolute; top: 11%; left: 40%">
-            <img src="img/logo.png" style="width: 100%; height: 100%">
-        </div>
+        <span style="position: absolute; left: 38%;">
+            <img src="img/logo.png" style="margin-top: 30px; ">
+        </span>
+
         <div class="search">
             <h2>Mandarin-Library Automation</h2>
             <form class="input-group col-md-12" style="margin-top: 50px; position: relative" action="VisitorSearch.do"

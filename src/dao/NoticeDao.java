@@ -42,7 +42,7 @@ public class NoticeDao {
     public Notice info(String id) {
         Notice notice = new Notice();
         try {
-            String sql = "Select * from notice where notice_ID= \'" + id + "\'";
+            String sql = "Select * from notice where notice_id= \'" + id + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
@@ -68,12 +68,12 @@ public class NoticeDao {
     public boolean isExitInDB(String id) {
         boolean Exit = false;
         try {
-            String sql = "Select * from notice where notice_ID= \'" + id + "\'";
+            String sql = "Select * from notice where notice_id= \'" + id + "\'";
             Connection connection = DBHelper.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
-                String idINDB = resultSet.getString("id");
+                String idINDB = resultSet.getString("notice_id");
                 if (idINDB.equals(id)) {
                     Exit = true;
                     break;
@@ -122,19 +122,16 @@ public class NoticeDao {
 
 
     public void deleteNotice(String id) {
-
-        String sql = "delete from notice where notice_id = \'" + id + "\'";
-
         try {
-
+            String sql = "delete from notice where notice_id = ?";
             Connection connection = DBHelper.getInstance().getConnection();
-            Statement statement = connection.createStatement();
-            int resultSet = statement.executeUpdate(sql);
-
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.executeUpdate();
+            DBHelper.closeConnection(connection,ps);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return;
     }
 
 }

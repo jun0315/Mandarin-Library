@@ -15,6 +15,7 @@ public class ReaderBorrow {
     private Date borrow_time;
     private int isReturned;
     private double fine;
+    private String book_name;
 
     public ReaderBorrow() {
 
@@ -28,21 +29,23 @@ public class ReaderBorrow {
         borrow_time = new Date(System.currentTimeMillis());
     }
 
-    public ReaderBorrow(String copy_id, String user_account, Date borrow_time, int isReturned) {
+    public ReaderBorrow(String copy_id, String user_account, Date borrow_time, int isReturned, String book_name) {
         this.copy_id = copy_id;
         this.user_account = user_account;
         this.borrow_time = borrow_time;
         this.isReturned = isReturned;
         //默认罚金为0
         this.fine = 0.0;
+        this.book_name = book_name;
     }
 
-    public ReaderBorrow(String copy_id, String user_account, Date borrow_time, int isReturned, double fine) {
+    public ReaderBorrow(String copy_id, String user_account, Date borrow_time, int isReturned, double fine, String book_name) {
         this.copy_id = copy_id;
         this.user_account = user_account;
         this.borrow_time = borrow_time;
         this.isReturned = isReturned;
         this.fine = fine;
+        this.book_name = book_name;
     }
 
     public String getCopy_id() {
@@ -83,5 +86,13 @@ public class ReaderBorrow {
 
     public void setFine(double fine) {
         this.fine = fine;
+    }
+
+    public String getBook_name() {
+        return book_name;
+    }
+
+    public void setBook_name(String book_name) {
+        this.book_name = book_name;
     }
 }

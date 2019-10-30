@@ -191,4 +191,20 @@ public class BookDao {
             e.printStackTrace();
         }
     }
+
+    //根据book_number查询book_name
+    public String getBookNameByBookNumber(String book_number) {
+        String book_name = "";
+        try {
+            String sql = "select book_name from book where book_number=\'" + book_number + "\'";
+            Connection connection = DBHelper.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next())
+                book_name = resultSet.getString("book_name");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return book_name;
+    }
 }

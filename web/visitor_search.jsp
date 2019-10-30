@@ -38,22 +38,36 @@
 <body>
 <div class="page">
     <!-- Main Navbar-->
-    <jsp:include page="header_template.jsp" flush="true"></jsp:include>
-    <div>
-        <!-- Page Header-->
-        <header class="page-header">
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <header class="header">
+        <nav class="navbar">
+            <!-- Search Box-->
             <div class="container-fluid">
-                <h2 class="no-margin-bottom">Search</h2>
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <!-- Navbar Header-->
+                    <div class="navbar-header">
+                        <!-- Navbar Brand --><a href="index.jsp" class="navbar-brand d-none d-sm-inline-block">
+                        <div class="brand-text d-none d-lg-inline-block">
+                            <span></span><strong></strong><span style="margin-left: 10px;"></span>
+                        </div>
+                        <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong></strong></div>
+                    </a>
+                    </div>
+                    <!-- Navbar Menu -->
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Logout    -->
+                        <li class="nav-item">
+                            <a href="homePage.do" class="nav-link logout">
+                                <span class="d-none d-sm-inline" style="font-size: larger">Back</span>
+                                <i class="fa fa-sign-out"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </header>
-        <!-- Breadcrumb-->
-        <div class="breadcrumb-holder container-fluid">
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                <li class="breadcrumb-item active">Search</li>
-            </ul>
-        </div>
-
+        </nav>
+    </header>
+    <div>
         <section class="tables" style="padding: 20px">
 
             <form class="input-group col-md-12" style="margin: 10px;position: relative" action="VisitorSearch.do"
