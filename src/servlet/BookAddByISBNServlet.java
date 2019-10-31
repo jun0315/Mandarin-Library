@@ -22,19 +22,20 @@ public class BookAddByISBNServlet extends HttpServlet {
     //TODO ISBN处理
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-        //String ISBN = request.getParameter("BookNumber");
-        String ISBN = "9780133432381";
-        GetBookInfo getBookInfo = new GetBookInfo(ISBN);
-        Book book = new Book();
-        book.setBookNumber(ISBN);
-        book.setAuthor(getBookInfo.getAuthor());
-        book.setName(getBookInfo.getTitle());
-        book.setPress(getBookInfo.getPublisher());
-        book.setDescription(getBookInfo.getDescription());
-        request.setAttribute("bookFromISBN", book);
-        BookCategoryDao bookCategoryDao = new BookCategoryDao();
-        List<BookCategory> bookCategories = bookCategoryDao.getBookCategories();
-        request.setAttribute("bookCategories", bookCategories);
+        String ISBN = request.getParameter("bookNumberFromAPIgigi");
+//        String ISBN = "9780133432381";
         request.getRequestDispatcher("book_add.jsp").forward(request, response);
+//        GetBookInfo getBookInfo = new GetBookInfo(ISBN);
+//        Book book = new Book();
+//        book.setBookNumber(ISBN);
+//        book.setAuthor(getBookInfo.getAuthor());
+//        book.setName(getBookInfo.getTitle());
+//        book.setPress(getBookInfo.getPublisher());
+//        book.setDescription(getBookInfo.getDescription());
+//        request.setAttribute("bookFromISBN", book);
+//        BookCategoryDao bookCategoryDao = new BookCategoryDao();
+//        List<BookCategory> bookCategories = bookCategoryDao.getBookCategories();
+//        request.setAttribute("bookCategories", bookCategories);
+//        request.getRequestDispatcher("book_add.jsp").forward(request, response);
     }
 }

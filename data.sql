@@ -50,7 +50,8 @@ CREATE TABLE `book` (
 /*Data for the table `book` */
 
 insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_description`) values 
-('9780131872486','Thinking in Java','Pearson Education',32,'Bruce Eckel','arts',5,'With humor and insight, the author introduces the fundamental concepts of the Java programming language, from object development to design patterns, with the help of straightforward examples. By the author of Thinking in C++++. Original. (Beginner).');
+('9780131872486','Thinking in Java','Pearson Education',32,'Bruce Eckel','arts',5,'With humor and insight, the author introduces the fundamental concepts of the Java programming language, from object development to design patterns, with the help of straightforward examples. By the author of Thinking in C++++. Original. (Beginner).'),
+('9787115216878','代码整洁之道','人民邮电出版社',32,'Robert C. Martin马丁Rtin Ma韩磊','Science',2,'本书提出一种观念：代码质量与其整洁度成正比。干净的代码，既在质量上较为可靠，也为后期维护、升级奠定了良好基础。作为编程领域的佼佼者，本书作者给出了一系列行之有效的整洁代码操作实践。这些实践在本书中体现为一条条规则(或称“启示”)，并辅以来自现实项目的正、反两面的范例。只要遵循这些规则，就能编写出干净的代码，从而有效提升代码质量。');
 
 /*Table structure for table `book_category` */
 
@@ -65,7 +66,8 @@ CREATE TABLE `book_category` (
 /*Data for the table `book_category` */
 
 insert  into `book_category`(`category`,`floor`,`shelf`) values 
-('arts',1,'1');
+('arts',1,'1'),
+('Science',1,'2');
 
 /*Table structure for table `book_deleted` */
 
@@ -102,7 +104,9 @@ insert  into `book_detail`(`book_number`,`copy_id`,`status`,`areacode`) values
 ('9780131872486','97801318724860002',2,'1'),
 ('9780131872486','97801318724860003',2,'2'),
 ('9780131872486','97801318724860004',2,'3'),
-('9780131872486','97801318724860005',2,'4');
+('9780131872486','97801318724860005',2,'4'),
+('9787115216878','97871152168780001',2,'0'),
+('9787115216878','97871152168780002',2,'1');
 
 /*Table structure for table `notice` */
 
@@ -119,7 +123,7 @@ CREATE TABLE `notice` (
 /*Data for the table `notice` */
 
 insert  into `notice`(`notice_topic`,`notice_content`,`notice_id`,`notice_date`) values 
-('123','111',111,NULL);
+('test notice','good luck',1,'2019-10-30 00:00:00');
 
 /*Table structure for table `reader` */
 
@@ -139,7 +143,7 @@ CREATE TABLE `reader` (
 /*Data for the table `reader` */
 
 insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`,`register_time`,`borrowing_count`) values 
-('13855447008','jun1','123','13',0,'2019-10-28',0),
+('13855447008','jun1','123','1072505283@qq.com',0,'2019-10-28',0),
 ('reader','123','123','1072505283@qq.com',300,'2019-10-17',3),
 ('reader-test','jun','123','1072505283@qq.com',300,'2019-10-22',0);
 

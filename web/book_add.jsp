@@ -95,17 +95,17 @@
                     <div class="card">
                         <div class="card-body">
                             <p>Add the new book</p>
-                            <form class="form-horizontal" action="BookAdd.do" method="post">
+                            <form class="form-horizontal" name="form1" action="" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
                                     <div class="col-sm-9">
                                         <input id="BookNumber"
-                                               class="form-control form-control-success" value="<%=bookNumberFromAPI%>">
+                                               class="form-control form-control-success" name="bookNumberFromAPIgigi"
+                                               value="">
                                         <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
-                                        <%--                                            <input type="submit" value="Submit" class="btn btn-primary" id="importISBN">Import ISBN</input>--%>
-                                        <a href="AddBookByISBN.do" id="importISBN">Import ISBN</a>
-
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                        <%--    <input type="submit" value="Submit" class="btn btn-primary" id="importISBN">Import ISBN</input>--%>
+                                        <input type="submit" id="isbn_import" value="Import ISBN" class="btn btn-primary">
+                                        <%--  <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -193,6 +193,20 @@
         alert("add failure because of have the same account!");
     }
 </script>
+
+<script language="JavaScript">
+    $(document).ready(function() {
+        $("#isbn_import").click(function () {
+            $("#draw").attr("action", "AddBookByISBN.do");
+            $("form").submit();
+        });
+        $("#book_add").click(function () {
+            $("#draw").attr("action", "BookAdd.do");
+            $("form").submit();
+        });
+    })
+</script>
+
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
