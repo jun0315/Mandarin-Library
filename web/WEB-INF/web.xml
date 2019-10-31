@@ -189,7 +189,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>EditReader</servlet-name>
-        <url-pattern>/ReaderEdit.do</url-pattern>
+        <url-pattern>/EditReader.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>BookList</servlet-name>
@@ -375,6 +375,14 @@
     <servlet-mapping>
         <servlet-name>HomePageNotice</servlet-name>
         <url-pattern>/homePage.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReaderDelete</servlet-name>
+        <servlet-class>servlet.ReaderDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReaderDelete</servlet-name>
+        <url-pattern>/ReaderDelete.do</url-pattern>
     </servlet-mapping>
 
     <!--    end -->

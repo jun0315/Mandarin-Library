@@ -44,9 +44,16 @@ public class GetBookInfo {
         }
 
         JSONObject json = new JSONObject(result);
+        if (json.getInt("totalItems")==0) {
+            isNull = true;
+            return;
+        }
 
         JSONArray bookItem = json.getJSONArray("items");
+
         volumeInfo = bookItem.getJSONObject(0).getJSONObject("volumeInfo");
+
+
     }
 
 
