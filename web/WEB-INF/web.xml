@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <welcome-file-list>
-        <welcome-file>homePage.jsp</welcome-file>
+        <welcome-file>homePage.do</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
@@ -189,7 +189,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>EditReader</servlet-name>
-        <url-pattern>/ReaderEdit.do</url-pattern>
+        <url-pattern>/EditReader.do</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>BookList</servlet-name>
@@ -345,6 +345,14 @@
         <url-pattern>/BookDetail.do</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>LibSearch</servlet-name>
+        <servlet-class>servlet.LibSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibSearch</servlet-name>
+        <url-pattern>/LibSearch</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>forgetpassword</servlet-name>
         <servlet-class>servlet.ForgetPasswordServlet</servlet-class>
     </servlet>
@@ -367,6 +375,14 @@
     <servlet-mapping>
         <servlet-name>HomePageNotice</servlet-name>
         <url-pattern>/homePage.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReaderDelete</servlet-name>
+        <servlet-class>servlet.ReaderDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReaderDelete</servlet-name>
+        <url-pattern>/ReaderDelete.do</url-pattern>
     </servlet-mapping>
 
     <!--    end -->

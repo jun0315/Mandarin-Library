@@ -127,7 +127,7 @@
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                                                                        <a href="DeleteReader.do?account=${reader.getAccount()}">
+                                                                        <a href="ReaderDelete.do?account=${reader.getAccount()}">
                                                                             <button type="button" class="btn btn-primary">Delete</button>
                                                                         </a>
                                                                     </div>

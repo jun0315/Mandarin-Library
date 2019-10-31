@@ -17,6 +17,7 @@
     int tag = 0;
     String[] BookManage = {
             "/book_add.jsp",
+            "/book_add_index.jsp",
             "/book_edit.jsp",
             "/librarian_book_list.jsp",
             "/book_category_add.jsp",
@@ -30,6 +31,7 @@
 
     String[] BusinessProcess = {
             "/librarian_borrow_business.jsp",
+            "/librarian_reserve_business.jsp",
             "/librarian_return_business.jsp",
     };
     boolean isContains2 = Arrays.asList(BusinessProcess).contains(path);
@@ -38,8 +40,9 @@
     }
 
     String[] RecordQuery = {
-            "/BookDeletedList.do",
-            "/IncomeHistory.do",
+            "/librarian_book_borrow_list.jsp",
+            "/book_delete_list.jsp",
+            "/librarian_income_history_business.jsp",
     };
     boolean isContains3 = Arrays.asList(RecordQuery).contains(path);
     if (isContains3) {
@@ -47,8 +50,8 @@
     }
 
     String[] Notice = {
-            "/NoticeList.do",
-            "/NoticePost.do",
+            "/notice_list.jsp",
+            "/notice_post.jsp",
     };
     boolean isContains4 = Arrays.asList(Notice).contains(path);
     if (isContains4) {
@@ -89,7 +92,6 @@
             <ul id="BookManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="BookList.do"><strong>Book List</strong></a></li>
                 <li><a href="BookCategoryList.do"><strong>Category List</strong></a></li>
-                <li><a href="librarian_book_borrow_list.jsp"><strong>Borrow List</strong></a></li>
             </ul>
         </li>
 
@@ -99,14 +101,15 @@
         <li><a href="#BusinessProcess" aria-expanded="${ tag eq 2 ? "true" : "false" }" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i><strong>Business Process</strong></a>
             <ul id="BusinessProcess" class="${ tag eq 2 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="BorrowBusiness.do"><strong>Borrow Business</strong></a></li>
+                <li><a href="librarian_borrow_business.jsp"><strong>Borrow Business</strong></a></li>
+                <li><a href="ReserveBusiness.do"><strong>Reserve Business</strong></a></li>
                 <li><a href="ReturnBusiness.do"><strong>Return Business</strong></a></li>
             </ul>
         </li>
         <li><a href="#RecordQuery" aria-expanded="${ tag eq 3 ? "true" : "false" }" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i><strong>Record Query</strong></a>
             <ul id="RecordQuery" class="${ tag eq 3 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="#"><strong>Reader History</strong></a></li>
+                <li><a href="librarian_book_borrow_list.jsp"><strong>Reader History</strong></a></li>
                 <li><a href="BookDeletedList.do"><strong>Book Deletion</strong></a></li>
                 <li><a href="IncomeHistory.do"><strong>Income History</strong></a></li>
             </ul>

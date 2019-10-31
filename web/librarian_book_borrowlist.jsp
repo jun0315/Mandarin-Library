@@ -1,8 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.BookDetail" %>
+<%@ page import="entity.BookCategory" %>
+<%@ page import="entity.Book" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -54,14 +54,14 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">Book Borrow List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item active">Book List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
@@ -80,37 +80,57 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div style="width: 1000px;height: 40px">
-                                        <a href="librarian_add.jsp">
-                                            <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
+                                    <div style="width: 1000px;height: 60px">
+                                        <a href="BookAdd.do">
+                                            <img src="img/addBook.png" style="float: left; length:40px; width:40px;">
                                             <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
-                                                <strong>Add Librarian</strong></p>
+                                                <strong>Add Book</strong></p>
                                         </a>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Copy ID</th>
-                                                <th>Floor</th>
-                                                <th>Shelf</th>
-                                                <th>AreaCode</th>
-                                                <th>Barcode</th>
+                                                <th>Book Number</th>
+                                                <th>Name</th>
+                                                <th>Press</th>
+                                                <th>Price</th>
+                                                <th>Author</th>
+                                                <th>Category</th>
+                                                <th>Amount</th>
+                                                <th>Operation</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%
-                                                List<BookDetail> bookdetails = (List<BookDetail>) (request.getAttribute("bookDetails"));
-                                                request.setAttribute("bookdetails", bookdetails);
-                                            %>
-                                            <c:forEach items="${bookdetails}" var="bookdetail" varStatus="li">
+                                            <%List<Book> books = (List<Book>) request.getAttribute("books");%>
+                                            <c:forEach items="${books}" var="book" varStatus="li">
                                                 <tr>
-                                                    <th>${bookdetail.getCopyID()}</th>
-                                                    <td>${bookdetail.getFloor()}</td>
-                                                    <td>${bookdetail.getShelf()}</td>
-                                                    <td>${bookdetail.getAreaCode()}</td>
+                                                    <td>${book.getBookNumber()}</td>
+                                                    <td>${book.getName()}</td>
+                                                    <td>${book.getPress()}</td>
+                                                    <td>${book.getPrice()}</td>
+                                                    <td>${book.getAuthor()}</td>
+                                                    <td>${book.getCategory()}</td>
+                                                    <td>${book.getAmount()}</td>
                                                     <td>
-                                                        <img src="cache/barcode/${bookdetail.getPath()}">
+                                                        <a href="BookDetail.do?bookNumber=${book.getBookNumber()}">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    style="color: white; background-color: rgb(23,162,184)">
+                                                                Detail
+                                                            </button>
+                                                        </a>
+                                                        <a href="EditBook.do?bookNumber=${book.getBookNumber()}">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                    style="color: white; background-color: rgb(46,203,112)">
+                                                                Edit
+                                                            </button>
+                                                        </a>
+                                                        <a href="BookDetail.do?bookNumber=${book.getBookNumber()}">
+                                                            <button type="button" class="btn btn-btn-primary"
+                                                                    style="color: white; background-color: rgb(224,79,61);">
+                                                                Delete
+                                                            </button>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             </c:forEach>
@@ -129,16 +149,16 @@
     </div>
 </div>
 
-
 <script>
     var info = '<%=request.getParameter("info")%>';
-    if (info == 'found') {
-        alert("successfully serach!");
-    } else if (info == 'notFound') {
-        alert("search failure!");
+    if (info == 'delete_error') {
+        alert("There is no category to delete!");
+        window.location.href = "BookList.do";
+    } else if (info == 'delete_success') {
+        alert("Successfully delete!");
+        window.location.href = "BookList.do";
     }
 </script>
-
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

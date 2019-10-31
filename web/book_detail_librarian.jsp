@@ -63,6 +63,7 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
+                                            <th>Name</th>
                                             <th>Bnumber</th>
                                             <th>id</th>
                                             <th>floor</th>
@@ -77,8 +78,9 @@
                                         %>
                                         <c:forEach items="${wa}" var="detail" varStatus="li">
                                             <tr>
+                                                <td>${detail.getName()}</td>
                                                 <td>${detail.getBookNumber()}</td>
-                                                <td>${detail.getCopyId()}</td>
+                                                <td>${detail.getCopyid()}</td>
                                                 <td>${detail.getFloor()}</td>
                                                 <td>${detail.getShelf()}</td>
                                                 <td>${detail.getAreacode()}</td>
@@ -111,7 +113,7 @@
                                                                     <button type="button" data-dismiss="modal"
                                                                             class="btn btn-secondary">Close
                                                                     </button>
-                                                                    <a href="DeleteBook.do?bookCopyID=${detail.getCopyId()}">
+                                                                    <a href="DeleteBook.do?bookCopyID=${detail.getCopyid()}">
                                                                             <%--                                                                                <a href="admin.jsp?account=${librarian.getAccount()}">--%>
                                                                         <button type="button"
                                                                                 class="btn btn-primary">
@@ -122,7 +124,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <a href="EditBook.do?booknumber=${book.getBookNumber()}">
+                                                    <a href="EditBook.do?bookNumber=${detail.getBookNumber()}">
                                                         <button type="button" class="btn btn-secondary"
                                                                 style="color: white; background-color: rgb(46,203,112)">
                                                             Edit

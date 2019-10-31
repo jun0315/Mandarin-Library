@@ -33,6 +33,7 @@ public class OrderDao {
                 detail.setCopyid(resultSet.getString(2));
                 detail.setState(resultSet.getInt(3));
                 detail.setAreacode(resultSet.getString(4));
+                detail.setName(book.getName());
                 detail.setFloor(book.getFloor());
                 detail.setShelf(book.getShelf());
                 list.add(detail);
