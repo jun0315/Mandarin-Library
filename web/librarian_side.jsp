@@ -89,7 +89,6 @@
             <ul id="BookManage" class="${ tag eq 1 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
                 <li><a href="BookList.do"><strong>Book List</strong></a></li>
                 <li><a href="BookCategoryList.do"><strong>Category List</strong></a></li>
-                <li><a href="librarian_book_borrow_list.jsp"><strong>Borrow List</strong></a></li>
             </ul>
         </li>
 
@@ -107,7 +106,7 @@
         <li><a href="#RecordQuery" aria-expanded="${ tag eq 3 ? "true" : "false" }" data-toggle="collapse"> <i
                 class="icon-interface-windows"></i><strong>Record Query</strong></a>
             <ul id="RecordQuery" class="${ tag eq 3 ? "collapse list-unstyled show" : "collapse list-unstyled "}">
-                <li><a href="#"><strong>Reader History</strong></a></li>
+                <li><a href="librarian_book_borrow_list.jsp"><strong>Reader History</strong></a></li>
                 <li><a href="BookDeletedList.do"><strong>Book Deletion</strong></a></li>
                 <li><a href="IncomeHistory.do"><strong>Income History</strong></a></li>
             </ul>
