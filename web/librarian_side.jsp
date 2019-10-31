@@ -17,7 +17,7 @@
     int tag = 0;
     String[] BookManage = {
             "/book_add.jsp",
-            "/book_add_no_isbn.jsp",
+            "/book_add_index.jsp",
             "/book_edit.jsp",
             "/librarian_book_list.jsp",
             "/book_category_add.jsp",
@@ -31,6 +31,7 @@
 
     String[] BusinessProcess = {
             "/librarian_borrow_business.jsp",
+            "/librarian_reserve_business.jsp",
             "/librarian_return_business.jsp",
     };
     boolean isContains2 = Arrays.asList(BusinessProcess).contains(path);
@@ -39,8 +40,9 @@
     }
 
     String[] RecordQuery = {
-            "/BookDeletedList.do",
-            "/IncomeHistory.do",
+            "/librarian_book_borrow_list.jsp",
+            "/book_delete_list.jsp",
+            "/librarian_income_history_business.jsp",
     };
     boolean isContains3 = Arrays.asList(RecordQuery).contains(path);
     if (isContains3) {
@@ -48,8 +50,8 @@
     }
 
     String[] Notice = {
-            "/NoticeList.do",
-            "/NoticePost.do",
+            "/notice_list.jsp",
+            "/notice_post.jsp",
     };
     boolean isContains4 = Arrays.asList(Notice).contains(path);
     if (isContains4) {
