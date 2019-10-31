@@ -101,11 +101,6 @@
                                     <div class="col-sm-9">
                                         <input id="BookNumber" name="BookNumber"
                                                class="form-control form-control-success" value="<%=bookNumberFromAPI%>">
-                                        <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
-                                        <%--                                            <input type="submit" value="Submit" class="btn btn-primary" id="importISBN">Import ISBN</input>--%>
-                                        <a href="AddBookByISBN.do" id="importISBN">Import ISBN</a>
-
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
                                 <div class="form-group row">
