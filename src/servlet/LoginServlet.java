@@ -52,6 +52,7 @@ public class LoginServlet extends HttpServlet {
 
             LibrarianDao librarianDao = new LibrarianDao();
             Librarian librarian = librarianDao.info(account);
+            session.setAttribute("account",librarian.getAccount());
             session.setAttribute("name", librarian.getName());
             session.setAttribute("type", librarian.getType());
 

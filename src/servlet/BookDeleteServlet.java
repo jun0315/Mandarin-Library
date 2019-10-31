@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "BookDeleteServlet")
@@ -21,9 +22,11 @@ public class BookDeleteServlet extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
         String bookNumber = (String) request.getParameter("bookCopyID");
- 
+
+        HttpSession session = request.getSession();
+        String librarianAccount = (String) session.getAttribute("account");
         BookDao bookDao = new BookDao();
-        bookDao.deleteBook(bookNumber);
+        bookDao.deleteBook(bookNumber,librarianAccount);
         request.getRequestDispatcher("librarian_book_list.jsp?info=delete_success").forward(request, response);
     }
 }

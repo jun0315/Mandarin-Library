@@ -4,6 +4,8 @@ import entity.Book;
 import entity.BookCategory;
 import utils.DBHelper;
 
+import javax.mail.Session;
+import javax.servlet.http.HttpSession;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -143,7 +145,7 @@ public class BookDao {
     }
 
     //删除具体的副本
-    public void deleteBook(String copy_id) {
+    public void deleteBook(String copy_id, String account) {
         try {
             //获取number
             String book_number = "";
@@ -177,14 +179,34 @@ public class BookDao {
             }
 
             //在book表中数量减一
-            sql = "update book set book_amount=? where book_number=\'" + book_number + "\'";
-            connection = DBHelper.getInstance().getConnection();
-            ps = connection.prepareStatement(sql);
-            ps.setString(1, String.valueOf(amount_int));
-            ps.executeUpdate();
-            DBHelper.closeConnection(connection, ps);
+            if (amount_int > 0) {
+                sql = "update book set book_amount=? where book_number=\'" + book_number + "\'";
+                connection = DBHelper.getInstance().getConnection();
+                ps = connection.prepareStatement(sql);
+                ps.setString(1, String.valueOf(amount_int));
+                ps.executeUpdate();
+                DBHelper.closeConnection(connection, ps);
+            } else {
+                sql = "delete from book where book_number = ?";
+                connection = DBHelper.getInstance().getConnection();
+                ps = connection.prepareStatement(sql);
+                ps.setString(1, book_number);
+                ps.executeUpdate();
+                DBHelper.closeConnection(connection, ps);
+            }
 
-            //在删书表中加入数据
+            if (amount_int > 0) {
+                //加入到book_detailed表中
+                sql = "insert into book_deleted values(?,?,?);";
+                connection = DBHelper.getInstance().getConnection();
+                ps = connection.prepareStatement(sql);
+                ps.setString(1, copy_id);
+                ps.setString(3, account);
+                ps.setDate(2, new Date(System.currentTimeMillis()));
+                ps.executeUpdate();
+                DBHelper.closeConnection(connection, ps);
+                //在删书表中加入数据
+            }
 
 
         } catch (SQLException e) {

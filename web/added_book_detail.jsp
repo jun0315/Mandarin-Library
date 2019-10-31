@@ -54,39 +54,23 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Librarian List</h2>
+                    <h2 class="no-margin-bottom">Add book detail</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Librarian List</li>
+                    <li class="breadcrumb-item active">Add book detail</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
-
-                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
-                      name="search" method="post">
-                    <input type="text" class="form-control" name="searchAccount"
-                           placeholder="Please enter the account of the administrator who needs to query">
-                    <span class="input-group-btn">
-                            <button type="submit" class="btn btn-info btn-search">search</button>
-                        </span>
-                </form>
 
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div style="width: 1000px;height: 40px">
-                                        <a href="librarian_add.jsp">
-                                            <img src="img/addUser.png" style="float: left; length:40px; width:40px;">
-                                            <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
-                                                <strong>Add Librarian</strong></p>
-                                        </a>
-                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
