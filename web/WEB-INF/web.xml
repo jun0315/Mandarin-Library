@@ -272,6 +272,14 @@
         <url-pattern>/DetailSearch</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>LibrarianBookBorrowList</servlet-name>
+        <servlet-class>servlet.LibrarianBookBorrowListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibrarianBookBorrowList</servlet-name>
+        <url-pattern>/LibrarianBookBorrowList.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
         <servlet-name>Order</servlet-name>
         <servlet-class>servlet.OrderServlet</servlet-class>
     </servlet>
@@ -313,7 +321,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteNotice</servlet-name>
-        <url-pattern>/DeleteNotice.do</url-pattern>
+        <url-pattern>/NoticeDelete.do</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -335,6 +343,14 @@
     <servlet-mapping>
         <servlet-name>BookDetail</servlet-name>
         <url-pattern>/BookDetail.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LibSearch</servlet-name>
+        <servlet-class>servlet.LibSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibSearch</servlet-name>
+        <url-pattern>/LibSearch</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>forgetpassword</servlet-name>

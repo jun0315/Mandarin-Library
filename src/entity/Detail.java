@@ -4,10 +4,35 @@ public class Detail {
     private String BookNumber;
     private String Copyid;
     private int State;
-
     //副本所從屬的書的大類
     private int Floor;
-    private String  Shelf;
+    private String Shelf;
+
+    private String Name;
+
+    public Detail() {
+        this.BookNumber = "NULL";
+        this.Copyid = "null";
+        this.State = 0;
+    }
+
+
+    public String getCopyid() {
+        return Copyid;
+    }
+
+    public void setCopyid(String copyid) {
+        Copyid = copyid;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
 
     public int getFloor() {
         return Floor;
@@ -35,11 +60,6 @@ public class Detail {
 
     private String Areacode;
 
-    public Detail() {
-        this.BookNumber = "NULL";
-        this.Copyid = "null";
-        this.State = 0;
-    }
 
     public String getBookNumber() {
         return BookNumber;
@@ -47,14 +67,6 @@ public class Detail {
 
     public void setBookNumber(String bookNumber) {
         BookNumber = bookNumber;
-    }
-
-    public String getCopyid() {
-        return Copyid;
-    }
-
-    public void setCopyid(String copyid) {
-        Copyid = copyid;
     }
 
     public int getState() {

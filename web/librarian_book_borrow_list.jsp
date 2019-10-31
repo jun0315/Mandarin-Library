@@ -1,10 +1,20 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: zcy10
+  Date: 2019/10/30
+  Time: 16:24
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="entity.Librarian" %>
 <%@ page import="java.util.List" %>
 <%@ page import="entity.BookCategory" %>
 <%@ page import="entity.Book" %>
+<%@ page import="entity.ReaderBorrow" %>
+<%@ page import="com.sun.org.apache.regexp.internal.RE" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -54,31 +64,25 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Book List</h2>
+                    <h2 class="no-margin-bottom">Book Borrow List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
                     <li class="breadcrumb-item"><a href="admin.jsp">Home</a></li>
-                    <li class="breadcrumb-item active">Book List</li>
+                    <li class="breadcrumb-item active">Book Borrow List</li>
                 </ul>
             </div>
             <section class="tables" style="padding: 20px">
 
-                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="LibSearch"
+                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="LibrarianBookBorrowList.do"
                       name="search" method="post">
-
+                    <input type="text" class="form-control" name="SearchReaderID"
+                           placeholder="Please enter the account of the reader ">
                     <span class="input-group-btn">
-                        <select  name="signal" class="btn btn-info btn-search">
-                            <option>Name</option>
-                            <option>ID</option>
-                            <option>Author</option>
-                        </select> </span>
-                    <input type="text" class="form-control" name="message"
-                           placeholder="Please enter the account of the administrator who needs to query">
                             <button type="submit" class="btn btn-info btn-search">search</button>
-
+                        </span>
                 </form>
 
                 <div class="container-fluid">
@@ -86,58 +90,29 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <div style="width: 1000px;height: 60px">
-                                        <a href="bood_add_index.jsp">
-                                            <img src="img/addBook.png" style="float: left; length:40px; width:40px;">
-                                            <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
-                                                <strong>Add Book</strong></p>
-                                        </a>
-                                    </div>
                                     <div class="table-responsive">
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Book Number</th>
-                                                <th>Name</th>
-                                                <th>Press</th>
-                                                <th>Price</th>
-                                                <th>Author</th>
-                                                <th>Category</th>
-                                                <th>Amount</th>
-                                                <th>Operation</th>
+                                                <th>ISBN</th>
+                                                <th>User Account</th>
+                                                <th>Borrow Time</th>
+                                                <th>isReturned</th>
+                                                <th>Fine</th>
+                                                <th>Book Name</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Book> books = (List<Book>) request.getAttribute("list");%>
-                                            <c:forEach items="${list}" var="book" varStatus="li">
+                                            <%List<ReaderBorrow> readerBorrowList = (List<ReaderBorrow>) request.getAttribute("readerBorrowList");
+                                            %>
+                                            <c:forEach items="${readerBorrowList}" var="readerBorrow" varStatus="li">
                                                 <tr>
-                                                    <td>${book.getBookNumber()}</td>
-                                                    <td>${book.getName()}</td>
-                                                    <td>${book.getPress()}</td>
-                                                    <td>${book.getPrice()}</td>
-                                                    <td>${book.getAuthor()}</td>
-                                                    <td>${book.getCategory()}</td>
-                                                    <td>${book.getAmount()}</td>
-                                                    <td>
-                                                        <a href="BookDetail.do?bookNumber=${book.getBookNumber()}">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                    style="color: white; background-color: rgb(23,162,184)">
-                                                                Detail
-                                                            </button>
-                                                        </a>
-                                                        <a href="EditBook.do?bookNumber=${book.getBookNumber()}">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                    style="color: white; background-color: rgb(46,203,112)">
-                                                                Edit
-                                                            </button>
-                                                        </a>
-                                                        <a href="BookDetail.do?bookNumber=${book.getBookNumber()}">
-                                                            <button type="button" class="btn btn-btn-primary"
-                                                                    style="color: white; background-color: rgb(224,79,61);">
-                                                                Delete
-                                                            </button>
-                                                        </a>
-                                                    </td>
+                                                    <td>${readerBorrow.getCopy_id()}</td>
+                                                    <td>${readerBorrow.getUser_account()}</td>
+                                                    <td>${readerBorrow.getBorrow_time()}</td>
+                                                    <td>${readerBorrow.getIsReturned()}</td>
+                                                    <td>${readerBorrow.getFine()}</td>
+                                                    <td>${readerBorrow.getBook_name()}</td>
                                                 </tr>
                                             </c:forEach>
                                             </tbody>
@@ -155,16 +130,7 @@
     </div>
 </div>
 
-<script>
-    var info = '<%=request.getParameter("info")%>';
-    if (info == 'delete_error') {
-        alert("There is no category to delete!");
-        window.location.href = "BookList.do";
-    } else if (info == 'delete_success') {
-        alert("Successfully delete!");
-        window.location.href = "BookList.do";
-    }
-</script>
+
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>

@@ -60,6 +60,8 @@
                                     <label class="col-sm-3 form-control-label">Account</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="account"
+                                               required oninvalid="setCustomValidity('Please enter relevant content');"
+                                               oninput="setCustomValidity('');"
                                                class="form-control form-control-success">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -68,6 +70,8 @@
                                     <label class="col-sm-3 form-control-label">Password</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="password"
+                                               required oninvalid="setCustomValidity('Please enter relevant content');"
+                                               oninput="setCustomValidity('');"
                                                class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -76,6 +80,8 @@
                                     <label class="col-sm-3 form-control-label">Name</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="name"
+                                               required oninvalid="setCustomValidity('Please enter relevant content');"
+                                               oninput="setCustomValidity('');"
                                                class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
@@ -84,6 +90,9 @@
                                     <label class="col-sm-3 form-control-label">Phone</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="phone"
+                                               required minlength="11" maxlength="11"
+                                               required oninvalid="setCustomValidity('Please enter 11 digits');"
+                                               oninput="setCustomValidity('');"
                                                class="form-control form-control-warning">
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>

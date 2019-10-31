@@ -54,7 +54,7 @@
             <!-- Page Header-->
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">Book List</h2>
+                    <h2 class="no-margin-bottom">Book Borrow List</h2>
                 </div>
             </header>
             <!-- Breadcrumb-->
@@ -66,19 +66,13 @@
             </div>
             <section class="tables" style="padding: 20px">
 
-                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="LibSearch"
+                <form class="input-group col-md-12" style="margin: 10px;position: relative" action="SearchLibrarian.do"
                       name="search" method="post">
-
-                    <span class="input-group-btn">
-                        <select  name="signal" class="btn btn-info btn-search">
-                            <option>Name</option>
-                            <option>ID</option>
-                            <option>Author</option>
-                        </select> </span>
-                    <input type="text" class="form-control" name="message"
+                    <input type="text" class="form-control" name="searchAccount"
                            placeholder="Please enter the account of the administrator who needs to query">
+                    <span class="input-group-btn">
                             <button type="submit" class="btn btn-info btn-search">search</button>
-
+                        </span>
                 </form>
 
                 <div class="container-fluid">
@@ -87,7 +81,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div style="width: 1000px;height: 60px">
-                                        <a href="bood_add_index.jsp">
+                                        <a href="BookAdd.do">
                                             <img src="img/addBook.png" style="float: left; length:40px; width:40px;">
                                             <p style="line-height:40px; vertical-align: middle; float: right; margin-left: 10px">
                                                 <strong>Add Book</strong></p>
@@ -108,8 +102,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <%List<Book> books = (List<Book>) request.getAttribute("list");%>
-                                            <c:forEach items="${list}" var="book" varStatus="li">
+                                            <%List<Book> books = (List<Book>) request.getAttribute("books");%>
+                                            <c:forEach items="${books}" var="book" varStatus="li">
                                                 <tr>
                                                     <td>${book.getBookNumber()}</td>
                                                     <td>${book.getName()}</td>

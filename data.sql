@@ -167,7 +167,7 @@ CREATE TABLE `reader_borrow` (
 /*Data for the table `reader_borrow` */
 
 insert  into `reader_borrow`(`copy_id`,`user_account`,`borrow_time`,`isReturned`,`fine`,`book_name`) values 
-('1','reader-test','2019-02-08 10:41:54',1,NULL,''),
+('1','reader-test','2019-02-08 10:41:54',1,NULL,'1321'),
 ('2','reader-test','2019-09-28 10:42:16',1,NULL,''),
 ('3','reader-test','2019-05-16 10:43:59',0,NULL,'');
 
