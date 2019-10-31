@@ -105,6 +105,11 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    Total Fine:
+                                    <%
+                                        double totalFine= (double) request.getAttribute("totalFine");
+                                        out.print(totalFine);
+                                    %>$
                                 </div>
                             </div>
                         </div>

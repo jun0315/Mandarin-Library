@@ -79,45 +79,45 @@
                                                     out.println(account);
                                                 %>
                                             </td>
-                                            <td>
-                                                <a href="#myModal_1" style="color: #0096e6"
-                                                   data-toggle="modal"
-                                                   id="lastButton1">Reset</a>
-                                                <!-- Modal-->
-                                                <form class="form-basic"
-                                                      action="ReaderAccountSetting.do?item=account" method="post">
-                                                    <div id="myModal_1" tabindex="-1" role="dialog"
-                                                         aria-labelledby="exampleModalLabel" aria-hidden="true"
-                                                         class="modal fade text-left">
-                                                        <div role="document" class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h4 id="exampleModalLabel" class="modal-title">
-                                                                        Reset</h4>
-                                                                    <button type="button" data-dismiss="modal"
-                                                                            aria-label="Close" class="close"><span
-                                                                            aria-hidden="true">×</span></button>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label class="form-control-label">Please type
-                                                                        your new account number.</label>
-                                                                    <input type="text"
-                                                                           name="newItemValue"
-                                                                           value=<% out.println(account); %>
-                                                                                   class="form-control">
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" data-dismiss="modal"
-                                                                            class="btn btn-secondary">Cancel
-                                                                    </button>
-                                                                    <input type="submit" value="Submit"
-                                                                           class="btn btn-primary">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </td>
+<%--                                            <td>--%>
+<%--&lt;%&ndash;                                                <a href="#myModal_1" style="color: #0096e6"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                                   data-toggle="modal"&ndash;%&gt;--%>
+<%--&lt;%&ndash;                                                   id="lastButton1">Reset</a>&ndash;%&gt;--%>
+<%--                                                <!-- Modal-->--%>
+<%--                                                <form class="form-basic"--%>
+<%--                                                      action="ReaderAccountSetting.do?item=account" method="post">--%>
+<%--                                                    <div id="myModal_1" tabindex="-1" role="dialog"--%>
+<%--                                                         aria-labelledby="exampleModalLabel" aria-hidden="true"--%>
+<%--                                                         class="modal fade text-left">--%>
+<%--                                                        <div role="document" class="modal-dialog">--%>
+<%--                                                            <div class="modal-content">--%>
+<%--                                                                <div class="modal-header">--%>
+<%--                                                                    <h4 id="exampleModalLabel" class="modal-title">--%>
+<%--                                                                        Reset</h4>--%>
+<%--                                                                    <button type="button" data-dismiss="modal"--%>
+<%--                                                                            aria-label="Close" class="close"><span--%>
+<%--                                                                            aria-hidden="true">×</span></button>--%>
+<%--                                                                </div>--%>
+<%--                                                                <div class="form-group">--%>
+<%--                                                                    <label class="form-control-label">Please type--%>
+<%--                                                                        your new account number.</label>--%>
+<%--                                                                    <input type="text"--%>
+<%--                                                                           name="newItemValue"--%>
+<%--                                                                           value=<% out.println(account); %>--%>
+<%--                                                                                   class="form-control">--%>
+<%--                                                                </div>--%>
+<%--                                                                <div class="modal-footer">--%>
+<%--                                                                    <button type="button" data-dismiss="modal"--%>
+<%--                                                                            class="btn btn-secondary">Cancel--%>
+<%--                                                                    </button>--%>
+<%--                                                                    <input type="submit" value="Submit"--%>
+<%--                                                                           class="btn btn-primary">--%>
+<%--                                                                </div>--%>
+<%--                                                            </div>--%>
+<%--                                                        </div>--%>
+<%--                                                    </div>--%>
+<%--                                                </form>--%>
+<%--                                            </td>--%>
                                         </tr>
                                         <tr>
                                             <th>Password</th>

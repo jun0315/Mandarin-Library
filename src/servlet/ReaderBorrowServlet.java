@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.Reader;
 import java.util.List;
 
 /**
@@ -28,9 +27,14 @@ public class ReaderBorrowServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        double totalFine=0.0;
         HttpSession session = request.getSession();
         List<ReaderBorrow> readerBorrowList = readerBorrowDao.getReaderBorrowList((String) session.getAttribute("account"));
         request.setAttribute("readerBorrowList", readerBorrowList);
+        for(ReaderBorrow readerBorrow:readerBorrowList){
+            totalFine+=readerBorrow.getFine();
+        }
+        request.setAttribute("totalFine",totalFine);
         request.getRequestDispatcher("reader_borrowHistory.jsp").forward(request, response);
     }
 }

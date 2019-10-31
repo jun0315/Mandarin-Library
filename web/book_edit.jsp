@@ -61,7 +61,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <p>Edit this account infomation</p>
+                            <p>Edit book information</p>
                             <form class="form-horizontal" action="EditBook.do" method="post">
                                 <%Book book = (Book) request.getAttribute("book");%>
                                 <div class="form-group row">
@@ -109,7 +109,16 @@
                                         <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
-                                <input type="hidden" name="category" value="<%=book.getCategory()%>">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 form-control-label">Category</label>
+                                    <div class="col-sm-9">
+                                        <input id="inputHorizontalWarning" name="category"
+                                               value="<%=book.getCategory()%>"
+                                               class="form-control form-control-warning">
+                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="preCategory" value="<%=book.getCategory()%>">
                                 <input type="hidden" name="amount" value="<%=book.getAmount()%>">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label">Description</label>
@@ -141,7 +150,9 @@
     if (info == 'success') {
         alert("successfully edit!");
     } else if (info == 'error') {
-        alert("edit failure because of have the same book number!");
+        alert("edit failure because of having the same book number!");
+    } else if(info=="error_category"){
+        alert("edit failure because of non-existent category!");
     }
 </script>
 
