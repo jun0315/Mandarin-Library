@@ -17,6 +17,7 @@
     int tag = 0;
     String[] BookManage = {
             "/book_add.jsp",
+            "/book_add_no_isbn.jsp",
             "/book_edit.jsp",
             "/librarian_book_list.jsp",
             "/book_category_add.jsp",

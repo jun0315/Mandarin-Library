@@ -102,75 +102,15 @@
                                         <input id="BookNumber"
                                                class="form-control form-control-success" name="bookNumberFromAPI"
                                                value="">
-                                        <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
+                                        <a href="book_add_no_isbn.jsp" id="">
+                                            Have No ISBN</a>
                                         <%--    <input type="submit" value="Submit" class="btn btn-primary" id="importISBN">Import ISBN</input>--%>
                                         <input type="button" name="isbn_import" value="Import ISBN" class="btn btn-primary"
                                                onclick="process('isbn')">
                                         <%--  <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Name</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="name"
-                                               class="form-control form-control-success" value="<%=nameFromAPI%>">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Press</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="press"
-                                               class="form-control form-control-success" value="<%=pressFromAPI%>">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
 
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Author</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="author"
-                                               class="form-control form-control-success" value="<%=authorFromAPI%>">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Description</label>
-                                    <div class="col-sm-9">
-                                        <input name="description"
-                                               class="form-control form-control-success" value="<%=describeFromAPI%>">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Price</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="price"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Category</label>
-                                    <div class="col-sm-9">
-                                        <select name="category" class="form-control form-control-success">
-                                            <%List<BookCategory> bookCategories = (List<BookCategory>) request.getAttribute("bookCategories");%>
-                                            <c:forEach items="${bookCategories}" var="bookCategory" varStatus="li">
-                                                <option id="category"
-                                                        value="${bookCategory.getCategory()}">${bookCategory.getCategory()}
-                                                </option>
-                                            </c:forEach>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label">Amount</label>
-                                    <div class="col-sm-9">
-                                        <input id="inputHorizontalSuccess" name="amount"
-                                               class="form-control form-control-success">
-                                        <%--                                        <small class="form-text">Example help text that remains unchanged.</small>--%>
-                                    </div>
-                                </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
                                         <input type="button" name="book_add" value="Submit" class="btn btn-primary"
@@ -195,20 +135,6 @@
         alert("add failure because of have the same account!");
     }
 </script>
-
-<%--<script language="JavaScript">--%>
-<%--    $(document).ready(function() {--%>
-<%--        $("#isbn_import").click(function () {--%>
-<%--            $("#draw").attr("action", "AddBookByISBN.do");--%>
-<%--            $("form").submit();--%>
-<%--        });--%>
-<%--        $("#book_add").click(function () {--%>
-<%--            $("#draw").attr("action", "BookAdd.do");--%>
-<%--            $("form").submit();--%>
-<%--        });--%>
-<%--    })--%>
-<%--</script>--%>
-
 
 <script   language=javascript>
     function   process(v){
