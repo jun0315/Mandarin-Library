@@ -18,12 +18,15 @@ import org.json.JSONObject;
 
 public class GetBookInfo {
 
-    private MyJSONObject volumeInfo;
+    private JSONObject volumeInfo;
+    private boolean isNull = false;
 
     public GetBookInfo(String isbn) {
         proxySetting();
         if (isbn != null) {
             GetByISBN(isbn);
+        } else {
+            isNull = true;
         }
     }
 
@@ -43,38 +46,75 @@ public class GetBookInfo {
         JSONObject json = new JSONObject(result);
 
         JSONArray bookItem = json.getJSONArray("items");
-        volumeInfo = (MyJSONObject) bookItem.getJSONObject(0).getJSONObject("volumeInfo");
+        volumeInfo = bookItem.getJSONObject(0).getJSONObject("volumeInfo");
     }
 
 
     public String getTitle() {
-        return volumeInfo.getString("title");
+        if (isNull)
+            return "";
+        try {
+            return volumeInfo.getString("title");
+        } catch (JSONException e) {
+            return "";
+        }
     }
 
     public String getAuthor() {
-        StringBuilder authorResult = new StringBuilder();
-        JSONArray authors = volumeInfo.getJSONArray("authors");
+        if (isNull)
+            return "";
+        try {
+            StringBuilder authorResult = new StringBuilder();
+            JSONArray authors = volumeInfo.getJSONArray("authors");
 
-        for (Object author : authors) {
-            authorResult.append((String) author);
+            for (Object author : authors) {
+                authorResult.append((String) author).append(" ");
+            }
+            return authorResult.toString();
+        } catch (JSONException e) {
+            return "";
         }
-        return authorResult.toString();
     }
 
     public String getPublisher() {
-        return volumeInfo.getString("publisher");
+        if (isNull)
+            return "";
+        try {
+            return volumeInfo.getString("publisher");
+        } catch (JSONException ignored) {
+            return "";
+        }
     }
 
     public String getPublishedDate() {
-        return volumeInfo.getString("publishedDate");
+        if (isNull)
+            return "";
+        try {
+            return volumeInfo.getString("publishedDate");
+        } catch (JSONException e) {
+            return "";
+        }
     }
 
     public int getPageCount() {
-        return volumeInfo.getInt("pageCount");
+        if (isNull)
+            return 0;
+        try {
+            return volumeInfo.getInt("pageCount");
+
+        } catch (JSONException e) {
+            return 0;
+        }
     }
 
     public String getDescription() {
-        return volumeInfo.getString("description");
+        if (isNull)
+            return "";
+        try {
+            return volumeInfo.getString("description");
+        } catch (JSONException e) {
+            return "";
+        }
     }
 
 
@@ -109,14 +149,3 @@ public class GetBookInfo {
 
 }
 
-class MyJSONObject extends JSONObject {
-    @Override
-    public String getString(String key) throws JSONException {
-        Object object = this.get(key);
-        if (object instanceof String) {
-            return super.getString(key);
-        } else {
-            return "";
-        }
-    }
-}
