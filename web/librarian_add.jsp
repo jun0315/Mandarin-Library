@@ -70,6 +70,7 @@
                                     <label class="col-sm-3 form-control-label">Password</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalWarning" name="password"
+                                               value="00010001"
                                                required oninvalid="setCustomValidity('Please enter relevant content');"
                                                oninput="setCustomValidity('');"
                                                class="form-control form-control-warning">
