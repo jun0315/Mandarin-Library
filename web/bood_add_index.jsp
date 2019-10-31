@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <a href="book_add.jsp" >Have No ISBN</a>
+                                        <a href="BookAdd.do" >Have No ISBN</a>
                                     </div>
                                 </div>
                             </form>
