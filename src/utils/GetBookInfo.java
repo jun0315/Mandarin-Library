@@ -1,6 +1,7 @@
 package utils;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -18,11 +19,14 @@ import org.json.JSONObject;
 public class GetBookInfo {
 
     private JSONObject volumeInfo;
+    private boolean isNull = false;
 
     public GetBookInfo(String isbn) {
         proxySetting();
         if (isbn != null) {
             GetByISBN(isbn);
+        } else {
+            isNull = true;
         }
     }
 
@@ -47,34 +51,72 @@ public class GetBookInfo {
 
 
     public String getTitle() {
-        return volumeInfo.getString("title");
+        if (isNull)
+            return "";
+        try {
+            return volumeInfo.getString("title");
+        } catch (JSONException e) {
+            return "";
+        }
     }
 
     public String getAuthor() {
-        String authorResult = "";
-        JSONArray authors = volumeInfo.getJSONArray("authors");
+        if (isNull)
+            return "";
+        try {
+            StringBuilder authorResult = new StringBuilder();
+            JSONArray authors = volumeInfo.getJSONArray("authors");
 
-        for (Object author : authors) {
-            authorResult += ((String) author);
+            for (Object author : authors) {
+                authorResult.append((String) author).append(" ");
+            }
+            return authorResult.toString();
+        } catch (JSONException e) {
+            return "";
         }
-        return authorResult;
     }
 
     public String getPublisher() {
-        return volumeInfo.getString("publisher");
+        if (isNull)
+            return "";
+        try {
+            return volumeInfo.getString("publisher");
+        } catch (JSONException ignored) {
+            return "";
+        }
     }
 
     public String getPublishedDate() {
-        return volumeInfo.getString("publishedDate");
+        if (isNull)
+            return "";
+        try {
+            return volumeInfo.getString("publishedDate");
+        } catch (JSONException e) {
+            return "";
+        }
     }
 
     public int getPageCount() {
-        return volumeInfo.getInt("pageCount");
+        if (isNull)
+            return 0;
+        try {
+            return volumeInfo.getInt("pageCount");
+
+        } catch (JSONException e) {
+            return 0;
+        }
     }
 
     public String getDescription() {
-        return volumeInfo.getString("description");
+        if (isNull)
+            return "";
+        try {
+            return volumeInfo.getString("description");
+        } catch (JSONException e) {
+            return "";
+        }
     }
+
 
 //test
 //    public static void main(String[] args) {
@@ -106,5 +148,4 @@ public class GetBookInfo {
     }
 
 }
-
 
