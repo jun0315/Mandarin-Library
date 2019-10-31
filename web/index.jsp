@@ -24,7 +24,7 @@
             <canvas id="demo-canvas"></canvas>
             <!-- back -->
             <div style="width: 100px; height: 37px; position: absolute; left: 5%; top: 2%">
-                <a href="homePage.jsp">
+                <a href="homePage.do">
                     <div style="width: 37%; height: 100%; float: left">
                         <img src="img/back.png" style="width: 100%; height: 100%">
                     </div>

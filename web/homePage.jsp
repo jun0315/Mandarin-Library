@@ -48,9 +48,9 @@
                 <div class="navbar-holder d-flex align-items-center justify-content-between">
                     <!-- Navbar Header-->
                     <div class="navbar-header">
-                        <!-- Navbar Brand --><a href="index.jsp" class="navbar-brand d-none d-sm-inline-block">
+                        <!-- Navbar Brand --><a href="homePage.jsp" class="navbar-brand d-none d-sm-inline-block">
                         <div class="brand-text d-none d-lg-inline-block">
-                            <span></span><strong></strong><span style="margin-left: 10px;"></span>
+                            <span>Mandarin-</span><strong>Library</strong><span style="margin-left: 10px;">Automation</span>
                         </div>
                         <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong></strong></div>
                     </a>
@@ -62,7 +62,7 @@
                         <!-- Logout    -->
                         <li class="nav-item">
                             <a href="index.jsp" class="nav-link logout">
-                                <span class="d-none d-sm-inline" style="font-size: larger">Login</span>
+                                <span class="d-none d-sm-inline" style="font-size: 22px">Login</span>
                                 <i class="fa fa-sign-out"></i>
                             </a>
                         </li>
@@ -73,7 +73,7 @@
     </header>
     <div class="effect1">
         <span style="position: absolute; left: 38%;">
-            <img src="img/logo.png" style="margin-top: 30px; ">
+            <img src="img/logo.png" style="margin-top: 10px; ">
         </span>
 
         <div class="search">
@@ -100,28 +100,22 @@
             <div class="card-body">
                 <p style="font-size: 30px; border-bottom: rgba(129,129,130,0.42) solid">
                     <strong>Notice</strong></p>
-                <div class="" style="width: 100%; margin-top: 30px">
-                    <div style="width: 80%; margin-left: auto; margin-right: auto">
-                        <div id="mq" style="width:100%; height:200px; font-size: 30px; overflow:hidden"
-                             οnmοuseοver="iScrollAmount=0" οnmοuseοut="iScrollAmount=1">
-                            　　this is a notice.<br/>
-                            　　this is a notice.<br/>
-                            　　<br/>
-                            　　this is a notice.<br/>
-                            　　this is a notice.<br/>
-                            　　<br/>
+                <div class="" style="width: 100%">
+                    <div id="notice" style="width: 80%; font-family: 'Times New Roman',fantasy; font-size: 30px;
+                    margin-left: auto; margin-right: auto">
+                        <div class="recycle">
+                            <ul>
+                                <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>　
+                                <c:forEach items="${notices}" var="notice" varStatus="li">
+                                        <li>
+                                            <span style="width: 150px">${li.index+1}</span>
+                                            <span style="width: 300px">${notice.getTopic()}</span>
+                                            <span style="width: 500px">${notice.getContent()}</span>
+                                            ${notice.getPosttime()}
+                                        </li>
+                                </c:forEach>
+                            </ul>
                         </div>
-<%--                        <tbody>--%>
-<%--                        <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>--%>
-<%--                        <c:forEach items="${notices}" var="notice" varStatus="li">--%>
-<%--                            <tr>--%>
-<%--                                <td>${notice.getID()}</td>--%>
-<%--                                <td>${notice.getTopic()}</td>--%>
-<%--                                <td>${notice.getContent()}</td>--%>
-<%--                                <td>${notice.getPosttime()}</td>--%>
-<%--                            </tr>--%>
-<%--                        </c:forEach>--%>
-<%--                        </tbody>--%>
                     </div>
                 </div>
             </div>
@@ -145,23 +139,17 @@
         </div>
     </footer>
 </div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.vticker.min.js"></script>
 <script>
-    var oMarquee = document.getElementById("mq"); //滚动对象
-    var iLineHeight = 40; //单行高度，像素
-    var iLineCount = 7; //实际行数
-    var iScrollAmount = 1; //每次滚动高度，像素
-    function run() {
-        oMarquee.scrollTop += iScrollAmount;
-        if ( oMarquee.scrollTop == iLineCount * iLineHeight )
-            oMarquee.scrollTop = 0;
-        if ( oMarquee.scrollTop % iLineHeight == 0 ) {
-            window.setTimeout( "run()", 2000 );
-        } else {
-            window.setTimeout( "run()", 50 );
-        }
-    }
-    oMarquee.innerHTML += oMarquee.innerHTML;
-    window.setTimeout( "run()", 2000 );
+    $(function(){
+        $('.recycle').vTicker({
+            showItems: 5,
+            pause: 1000
+        });
+    });
 </script>
+
 </body>
 </html>
