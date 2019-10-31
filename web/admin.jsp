@@ -112,7 +112,7 @@
                         <p style="font-size: 30px; border-bottom: rgba(129,129,130,0.42) solid">
                             <strong>Notice</strong></p>
                         <div class="" style="width: 100%">
-                            <div id="notice" style="width: 80%; font-family: 'Times New Roman',fantasy; font-size: 30px;
+                            <div id="notice" style="width: 80%; font-family: 'Microsoft YaHei',fantasy; font-size: 30px;
                     margin-left: auto; margin-right: auto">
                                 <div class="recycle">
                                     <ul>
