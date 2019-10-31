@@ -23,7 +23,11 @@ public class LoginDao {
                 String passwordInDB = resultSet.getString("staff_password");
                 if (passwordInDB.equals(password)) {
                     userType = UserType.ToUserType(resultSet.getString("user_type"));
-                    canFind = true;
+                    if(userType == UserType.Admin){
+                        canFind = false;
+                    }else {
+                        canFind = true;
+                    }
                     break;
                 }
             }

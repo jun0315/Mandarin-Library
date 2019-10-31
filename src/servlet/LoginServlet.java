@@ -74,13 +74,13 @@ public class LoginServlet extends HttpServlet {
 
         switch (userType) {
             case Admin:
-                response.sendRedirect("admin.jsp");
+                response.sendRedirect("AdminNoticeHome.do");
                 break;
             case Librarian:
-                response.sendRedirect("librarian.jsp");
+                response.sendRedirect("LibrarianNoticeHome.do");
                 break;
             case Reader:
-                response.sendRedirect("reader.jsp");
+                response.sendRedirect("ReaderNoticeHome.do");
                 break;
             case None:
                 response.sendRedirect("index.jsp?error=yes");

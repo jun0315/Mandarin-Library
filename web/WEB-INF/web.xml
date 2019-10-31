@@ -385,5 +385,30 @@
         <url-pattern>/ReaderDelete.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AdminNotice</servlet-name>
+        <servlet-class>servlet.AdminNoticeListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminNotice</servlet-name>
+        <url-pattern>/AdminNoticeHome.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LibrarianNotice</servlet-name>
+        <servlet-class>servlet.LibrarianNoticeListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LibrarianNotice</servlet-name>
+        <url-pattern>/LibrarianNoticeHome.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ReaderNotice</servlet-name>
+        <servlet-class>servlet.ReaderNoticeListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReaderNotice</servlet-name>
+        <url-pattern>/ReaderNoticeHome.do</url-pattern>
+    </servlet-mapping>
     <!--    end -->
 </web-app>
