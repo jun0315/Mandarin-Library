@@ -1,6 +1,6 @@
 /*
 SQLyog Community v13.1.5  (64 bit)
-MySQL - 5.6.15 : Database - lib_system
+MySQL - 5.6.45-log : Database - lib_system
 *********************************************************************
 */
 
@@ -21,12 +21,16 @@ USE `lib_system`;
 DROP TABLE IF EXISTS `admin_setting`;
 
 CREATE TABLE `admin_setting` (
-  `book_fine_value` int(11) DEFAULT '1',
-  `book_return_period` int(11) DEFAULT '30',
-  `reader_security_deposit` int(11) DEFAULT '300'
+  `book_fine_value` varchar(11) DEFAULT NULL,
+  `book_return_period` varchar(11) DEFAULT NULL,
+  `reader_security_deposit` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `admin_setting` */
+
+insert  into `admin_setting`(`book_fine_value`,`book_return_period`,`reader_security_deposit`) values 
+('1','30','15'),
+('1','30','15');
 
 /*Table structure for table `book` */
 
@@ -47,7 +51,7 @@ CREATE TABLE `book` (
 /*Data for the table `book` */
 
 insert  into `book`(`book_number`,`book_name`,`book_press`,`book_price`,`book_author`,`book_category`,`book_amount`,`book_description`) values 
-('9780131872486','Thinking in Java','Pearson Education',32,'Bruce Eckel','Art',4,'With humor and insight, the author introduces the fundamental concepts of the Java programming language, from object development to design patterns, with the help of straightforward examples. By the author of Thinking in C++++. Original. (Beginner).'),
+('9780131872486','Thinking in Java','Pearson Education',32,'Bruce Eckel','Art',2,'With humor and insight, the author introduces the fundamental concepts of the Java programming language, from object development to design patterns, with the help of straightforward examples. By the author of Thinking in C++++. Original. (Beginner).'),
 ('9787020139927','失踪的孩子','西北工业大学出版社',2,'Elena Ferrante ','Art',2,'2'),
 ('9787115216878','代码整洁之道','人民邮电出版社',32,'Robert C. Martin马丁Rtin Ma韩磊','Science',2,'本书提出一种观念：代码质量与其整洁度成正比。干净的代码，既在质量上较为可靠，也为后期维护、升级奠定了良好基础。作为编程领域的佼佼者，本书作者给出了一系列行之有效的整洁代码操作实践。这些实践在本书中体现为一条条规则(或称“启示”)，并辅以来自现实项目的正、反两面的范例。只要遵循这些规则，就能编写出干净的代码，从而有效提升代码质量。');
 
@@ -85,6 +89,8 @@ CREATE TABLE `book_deleted` (
 /*Data for the table `book_deleted` */
 
 insert  into `book_deleted`(`copy_id`,`delete_time`,`staff_id`) values 
+('97801318724860002','2019-10-31 00:00:00','0201'),
+('97801318724860003','2019-10-31 00:00:00','0201'),
 ('97801318724860016','2019-10-31 22:25:14','0201'),
 ('97801318724860017','2019-10-31 22:26:38','0201'),
 ('97801318724860018','2019-10-31 22:26:42',NULL);
@@ -106,8 +112,6 @@ CREATE TABLE `book_detail` (
 /*Data for the table `book_detail` */
 
 insert  into `book_detail`(`book_number`,`copy_id`,`status`,`areacode`) values 
-('9780131872486','97801318724860002',2,'1'),
-('9780131872486','97801318724860003',2,'2'),
 ('9780131872486','97801318724860004',2,'3'),
 ('9780131872486','97801318724860005',2,'4'),
 ('9787020139927','97870201399270001',2,'34'),
@@ -163,7 +167,7 @@ CREATE TABLE `reader` (
 insert  into `reader`(`user_account`,`user_name`,`user_password`,`user_email`,`security_deposit`,`register_time`,`borrowing_count`) values 
 ('12213123123','samuel','12345678','m123213@163.com',0,NULL,NULL),
 ('13855447008','jun1','123','1072505283@qq.com',0,'2019-10-28',0),
-('17795832333','liubihao','123456','888@qq.com',300,'2019-11-01',2);
+('17795832333','liubihao','123456','1072505283@qq.com',300,'2019-11-01',2);
 
 /*Table structure for table `reader_borrow` */
 

@@ -33,7 +33,7 @@ public class AdminSettingsDao {
             }
 
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
 
         return adminSettings;
