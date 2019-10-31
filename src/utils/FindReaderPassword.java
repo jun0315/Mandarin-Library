@@ -13,7 +13,7 @@ public class FindReaderPassword {
     public static void findPassword(String mailAddress, String account, HttpServletRequest request) {
         FindReaderPassword.request = request;
         String mailContent;
-        String findPwdUrl = urlCrypt(mailAddress,account);
+        String findPwdUrl = urlCrypt(mailAddress, account);
 
         mailContent = "Test Find Password Url ";
         mailContent += findPwdUrl;
@@ -27,7 +27,22 @@ public class FindReaderPassword {
         }
     }
 
-    private static String urlCrypt(String mailAddress,String account) {
+    public static void AlertReturnBook(String mailAddress,HttpServletRequest request) {
+        FindReaderPassword.request = request;
+        String mailContent;
+
+        mailContent = "Your book is about to expire, please return it in time";
+
+        MailSender mailSender = new MailSender(mailAddress);
+        mailSender.setMailContent("Timely return of books", mailContent);
+        try {
+            mailSender.sendEmail();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static String urlCrypt(String mailAddress, String account) {
         String UserName = account;
         String result;
         String todayDate;

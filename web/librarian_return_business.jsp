@@ -57,6 +57,9 @@
                     <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
                     <li class="breadcrumb-item active">View</li>
                 </ul>
+                <a href="AlertToEmail.do">
+                    <button type="button" class="btn btn-primary">AlertToEmail</button>
+                </a>
             </div>
 
             <%--显示借阅记录 --%>
@@ -146,12 +149,17 @@
     </div>
 </div>
 
+
 <script>
     var info = '<%=request.getParameter("info")%>';
     if (info == "return_success") {
         alert("Successfully Return!");
     }
+    if (info == "alert_success") {
+        alert("Successfully Alert!")
+    }
 </script>
+
 
 <!-- JavaScript files-->
 <script src="vendor/jquery/jquery.min.js"></script>
