@@ -17,6 +17,26 @@ public class ReaderBorrow {
     private double fine;
     private String book_name;
 
+    public String getCopy_barpath() {
+        return copy_barpath;
+    }
+
+    public void setCopy_barpath(String copy_barpath) {
+        this.copy_barpath = copy_barpath;
+    }
+
+    private String copy_barpath;
+
+    public String getAccount_barpath() {
+        return account_barpath;
+    }
+
+    public void setAccount_barpath(String account_barpath) {
+        this.account_barpath = account_barpath;
+    }
+
+    private String account_barpath;
+
     public ReaderBorrow() {
 
     }

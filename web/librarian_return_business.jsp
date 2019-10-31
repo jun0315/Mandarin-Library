@@ -72,7 +72,9 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>Reader Account</th>
+                                                <th>Account Bar</th>
                                                 <th>Book Copy ID</th>
+                                                <th>Copy Bar</th>
                                                 <th>Borrow Time</th>
                                                 <th>Status</th>
                                                 <th>Fine</th>
@@ -85,7 +87,14 @@
                                                 <tr>
                                                     <th>${li.index+1}</th>
                                                     <td>${readerBorrow.getUser_account()}</td>
+                                                    <td>
+                                                        <img src="cache/barcode/${readerBorrow.getAccount_barpath()}">
+                                                    </td>
+
                                                     <td>${readerBorrow.getCopy_id()}</td>
+                                                    <td>
+                                                        <img src="cache/barcode/${readerBorrow.getCopy_barpath()}">
+                                                    </td>
                                                     <td>${readerBorrow.getBorrow_time().toString()}</td>
                                                     <td>
                                                         <c:choose>
