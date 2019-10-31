@@ -1,6 +1,7 @@
 package utils;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -17,7 +18,7 @@ import org.json.JSONObject;
 
 public class GetBookInfo {
 
-    private JSONObject volumeInfo;
+    private MyJSONObject volumeInfo;
 
     public GetBookInfo(String isbn) {
         proxySetting();
@@ -42,7 +43,7 @@ public class GetBookInfo {
         JSONObject json = new JSONObject(result);
 
         JSONArray bookItem = json.getJSONArray("items");
-        volumeInfo = bookItem.getJSONObject(0).getJSONObject("volumeInfo");
+        volumeInfo = (MyJSONObject) bookItem.getJSONObject(0).getJSONObject("volumeInfo");
     }
 
 
@@ -51,13 +52,13 @@ public class GetBookInfo {
     }
 
     public String getAuthor() {
-        String authorResult = "";
+        StringBuilder authorResult = new StringBuilder();
         JSONArray authors = volumeInfo.getJSONArray("authors");
 
         for (Object author : authors) {
-            authorResult += ((String) author);
+            authorResult.append((String) author);
         }
-        return authorResult;
+        return authorResult.toString();
     }
 
     public String getPublisher() {
@@ -75,6 +76,7 @@ public class GetBookInfo {
     public String getDescription() {
         return volumeInfo.getString("description");
     }
+
 
 //test
 //    public static void main(String[] args) {
@@ -107,4 +109,14 @@ public class GetBookInfo {
 
 }
 
-
+class MyJSONObject extends JSONObject {
+    @Override
+    public String getString(String key) throws JSONException {
+        Object object = this.get(key);
+        if (object instanceof String) {
+            return super.getString(key);
+        } else {
+            return "";
+        }
+    }
+}
