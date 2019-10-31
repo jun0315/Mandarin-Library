@@ -1,5 +1,8 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="entity.Notice" %>
+<%@ page import="java.util.List" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -103,8 +106,31 @@
                 </div>
             </section>
             <!-- notice -->
-            <div style="margin-top: 40px;">
-                <h1>这里是Notice。</h1>
+            <div class="tables" style="padding: 20px">
+                <div class="card">
+                    <div class="card-body">
+                        <p style="font-size: 30px; border-bottom: rgba(129,129,130,0.42) solid">
+                            <strong>Notice</strong></p>
+                        <div class="" style="width: 100%">
+                            <div id="notice" style="width: 80%; font-family: 'Times New Roman',fantasy; font-size: 30px;
+                    margin-left: auto; margin-right: auto">
+                                <div class="recycle">
+                                    <ul>
+                                        <%List<Notice> notices = (List<Notice>) request.getAttribute("notices");%>　
+                                        <c:forEach items="${notices}" var="notice" varStatus="li">
+                                            <li>
+                                                <span style="width: 150px">${li.index+1}</span>
+                                                <span style="width: 300px">${notice.getTopic()}</span>
+                                                <span style="width: 500px">${notice.getContent()}</span>
+                                                    ${notice.getPosttime()}
+                                            </li>
+                                        </c:forEach>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Page Footer-->
             <jsp:include page="footer.jsp" flush="true"></jsp:include>
@@ -112,6 +138,17 @@
     </div>
 </div>
 <!-- JavaScript files-->
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.vticker.min.js"></script>
+<script>
+    $(function(){
+        $('.recycle').vTicker({
+            showItems: 5,
+            pause: 1000
+        });
+    });
+</script>
+
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/popper.js/umd/popper.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
