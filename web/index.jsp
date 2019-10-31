@@ -20,7 +20,7 @@
 <body>
 <div class="container demo-1">
     <div class="content">
-        <div id="large-header" class="large-header" style="background-image: url('img/login_bg.jpg');">
+        <div id="large-header" class="large-header">
             <canvas id="demo-canvas"></canvas>
             <!-- back -->
             <div style="width: 100px; height: 37px; position: absolute; left: 5%; top: 2%">

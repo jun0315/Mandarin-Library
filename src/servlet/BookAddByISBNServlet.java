@@ -22,7 +22,7 @@ public class BookAddByISBNServlet extends HttpServlet {
     //TODO ISBN处理
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
-        String ISBN = request.getParameter("bookNumberFromAPIgigi");
+        String ISBN = request.getParameter("bookNumberFromAPI");
 //        String ISBN = "9780133432381";
         request.getRequestDispatcher("book_add.jsp").forward(request, response);
 //        GetBookInfo getBookInfo = new GetBookInfo(ISBN);

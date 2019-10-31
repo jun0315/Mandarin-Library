@@ -95,16 +95,17 @@
                     <div class="card">
                         <div class="card-body">
                             <p>Add the new book</p>
-                            <form class="form-horizontal" name="form1" action="" method="post">
+                            <form class="form-horizontal" name="theForm" action="" method="post">
                                 <div class="form-group row">
                                     <label class="col-sm-3 form-control-label" id="bookNo">ISBN</label>
                                     <div class="col-sm-9">
                                         <input id="BookNumber"
-                                               class="form-control form-control-success" name="bookNumberFromAPIgigi"
+                                               class="form-control form-control-success" name="bookNumberFromAPI"
                                                value="">
                                         <a href="#" id=ClickISBNorMSBN onclick="changeISBN()">Have No ISBN</a>
                                         <%--    <input type="submit" value="Submit" class="btn btn-primary" id="importISBN">Import ISBN</input>--%>
-                                        <input type="submit" id="isbn_import" value="Import ISBN" class="btn btn-primary">
+                                        <input type="button" name="isbn_import" value="Import ISBN" class="btn btn-primary"
+                                               onclick="process('isbn')">
                                         <%--  <small class="form-text">Example help text that remains unchanged.</small>--%>
                                     </div>
                                 </div>
@@ -126,7 +127,7 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-sm-3 form-control-label" }>Author</label>
+                                    <label class="col-sm-3 form-control-label">Author</label>
                                     <div class="col-sm-9">
                                         <input id="inputHorizontalSuccess" name="author"
                                                class="form-control form-control-success" value="<%=authorFromAPI%>">
@@ -172,7 +173,8 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <input type="submit" value="Submit" class="btn btn-primary">
+                                        <input type="button" name="book_add" value="Submit" class="btn btn-primary"
+                                        onclick="process('book')">
                                     </div>
                                 </div>
                             </form>
@@ -194,17 +196,29 @@
     }
 </script>
 
-<script language="JavaScript">
-    $(document).ready(function() {
-        $("#isbn_import").click(function () {
-            $("#draw").attr("action", "AddBookByISBN.do");
-            $("form").submit();
-        });
-        $("#book_add").click(function () {
-            $("#draw").attr("action", "BookAdd.do");
-            $("form").submit();
-        });
-    })
+<%--<script language="JavaScript">--%>
+<%--    $(document).ready(function() {--%>
+<%--        $("#isbn_import").click(function () {--%>
+<%--            $("#draw").attr("action", "AddBookByISBN.do");--%>
+<%--            $("form").submit();--%>
+<%--        });--%>
+<%--        $("#book_add").click(function () {--%>
+<%--            $("#draw").attr("action", "BookAdd.do");--%>
+<%--            $("form").submit();--%>
+<%--        });--%>
+<%--    })--%>
+<%--</script>--%>
+
+
+<script   language=javascript>
+    function   process(v){
+        if(v=="isbn"){
+            document.theForm.action="AddBookByISBN.do";
+        }else{
+            document.theForm.action="BookAdd.do";
+        }
+        document.theForm.submit();
+    }
 </script>
 
 <!-- JavaScript files-->

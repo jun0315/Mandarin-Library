@@ -116,14 +116,6 @@
                                 </c:forEach>
                             </ul>
                         </div>
-<%--                        <div id="mq" style="width:100%; height:200px; font-size: 30px; overflow:hidden"--%>
-<%--                             οnmοuseοver="iScrollAmount=0" οnmοuseοut="iScrollAmount=1">--%>
-<%--                            <c:forEach items="${notices}" var="notice" varStatus="li">--%>
-<%--                                <br/>${notice.getTopic()}&emsp;&emsp;--%>
-<%--                                ${notice.getContent()}&emsp;&emsp;--%>
-<%--                                ${notice.getPosttime()}<br/>--%>
-<%--                            </c:forEach>--%>
-<%--                        </div>--%>
                     </div>
                 </div>
             </div>
@@ -147,24 +139,6 @@
         </div>
     </footer>
 </div>
-<%--<script>--%>
-<%--    var oMarquee = document.getElementById("mq"); //滚动对象--%>
-<%--    var iLineHeight = 30; //单行高度，像素--%>
-<%--    var iLineCount = 3; //实际行数--%>
-<%--    var iScrollAmount = 1; //每次滚动高度，像素--%>
-<%--    function run() {--%>
-<%--        oMarquee.scrollTop += iScrollAmount;--%>
-<%--        if ( oMarquee.scrollTop == iLineCount * iLineHeight )--%>
-<%--            oMarquee.scrollTop = 1;--%>
-<%--        if ( oMarquee.scrollTop % iLineHeight == 0 ) {--%>
-<%--            window.setTimeout( "run()", 2000 );--%>
-<%--        } else {--%>
-<%--            window.setTimeout( "run()", 50 );--%>
-<%--        }--%>
-<%--    }--%>
-<%--    oMarquee.innerHTML += oMarquee.innerHTML;--%>
-<%--    window.setTimeout( "run()", 2000 );--%>
-<%--</script>--%>
 
 <script src="js/jquery-1.8.3.min.js"></script>
 <script src="js/jquery.vticker.min.js"></script>
@@ -172,7 +146,7 @@
     $(function(){
         $('.recycle').vTicker({
             showItems: 5,
-            pause: 3000
+            pause: 1000
         });
     });
 </script>
