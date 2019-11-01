@@ -23,7 +23,7 @@ public class ReaderReserveDao {
             while (resultSet.next()) {
                 String user_account = resultSet.getString("user_account");
                 String copy_id = resultSet.getString("copy_id");
-                Date reserve_time = resultSet.getDate("reserve_time");
+                Timestamp reserve_time = resultSet.getTimestamp("reserve_time");
                 ReaderReserve readerReserve = new ReaderReserve(user_account, copy_id, reserve_time);
                 readerReserveList.add(readerReserve);
             }

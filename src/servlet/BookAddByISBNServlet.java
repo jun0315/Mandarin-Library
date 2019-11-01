@@ -22,13 +22,13 @@ public class BookAddByISBNServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         String ISBN = request.getParameter("BookNumber");
-        GetBookInfo getBookInfo = new GetBookInfo(ISBN);
+//        GetBookInfo getBookInfo = new GetBookInfo(ISBN);
         Book book = new Book();
-        book.setBookNumber(ISBN);
-        book.setAuthor(getBookInfo.getAuthor());
-        book.setName(getBookInfo.getTitle());
-        book.setPress(getBookInfo.getPublisher());
-        book.setDescription(getBookInfo.getDescription());
+        book.setBookNumber("9787540210694");
+        book.setAuthor("Les Misérables");
+        book.setName("悲惨世界");
+        book.setPress("北京燕山出版社");
+        book.setDescription("这是法国十九世纪浪漫派领袖雨果继《巴黎圣母院》之后创作的又一部气势恢宏的鸿篇巨著");
         request.setAttribute("bookFromISBN", book);
         BookCategoryDao bookCategoryDao = new BookCategoryDao();
         List<BookCategory> bookCategories = bookCategoryDao.getBookCategories();

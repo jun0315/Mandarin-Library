@@ -53,7 +53,9 @@ public class GetBookInfo {
 
         volumeInfo = bookItem.getJSONObject(0).getJSONObject("volumeInfo");
 
-
+        if(volumeInfo == null){
+            isNull = true;
+        }
     }
 
 
@@ -140,7 +142,7 @@ public class GetBookInfo {
 
     private void proxySetting() {
         String proxyHost = "127.0.0.1";
-        String proxyPort = "7890";
+        String proxyPort = "1080";
         System.setProperty("http.proxyHost", proxyHost);
         System.setProperty("http.proxyPort", proxyPort);
         System.setProperty("https.proxyHost", proxyHost);

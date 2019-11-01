@@ -53,6 +53,12 @@
     </div>
 </div><!-- /container -->
 
+<script>
+    var info = '<%=request.getParameter("forget")%>';
+    if (info == 'yes') {
+        alert("successfully send email!");
+    }
+</script>
 <script src="js/TweenLite.min.js"></script>
 <script src="js/EasePack.min.js"></script>
 <script src="js/rAF.js"></script>

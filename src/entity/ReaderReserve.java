@@ -1,12 +1,14 @@
 package entity;
 
 import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
 
 public class ReaderReserve {
 
     private String user_account;
     private String copy_id;
-    private Date reserve_time;
+    private Timestamp reserve_time;
     private String account_barpath;
 
     public String getAccount_barpath() {
@@ -35,13 +37,13 @@ public class ReaderReserve {
         this.user_account = user_account;
         this.copy_id = copy_id;
         //预约时间设置为当前系统时间
-        this.reserve_time = new Date(System.currentTimeMillis());
+        this.reserve_time= new Timestamp(System.currentTimeMillis());
     }
 
-    public ReaderReserve(String user_account, String copy_id, Date reserve_time){
+    public ReaderReserve(String user_account, String copy_id, Timestamp reserve_time){
         this.user_account=user_account;
         this.copy_id=copy_id;
-        this.reserve_time=reserve_time;
+        this.reserve_time= reserve_time;
     }
 
     public String getUser_account() {
@@ -60,11 +62,11 @@ public class ReaderReserve {
         this.copy_id = copy_id;
     }
 
-    public Date getReserve_time() {
+    public Timestamp getReserve_time() {
         return reserve_time;
     }
 
     public void setReserve_time(Date reserve_time) {
-        this.reserve_time = reserve_time;
+        this.reserve_time = new Timestamp(reserve_time.getTime());
     }
 }

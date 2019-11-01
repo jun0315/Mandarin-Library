@@ -24,7 +24,7 @@ public class ForgetPasswordServlet extends HttpServlet {
             //此时是打算修改密码
             String Email = readerDao.getEmailByAccount(account);
             FindReaderPassword.findPassword(Email, account,request);
-            response.sendRedirect("index.jsp?forget=yes");
+            response.sendRedirect("forget.jsp?forget=yes");
         }
     }
 

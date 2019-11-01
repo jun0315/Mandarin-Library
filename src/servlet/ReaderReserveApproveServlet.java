@@ -44,6 +44,6 @@ public class ReaderReserveApproveServlet extends HttpServlet {
         Reader reader =readerDao.info(user_account);
         reader.setBorrowing_count(reader.getBorrowing_count()+1);
         //操作成功后返回到原页面，等同于刷新原页面
-        response.sendRedirect("BorrowBusiness.do?info=approve_success");
+        response.sendRedirect("ReserveBusiness.do?info=approve_success");
     }
 }

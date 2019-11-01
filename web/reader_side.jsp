@@ -27,7 +27,7 @@
     </div>
     <%--            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>--%>
     <ul class="list-unstyled">
-        <li><a href="reader.jsp"> <i class="icon-bill"></i>Home</a></li>
+        <li><a href="index.jsp"> <i class="icon-bill"></i>Home</a></li>
         <li><a href="BorrowHistory.do"> <i class="icon-bill"></i>Borrowing History</a></li>
         <li><a href="reader_search.jsp"> <i class="icon-search"></i>Search Book</a></li>
         <li><a href="reader_account_setting.jsp"> <i class="icon-home"></i>Account Information</a></li>

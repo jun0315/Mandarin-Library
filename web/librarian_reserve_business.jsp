@@ -16,7 +16,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Borrow Business</title>
+    <title>Reserve Business</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
@@ -62,7 +62,7 @@
             <!-- Breadcrumb-->
             <div class="breadcrumb-holder container-fluid">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+                    <li class="breadcrumb-item"><a href="librarian.jsp">Home</a></li>
                     <li class="breadcrumb-item active">Reserve Business</li>
                 </ul>
             </div>
