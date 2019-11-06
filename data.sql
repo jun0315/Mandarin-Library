@@ -29,8 +29,8 @@ CREATE TABLE `admin_setting` (
 /*Data for the table `admin_setting` */
 
 insert  into `admin_setting`(`book_fine_value`,`book_return_period`,`reader_security_deposit`) values 
-('1','30','15'),
-('1','30','15');
+('2','35','20'),
+('2','35','20');
 
 /*Table structure for table `book` */
 
@@ -112,7 +112,7 @@ CREATE TABLE `book_detail` (
 /*Data for the table `book_detail` */
 
 insert  into `book_detail`(`book_number`,`copy_id`,`status`,`areacode`) values 
-('9780131872486','97801318724860004',2,'3'),
+('9780131872486','97801318724860004',1,'3'),
 ('9780131872486','97801318724860005',2,'4'),
 ('9787020139927','97870201399270001',2,'34'),
 ('9787020139927','97870201399270002',2,'32'),
@@ -210,6 +210,9 @@ CREATE TABLE `reader_reserve` (
 
 /*Data for the table `reader_reserve` */
 
+insert  into `reader_reserve`(`user_account`,`copy_id`,`reserve_time`) values 
+('13855447008','97801318724860004','2019-11-06 17:03:29');
+
 /*Table structure for table `staff` */
 
 DROP TABLE IF EXISTS `staff`;
@@ -228,7 +231,7 @@ CREATE TABLE `staff` (
 insert  into `staff`(`staff_name`,`user_type`,`staff_account`,`staff_password`,`staff_phone`) values 
 ('xieqijun','Admin','0101','0101','12388984637'),
 ('zhangcongy','Admin','0102','0102','19232983298'),
-('liubihao','Librarian','0201','0201','17786423232'),
+('liubihao_test','Librarian','0201','0201','17786423232'),
 ('huangzhi','Librarian','0202','00010001','12321002322');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
