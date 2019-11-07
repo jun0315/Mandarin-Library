@@ -41,8 +41,8 @@ public class AlertToEmailServlet extends HttpServlet {
 
             if (readerBorrow.getIsReturned() == 0 && (book_return_period - between_days) <= 3) {
                 //获取读者Email
-                String email = readerDao.getEmailByAccount(readerBorrow.getUser_account());
-//                String email = "1072505283@qq.com";
+//                String email = readerDao.getEmailByAccount(readerBorrow.getUser_account());
+                String email = "1072505283@qq.com";
                 FindReaderPassword.AlertReturnBook(email,request);
             }
         }

@@ -37,6 +37,7 @@ public class GetBookInfo {
                 ("https://www.googleapis.com/books/v1/volumes?q=isbn:" + isbn + "&country=HK");
 
         if (result.isEmpty()) {
+            isNull = true;
             System.err.println("get book information failed");
             return;
         } else {
@@ -44,7 +45,7 @@ public class GetBookInfo {
         }
 
         JSONObject json = new JSONObject(result);
-        if (json.getInt("totalItems")==0) {
+        if (json.getInt("totalItems") == 0) {
             isNull = true;
             return;
         }
@@ -53,7 +54,7 @@ public class GetBookInfo {
 
         volumeInfo = bookItem.getJSONObject(0).getJSONObject("volumeInfo");
 
-        if(volumeInfo == null){
+        if (volumeInfo == null) {
             isNull = true;
         }
     }
@@ -142,7 +143,7 @@ public class GetBookInfo {
 
     private void proxySetting() {
         String proxyHost = "127.0.0.1";
-        String proxyPort = "1080";
+        String proxyPort = "7890";
         System.setProperty("http.proxyHost", proxyHost);
         System.setProperty("http.proxyPort", proxyPort);
         System.setProperty("https.proxyHost", proxyHost);

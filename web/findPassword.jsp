@@ -40,7 +40,7 @@
                     </div>
                     <div class="mb2">
                         <button type="submit" class="act-but submit" id="button" style="color: #FFFFFF; width: 330px">
-                            send email
+                            confirm edit password
                         </button>
                     </div>
                 </form>
