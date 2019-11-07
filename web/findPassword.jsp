@@ -25,7 +25,8 @@
             <div class="logo_box">
                 <h3>Input your account,and we will send to your email</h3>
                 <form action="ForgetPassword.do" name="f" method="post">
-                    <%String account = (String)request.getParameter("account");
+                    <%
+                        String account = (String) request.getParameter("account");
                         System.out.println(account);
                     %>
                     <div class="input_outer">
@@ -53,6 +54,11 @@
     var error = '<%=request.getParameter("error")%>';
     if (error == 'yes') {
         alert("Account or password wrong!");
+    }
+    var info = '<%=request.getParameter("info")%>';
+    if (info == 'error') {
+        alert("verification failed!");
+
     }
 </script>
 <script src="js/TweenLite.min.js"></script>

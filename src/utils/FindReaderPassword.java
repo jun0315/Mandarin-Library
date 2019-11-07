@@ -13,7 +13,7 @@ public class FindReaderPassword {
     public static void findPassword(String mailAddress, String account, HttpServletRequest request) {
         FindReaderPassword.request = request;
         String mailContent;
-        String findPwdUrl = urlCrypt(mailAddress, account);
+        String findPwdUrl = urlCrypt(account);
 
         mailContent = "Test Find Password Url ";
         mailContent += findPwdUrl;
@@ -27,7 +27,7 @@ public class FindReaderPassword {
         }
     }
 
-    public static void AlertReturnBook(String mailAddress,HttpServletRequest request) {
+    public static void AlertReturnBook(String mailAddress, HttpServletRequest request) {
         FindReaderPassword.request = request;
         String mailContent;
 
@@ -42,7 +42,7 @@ public class FindReaderPassword {
         }
     }
 
-    private static String urlCrypt(String mailAddress, String account) {
+    private static String urlCrypt(String account) {
         String UserName = account;
         String result;
         String todayDate;
@@ -53,10 +53,10 @@ public class FindReaderPassword {
 
         String rootPath = "http://localhost:8080" + request.getContextPath();
 
-        result = rootPath + "/findPassword.jsp?account=";
+        result = rootPath + "/ForgetPassword.do?account=";
         result += UserName;
         result += "&verify=";
-        result += md5((mailAddress + todayDate));
+        result += md5(("3614" + todayDate));
 
         return result;
     }
